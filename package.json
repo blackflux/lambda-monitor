@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/simlu/lambda-monitor#readme",
   "devDependencies": {
-    "js-gardener": "1.6.0",
+    "js-gardener": "1.7.0",
     "coveralls": "3.0.0",
     "semantic-release": "8.2.0"
   },
