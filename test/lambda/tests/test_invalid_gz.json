@@ -1,0 +1,20 @@
+{
+  "handler": "processLogs",
+  "success": false,
+  "timeout": 10000,
+  "error": [
+    {
+      "to.equal": "{\"errno\":-3,\"code\":\"Z_DATA_ERROR\"}"
+    }
+  ],
+  "logs": [
+    {
+      "to.deep.equal": []
+    }
+  ],
+  "event": {
+    "awslogs": {
+      "data": "68JlBUk+l7KSN7tCOEJ4M3/qOI49vMH4sIAAFtKV3akI8d0bLYmibvPPN3wz00CJxmQnTO41wABBAAAAHWPwQqCQBCEcB6sQbFC3CjW3XW8kxpOpP+OC22d1Wml1qZkQGtoMsScGX0Xm7EFtK+smZBEUgXoLCdMhhwWQRIctmxaczKN3plG8zlaHIta5KqWsozoTYw3/djzwhpLwivWFGHGpAFe7DLHj+zCKdlFqLaU2ZHV2a4Ct/an0/ivdX8oYc1UVX860fQDQiMdxRQEAAA=="
+    }
+  }
+}
