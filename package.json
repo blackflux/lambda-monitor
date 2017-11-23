@@ -31,8 +31,10 @@
     "url": "https://github.com/simlu/lambda-monitor/issues"
   },
   "homepage": "https://github.com/simlu/lambda-monitor#readme",
+  "dependencies": {},
   "devDependencies": {
     "js-gardener": "1.7.0",
+    "lambda-tdd": "1.2.2",
     "coveralls": "3.0.0",
     "semantic-release": "8.2.0"
   },
@@ -47,6 +49,5 @@
   },
   "files": [
     "lib"
-  ],
-  "dependencies": {}
+  ]
 }

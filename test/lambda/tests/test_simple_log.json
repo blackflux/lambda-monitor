@@ -1,0 +1,20 @@
+{
+  "handler": "processLogs",
+  "success": true,
+  "timeout": 10000,
+  "response": [
+    {
+      "to.equal": "[{\"message\":\"[ERROR] First test message\",\"logGroupName\":\"testLogGroup\",\"logStreamName\":\"testLogStream\",\"@timestamp\":\"2015-08-24T19:03:07.000Z\"},{\"message\":\"[ERROR] Second test message\",\"logGroupName\":\"testLogGroup\",\"logStreamName\":\"testLogStream\",\"@timestamp\":\"2015-08-24T19:03:07.001Z\"}]"
+    }
+  ],
+  "logs": [
+    {
+      "to.deep.equal": []
+    }
+  ],
+  "event": {
+    "awslogs": {
+      "data": "H4sIAAAAAAAAAHWPwQqCQBCGX0Xm7EFtK+smZBEUgXoLCdMhFtKV3akI8d0bLYmibvPPN3wz00CJxmQnTO41whwWQRIctmEcB6sQbFC3CjW3XW8kxpOpP+OC22d1Wml1qZkQGtoMsScxaczKN3plG8zlaHIta5KqWsozoTYw3/djzwhpLwivWFGHGpAFe7DL68JlBUk+l7KSN7tCOEJ4M3/qOI49vMHj+zCKdlFqLaU2ZHV2a4Ct/an0/ivdX8oYc1UVX860fQDQiMdxRQEAAA=="
+    }
+  }
+}
