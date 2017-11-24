@@ -4,7 +4,7 @@
   "timeout": 10000,
   "response": [
     {
-      "to.equal": "[{\"message\":\"[ERROR] First test message\",\"logGroupName\":\"testLogGroup\",\"logStreamName\":\"testLogStream\",\"@timestamp\":\"2015-08-24T19:03:07.000Z\"},{\"message\":\"[ERROR] Second test message\",\"logGroupName\":\"testLogGroup\",\"logStreamName\":\"testLogStream\",\"@timestamp\":\"2015-08-24T19:03:07.001Z\"}]"
+      "to.equal": "[{\"message\":\"START RequestId: 7b221687-cff8-11e7-875c-81774d029543 Version: $LATEST\\n\",\"logGroupName\":\"/aws/lambda/peg-solitiare-dev-overview\",\"logStreamName\":\"2017/11/23/[$LATEST]a5ec508845ef4e66a65e39a63736eefe\",\"@timestamp\":\"2017-11-23T02:46:19.085Z\"}]"
     }
   ],
   "logs": [
@@ -14,7 +14,7 @@
   ],
   "event": {
     "awslogs": {
-      "data": "H4sIAAAAAAAAAHWPwQqCQBCGX0Xm7EFtK+smZBEUgXoLCdMhFtKV3akI8d0bLYmibvPPN3wz00CJxmQnTO41whwWQRIctmEcB6sQbFC3CjW3XW8kxpOpP+OC22d1Wml1qZkQGtoMsScxaczKN3plG8zlaHIta5KqWsozoTYw3/djzwhpLwivWFGHGpAFe7DL68JlBUk+l7KSN7tCOEJ4M3/qOI49vMHj+zCKdlFqLaU2ZHV2a4Ct/an0/ivdX8oYc1UVX860fQDQiMdxRQEAAA=="
+      "data": "H4sIAAAAAAAAADVQy07DQAz8lWjFsVHW+/Imt0iECgk4NBEXqNA2capIeZGkqVDVf2eh4Js99oxnLqyjeXZHKr5GYgm7T4v04znL83SbsQ0bzj1NfoxWGhEDGBWjH7fDcTsNp9EjkTvPUeu6Q+WikY7hPLTN0riJworWcFhpWhs6327yZSLX+SPBASOASMjo7e4pLbK82DtNpebWKk21ImOc0SRjZyRKQ1STp5hPh7mcmnFphv6haReaZpa8sZehp1vL9r862Ur98gNdWFN5OSmRa2UAY65BgeRSxTEYA0oKgdwajZpzLSyiRolKxEb7El5yaXw+i+u8VdAAyhN4Fqs3/7l5+rxId0Wwo8+TX32skgAPQoCxGJZ1bUMAwtCiLkMLiKriItZKBq/+e+8jCf4CeO/ZdX/9Bkt7CuOQAQAA"
     }
   }
 }

@@ -9,7 +9,9 @@
   ],
   "logs": [
     {
-      "to.deep.equal": []
+      "to.deep.equal": [
+        "incorrect header check"
+      ]
     }
   ],
   "event": {
