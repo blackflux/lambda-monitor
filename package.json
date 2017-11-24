@@ -34,7 +34,7 @@
   "dependencies": {},
   "devDependencies": {
     "js-gardener": "1.7.0",
-    "lambda-tdd": "1.2.2",
+    "lambda-tdd": "1.2.3",
     "coveralls": "3.0.0",
     "semantic-release": "8.2.0"
   },
