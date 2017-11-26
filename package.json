@@ -35,7 +35,8 @@
     "aws-sdk": "2.156.0",
     "cache-manager": "2.5.0",
     "lambda-rollbar": "1.1.0",
-    "lodash.get": "4.4.2"
+    "lodash.get": "4.4.2",
+    "request": "2.83.0"
   },
   "devDependencies": {
     "js-gardener": "1.7.0",
