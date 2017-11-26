@@ -23,7 +23,7 @@ provider:
       Action:
         - "lambda:GetFunction"
       Resource:
-        - arn:aws:lambda:#{AWS::Region}:#{AWS:AccountId}:function:*
+        - arn:aws:lambda:${self:provider.region}:*:function:*
 
 functions:
   process-logs:
