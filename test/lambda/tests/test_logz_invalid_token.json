@@ -14,7 +14,7 @@
     {
       "to.deep.equal": [
         "2017-11-23T02:57:59.665Z 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0 Task timed out after 1.00 seconds\n\n",
-        "{\"statusCode\":401,\"body\":\"Logging token is not valid\",\"headers\":{},\"request\":{\"uri\":{\"protocol\":\"https:\",\"slashes\":true,\"auth\":null,\"host\":\"listener.logz.io:8071\",\"port\":\"8071\",\"hostname\":\"listener.logz.io\",\"hash\":null,\"search\":\"?token=logz_invalid_token&type=dev\",\"query\":\"token=logz_invalid_token&type=dev\",\"pathname\":\"/\",\"path\":\"/?token=logz_invalid_token&type=dev\",\"href\":\"https://listener.logz.io:8071/?token=logz_invalid_token&type=dev\"},\"method\":\"POST\",\"headers\":{\"content-length\":461}}}"
+        "401 - \"Logging token is not valid\""
       ]
     }
   ],
