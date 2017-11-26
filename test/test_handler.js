@@ -1,4 +1,5 @@
 const path = require("path");
+const AWS = require("aws-sdk");
 const lambdaTester = require("lambda-tdd")({
   cwd: path.join(__dirname, ".."),
   verbose: process.argv.slice(2).indexOf("--debug") !== -1,
@@ -7,5 +8,9 @@ const lambdaTester = require("lambda-tdd")({
   envVarYml: path.join(__dirname, "lambda", "env.yml"),
   testFolder: path.join(__dirname, "lambda", "tests")
 });
+
+// dummy credentials are required for mock since AWS raises "Missing credentials" if non are found
+process.env.AWS_ACCESS_KEY_ID = get(AWS, 'config.credentials.accessKeyId', "DUMMY");
+process.env.AWS_SECRET_ACCESS_KEY = get(AWS, 'config.credentials.secretAccessKey', "DUMMY");
 
 lambdaTester.execute();
