@@ -10,43 +10,5 @@
           "STAGE": "dev"
         }
       }
-    },
-    {
-        "scope": "https://listener.logz.io:8071",
-        "method": "POST",
-        "path": "/?token=dummy_logzio_token&type=prod",
-        "body": {
-            "message": "REPORT RequestId: 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0\tDuration: 1001.14 ms\tBilled Duration: 1000 ms \tMemory Size: 256 MB\tMax Memory Used: 44 MB\t\n",
-            "logGroupName": "/aws/lambda/peg-solitiare-dev-overview",
-            "logStreamName": "2017/11/23/[$LATEST]e680fe32c6ba48ce8c3a377a25cd488e",
-            "@timestamp": "2017-11-23T02:57:59.665Z",
-            "requestId": "1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0",
-            "duration": "1001.14",
-            "billedDuration": "1000",
-            "maxMemory": "256",
-            "memory": "44"
-        },
-        "status": 200,
-        "response": "",
-        "rawHeaders": [
-            "Server",
-            "nginx/1.11.10",
-            "Date",
-            "Sun, 26 Nov 2017 00:23:08 GMT",
-            "Content-Type",
-            "text/plain; charset=UTF-8",
-            "Content-Length",
-            "0",
-            "Connection",
-            "close",
-            "Access-Control-Allow-Origin",
-            "*",
-            "Access-Control-Allow-Credentials",
-            "true",
-            "Access-Control-Allow-Methods",
-            "GET, POST, PUT, DELETE, OPTIONS",
-            "Access-Control-Allow-Headers",
-            "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With"
-        ]
     }
 ]
