@@ -15,7 +15,7 @@ provider:
   timeout: 10
   versionFunctions: false
   stackTags:
-    MONITOR: false
+    MONITORED: "false"
   environment:
     ${file(.vars/${opt:stage, self:provider.stage}.yml)}
   iamRoleStatements:
