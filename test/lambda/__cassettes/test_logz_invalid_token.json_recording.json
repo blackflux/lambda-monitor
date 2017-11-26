@@ -22,10 +22,10 @@
             "timestamp": "2017-11-23T02:57:59.665Z",
             "@timestamp": "2017-11-23T02:57:59.665Z",
             "requestId": "1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0",
-            "duration": "1001.14",
-            "billedDuration": "1000",
-            "maxMemory": "256",
-            "memory": "44"
+            "duration": 1001.14,
+            "billedDuration": 1000,
+            "maxMemory": 256,
+            "memory": 44
         },
         "status": 401,
         "response": "Logging token is not valid"
