@@ -1,0 +1,28 @@
+service: lambda-monitor
+
+package:
+  exclude:
+    - test/**
+    - coverage/**
+    - .vars/**
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: ${file(.vars/env.yml):DEFAULT_ENVIRONMENT}
+  region: ${file(.vars/env.yml):REGION}
+  memorySize: 256
+  timeout: 10
+  versionFunctions: false
+  environment:
+    ${file(.vars/env.yml)}
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "lambda:GetFunction"
+      Resource:
+        - arn:aws:lambda:${file(.vars/env.yml):REGION}:*:function:*
+
+functions:
+  process-logs:
+    handler: lib/handler.processLogs

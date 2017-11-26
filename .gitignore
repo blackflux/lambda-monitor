@@ -13,3 +13,8 @@ npm-debug.log
 # Test Specific
 coverage/
 .coveralls.yml
+
+# Serverless directories
+.serverless
+.vars/*
+!.vars/sample.yml
