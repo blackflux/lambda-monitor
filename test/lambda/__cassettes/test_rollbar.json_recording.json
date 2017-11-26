@@ -1,0 +1,44 @@
+[
+    {
+        "scope": "https://lambda.us-east-1.amazonaws.com:443",
+        "method": "GET",
+        "path": "/2015-03-31/functions/peg-solitiare-dev-overview",
+        "body": "",
+        "status": 200,
+        "response": {
+            "Tags": {
+                "STAGE": "dev"
+            }
+        }
+    },
+    {
+        "scope": "https://api.rollbar.com:443",
+        "method": "POST",
+        "path": "/api/1/item/",
+        "body": {
+            "access_token": "rollbar_dummy_token",
+            "data": {
+                "timestamp": 1511659234,
+                "environment": "dev",
+                "level": "warning",
+                "language": "javascript",
+                "framework": "node-js",
+                "uuid": "a18037f4-6871-43ee-ea46-3ebd14e58771",
+                "notifier": {
+                    "name": "node_rollbar",
+                    "version": "2.3.1"
+                },
+                "id": "33705477413970201536500575666792700703924347154117689346",
+                "message": "2017-11-23T02:57:59.665Z 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0 Task timed out after 1.00 seconds\n\n"
+            }
+        },
+        "status": 200,
+        "response": {
+            "err": 0,
+            "result": {
+                "id": null,
+                "uuid": "a18037f4-6871-43ee-ea46-3ebd14e58771"
+            }
+        }
+    }
+]
