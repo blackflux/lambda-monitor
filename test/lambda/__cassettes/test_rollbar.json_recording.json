@@ -1,17 +1,5 @@
 [
     {
-        "scope": "https://lambda.us-east-1.amazonaws.com:443",
-        "method": "GET",
-        "path": "/2015-03-31/functions/peg-solitiare-dev-overview",
-        "body": "",
-        "status": 200,
-        "response": {
-            "Tags": {
-                "STAGE": "dev"
-            }
-        }
-    },
-    {
         "scope": "https://api.rollbar.com:443",
         "method": "POST",
         "path": "/api/1/item/",

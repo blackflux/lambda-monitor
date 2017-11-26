@@ -1,20 +1,8 @@
 [
     {
-        "scope": "https://lambda.us-east-1.amazonaws.com:443",
-        "method": "GET",
-        "path": "/2015-03-31/functions/peg-solitiare-dev-overview",
-        "body": "",
-        "status": 200,
-        "response": {
-            "Tags": {
-                "STAGE": "dev"
-            }
-        }
-    },
-    {
         "scope": "https://listener.logz.io:8071",
         "method": "POST",
-        "path": "/?token=logz_invalid_token&type=dev",
+        "path": "/?token=logz_invalid_token&type=local-dev",
         "body": {
             "message": "REPORT RequestId: 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0\tDuration: 1001.14 ms\tBilled Duration: 1000 ms \tMemory Size: 256 MB\tMax Memory Used: 44 MB\t\n",
             "logGroupName": "/aws/lambda/peg-solitiare-dev-overview",
@@ -24,7 +12,8 @@
             "duration": 1001.14,
             "billedDuration": 1000,
             "maxMemory": 256,
-            "memory": 44
+            "memory": 44,
+            "env": "local-dev"
         },
         "status": 401,
         "response": "Logging token is not valid"
