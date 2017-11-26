@@ -1,4 +1,5 @@
 const path = require("path");
+const get = require("lodash.get");
 const AWS = require("aws-sdk");
 const lambdaTester = require("lambda-tdd")({
   cwd: path.join(__dirname, ".."),
