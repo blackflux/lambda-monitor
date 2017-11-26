@@ -28,4 +28,16 @@ provider:
 functions:
   process-logs:
     handler: lib/handler.processLogs
-    description: Analyse and Process Lambda CloudWatch Logs
+    description: Processor for Lambda CloudWatch Streams
+
+  subscribe:
+    handler: lib/handler.subscribe
+    description: Subscribe Processor to Lambda CloudWatch Streams
+    events:
+      - schedule: rate(1 hours)
+
+  set-retention:
+    handler: lib/handler.setRetention
+    description: Update Retention for Lambda CloudWatch Streams
+    events:
+      - schedule: rate(1 hours)
