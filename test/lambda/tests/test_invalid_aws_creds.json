@@ -1,0 +1,26 @@
+{
+  "handler": "processLogs",
+  "success": false,
+  "env": {
+    "AWS_ACCESS_KEY_ID": "00000",
+    "AWS_SECRET_ACCESS_KEY": "00000"
+  },
+  "timeout": 10000,
+  "error": [
+    {
+      "to.contain": "The security token included in the request is invalid."
+    }
+  ],
+  "logs": [
+    {
+      "to.deep.equal": [
+        "The security token included in the request is invalid."
+      ]
+    }
+  ],
+  "event": {
+    "awslogs": {
+      "data": "H4sIAAAAAAAAADVQy07DQAz8lWjFsVHW+/Imt0iECgk4NBEXqNA2capIeZGkqVDVf2eh4Js99oxnLqyjeXZHKr5GYgm7T4v04znL83SbsQ0bzj1NfoxWGhEDGBWjH7fDcTsNp9EjkTvPUeu6Q+WikY7hPLTN0riJworWcFhpWhs6327yZSLX+SPBASOASMjo7e4pLbK82DtNpebWKk21ImOc0SRjZyRKQ1STp5hPh7mcmnFphv6haReaZpa8sZehp1vL9r862Ur98gNdWFN5OSmRa2UAY65BgeRSxTEYA0oKgdwajZpzLSyiRolKxEb7El5yaXw+i+u8VdAAyhN4Fqs3/7l5+rxId0Wwo8+TX32skgAPQoCxGJZ1bUMAwtCiLkMLiKriItZKBq/+e+8jCf4CeO/ZdX/9Bkt7CuOQAQAA"
+    }
+  }
+}

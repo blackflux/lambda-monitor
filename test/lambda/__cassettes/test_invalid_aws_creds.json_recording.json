@@ -1,0 +1,26 @@
+[
+    {
+        "scope": "https://lambda.us-east-1.amazonaws.com:443",
+        "method": "GET",
+        "path": "/2015-03-31/functions/peg-solitiare-dev-overview",
+        "body": "",
+        "status": 403,
+        "response": {
+            "message": "The security token included in the request is invalid."
+        },
+        "rawHeaders": [
+            "Date",
+            "Sun, 26 Nov 2017 01:39:37 GMT",
+            "Content-Type",
+            "application/json",
+            "Content-Length",
+            "68",
+            "Connection",
+            "keep-alive",
+            "x-amzn-RequestId",
+            "a97c54df-d24a-11e7-87e8-653ccb6fe300",
+            "x-amzn-ErrorType",
+            "UnrecognizedClientException"
+        ]
+    }
+]
