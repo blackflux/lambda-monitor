@@ -28,3 +28,4 @@ provider:
 functions:
   process-logs:
     handler: lib/handler.processLogs
+    description: Analyse and Process Lambda CloudWatch Logs
