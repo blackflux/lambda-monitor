@@ -34,10 +34,10 @@ functions:
     handler: lib/handler.subscribe
     description: Subscribe Processor to Lambda CloudWatch Streams
     events:
-      - schedule: rate(1 hours)
+      - schedule: rate(1 hour)
 
   set-retention:
     handler: lib/handler.setRetention
     description: Update Retention for Lambda CloudWatch Streams
     events:
-      - schedule: rate(1 hours)
+      - schedule: rate(1 hour)
