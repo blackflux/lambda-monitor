@@ -9,7 +9,7 @@ package:
 provider:
   name: aws
   runtime: nodejs6.10
-  stage: dev
+  stage: ${opt:stage}
   region: us-east-1
   memorySize: 256
   timeout: 10
@@ -17,13 +17,19 @@ provider:
   stackTags:
     MONITORED: "false"
   environment:
-    ${file(.vars/${opt:stage, self:provider.stage}.yml)}
+    ROLLBAR_ACCESS_TOKEN: ${file(.vars/${self:provider.stage}.yml):ROLLBAR_ACCESS_TOKEN}
+    LOGGLY_TOKEN: ${file(.vars/${self:provider.stage}.yml):LOGGLY_TOKEN}
+    LOGZ_TOKEN: ${file(.vars/${self:provider.stage}.yml):LOGZ_TOKEN}
+    STAGE: ${self:provider.stage}
+    REGION: ${self:provider.region}
   iamRoleStatements:
     - Effect: "Allow"
       Action:
-        - "lambda:GetFunction"
+        - "lambda:ListFunctions"
+        - "lambda:ListTags"
+        - "logs:putRetentionPolicy"
       Resource:
-        - arn:aws:lambda:${self:provider.region}:*:function:*
+        - "*"
 
 functions:
   process-logs:
