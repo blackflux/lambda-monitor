@@ -1,0 +1,149 @@
+[
+    {
+        "scope": "https://lambda.us-east-1.amazonaws.com:443",
+        "method": "GET",
+        "path": "/2015-03-31/functions/",
+        "body": "",
+        "status": 200,
+        "response": {
+            "Functions": [
+                {
+                    "FunctionArn": "arn:aws:lambda:us-east-1:783629116497:function:lambda-monitor-dev-set-retention",
+                    "FunctionName": "lambda-monitor-dev-set-retention"
+                },
+                {
+                    "FunctionArn": "arn:aws:lambda:us-east-1:783629116497:function:lambda-monitor-prod-set-retention",
+                    "FunctionName": "lambda-monitor-prod-set-retention"
+                },
+                {
+                    "FunctionArn": "arn:aws:lambda:us-east-1:783629116497:function:lambda-monitor-dev-process-logs",
+                    "FunctionName": "lambda-monitor-dev-process-logs"
+                },
+                {
+                    "FunctionArn": "arn:aws:lambda:us-east-1:783629116497:function:lambda-monitor-prod-process-logs",
+                    "FunctionName": "lambda-monitor-prod-process-logs"
+                },
+                {
+                    "FunctionArn": "arn:aws:lambda:us-east-1:783629116497:function:lambda-monitor-dev-subscribe",
+                    "FunctionName": "lambda-monitor-dev-subscribe"
+                },
+                {
+                    "FunctionArn": "arn:aws:lambda:us-east-1:783629116497:function:lambda-monitor-prod-subscribe",
+                    "FunctionName": "lambda-monitor-prod-subscribe"
+                }
+            ],
+            "NextMarker": null
+        }
+    },
+    {
+        "scope": "https://lambda.us-east-1.amazonaws.com:443",
+        "method": "GET",
+        "path": "/2017-03-31/tags/arn%3Aaws%3Alambda%3Aus-east-1%3A783629116497%3Afunction%3Alambda-monitor-dev-process-logs",
+        "body": "",
+        "status": 200,
+        "response": {
+            "Tags": {
+                "MONITORED": "false",
+                "STAGE": "local-dev"
+            }
+        }
+    },
+    {
+        "scope": "https://lambda.us-east-1.amazonaws.com:443",
+        "method": "GET",
+        "path": "/2017-03-31/tags/arn%3Aaws%3Alambda%3Aus-east-1%3A783629116497%3Afunction%3Alambda-monitor-dev-subscribe",
+        "body": "",
+        "status": 200,
+        "response": {
+            "Tags": {
+                "MONITORED": "false",
+                "STAGE": "local-dev"
+            }
+        }
+    },
+    {
+        "scope": "https://lambda.us-east-1.amazonaws.com:443",
+        "method": "GET",
+        "path": "/2017-03-31/tags/arn%3Aaws%3Alambda%3Aus-east-1%3A783629116497%3Afunction%3Alambda-monitor-prod-process-logs",
+        "body": "",
+        "status": 200,
+        "response": {
+            "Tags": {
+                "MONITORED": "false",
+                "STAGE": "prod"
+            }
+        }
+    },
+    {
+        "scope": "https://lambda.us-east-1.amazonaws.com:443",
+        "method": "GET",
+        "path": "/2017-03-31/tags/arn%3Aaws%3Alambda%3Aus-east-1%3A783629116497%3Afunction%3Alambda-monitor-dev-set-retention",
+        "body": "",
+        "status": 200,
+        "response": {
+            "Tags": {
+                "MONITORED": "false",
+                "STAGE": "local-dev"
+            }
+        }
+    },
+    {
+        "scope": "https://lambda.us-east-1.amazonaws.com:443",
+        "method": "GET",
+        "path": "/2017-03-31/tags/arn%3Aaws%3Alambda%3Aus-east-1%3A783629116497%3Afunction%3Alambda-monitor-prod-set-retention",
+        "body": "",
+        "status": 200,
+        "response": {
+            "Tags": {
+                "MONITORED": "false",
+                "STAGE": "prod"
+            }
+        }
+    },
+    {
+        "scope": "https://lambda.us-east-1.amazonaws.com:443",
+        "method": "GET",
+        "path": "/2017-03-31/tags/arn%3Aaws%3Alambda%3Aus-east-1%3A783629116497%3Afunction%3Alambda-monitor-prod-subscribe",
+        "body": "",
+        "status": 200,
+        "response": {
+            "Tags": {
+                "MONITORED": "false",
+                "STAGE": "prod"
+            }
+        }
+    },
+    {
+        "scope": "https://logs.us-east-1.amazonaws.com:443",
+        "method": "POST",
+        "path": "/",
+        "body": {
+            "logGroupName": "/aws/lambda/lambda-monitor-dev-set-retention",
+            "retentionInDays": 30
+        },
+        "status": 200,
+        "response": ""
+    },
+    {
+        "scope": "https://logs.us-east-1.amazonaws.com:443",
+        "method": "POST",
+        "path": "/",
+        "body": {
+            "logGroupName": "/aws/lambda/lambda-monitor-dev-subscribe",
+            "retentionInDays": 30
+        },
+        "status": 200,
+        "response": ""
+    },
+    {
+        "scope": "https://logs.us-east-1.amazonaws.com:443",
+        "method": "POST",
+        "path": "/",
+        "body": {
+            "logGroupName": "/aws/lambda/lambda-monitor-dev-process-logs",
+            "retentionInDays": 30
+        },
+        "status": 200,
+        "response": ""
+    }
+]
