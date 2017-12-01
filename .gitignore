@@ -16,5 +16,5 @@ coverage/
 
 # Serverless directories
 .serverless
-.vars/*
-!.vars/sample.yml
+config/*
+!config/sample.yml
