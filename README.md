@@ -75,3 +75,5 @@ There are three lambda function created per stage. All operations are only perfo
 - **More Services** - There are various logging and reporting services out there and adding support for more is always desired.
 - **Instant Subscriptions** - Currently subscriptions are updated periodically. Ideally these would be triggered automatically when new lambda functions are deployed. There exists an [example](https://github.com/theburningmonk/lambda-logging-demo/blob/master/serverless.yml), however I was not able to get it work as intended.
 - **Logging Levels** - Ideally different logging levels should be detected. Need to agree on syntax and how to configure which logging levels get sent where.
+
+*Important:* When contributing please make sure that the recorded cassettes do not expose any security relevant information. E.g. tokens need to be replaced.
