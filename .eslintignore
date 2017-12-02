@@ -1,3 +1,4 @@
 test/lambda/env.yml
 serverless.yml
 config/*.yml
+docs/assets/*.png
