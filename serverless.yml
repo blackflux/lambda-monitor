@@ -2,6 +2,7 @@ service: lambda-monitor
 
 package:
   exclude:
+    - docs/**
     - test/**
     - coverage/**
     - config/**
