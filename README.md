@@ -37,7 +37,7 @@ Getting set up is very easy:
 
 ### Configure Rollbar (Required)
 
-First create a new Rollbar project and call it "lambda-monitor" or similar. Now create a server write key for each stage that you are using and put it into the corresponding `STAGE.yml` file (see above).
+First create a new Rollbar project and call it `lambda-monitor` or similar. Now create a server write key for each stage that you are using and put it into the corresponding `STAGE.yml` file (see above).
 
 ### Configure Log Services (All Optional)
 
@@ -55,7 +55,7 @@ There are three lambda function created per stage. All operations are only perfo
 
 **process-logs** - This lambda function is subscribed to CloudWatch and processes the logs. Anomalies are submitted to rollbar and all detected log events are sent to the configured logging services. Tagged with `"MONITOR": "1"` and `"MONITORED": "0"`.
 
-**subscribe** - Subscribes the *process-logs* lambda function (detected using the MONITOR tag) to all relevant CloudWatch Groups, excluding those functions that have the MONITORED tag set to 0. 
+**subscribe** - Subscribes the *process-logs* lambda function (detected using the `MONITOR` tag) to all relevant CloudWatch Groups, excluding those functions that have the `MONITORED` tag set to `0`. 
 
 **set-retention** - Updates the retention for all relevant CloudWatch Groups.
 
