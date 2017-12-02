@@ -30,14 +30,16 @@ Getting set up is very easy:
 1) Clone this repository locally and run `npm install`
 2) Update your AWS region in `serverless.yml` under `provider.region` (if you have multiple regions you'll need to clone this repo multiple times)
 3) Copy `config/sample.yml` to `config/STAGE.yml` for each stage `STAGE` you're using (e.g. `STAGE` could be dev, qa or prod).
-4) Configure your copied `STAGE.yml` files with the appropriate tokens. Only `ROLLBAR_ACCESS_TOKEN` is required, the other tokens are optional and need to be removed if they are unused.
+4) Configure your copied `STAGE.yml` files with the appropriate tokens. All tokens are optional and need to be removed if they are unused.
 5) Run `sls deploy --stage=STAGE` for each stage
 
 *Important:* Currently subscription updates are on a timer. So it can take up to an hour until your logs are all subscribed correctly. If you want to accelerate this you can manually execute the subscribe function.
 
-### Configure Rollbar (Required)
+### Configure Rollbar (Optional)
 
 First create a new Rollbar project and call it `lambda-monitor` or similar. Now create a server write key for each stage that you are using and put it into the corresponding `STAGE.yml` file (see above).
+
+If you decide not to enable rollbar logging please remove the token fomr the appropriate yml files.
 
 ### Configure Log Services (All Optional)
 
