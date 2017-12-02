@@ -39,7 +39,7 @@ Getting set up is very easy:
 
 First create a new Rollbar project and call it "lambda-monitor" or similar. Now create a server write key for each stage that you are using and put it into the corresponding `STAGE.yml` file (see above).
 
-### Configure Monitoring Services (All Optional)
+### Configure Log Services (All Optional)
 
 Obtain token and fill into all or corresponding `STAGE.yml`. And `env` key is submitted to the logs, so you are able to easily distinguish between your stages.
 
