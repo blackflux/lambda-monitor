@@ -12,6 +12,23 @@
 
 Automatically configure lambda log analysis and popagation to external services.
 
+## What it does
+
+- Pipe AWS Lambda Logs to external logging services (e.g. [Loggly](https://loggly.com) or [Logz](https://logz.io))
+- Log AWS Lambda anomalies to external monitoring service (e.g. [Rollbar](https://rollbar.com))
+- Fully transparent, no changes to existing Lambda functions required
+
+![Cloudwatch To Loggly](/docs/assets/cloudwatch_to_loggly.png)
+
+
 ## Getting Started
 
 ...
+
+## Contributing / What is next?
+
+
+- **Publish on AWS** - [Serverless Application Repository](https://aws.amazon.com/serverless/serverlessrepo/) has been announced to better discover, deploy, and publish serverless applications. However this requires the "wiring" logic to be written in [SAM](https://github.com/awslabs/serverless-application-model) opposed to [Serverless](https://github.com/serverless/serverless). 
+- **Transparent and Configurable Pipelines** - Currently all logs are processed and handled. What gets processed and submitted where should be more transparent and configurable.
+- **More Services** - There are various logging and reporting services out there and adding support for more is always desired.
+- **Instant Subscriptions** - Currently subscriptions are updated periodically. Ideally these would be triggered automatically when new lambda functions are deployed. There exists an [example](https://github.com/theburningmonk/lambda-logging-demo/blob/master/serverless.yml), however I was not able to get it work as intended.
