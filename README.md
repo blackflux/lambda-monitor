@@ -73,7 +73,6 @@ This repo is also published on npm. You can install it with `npm install --save 
 
 ## Contributing / What is next?
 
-
 - **Publish on AWS** - [Serverless Application Repository](https://aws.amazon.com/serverless/serverlessrepo/) has been announced to better discover, deploy, and publish serverless applications. However this requires the "wiring" logic to be written in [SAM](https://github.com/awslabs/serverless-application-model) opposed to [Serverless](https://github.com/serverless/serverless). 
 - **Transparent and Configurable Pipelines** - Currently all logs are processed and handled. What gets processed and submitted where should be more transparent and configurable.
 - **More Services** - There are various logging and reporting services out there and adding support for more is always desired.
