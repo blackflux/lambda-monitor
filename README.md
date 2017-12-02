@@ -33,6 +33,8 @@ Getting set up is very easy:
 4) Configure your copied `STAGE.yml` files with the appropriate tokens. All tokens are optional and need to be removed if they are unused.
 5) Run `sls deploy --stage=STAGE` for each stage
 
+If you decide to uninstall, simply run `sls remove --stage=STAGE`
+
 *Important:* Currently subscription updates are on a timer. So it can take up to an hour until your logs are all subscribed correctly. If you want to accelerate this you can manually execute the subscribe function.
 
 ### Configure Rollbar (Optional)
