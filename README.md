@@ -37,6 +37,10 @@ If you decide to uninstall, simply run `sls remove --stage=STAGE`
 
 *Important:* Currently subscription updates are on a timer. So it can take up to an hour until your logs are all subscribed correctly. If you want to accelerate this you can manually execute the subscribe function.
 
+### Alternative Setup (More Work)
+
+This repo is also published on npm. You can install it with `npm install --save lambda-monitor` and then use the three exposed lambda functions to your liking (note that you will need to expose the environment variables correctly).
+
 ### Configure Rollbar (Optional)
 
 First create a new Rollbar project and call it `lambda-monitor` or similar. Now create a server write key for each stage that you are using and put it into the corresponding `STAGE.yml` file (see above).
