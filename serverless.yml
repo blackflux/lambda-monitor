@@ -14,8 +14,6 @@ provider:
   memorySize: 256
   timeout: 10
   versionFunctions: false
-  stackTags:
-    MONITORED: "false"
   environment:
     ROLLBAR_ACCESS_TOKEN: ${file(config/${self:provider.stage}.yml):ROLLBAR_ACCESS_TOKEN}
     LOGGLY_TOKEN: ${file(config/${self:provider.stage}.yml):LOGGLY_TOKEN}
@@ -27,7 +25,8 @@ provider:
       Action:
         - "lambda:ListFunctions"
         - "lambda:ListTags"
-        - "logs:putRetentionPolicy"
+        - "logs:PutRetentionPolicy"
+        - "logs:PutSubscriptionFilter"
       Resource:
         - "*"
 
@@ -35,6 +34,9 @@ functions:
   process-logs:
     handler: lib/handler.processLogs
     description: Processor for Lambda CloudWatch Streams
+    tags:
+      MONITOR: "1"
+      MONITORED: "0"
 
   subscribe:
     handler: lib/handler.subscribe
@@ -47,3 +49,12 @@ functions:
     description: Update Retention for Lambda CloudWatch Streams
     events:
       - schedule: rate(1 hour)
+
+resources:
+  Resources:
+    LambdaInvokePermission:
+      Type: AWS::Lambda::Permission
+      Properties:
+        Action: lambda:InvokeFunction
+        FunctionName: ${self:service}-${self:provider.stage}-process-logs
+        Principal: logs.${self:provider.region}.amazonaws.com
