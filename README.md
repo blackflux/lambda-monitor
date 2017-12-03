@@ -41,17 +41,17 @@ If you decide to uninstall, simply run `sls remove --stage=STAGE`
 
 First create a new Rollbar project and call it `lambda-monitor` or similar. Now create a server write key for each stage that you are using and put it into the corresponding `STAGE.yml` file (see above).
 
-If you decide not to enable rollbar logging please remove the token fomr the appropriate yml files.
+If you decide not to enable rollbar logging please remove the token from the appropriate yml files.
 
 ### Configure Log Services (All Optional)
 
-Obtain token and fill into all or corresponding `STAGE.yml`. And `env` key is submitted to the logs, so you are able to easily distinguish between your stages.
+Obtain token and fill into all or corresponding `STAGE.yml`. The current stage is submitted to the logs as `env`, so you are able to easily distinguish between your stages.
 
-If you don't want to use a service, please remove the corresponding token form the yml file.
+If you don't want to use a service, please remove the corresponding token from the yml file.
 
 ### Disable Logging for a Lambda Function
 
-To exclude a lambda function from being monitored simply add the tag `"MONITORED": "0"`. Note that you need to manually unsubscribe the CloudWatch stream if `process-log` has already been subscribed to it.
+To exclude a lambda function from being monitored simply add the tag `"MONITORED": "0"`. Note that you need to manually unsubscribe if `process-log` has already been subscribed to the CloudWatch stream.
 
 ## How it works
 
@@ -65,7 +65,7 @@ There are three lambda function created per stage. All operations are only perfo
 
 ## Alternative Setup (More Work)
 
-This repo is also published on npm. You can install it with `npm install --save lambda-monitor` and then use the three exposed lambda functions to your liking (note that you will need to expose the environment variables correctly).
+This repo is also published on npm. You can install it with `npm install --save lambda-monitor` and then use the three exposed lambda functions to your liking (note that you will need to set the environment variables correctly).
 
 ## Limitations
 
