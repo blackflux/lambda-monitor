@@ -45,7 +45,7 @@ If you decide not to enable rollbar logging please remove the token from the app
 
 ### Configure Log Services (All Optional)
 
-Obtain token and fill into all or corresponding `STAGE.yml`. The current stage is submitted to the logs, so you are able to easily distinguish between your stages.
+Obtain token and fill into all or corresponding `STAGE.yml`. The current stage is submitted to the logs as `env`, so you are able to easily distinguish between your stages.
 
 If you don't want to use a service, please remove the corresponding token from the yml file.
 
