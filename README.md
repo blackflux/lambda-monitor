@@ -51,7 +51,7 @@ If you don't want to use a service, please remove the corresponding token from t
 
 ### Disable Logging for a Lambda Function
 
-To exclude a lambda function from being monitored simply add the tag `"MONITORED": "0"`. Note that you need to manually unsubscribe the CloudWatch stream if `process-log` has already been subscribed to it.
+To exclude a lambda function from being monitored simply add the tag `"MONITORED": "0"`. Note that you need to manually unsubscribe if `process-log` has already been subscribed to the CloudWatch stream.
 
 ## How it works
 
