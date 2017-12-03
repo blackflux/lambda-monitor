@@ -65,7 +65,7 @@ There are three lambda function created per stage. All operations are only perfo
 
 ## Alternative Setup (More Work)
 
-This repo is also published on npm. You can install it with `npm install --save lambda-monitor` and then use the three exposed lambda functions to your liking (note that you will need to expose the environment variables correctly).
+This repo is also published on npm. You can install it with `npm install --save lambda-monitor` and then use the three exposed lambda functions to your liking (note that you will need to set the environment variables correctly).
 
 ## Limitations
 
