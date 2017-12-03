@@ -41,7 +41,7 @@ If you decide to uninstall, simply run `sls remove --stage=STAGE`
 
 First create a new Rollbar project and call it `lambda-monitor` or similar. Now create a server write key for each stage that you are using and put it into the corresponding `STAGE.yml` file (see above).
 
-If you decide not to enable rollbar logging please remove the token fomr the appropriate yml files.
+If you decide not to enable rollbar logging please remove the token from the appropriate yml files.
 
 ### Configure Log Services (All Optional)
 
