@@ -35,7 +35,7 @@ $ git clone https://github.com/simlu/lambda-monitor
 3) Update your AWS `provider.region` in `serverless.yml`.
 4) Copy `config/sample.yml` to `config/STAGE.yml` for each `STAGE` (e.g. `dev`, `qa` or `prod`).
 5) Configure copied files with appropriate tokens. Unused token need to be removed.
-6) Comment last section `resources:` in `serverless.yml`, then run `sls deploy --stage=STAGE` for each stage, uncomment section and run deploy commands again.
+6) Comment last section `resources:` in `serverless.yml`, then run `sls deploy --stage=STAGE` for each stage, uncomment section and run deploy commands again. Trying to resolve this inconvenience [here](https://github.com/serverless/serverless/issues/4523).
 
 If you decide to uninstall, simply run `sls remove --stage=STAGE`
 
