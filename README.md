@@ -22,7 +22,7 @@ Automatically configure lambda log analysis and popagation to external services.
 
 ## Requirements
 
-- Functions need to be tagged correctly with "STAGE" tag (e.g. dev, qa, prod). The Serverless Framework does this automatically.
+- Functions need to be tagged correctly with `STAGE` tag (e.g. dev, qa, prod). The Serverless Framework does this automatically.
 
 ## Getting Started
 
