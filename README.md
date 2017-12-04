@@ -27,11 +27,15 @@ Automatically configure lambda log analysis and popagation to external services.
 ## Getting Started
 
 Getting set up is very easy:
-1) Clone this repository locally and run `npm install`
-2) Update your AWS region in `serverless.yml` under `provider.region` (if you have multiple regions you'll need to clone this repo multiple times)
-3) Copy `config/sample.yml` to `config/STAGE.yml` for each stage `STAGE` you're using (e.g. `STAGE` could be dev, qa or prod).
-4) Configure your copied `STAGE.yml` files with the appropriate tokens. All tokens are optional and need to be removed if they are unused.
-5) Run `sls deploy --stage=STAGE` for each stage
+1) Clone repository locally with
+```bash
+$ git clone https://github.com/simlu/lambda-monitor
+```
+2) Run `npm install` inside newly created `lambda-monitor` directory.
+3) Update your AWS `provider.region` in `serverless.yml`.
+4) Copy `config/sample.yml` to `config/STAGE.yml` for each `STAGE` (e.g. `dev`, `qa` or `prod`).
+5) Configure copied files with appropriate tokens. Unused token need to be removed.
+6) Run `sls deploy --stage=STAGE` for each stage.
 
 If you decide to uninstall, simply run `sls remove --stage=STAGE`
 
