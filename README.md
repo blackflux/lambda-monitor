@@ -41,6 +41,11 @@ If you decide to uninstall, simply run `sls remove --stage=STAGE`
 
 First create a new Rollbar project and call it `lambda-monitor` or similar. Now create a server write key for each stage that you are using and put it into the corresponding `STAGE.yml` file (see above).
 
+You can configure the minimum log level that should be send to rollbar using `ROLLBAR_LOG_LEVEL`. Available options are:
+`DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`
+
+To tag log messages just prefix them with, e.g. `DEBUG:`. Default log level is `WARNING`.
+
 If you decide not to enable rollbar logging please remove the token from the appropriate yml files.
 
 ### Configure Log Services (All Optional)
@@ -77,6 +82,5 @@ This repo is also published on npm. You can install it with `npm install --save 
 - **Transparent and Configurable Pipelines** - Currently all logs are processed and handled. What gets processed and submitted where should be more transparent and configurable.
 - **More Services** - There are various logging and reporting services out there and adding support for more is always desired.
 - **Instant Subscriptions** - Currently subscriptions are updated periodically. Ideally these would be triggered automatically when new lambda functions are deployed. There exists an [example](https://github.com/theburningmonk/lambda-logging-demo/blob/master/serverless.yml), however I was not able to get it work as intended.
-- **Logging Levels** - Ideally different logging levels should be detected. Need to agree on syntax and how to configure which logging levels get sent where.
 
 *Important:* When contributing please make sure that the recorded cassettes do not expose any security relevant information. E.g. tokens need to be replaced.

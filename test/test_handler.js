@@ -14,4 +14,4 @@ const lambdaTester = require("lambda-tdd")({
 process.env.AWS_ACCESS_KEY_ID = get(AWS, 'config.credentials.accessKeyId', "DUMMY");
 process.env.AWS_SECRET_ACCESS_KEY = get(AWS, 'config.credentials.secretAccessKey', "DUMMY");
 
-lambdaTester.execute();
+lambdaTester.execute((process.argv.slice(2).find(e => e.startsWith("--filter=")) || "").substring(9));
