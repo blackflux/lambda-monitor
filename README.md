@@ -22,7 +22,8 @@ Automatically configure lambda log analysis and popagation to external services.
 
 ## Requirements
 
-- Functions need to be tagged correctly with `STAGE` tag (e.g. dev, qa, prod). The Serverless Framework does this automatically.
+- Install [Serverless Framework](https://serverless.com/) with `npm install -g serverless`.
+- All functions need to be tagged correctly with `STAGE` tag to be monitored (e.g. dev, qa, prod). The Serverless Framework does this automatically.
 
 ## Getting Started
 
