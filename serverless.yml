@@ -2,6 +2,8 @@ service: lambda-monitor
 
 package:
   exclude:
+    - "*"
+    - .idea/**
     - docs/**
     - test/**
     - coverage/**
@@ -59,3 +61,5 @@ resources:
         Action: lambda:InvokeFunction
         FunctionName: ${self:service}-${self:provider.stage}-process-logs
         Principal: logs.${self:provider.region}.amazonaws.com
+      DependsOn:
+        - ProcessDashlogsLambdaFunction
