@@ -51,6 +51,8 @@ To tag log messages just prefix them with, e.g. `DEBUG:`. Default log level is `
 
 If you decide not to enable rollbar logging please remove the token from the appropriate yml files.
 
+> Note: For Rollbar Logging directly from Lambda Function see [lambda-rollbar](https://github.com/simlu/lambda-rollbar).
+
 ### Configure Log Services (All Optional)
 
 Obtain token and fill into all or corresponding `STAGE.yml`. The current stage is submitted to the logs as `env`, so you are able to easily distinguish between your stages.
