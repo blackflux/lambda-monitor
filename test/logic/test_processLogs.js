@@ -14,7 +14,9 @@ describe("Testing processLogs", () => {
           "L2tBY25TwJ2UReIQ5yE9z8+zeN2/vgGRLcfOsQEAAA=="
         )
       }
-    }, null, (err) => {
+    }, {
+      getRemainingTimeInMillis: () => 30000
+    }, (err) => {
       expect(logs).to.deep.equal(["INFO: Task timed out after 1.00 seconds\n\n"]);
       expect(err).to.equal(null);
       done();
