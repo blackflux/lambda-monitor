@@ -14,6 +14,7 @@ Automatically configure lambda log analysis and popagation to external services.
 
 ## What it does
 
+- Smart AWS Lambda Log parsing and analysis
 - Pipe AWS Lambda Logs to external logging services (e.g. [Loggly](https://loggly.com) or [Logz](https://logz.io))
 - Log AWS Lambda anomalies to external monitoring service (e.g. [Rollbar](https://rollbar.com))
 - Fully transparent, no changes to existing Lambda functions required
