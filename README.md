@@ -40,8 +40,6 @@ $ git clone https://github.com/simlu/lambda-monitor
 
 If you decide to uninstall, simply run `sls remove --stage=STAGE`
 
-*Important:* Currently subscription updates are on a timer. So it can take up to an hour until your logs are all subscribed correctly. If you want to accelerate this you can manually execute the subscribe function.
-
 ### Configure Rollbar (Optional)
 
 First create a new Rollbar project and call it `lambda-monitor` or similar. Now create a server write key for each stage that you are using and put it into the corresponding `STAGE.yml` file (see above).
@@ -79,7 +77,7 @@ This repo is also published on npm. You can install it with `npm install --save 
 
 ## Limitations
 
-- This service currently relies on keeping your log output clean. Output that is not recognized as default Lambda CloudWatch output is immediately logged to rollbar.
+- Currently subscription updates happen during initial deploy and periodically. So it can take up to an hour until new lambda log streams are monitored. If you want to accelerate this you can manually execute the subscribe function.
 
 ## Contributing / What is next?
 

@@ -63,3 +63,13 @@ resources:
         Principal: logs.${self:provider.region}.amazonaws.com
       DependsOn:
         - ProcessDashlogsLambdaFunction
+
+    TriggerLambdaResource:
+      Type: Custom::TriggerLambdaResource
+      Properties:
+        ServiceToken:
+          Fn::GetAtt: [SubscribeLambdaFunction, Arn]
+      DependsOn:
+        - LambdaInvokePermission
+        - SubscribeLambdaFunction
+        - ProcessDashlogsLambdaFunction
