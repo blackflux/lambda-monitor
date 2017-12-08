@@ -46,6 +46,17 @@ functions:
     description: Subscribe Processor to Lambda CloudWatch Streams
     events:
       - schedule: rate(1 hour)
+      - cloudwatchEvent:
+          event:
+            source:
+              - aws.logs
+            detail-type:
+              - AWS API Call via CloudTrail
+            detail:
+              eventSource:
+                - logs.amazonaws.com
+              eventName:
+                - CreateLogGroup
 
   set-retention:
     handler: lib/handler.setRetention
