@@ -1,5 +1,7 @@
 # Lambda Monitoring
 
+[![Join the chat at https://gitter.im/simlu/lambda-monitor](https://badges.gitter.im/simlu/lambda-monitor.svg)](https://gitter.im/simlu/lambda-monitor?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://img.shields.io/travis/simlu/lambda-monitor/master.svg)](https://travis-ci.org/simlu/lambda-monitor)
 [![Test Coverage](https://img.shields.io/coveralls/simlu/lambda-monitor/master.svg)](https://coveralls.io/github/simlu/lambda-monitor?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/simlu/lambda-monitor.svg)](https://greenkeeper.io/)
