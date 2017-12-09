@@ -4,7 +4,7 @@
   "timeout": 30000,
   "response": [
     {
-      "to.deep.equal": "\"Done.\""
+      "to.deep.equal": "Done."
     }
   ],
   "logs": [
