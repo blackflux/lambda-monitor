@@ -175,6 +175,7 @@ resources:
                   s3:x-amz-acl: bucket-owner-full-control
       DependsOn:
         - CloudTrailBucket
+        - DeleteCloudTrailBucket
 
     CloudTrail:
       Type: AWS::CloudTrail::Trail
