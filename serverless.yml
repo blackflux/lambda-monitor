@@ -32,6 +32,14 @@ provider:
         - "logs:PutSubscriptionFilter"
       Resource:
         - "*"
+    - Effect: "Allow"
+      Action:
+        - "s3:*"
+      Resource:
+        Fn::Join:
+          - ""
+          - - "arn:aws:s3:::"
+            - Ref: CloudTrailBucket
 
 functions:
   process-logs:
