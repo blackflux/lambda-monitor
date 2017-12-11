@@ -34,7 +34,17 @@ provider:
         - "*"
     - Effect: "Allow"
       Action:
-        - "s3:*"
+        - "s3:DeleteObject"
+      Resource:
+        Fn::Join:
+          - ""
+          - - "arn:aws:s3:::"
+            - Ref: CloudTrailBucket
+            - "/*"
+    - Effect: "Allow"
+      Action:
+        - "s3:ListBucket"
+        - "s3:DeleteBucket"
       Resource:
         Fn::Join:
           - ""
