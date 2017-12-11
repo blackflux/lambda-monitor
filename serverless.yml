@@ -87,14 +87,25 @@ resources:
         - ProcessDashlogsLambdaFunction
 
     # Dummy Resource to ensure Subscribe gets invoked on first deploy
-    TriggerLambdaResource:
-      Type: Custom::TriggerLambdaResource
+    TriggerLambdaSubscribeResource:
+      Type: Custom::TriggerLambdaSubscribeResource
       Properties:
         ServiceToken:
           Fn::GetAtt: [SubscribeLambdaFunction, Arn]
       DependsOn:
         - LambdaInvokePermission
         - SubscribeLambdaFunction
+        - ProcessDashlogsLambdaFunction
+
+    # Dummy Resource to ensure setRetention gets invoked on first deploy
+    TriggerLambdaSetRetentionResource:
+      Type: Custom::TriggerLambdaSetRetentionResource
+      Properties:
+        ServiceToken:
+          Fn::GetAtt: [SetDashretentionLambdaFunction, Arn]
+      DependsOn:
+        - LambdaInvokePermission
+        - SetDashretentionLambdaFunction
         - ProcessDashlogsLambdaFunction
 
     # Used to receive CloudTrail logs (required for cloudwatchEvent above)
