@@ -63,6 +63,17 @@ functions:
     description: Update Retention for Lambda CloudWatch Streams
     events:
       - schedule: rate(1 hour)
+      - cloudwatchEvent:
+          event:
+            source:
+              - aws.logs
+            detail-type:
+              - AWS API Call via CloudTrail
+            detail:
+              eventSource:
+                - logs.amazonaws.com
+              eventName:
+                - CreateLogGroup
 
 resources:
   Resources:
@@ -85,3 +96,55 @@ resources:
         - LambdaInvokePermission
         - SubscribeLambdaFunction
         - ProcessDashlogsLambdaFunction
+
+    # Used to receive CloudTrail logs (required for cloudwatchEvent above)
+    CloudTrailBucket:
+      Type: AWS::S3::Bucket
+
+    # Reference: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html
+    CloudTrailBucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket:
+          Ref: CloudTrailBucket
+        PolicyDocument:
+          Statement:
+            -
+              Sid: AWSCloudTrailAclCheck
+              Effect: Allow
+              Principal:
+                Service: cloudtrail.amazonaws.com
+              Action: s3:GetBucketAcl
+              Resource:
+                Fn::Join:
+                  - ""
+                  - - "arn:aws:s3:::"
+                    - Ref: CloudTrailBucket
+            -
+              Sid: AWSCloudTrailWrite
+              Effect: Allow
+              Principal:
+                Service: cloudtrail.amazonaws.com
+              Action: s3:PutObject
+              Resource:
+                Fn::Join:
+                  - ""
+                  - - "arn:aws:s3:::"
+                    - Ref: CloudTrailBucket
+                    - "/AWSLogs/"
+                    - Ref: "AWS::AccountId"
+                    - "/*"
+              Condition:
+                StringEquals:
+                  s3:x-amz-acl: bucket-owner-full-control
+      DependsOn:
+        - CloudTrailBucket
+
+    CloudTrail:
+      Type: AWS::CloudTrail::Trail
+      Properties:
+        S3BucketName:
+          Ref: CloudTrailBucket
+        IsLogging: true
+      DependsOn:
+        - CloudTrailBucketPolicy
