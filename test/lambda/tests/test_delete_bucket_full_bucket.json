@@ -1,0 +1,41 @@
+{
+  "handler": "deleteBucket",
+  "success": true,
+  "timeout": 30000,
+  "response": [
+    {
+      "to.deep.equal": "Done."
+    }
+  ],
+  "logs": [
+    {
+      "to.deep.equal": [
+        "emptyBucket(): {\"Bucket\":\"full-bucket-32498uerfgjk45t89u34tjwer\"}",
+        "Deleting 1000 items...",
+        "Deleted 1000 items ok.",
+        "emptyBucket(): {\"Bucket\":\"full-bucket-32498uerfgjk45t89u34tjwer\",\"ContinuationToken\":\"1p4UxYVQuenbGQZuLPef3IsbzGMmVRobzdJHhgFY78XQZYfSI7EONylWKyzdAeeQkjU08IT/OR6U8I2gqt0WwXgM9lK1qoIaL\"}",
+        "Deleting 382 items...",
+        "Deleted 382 items ok.",
+        "full-bucket-32498uerfgjk45t89u34tjwer emptied and deleted!",
+        "Response body:\n",
+        "{\"Status\":\"SUCCESS\",\"Reason\":\"See the details in CloudWatch Log Stream: undefined\",\"StackId\":\"arn:aws:cloudformation:eu-west-1:...\",\"RequestId\":\"afd8d7c5-9376-4013-8b3b-307517b8719e\",\"LogicalResourceId\":\"Route53\",\"Data\":{}}",
+        "Status code: 200",
+        "Status message: OK"
+      ]
+    }
+  ],
+  "event": {
+    "RequestType": "Delete",
+    "ServiceToken": "arn:aws:lambda:...:function:route53Dependency",
+    "ResponseURL": "https://requestb.in/1b23n7c1",
+    "StackId": "arn:aws:cloudformation:eu-west-1:...",
+    "RequestId": "afd8d7c5-9376-4013-8b3b-307517b8719e",
+    "LogicalResourceId": "Route53",
+    "ResourceType": "Custom::Route53Dependency",
+    "ResourceProperties": {
+      "ServiceToken": "arn:aws:lambda:...:function:route53Dependency",
+      "DomainName": "example.com",
+      "BucketName": "full-bucket-32498uerfgjk45t89u34tjwer"
+    }
+  }
+}
