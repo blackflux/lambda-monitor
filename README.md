@@ -66,7 +66,13 @@ To exclude a lambda function from being monitored simply add the tag `"MONITORED
 
 ## How it works
 
-There are three lambda function created per stage. All operations are only performed on lambda functions tagged with the corresponding stage.
+While deploying this project is very straight forward, there is a lot of complexity going on behind the scenes to ensure:
+
+- All Lambda functions are subscribed on initial deploy
+- Newly created Lambda function are immediately subscribed
+- Periodic checks for Lambda functions not subscribed (self healing)
+
+There are four lambda function created per stage. All operations are only performed on lambda functions tagged with the corresponding stage.
 
 **process-logs** - This lambda function is subscribed to CloudWatch and processes the logs. Anomalies are submitted to rollbar and all detected log events are sent to the configured logging services. Tagged with `"MONITOR": "1"` and `"MONITORED": "0"`.
 
@@ -74,19 +80,16 @@ There are three lambda function created per stage. All operations are only perfo
 
 **set-retention** - Updates the retention for all relevant CloudWatch Groups.
 
+**empty-bucket** - Empty and delete CloudTrail bucket when stage is removed from AWS.
+
 ## Alternative Setup (More Work)
 
 This repo is also published on npm. You can install it with `npm install --save lambda-monitor` and then use the three exposed lambda functions to your liking (note that you will need to set the environment variables correctly).
-
-## Limitations
-
-- Currently subscription updates happen during initial deploy and periodically. So it can take up to an hour until new lambda log streams are monitored. If you want to accelerate this you can manually execute the subscribe function.
 
 ## Contributing / What is next?
 
 - **Publish on AWS** - [Serverless Application Repository](https://aws.amazon.com/serverless/serverlessrepo/) has been announced to better discover, deploy, and publish serverless applications. However this requires the "wiring" logic to be written in [SAM](https://github.com/awslabs/serverless-application-model) opposed to [Serverless](https://github.com/serverless/serverless). 
 - **Transparent and Configurable Pipelines** - Currently all logs are processed and handled. What gets processed and submitted where should be more transparent and configurable.
 - **More Services** - There are various logging and reporting services out there and adding support for more is always desired.
-- **Instant Subscriptions** - Currently subscriptions are updated periodically. Ideally these would be triggered automatically when new lambda functions are deployed. There exists an [example](https://github.com/theburningmonk/lambda-logging-demo/blob/master/serverless.yml), however I was not able to get it work as intended.
 
 *Important:* When contributing please make sure that the recorded cassettes do not expose any security relevant information. E.g. tokens need to be replaced.

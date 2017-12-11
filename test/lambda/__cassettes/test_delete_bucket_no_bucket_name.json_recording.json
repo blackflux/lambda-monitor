@@ -1,0 +1,21 @@
+[
+  {
+    "scope": "https://requestb.in:443",
+    "method": "PUT",
+    "path": "/1b23n7c1",
+    "body": {
+      "Status": "FAILED",
+      "Reason": "See the details in CloudWatch Log Stream: undefined",
+      "StackId": "arn:aws:cloudformation:eu-west-1:...",
+      "RequestId": "afd8d7c5-9376-4013-8b3b-307517b8719e",
+      "LogicalResourceId": "Route53",
+      "Data": {}
+    },
+    "headers": {
+      "content-type": "",
+      "content-length": 223
+    },
+    "status": 200,
+    "response": ""
+  }
+]

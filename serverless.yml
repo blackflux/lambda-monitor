@@ -15,7 +15,7 @@ provider:
   stage: ${opt:stage}
   region: us-east-1
   memorySize: 256
-  timeout: 30
+  timeout: 300
   versionFunctions: false
   environment:
     ROLLBAR_ACCESS_TOKEN: ${file(config/${self:provider.stage}.yml):ROLLBAR_ACCESS_TOKEN}
@@ -75,6 +75,10 @@ functions:
               eventName:
                 - CreateLogGroup
 
+  delete-bucket:
+    handler: lib/handler.deleteBucket
+    description: Delete s3 bucket and all files in it
+
 resources:
   Resources:
     LambdaInvokePermission:
@@ -88,7 +92,7 @@ resources:
 
     # Dummy Resource to ensure Subscribe gets invoked on first deploy
     TriggerLambdaSubscribeResource:
-      Type: Custom::TriggerLambdaSubscribeResource
+      Type: Custom::LambdaDependency
       Properties:
         ServiceToken:
           Fn::GetAtt: [SubscribeLambdaFunction, Arn]
@@ -99,7 +103,7 @@ resources:
 
     # Dummy Resource to ensure setRetention gets invoked on first deploy
     TriggerLambdaSetRetentionResource:
-      Type: Custom::TriggerLambdaSetRetentionResource
+      Type: Custom::LambdaDependency
       Properties:
         ServiceToken:
           Fn::GetAtt: [SetDashretentionLambdaFunction, Arn]
@@ -111,6 +115,19 @@ resources:
     # Used to receive CloudTrail logs (required for cloudwatchEvent above)
     CloudTrailBucket:
       Type: AWS::S3::Bucket
+      DeletionPolicy: Retain
+
+    # Reference: https://community.alfresco.com/community/platform/blog/2016/10/13/how-a-lambda-backed-custom-resource-saved-the-day
+    DeleteCloudTrailBucket:
+      Type: Custom::LambdaDependency
+      Properties:
+        ServiceToken:
+          Fn::GetAtt: [DeleteDashbucketLambdaFunction, Arn]
+        BucketName:
+          Ref: CloudTrailBucket
+      DependsOn:
+        - CloudTrailBucket
+        - DeleteDashbucketLambdaFunction
 
     # Reference: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html
     CloudTrailBucketPolicy:
