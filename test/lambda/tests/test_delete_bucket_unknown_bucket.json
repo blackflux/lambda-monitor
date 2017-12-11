@@ -1,0 +1,36 @@
+{
+  "handler": "deleteBucket",
+  "success": false,
+  "timeout": 30000,
+  "error": [
+    {
+      "to.deep.equal": "The specified bucket does not exist"
+    }
+  ],
+  "logs": [
+    {
+      "to.deep.equal": [
+        "emptyBucket(): {\"Bucket\":\"unknown-bucket-weflkj34tEfoijkwefdqwdojkerg\"}",
+        "Response body:\n",
+        "{\"Status\":\"FAILED\",\"Reason\":\"See the details in CloudWatch Log Stream: undefined\",\"StackId\":\"arn:aws:cloudformation:eu-west-1:...\",\"RequestId\":\"afd8d7c5-9376-4013-8b3b-307517b8719e\",\"LogicalResourceId\":\"Route53\",\"Data\":{}}",
+        "Status code: 200",
+        "Status message: null",
+        "The specified bucket does not exist"
+      ]
+    }
+  ],
+  "event": {
+    "RequestType": "Delete",
+    "ServiceToken": "arn:aws:lambda:...:function:route53Dependency",
+    "ResponseURL": "https://requestb.in/1b23n7c1",
+    "StackId": "arn:aws:cloudformation:eu-west-1:...",
+    "RequestId": "afd8d7c5-9376-4013-8b3b-307517b8719e",
+    "LogicalResourceId": "Route53",
+    "ResourceType": "Custom::Route53Dependency",
+    "ResourceProperties": {
+      "ServiceToken": "arn:aws:lambda:...:function:route53Dependency",
+      "DomainName": "example.com",
+      "BucketName": "unknown-bucket-weflkj34tEfoijkwefdqwdojkerg"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "scope": "https://s3.amazonaws.com:443",
+    "method": "GET",
+    "path": "/unknown-bucket-weflkj34tEfoijkwefdqwdojkerg?list-type=2",
+    "body": "",
+    "status": 404,
+    "response": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>NoSuchBucket</Code><Message>The specified bucket does not exist</Message><BucketName>unknown-bucket-weflkj34tEfoijkwefdqwdojkerg</BucketName><RequestId>D05DB1E1F6C5577F</RequestId><HostId>DcMwUFfoHAknx+mhQcZ9I1qjOlTG6YI/rxbSqXdvHDWz0tKydFvaK+q9QQanfk6Yvamhgxxoafk=</HostId></Error>",
+    "rawHeaders": [
+      "x-amz-request-id",
+      "D05DB1E1F6C5577F",
+      "x-amz-id-2",
+      "DcMwUFfoHAknx+mhQcZ9I1qjOlTG6YI/rxbSqXdvHDWz0tKydFvaK+q9QQanfk6Yvamhgxxoafk=",
+      "Content-Type",
+      "application/xml",
+      "Transfer-Encoding",
+      "chunked",
+      "Date",
+      "Mon, 11 Dec 2017 03:13:26 GMT",
+      "Server",
+      "AmazonS3"
+    ]
+  },
+  {
+    "scope": "https://requestb.in:443",
+    "method": "PUT",
+    "path": "/1b23n7c1",
+    "body": {
+      "Status": "FAILED",
+      "Reason": "See the details in CloudWatch Log Stream: undefined",
+      "StackId": "arn:aws:cloudformation:eu-west-1:...",
+      "RequestId": "afd8d7c5-9376-4013-8b3b-307517b8719e",
+      "LogicalResourceId": "Route53",
+      "Data": {}
+    },
+    "headers": {
+      "content-type": "",
+      "content-length": 223
+    },
+    "status": 200,
+    "response": ""
+  }
+]

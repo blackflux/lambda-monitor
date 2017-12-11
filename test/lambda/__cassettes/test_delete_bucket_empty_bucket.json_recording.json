@@ -1,0 +1,63 @@
+[
+  {
+    "scope": "https://empty-bucket-32498uerfgjk45t89u34tjwer.s3.amazonaws.com:443",
+    "method": "GET",
+    "path": "/?list-type=2",
+    "body": "",
+    "status": 200,
+    "response": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ListBucketResult xmlns=\"http://s3.amazonaws.com/doc/2006-03-01/\"><Name>empty-bucket-32498uerfgjk45t89u34tjwer</Name><Prefix></Prefix><KeyCount>0</KeyCount><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated></ListBucketResult>",
+    "rawHeaders": [
+      "x-amz-id-2",
+      "eC0zSrwyaw6affDeTjmS1BIfA5iI1dVEb7SRH5JvWyQsgQC7w48lIpZXWTrHF4zCqyV4/9K6FsE=",
+      "x-amz-request-id",
+      "70E24E2300A677F2",
+      "Date",
+      "Mon, 11 Dec 2017 03:34:53 GMT",
+      "x-amz-bucket-region",
+      "us-east-1",
+      "Content-Type",
+      "application/xml",
+      "Transfer-Encoding",
+      "chunked",
+      "Server",
+      "AmazonS3"
+    ]
+  },
+  {
+    "scope": "https://empty-bucket-32498uerfgjk45t89u34tjwer.s3.amazonaws.com:443",
+    "method": "DELETE",
+    "path": "/",
+    "body": "",
+    "status": 204,
+    "response": "",
+    "rawHeaders": [
+      "x-amz-id-2",
+      "YqLVhVQuN68qIgIV9A6cAejMaZz9M54Idbz6fp6Rrcf+SsAxz8wpGoOpicdglZQ6iCtLwvzi2EE=",
+      "x-amz-request-id",
+      "F863FAD28F090DA3",
+      "Date",
+      "Mon, 11 Dec 2017 03:34:53 GMT",
+      "Server",
+      "AmazonS3"
+    ]
+  },
+  {
+    "scope": "https://requestb.in:443",
+    "method": "PUT",
+    "path": "/1b23n7c1",
+    "body": {
+      "Status": "SUCCESS",
+      "Reason": "See the details in CloudWatch Log Stream: undefined",
+      "StackId": "arn:aws:cloudformation:eu-west-1:...",
+      "RequestId": "afd8d7c5-9376-4013-8b3b-307517b8719e",
+      "LogicalResourceId": "Route53",
+      "Data": {}
+    },
+    "headers": {
+      "content-type": "",
+      "content-length": 223
+    },
+    "status": 200,
+    "response": ""
+  }
+]
