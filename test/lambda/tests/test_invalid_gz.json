@@ -4,7 +4,7 @@
   "timeout": 10000,
   "error": [
     {
-      "to.equal": "{\"errno\":-3,\"code\":\"Z_DATA_ERROR\"}"
+      "to.equal": "incorrect header check"
     }
   ],
   "logs": [
