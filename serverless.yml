@@ -185,7 +185,7 @@ resources:
                   s3:x-amz-acl: bucket-owner-full-control
       DependsOn:
         - CloudTrailBucket
-        - DeleteCloudTrailBucket
+        - DeleteCloudTrailBucket # ensure the policy gets removed before bucket gets cleared (no more files)
 
     CloudTrail:
       Type: AWS::CloudTrail::Trail
