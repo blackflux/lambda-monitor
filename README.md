@@ -15,7 +15,8 @@ Automatically configure lambda log analysis and popagation to external services.
 ## What it does
 
 - Parsing and analysis of AWS Lambda Logs
-- Pipes AWS Lambda Logs to external logging services (e.g. [Loggly](https://loggly.com) or [Logz](https://logz.io))
+- Sets Lambda Cloudwatch log retention to 30 days to reduce storage cost
+- Pipes AWS Lambda Logs to external logging services (e.g. [Loggly](https://loggly.com), [Logz](https://logz.io) or [Datadog](https://www.datadoghq.com))
 - Detects and sends AWS Lambda anomalies to external monitoring service (e.g. [Rollbar](https://rollbar.com))
 - Fully transparent, no changes to existing Lambda functions required
 
