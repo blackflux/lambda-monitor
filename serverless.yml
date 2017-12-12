@@ -18,9 +18,11 @@ provider:
   timeout: 300
   versionFunctions: false
   environment:
-    ROLLBAR_ACCESS_TOKEN: ${file(config/${self:provider.stage}.yml):ROLLBAR_ACCESS_TOKEN}
     LOGGLY_TOKEN: ${file(config/${self:provider.stage}.yml):LOGGLY_TOKEN}
     LOGZ_TOKEN: ${file(config/${self:provider.stage}.yml):LOGZ_TOKEN}
+    DATADOG_API_KEY: ${file(config/${self:provider.stage}.yml):DATADOG_API_KEY}
+    ROLLBAR_ACCESS_TOKEN: ${file(config/${self:provider.stage}.yml):ROLLBAR_ACCESS_TOKEN}
+    ROLLBAR_REPORT_LEVEL: ${file(config/${self:provider.stage}.yml):ROLLBAR_REPORT_LEVEL}
     STAGE: ${self:provider.stage}
     REGION: ${self:provider.region}
   iamRoleStatements:
