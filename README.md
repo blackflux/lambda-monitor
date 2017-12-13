@@ -53,13 +53,15 @@ To tag log messages just prefix them with, e.g. `DEBUG:`. Default log level is `
 
 If you decide not to enable rollbar logging please remove the token from the appropriate yml files.
 
-> Note: For Rollbar Logging directly from Lambda Function see [lambda-rollbar](https://github.com/simlu/lambda-rollbar).
+> :link: For Rollbar Logging directly from Lambda Function see [lambda-rollbar](https://github.com/simlu/lambda-rollbar).
 
 ### Configure Log Services (All Optional)
 
 Obtain token and fill into all or corresponding `STAGE.yml`. The current stage is submitted to the logs as `env`, so you are able to easily distinguish between your stages.
 
 If you don't want to use a service, please remove the corresponding token from the yml file.
+
+> :warning: It is recommended that you only enable one logging service at a time to avoid log resubmission when a service temporarily fails to accept data.
 
 ### Disable Logging for a Lambda Function
 
@@ -93,4 +95,4 @@ This repo is also published on npm. You can install it with `npm install --save 
 - **Transparent and Configurable Pipelines** - Currently all logs are processed and handled. What gets processed and submitted where should be more transparent and configurable.
 - **More Services** - There are various logging and reporting services out there and adding support for more is always desired.
 
-*Important:* When contributing please make sure that the recorded cassettes do not expose any security relevant information. E.g. tokens need to be replaced.
+> :warning: When contributing please make sure that the recorded cassettes do not expose any security relevant information. E.g. tokens need to be replaced.
