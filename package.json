@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "chai": "4.1.2",
-    "nock": "9.1.4",
+    "nock": "9.1.5",
     "js-gardener": "1.10.5",
     "lambda-tdd": "1.10.3",
     "coveralls": "3.0.0",
