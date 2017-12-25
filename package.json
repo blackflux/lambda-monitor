@@ -44,7 +44,7 @@
   "devDependencies": {
     "chai": "4.1.2",
     "nock": "9.1.5",
-    "js-gardener": "1.10.8",
+    "js-gardener": "1.10.9",
     "lambda-tdd": "1.10.4",
     "coveralls": "3.0.0",
     "semantic-release": "11.0.2"
