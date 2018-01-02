@@ -47,6 +47,7 @@
     "js-gardener": "1.10.10",
     "lambda-tdd": "1.10.4",
     "coveralls": "3.0.0",
+    "mocha": "4.1.0",
     "semantic-release": "11.0.2"
   },
   "licenses": [
