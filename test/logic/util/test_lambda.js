@@ -11,10 +11,10 @@ const lambda = require("../../../lib/logic/util/lambda")({
 });
 
 const func = { FunctionARN: "FUNCTION_ARN", FunctionName: "FUNCTION_NAME" };
-nockBack.setMode('record');
 
 describe("Testing Lambda", () => {
   before(() => {
+    nockBack.setMode('record');
     nockBack.fixtures = path.join(__dirname, "__cassette");
   });
 
@@ -41,6 +41,26 @@ describe("Testing Lambda", () => {
   it("Testing subscribeCloudWatchLogGroup Error", (done) => {
     nockBack(`lambda-subscribe-cloud-watch-log-group-error.json_recording.json`, {}, (nockDone) => {
       lambdaInvalid.subscribeCloudWatchLogGroup(func, func).catch((e) => {
+        expect(e.message).to.equal("The security token included in the request is invalid.");
+        nockDone();
+        done();
+      });
+    });
+  });
+
+  it("Testing appendLogRetentionInfo Error", (done) => {
+    nockBack(`lambda-append-log-retention-info-error.json_recording.json`, {}, (nockDone) => {
+      lambdaInvalid.appendLogRetentionInfo([func]).catch((e) => {
+        expect(e.message).to.equal("The security token included in the request is invalid.");
+        nockDone();
+        done();
+      });
+    });
+  });
+
+  it("Testing appendLogSubscriptionInfo Error", (done) => {
+    nockBack(`lambda-append-log-subscription-info-error.json_recording.json`, {}, (nockDone) => {
+      lambdaInvalid.appendLogSubscriptionInfo([func]).catch((e) => {
         expect(e.message).to.equal("The security token included in the request is invalid.");
         nockDone();
         done();
