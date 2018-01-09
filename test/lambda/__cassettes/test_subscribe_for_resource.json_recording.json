@@ -1,6 +1,6 @@
 [
   {
-    "scope": "https://tagging.us-west-2.amazonaws.com:443",
+    "scope": "https://tagging.us-east-1.amazonaws.com:443",
     "method": "POST",
     "path": "/",
     "body": {
@@ -8,7 +8,7 @@
         {
           "Key": "STAGE",
           "Values": [
-            "dev"
+            "local-dev"
           ]
         }
       ],

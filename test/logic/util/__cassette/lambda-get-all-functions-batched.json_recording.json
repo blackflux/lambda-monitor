@@ -1,6 +1,6 @@
 [
   {
-    "scope": "https://tagging.us-west-2.amazonaws.com:443",
+    "scope": "https://tagging.us-east-1.amazonaws.com:443",
     "method": "POST",
     "path": "/",
     "body": {
@@ -14,7 +14,7 @@
       "PaginationToken": "token1",
       "ResourceTagMappingList": [
         {
-          "ResourceARN": "arn:aws:lambda:us-west-2:0123456789:function:function-name-one",
+          "ResourceARN": "arn:aws:lambda:us-east-1:0123456789:function:function-name-one",
           "Tags": [
             {
               "Key": "STAGE",
@@ -26,7 +26,7 @@
     }
   },
   {
-    "scope": "https://tagging.us-west-2.amazonaws.com:443",
+    "scope": "https://tagging.us-east-1.amazonaws.com:443",
     "method": "POST",
     "path": "/",
     "body": {
@@ -41,7 +41,7 @@
       "PaginationToken": "token2",
       "ResourceTagMappingList": [
         {
-          "ResourceARN": "arn:aws:lambda:us-west-2:0123456789:function:function-name-two",
+          "ResourceARN": "arn:aws:lambda:us-east-1:0123456789:function:function-name-two",
           "Tags": [
             {
               "Key": "STAGE",
@@ -53,7 +53,7 @@
     }
   },
   {
-    "scope": "https://tagging.us-west-2.amazonaws.com:443",
+    "scope": "https://tagging.us-east-1.amazonaws.com:443",
     "method": "POST",
     "path": "/",
     "body": {

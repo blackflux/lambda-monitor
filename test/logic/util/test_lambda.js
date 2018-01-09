@@ -7,7 +7,7 @@ const lambdaInvalid = require("../../../lib/logic/util/lambda")({
   secretAccessKey: "INVALID_SECRET_ACCESS_KEY"
 });
 const lambda = require("../../../lib/logic/util/lambda")({
-  region: "us-west-2"
+  region: "us-east-1"
 });
 
 const func = { FunctionARN: "FUNCTION_ARN", FunctionName: "FUNCTION_NAME" };
