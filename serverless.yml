@@ -30,6 +30,8 @@ provider:
       Action:
         - "lambda:ListFunctions"
         - "lambda:ListTags"
+        - "logs:DescribeLogGroups"
+        - "logs:DescribeSubscriptionFilters"
         - "logs:PutRetentionPolicy"
         - "logs:PutSubscriptionFilter"
       Resource:
