@@ -10,7 +10,7 @@ const lambda = require("../../../lib/logic/util/lambda")({
   region: "us-west-2"
 });
 
-const func = { FunctionArn: "FUNCTION_ARN", FunctionName: "FUNCTION_NAME" };
+const func = { FunctionARN: "FUNCTION_ARN", FunctionName: "FUNCTION_NAME" };
 nockBack.setMode('record');
 
 describe("Testing Lambda", () => {
