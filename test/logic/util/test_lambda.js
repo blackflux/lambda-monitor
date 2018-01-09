@@ -7,7 +7,7 @@ const lambdaInvalid = require("../../../lib/logic/util/lambda")({
   secretAccessKey: "INVALID_SECRET_ACCESS_KEY"
 });
 const lambda = require("../../../lib/logic/util/lambda")({
-  region: "us-east-1"
+  region: "us-west-2"
 });
 
 const func = { FunctionArn: "FUNCTION_ARN", FunctionName: "FUNCTION_NAME" };
@@ -21,16 +21,6 @@ describe("Testing Lambda", () => {
   it("Testing getAllFunctions Error", (done) => {
     nockBack(`lambda-get-all-functions-error.json_recording.json`, {}, (nockDone) => {
       lambdaInvalid.getAllFunctions().catch((e) => {
-        expect(e.message).to.equal("The security token included in the request is invalid.");
-        nockDone();
-        done();
-      });
-    });
-  });
-
-  it("Testing appendTags Error", (done) => {
-    nockBack(`lambda-get-append-tags-error.json_recording.json`, {}, (nockDone) => {
-      lambdaInvalid.appendTags([func]).catch((e) => {
         expect(e.message).to.equal("The security token included in the request is invalid.");
         nockDone();
         done();
@@ -59,8 +49,10 @@ describe("Testing Lambda", () => {
   });
 
   it("Testing getAllFunctions Batched", (done) => {
-    nockBack(`lambda-get-all-functions.json_recording.json`, {}, (nockDone) => {
-      lambda.getAllFunctions().then((r) => {
+    nockBack(`lambda-get-all-functions-batched.json_recording.json`, {}, (nockDone) => {
+      lambda.getAllFunctions({
+        ResourcesPerPage: 1
+      }).then((r) => {
         expect(r.length).to.equal(2);
         nockDone();
         done();

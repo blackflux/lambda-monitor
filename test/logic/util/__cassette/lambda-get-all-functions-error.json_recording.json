@@ -1,12 +1,17 @@
 [
-    {
-        "scope": "https://lambda.us-east-1.amazonaws.com:443",
-        "method": "GET",
-        "path": "/2015-03-31/functions/",
-        "body": "",
-        "status": 403,
-        "response": {
-            "message": "The security token included in the request is invalid."
-        }
+  {
+    "scope": "https://tagging.us-east-1.amazonaws.com:443",
+    "method": "POST",
+    "path": "/",
+    "body": {
+      "ResourceTypeFilters": [
+        "lambda"
+      ]
+    },
+    "status": 400,
+    "response": {
+      "__type": "UnrecognizedClientException",
+      "message": "The security token included in the request is invalid."
     }
+  }
 ]

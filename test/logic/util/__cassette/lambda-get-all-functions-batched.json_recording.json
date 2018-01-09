@@ -1,0 +1,72 @@
+[
+  {
+    "scope": "https://tagging.us-west-2.amazonaws.com:443",
+    "method": "POST",
+    "path": "/",
+    "body": {
+      "ResourcesPerPage": 1,
+      "ResourceTypeFilters": [
+        "lambda"
+      ]
+    },
+    "status": 200,
+    "response": {
+      "PaginationToken": "token1",
+      "ResourceTagMappingList": [
+        {
+          "ResourceARN": "arn:aws:lambda:us-west-2:0123456789:function:function-name-one",
+          "Tags": [
+            {
+              "Key": "STAGE",
+              "Value": "prod"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "scope": "https://tagging.us-west-2.amazonaws.com:443",
+    "method": "POST",
+    "path": "/",
+    "body": {
+      "ResourcesPerPage": 1,
+      "PaginationToken": "token1",
+      "ResourceTypeFilters": [
+        "lambda"
+      ]
+    },
+    "status": 200,
+    "response": {
+      "PaginationToken": "token2",
+      "ResourceTagMappingList": [
+        {
+          "ResourceARN": "arn:aws:lambda:us-west-2:0123456789:function:function-name-two",
+          "Tags": [
+            {
+              "Key": "STAGE",
+              "Value": "qa"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "scope": "https://tagging.us-west-2.amazonaws.com:443",
+    "method": "POST",
+    "path": "/",
+    "body": {
+      "ResourcesPerPage": 1,
+      "PaginationToken": "token2",
+      "ResourceTypeFilters": [
+        "lambda"
+      ]
+    },
+    "status": 200,
+    "response": {
+      "PaginationToken": "",
+      "ResourceTagMappingList": []
+    }
+  }
+]
