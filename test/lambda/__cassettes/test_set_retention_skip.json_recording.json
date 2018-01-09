@@ -1,0 +1,95 @@
+[
+    {
+        "scope": "https://tagging.us-west-2.amazonaws.com:443",
+        "method": "POST",
+        "path": "/",
+        "body": {
+            "TagFilters": [
+                {
+                    "Key": "STAGE",
+                    "Values": [
+                        "dev"
+                    ]
+                }
+            ],
+            "ResourceTypeFilters": [
+                "lambda"
+            ]
+        },
+        "status": 200,
+        "response": {
+            "PaginationToken": "",
+            "ResourceTagMappingList": [
+                {
+                    "ResourceARN": "arn:aws:lambda:us-west-2:1234567890:function:lambda-function-one",
+                    "Tags": [
+                        {
+                            "Key": "MONITOR",
+                            "Value": "1"
+                        },
+                        {
+                            "Key": "MONITORED",
+                            "Value": "0"
+                        },
+                        {
+                            "Key": "STAGE",
+                            "Value": "dev"
+                        }
+                    ]
+                },
+                {
+                    "ResourceARN": "arn:aws:lambda:us-west-2:1234567890:function:lambda-function-two",
+                    "Tags": [
+                        {
+                            "Key": "STAGE",
+                            "Value": "dev"
+                        }
+                    ]
+                }
+            ]
+        }
+
+    },
+    {
+        "scope": "https://logs.us-west-2.amazonaws.com:443",
+        "method": "POST",
+        "path": "/",
+        "body": {
+            "logGroupNamePrefix": "/aws/lambda/lambda-function-two"
+        },
+        "status": 200,
+        "response": {
+            "logGroups": [
+                {
+                    "arn": "arn:aws:logs:us-west-2:1234567890:log-group:/aws/lambda/lambda-function-two:*",
+                    "creationTime": 1513021536328,
+                    "logGroupName": "/aws/lambda/lambda-function-two",
+                    "metricFilterCount": 0,
+                    "retentionInDays": 30,
+                    "storedBytes": 713
+                }
+            ]
+        }
+    },
+    {
+        "scope": "https://logs.us-west-2.amazonaws.com:443",
+        "method": "POST",
+        "path": "/",
+        "body": {
+            "logGroupNamePrefix": "/aws/lambda/lambda-function-one"
+        },
+        "status": 200,
+        "response": {
+            "logGroups": [
+                {
+                    "arn": "arn:aws:logs:us-west-2:1234567890:log-group:/aws/lambda/lambda-function-one:*",
+                    "creationTime": 1512425328974,
+                    "logGroupName": "/aws/lambda/lambda-function-one",
+                    "metricFilterCount": 0,
+                    "retentionInDays": 30,
+                    "storedBytes": 14972091
+                }
+            ]
+        }
+    }
+]
