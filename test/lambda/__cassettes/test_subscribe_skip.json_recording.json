@@ -1,0 +1,85 @@
+[
+    {
+        "scope": "https://tagging.us-west-2.amazonaws.com:443",
+        "method": "POST",
+        "path": "/",
+        "body": {
+            "TagFilters": [
+                {
+                    "Key": "STAGE",
+                    "Values": [
+                        "dev"
+                    ]
+                }
+            ],
+            "ResourceTypeFilters": [
+                "lambda"
+            ]
+        },
+        "status": 200,
+        "response": {
+            "PaginationToken": "",
+            "ResourceTagMappingList": [
+                {
+                    "ResourceARN": "arn:aws:lambda:us-west-2:1234567890:function:lambda-function-one",
+                    "Tags": [
+                        {
+                            "Key": "MONITOR",
+                            "Value": "1"
+                        },
+                        {
+                            "Key": "MONITORED",
+                            "Value": "0"
+                        },
+                        {
+                            "Key": "STAGE",
+                            "Value": "dev"
+                        }
+                    ]
+                },
+                {
+                    "ResourceARN": "arn:aws:lambda:us-west-2:1234567890:function:lambda-function-two",
+                    "Tags": [
+                        {
+                            "Key": "STAGE",
+                            "Value": "dev"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "scope": "https://logs.us-west-2.amazonaws.com:443",
+        "method": "POST",
+        "path": "/",
+        "body": {
+            "logGroupName": "/aws/lambda/lambda-function-one"
+        },
+        "status": 200,
+        "response": {
+            "subscriptionFilters": []
+        }
+    },
+    {
+        "scope": "https://logs.us-west-2.amazonaws.com:443",
+        "method": "POST",
+        "path": "/",
+        "body": {
+            "logGroupName": "/aws/lambda/lambda-function-two"
+        },
+        "status": 200,
+        "response": {
+            "subscriptionFilters": [
+                {
+                    "creationTime": 1513021578315,
+                    "destinationArn": "arn:aws:lambda:us-west-2:1234567890:function:lambda-function-one",
+                    "distribution": "ByLogStream",
+                    "filterName": "NoneFilter",
+                    "filterPattern": "",
+                    "logGroupName": "/aws/lambda/lambda-function-two"
+                }
+            ]
+        }
+    }
+]

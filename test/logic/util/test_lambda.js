@@ -30,7 +30,7 @@ describe("Testing Lambda", () => {
 
   it("Testing setCloudWatchRetention Error", (done) => {
     nockBack(`lambda-get-set-cloud-watch-retention-error.json_recording.json`, {}, (nockDone) => {
-      lambdaInvalid.setCloudWatchRetention(func).catch((e) => {
+      lambdaInvalid.setCloudWatchRetention(func, 30).catch((e) => {
         expect(e.message).to.equal("The security token included in the request is invalid.");
         nockDone();
         done();
