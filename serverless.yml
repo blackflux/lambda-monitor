@@ -28,8 +28,6 @@ provider:
   iamRoleStatements:
     - Effect: "Allow"
       Action:
-        - "lambda:ListFunctions"
-        - "lambda:ListTags"
         - "tag:GetResources"
         - "logs:DescribeLogGroups"
         - "logs:DescribeSubscriptionFilters"
