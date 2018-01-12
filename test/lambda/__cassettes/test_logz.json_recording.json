@@ -2,7 +2,7 @@
     {
         "scope": "https://listener.logz.io:8071",
         "method": "POST",
-        "path": "/?token=logz_dummy_token&type=local-dev",
+        "path": "/?token=logz_dummy_token&type=lambda-execution-info",
         "body": {
             "message": "REPORT RequestId: 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0\tDuration: 1001.14 ms\tBilled Duration: 1000 ms \tMemory Size: 256 MB\tMax Memory Used: 44 MB\t\n",
             "logGroupName": "/aws/lambda/peg-solitiare-dev-overview",
