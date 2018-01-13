@@ -195,6 +195,6 @@ resources:
       Properties:
         S3BucketName:
           Ref: CloudTrailBucket
-        IsLogging: true
+        IsLogging: ${file(config/${self:provider.stage}.yml):ENABLE_CLOUD_TRAIL_LOGGING}
       DependsOn:
         - CloudTrailBucketPolicy

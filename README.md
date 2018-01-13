@@ -63,6 +63,14 @@ If you don't want to use a service, please remove the corresponding token from t
 
 > :warning: It is recommended that you only enable one logging service at a time to avoid log resubmission when a service temporarily fails to accept data.
 
+### Enable Auto Subscribe for new Lambda Function
+
+To enable auto subscribe for new lambda functions you need to have CloudTrail enabled for your region.
+You can either do this manually, or you can do it by setting `ENABLE_CLOUD_TRAIL_LOGGING` to `"true"`.
+
+> :warning: Only enable this for one environment (probably production) and only if you have **not** enabled it manually. 
+Otherwise CloudTrail will log to multiple buckets and significant charges can occur.
+
 ### Disable Logging for a Lambda Function
 
 To exclude a lambda function from being monitored simply add the tag `"MONITORED": "0"`. Note that you need to manually unsubscribe if `process-log` has already been subscribed to the CloudWatch stream.
