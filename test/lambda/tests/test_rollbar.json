@@ -13,6 +13,7 @@
   "logs": [
     {
       "to.deep.equal": [
+        "Task timed out after 1.00 seconds\n\n",
         "Task timed out after 1.00 seconds\n\n"
       ]
     }
