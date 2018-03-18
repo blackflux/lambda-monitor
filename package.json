@@ -38,6 +38,8 @@
     "lodash.defaults": "4.2.0",
     "lodash.difference": "4.5.0",
     "lodash.get": "4.4.2",
+    "optimist": "0.6.1",
+    "yaml-boost": "1.2.0",
     "request": "2.85.0",
     "request-promise": "4.2.2"
   },
