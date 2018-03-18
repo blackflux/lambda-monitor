@@ -20,7 +20,8 @@ provider:
   environment:
     STAGE: ${self:provider.stage}
     REGION: ${self:provider.region}
-    <<<: ${file(config/${self:provider.stage}.yml)}
+    <<<:
+      - ${file(config/${self:provider.stage}.yml)}
   iamRoleStatements:
     - Effect: "Allow"
       Action:
