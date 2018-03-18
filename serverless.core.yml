@@ -13,18 +13,15 @@ provider:
   name: aws
   runtime: nodejs6.10
   stage: ${opt:stage}
-  region: us-east-1
+  region: ${opt:region}
   memorySize: 256
   timeout: 300
   versionFunctions: false
   environment:
-    LOGGLY_TOKEN: ${file(config/${self:provider.stage}.yml):LOGGLY_TOKEN}
-    LOGZ_TOKEN: ${file(config/${self:provider.stage}.yml):LOGZ_TOKEN}
-    DATADOG_API_KEY: ${file(config/${self:provider.stage}.yml):DATADOG_API_KEY}
-    ROLLBAR_ACCESS_TOKEN: ${file(config/${self:provider.stage}.yml):ROLLBAR_ACCESS_TOKEN}
-    ROLLBAR_REPORT_LEVEL: ${file(config/${self:provider.stage}.yml):ROLLBAR_REPORT_LEVEL}
-    STAGE: ${self:provider.stage}
-    REGION: ${self:provider.region}
+    STAGE: ${opt:stage}
+    REGION: ${opt:region}
+    <<<:
+      - ${file(./config/${opt:stage}.yml)}
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -106,8 +103,8 @@ resources:
       Type: AWS::Lambda::Permission
       Properties:
         Action: lambda:InvokeFunction
-        FunctionName: ${self:service}-${self:provider.stage}-process-logs
-        Principal: logs.${self:provider.region}.amazonaws.com
+        FunctionName: ${self:service}-${opt:stage}-process-logs
+        Principal: logs.${opt:region}.amazonaws.com
       DependsOn:
         - ProcessDashlogsLambdaFunction
 
@@ -195,6 +192,6 @@ resources:
       Properties:
         S3BucketName:
           Ref: CloudTrailBucket
-        IsLogging: ${file(config/${self:provider.stage}.yml):ENABLE_CLOUD_TRAIL_LOGGING}
+        IsLogging: ${file(./config/${opt:stage}.yml):ENABLE_CLOUD_TRAIL_LOGGING}
       DependsOn:
         - CloudTrailBucketPolicy
