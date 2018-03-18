@@ -13,15 +13,15 @@ provider:
   name: aws
   runtime: nodejs6.10
   stage: ${opt:stage}
-  region: us-east-1
+  region: ${opt:region}
   memorySize: 256
   timeout: 300
   versionFunctions: false
   environment:
-    STAGE: ${self:provider.stage}
-    REGION: ${self:provider.region}
+    STAGE: ${opt:stage}
+    REGION: ${opt:region}
     <<<:
-      - ${file(config/${self:provider.stage}.yml)}
+      - ${file(./config/${opt:stage}.yml)}
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -103,8 +103,8 @@ resources:
       Type: AWS::Lambda::Permission
       Properties:
         Action: lambda:InvokeFunction
-        FunctionName: ${self:service}-${self:provider.stage}-process-logs
-        Principal: logs.${self:provider.region}.amazonaws.com
+        FunctionName: ${self:service}-${opt:stage}-process-logs
+        Principal: logs.${opt:region}.amazonaws.com
       DependsOn:
         - ProcessDashlogsLambdaFunction
 
@@ -192,6 +192,6 @@ resources:
       Properties:
         S3BucketName:
           Ref: CloudTrailBucket
-        IsLogging: ${file(config/${self:provider.stage}.yml):ENABLE_CLOUD_TRAIL_LOGGING}
+        IsLogging: ${file(./config/${opt:stage}.yml):ENABLE_CLOUD_TRAIL_LOGGING}
       DependsOn:
         - CloudTrailBucketPolicy
