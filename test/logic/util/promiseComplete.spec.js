@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const promiseComplete = require("../../../lib/logic/util/promiseComplete");
+const promiseComplete = require("../../../src/logic/util/promiseComplete");
 
 describe("Testing promiseComplete", () => {
   it("Testing Multiple Errors", (done) => {

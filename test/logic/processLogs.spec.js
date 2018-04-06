@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const processLogs = require("../../lib/logic/processLogs");
+const processLogs = require("../../src/logic/processLogs");
 
 describe("Testing processLogs", () => {
   it("Testing Log Level Extraction", (done) => {

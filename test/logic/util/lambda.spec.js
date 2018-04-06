@@ -1,12 +1,12 @@
 const path = require("path");
 const expect = require("chai").expect;
 const nockBack = require('nock').back;
-const lambdaInvalid = require("../../../lib/logic/util/lambda")({
+const lambdaInvalid = require("../../../src/logic/util/lambda")({
   region: "us-east-1",
   accessKeyId: "INVALID_ACCESS_KEY_ID",
   secretAccessKey: "INVALID_SECRET_ACCESS_KEY"
 });
-const lambda = require("../../../lib/logic/util/lambda")({
+const lambda = require("../../../src/logic/util/lambda")({
   region: "us-east-1"
 });
 
