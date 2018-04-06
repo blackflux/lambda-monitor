@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const timeoutPromise = require("../../../lib/logic/util/timeoutPromise");
+const timeoutPromise = require("../../../src/logic/util/timeoutPromise");
 
 describe("Testing timeoutPromise", () => {
   it("Testing Timeout", (done) => {

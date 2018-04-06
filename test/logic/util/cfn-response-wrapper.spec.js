@@ -2,7 +2,7 @@
 const path = require("path");
 const expect = require("chai").expect;
 const nockBack = require('nock').back;
-const response = require("../../../lib/logic/util/cfn-response-wrapper");
+const response = require("../../../src/logic/util/cfn-response-wrapper");
 
 const sampleEvent = {
   RequestType: "Create",
