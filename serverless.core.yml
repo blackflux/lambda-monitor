@@ -8,6 +8,7 @@ package:
     - test/**
     - coverage/**
     - config/**
+    - src/**
 
 provider:
   name: aws

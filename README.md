@@ -37,6 +37,7 @@ $ git clone https://github.com/simlu/lambda-monitor
 2) Run `npm install` inside newly created `lambda-monitor` directory.
 3) Copy `config/example.yml` to `config/STAGE.yml` for each `STAGE` (e.g. `dev`, `qa` or `prod`).
 4) Configure copied files with appropriate tokens. Unused token need to be removed.
+5) Build with `npm run clean-build`
 5) Run `sls deploy --stage=STAGE --region=REGION` for each stage.
 
 If you decide to uninstall, simply run `sls remove --stage=STAGE --region=REGION`
