@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/simlu/lambda-monitor#readme",
   "dependencies": {
-    "aws-sdk": "2.243.1",
+    "aws-sdk": "2.244.1",
     "cfn-response": "1.0.1",
     "lambda-rollbar": "1.9.6",
     "lodash.defaults": "4.2.0",
