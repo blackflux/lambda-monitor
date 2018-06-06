@@ -55,7 +55,7 @@
     "lambda-tdd": "1.12.3",
     "coveralls": "3.0.1",
     "mocha": "5.2.0",
-    "semantic-release": "15.1.8",
+    "semantic-release": "15.5.1",
     "nyc": "11.7.1",
     "babel-cli": "7.0.0-beta.3"
   },
