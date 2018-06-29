@@ -76,7 +76,7 @@ describe("Testing Lambda", () => {
         expect(r.length).to.equal(2);
         nockDone();
         done();
-      });
+      }).catch(done.fail);
     });
   });
 });

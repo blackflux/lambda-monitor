@@ -1,7 +1,7 @@
 const expect = require("chai").expect;
-const promiseComplete = require("../../../src/logic/util/promiseComplete");
+const promiseComplete = require("../../../src/logic/util/promise-complete");
 
-describe("Testing promiseComplete", () => {
+describe("Testing promise-complete", () => {
   it("Testing Multiple Errors", (done) => {
     const error1 = new Error("error1");
     const error2 = new Error("error2");

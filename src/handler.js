@@ -7,10 +7,10 @@ const rollbar = require("lambda-rollbar")({
   reportLevel: get(process.env, 'ROLLBAR_REPORT_LEVEL', "WARNING").toLowerCase(),
   template: 'aws-cloud-watch'
 });
-const processLogs = require("./logic/processLogs");
+const processLogs = require("./logic/process-logs");
 const subscribe = require("./logic/subscribe");
-const setRetention = require("./logic/setRetention");
-const deleteBucket = require("./logic/deleteBucket");
+const setRetention = require("./logic/set-retention");
+const deleteBucket = require("./logic/delete-bucket");
 
 const callbackify = fn => (event, context, rb) => new Promise((resolve, reject) => fn(
   event,

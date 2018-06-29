@@ -19,3 +19,5 @@ coverage/
 config/*
 !config/example.yml
 lib/
+yarn-error.log
+release.tar.gz
