@@ -16,6 +16,13 @@ describe("Testing Lambda", () => {
   before(() => {
     nockBack.setMode('record');
     nockBack.fixtures = path.join(__dirname, "__cassette");
+    process.env.AWS_ACCESS_KEY_ID = "DUMMY";
+    process.env.AWS_SECRET_ACCESS_KEY = "DUMMY";
+  });
+
+  after(() => {
+    delete process.env.AWS_ACCESS_KEY_ID;
+    delete process.env.AWS_SECRET_ACCESS_KEY;
   });
 
   it("Testing getAllFunctions Error", (done) => {
