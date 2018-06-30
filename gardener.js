@@ -3,6 +3,7 @@ const gardener = require('js-gardener');
 
 if (require.main === module) {
   gardener({
-    eslint: { rules: { "enforce-flow": 0 } }
+    author: "Lukas Siemon",
+    docker: ["lambda"]
   }).catch(() => process.exit(1));
 }
