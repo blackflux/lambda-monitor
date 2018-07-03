@@ -53,7 +53,7 @@
     "chai": "4.1.2",
     "nock": "9.4.1",
     "js-gardener": "1.26.3",
-    "lambda-tdd": "1.17.0",
+    "lambda-tdd": "1.19.0",
     "coveralls": "3.0.2",
     "mocha": "5.2.0",
     "semantic-release": "15.6.1",
