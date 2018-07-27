@@ -5,19 +5,15 @@
   },
   "success": false,
   "timeout": 10000,
-  "error": [
-    {
-      "to.contain": "Invalid API key"
-    }
-  ],
-  "logs": [
-    {
-      "to.deep.equal": [
-        "Task timed out after 1.00 seconds\n\n",
-        "403 - \"Invalid API key\""
-      ]
-    }
-  ],
+  "error": {
+    "to.contain": "Invalid API key"
+  },
+  "logs": {
+    "to.deep.equal": [
+      "Task timed out after 1.00 seconds\n\n",
+      "403 - \"Invalid API key\""
+    ]
+  },
   "event": {
     "awslogs": {
       "data": "H4sIAAAAAAAAAK1STW/TQBD9KyuLYxzv99i+pYqpkEhBsbnQRGhtjyMLfwTvJqFU/e+sW3roLQiO897MvHlP8xj0aK05YPFwxCAN1qti9W2T5fnqNgsWwXgZcPIwxELzhDEtE/BwNx5up/F09ExkLjbqTF/WJjriIbRj17rWTBjWeA7HM07nFi8vM7mb0PR+iFMGEWMRF9H9u4+rIsuLPeqYNih4pUsj4wrjShgBYLiqahnH6FfYU2mrqT26dhzet53DyQbpfXA3DvhSBvtnneyMg5upx6CtvZwQQJUEkEwkQL24ElpRqkBprSHhQClQkXApJDAlGQMdJ0JKL+lan48zvbfKFGOSqhgSrdXiNTe/Prtbky3+OPnGD3VKWMUNNALDqmlMyBhCaAyUYS2qWtEGaFXS3RA8Lf7tOnXlddvs86dt8dcHuvVpMnPQvp9StmSS9Hbnbtquw5q8IalnyM5tsB+nB5K3vzAlXGmyufGg+Un+EF8senEpn/H/EIC+MoD52bzLkIuC8lRBqpKlb/l6VQ6kMPY7mWVqMp4cMY1/M8KW3rTFahxquxtmL/un3xg+XUZKAwAA"
