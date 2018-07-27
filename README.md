@@ -2,7 +2,6 @@
 
 [![Build Status](https://img.shields.io/travis/simlu/lambda-monitor/master.svg)](https://travis-ci.org/simlu/lambda-monitor)
 [![Test Coverage](https://img.shields.io/coveralls/simlu/lambda-monitor/master.svg)](https://coveralls.io/github/simlu/lambda-monitor?branch=master)
-[![Greenkeeper Badge](https://badges.greenkeeper.io/simlu/lambda-monitor.svg)](https://greenkeeper.io/)
 [![Dependencies](https://david-dm.org/simlu/lambda-monitor/status.svg)](https://david-dm.org/simlu/lambda-monitor)
 [![NPM](https://img.shields.io/npm/v/lambda-monitor.svg)](https://www.npmjs.com/package/lambda-monitor)
 [![Downloads](https://img.shields.io/npm/dt/lambda-monitor.svg)](https://www.npmjs.com/package/lambda-monitor)

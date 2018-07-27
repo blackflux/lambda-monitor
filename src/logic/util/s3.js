@@ -2,8 +2,10 @@ const aws = require("aws-sdk");
 
 const s3 = new aws.S3();
 
-const promisfy = func => objParams => new Promise((resolve, reject) =>
-  s3[func](objParams, (err, result) => (err ? reject(err) : resolve(result))));
+const promisfy = func => objParams => new Promise((resolve, reject) => s3[func](
+  objParams,
+  (err, result) => (err ? reject(err) : resolve(result))
+));
 
 const listObjectsV2 = promisfy("listObjectsV2");
 const deleteObjects = promisfy("deleteObjects");

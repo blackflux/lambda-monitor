@@ -2,15 +2,11 @@
   "handler": "subscribe",
   "success": true,
   "timeout": 30000,
-  "response": [
-    {
-      "to.deep.equal": "Done."
-    }
-  ],
-  "logs": [
-    {
-      "to.deep.equal": []
-    }
-  ],
+  "response": {
+    "to.deep.equal": "Done."
+  },
+  "logs": {
+    "to.deep.equal": []
+  },
   "event": {}
 }

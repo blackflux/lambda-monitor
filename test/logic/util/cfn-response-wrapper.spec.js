@@ -32,9 +32,9 @@ const doTest = (errObject, respObject, status, done) => {
       expect(resp).to.equal(respObject);
       expect(logs).to.deep.equal([
         `Response body:\n`,
-        `{"Status":"${status.toUpperCase()}","Reason":"See the details in CloudWatch Log Stream: undefined",` +
-        `"StackId":"arn:aws:cloudformation:eu-west-1:...","RequestId":"afd8d7c5-9376-4013-8b3b-307517b8719e",` +
-        `"LogicalResourceId":"Route53","Data":{}}`,
+        `{"Status":"${status.toUpperCase()}","Reason":"See the details in CloudWatch Log Stream: undefined",`
+        + `"StackId":"arn:aws:cloudformation:eu-west-1:...","RequestId":"afd8d7c5-9376-4013-8b3b-307517b8719e",`
+        + `"LogicalResourceId":"Route53","Data":{}}`,
         `Status code: 200`,
         `Status message: null`
       ]);
