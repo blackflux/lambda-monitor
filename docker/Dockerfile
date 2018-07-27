@@ -13,6 +13,8 @@ RUN yum install git vi -y \
 ENV HOME /user
 RUN chmod 757 /user
 
+# set project root as execution env
+ENV AWS_EXECUTION_ENV ${pwd}
 # ensure npm spawn can write to folder
 ENV SPAWN_WRAP_SHIM_ROOT /tmp
 # disable babel trying to access root file location
