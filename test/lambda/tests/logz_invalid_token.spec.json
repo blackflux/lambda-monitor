@@ -5,11 +5,11 @@
   },
   "success": false,
   "timeout": 10000,
-  "error": {
-    "to.contain": "Logging token is not valid"
+  "expect(message)": {
+    "to.equal()": "401 - \"Logging token is not valid\""
   },
   "logs": {
-    "to.deep.equal": [
+    "to.deep.equal()": [
       "Task timed out after 1.00 seconds\n\n",
       "401 - \"Logging token is not valid\""
     ]

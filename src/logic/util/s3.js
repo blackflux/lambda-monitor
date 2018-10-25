@@ -2,15 +2,10 @@ const aws = require("aws-sdk");
 
 const s3 = new aws.S3();
 
-const promisfy = func => objParams => new Promise((resolve, reject) => s3[func](
-  objParams,
-  (err, result) => (err ? reject(err) : resolve(result))
-));
+const listObjectsV2 = p => s3.listObjectsV2(p).promise();
+const deleteObjects = p => s3.deleteObjects(p).promise();
 
-const listObjectsV2 = promisfy("listObjectsV2");
-const deleteObjects = promisfy("deleteObjects");
-
-module.exports.deleteBucket = promisfy("deleteBucket");
+module.exports.deleteBucket = p => s3.deleteBucket(p).promise();
 module.exports.emptyBucket = (objParams, logger) => {
   logger.info(`emptyBucket(): ${JSON.stringify(objParams)}`);
   return listObjectsV2(objParams).then((result) => {
