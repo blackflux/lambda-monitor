@@ -38,7 +38,7 @@ $ git clone https://github.com/simlu/lambda-monitor
 4) Install docker and start container with `. manage.sh`
 5) Run `npm ci` inside newly created `lambda-monitor` directory inside docker.
 6) Build with `npm run clean-build`
-7) Run `sls deploy --stage=STAGE --region=REGION` for each stage.
+7) Run `sls deploy --stage=STAGE --region=REGION --force` for each stage.
 
 If you decide to uninstall, simply run `sls remove --stage=STAGE --region=REGION`
 
