@@ -33,10 +33,10 @@ Getting set up is very easy:
 ```bash
 $ git clone https://github.com/simlu/lambda-monitor
 ```
-2) Run `npm ci` inside newly created `lambda-monitor` directory.
-3) Copy `config/example.yml` to `config/STAGE.yml` for each `STAGE` (e.g. `dev`, `qa` or `prod`).
-4) Configure copied files with appropriate tokens. Unused token need to be removed.
-5) Install docker and start container with `. manage.sh`
+2) Copy `config/example.yml` to `config/STAGE.yml` for each `STAGE` (e.g. `dev`, `qa` or `prod`).
+3) Configure copied files with appropriate tokens. Unused token need to be removed.
+4) Install docker and start container with `. manage.sh`
+5) Run `npm ci` inside newly created `lambda-monitor` directory inside docker.
 6) Build with `npm run clean-build`
 7) Run `sls deploy --stage=STAGE --region=REGION` for each stage.
 
