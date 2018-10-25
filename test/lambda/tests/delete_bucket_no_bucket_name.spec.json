@@ -2,7 +2,7 @@
   "handler": "deleteBucket",
   "success": false,
   "timeout": 30000,
-  "error": {
+  "expect(message)": {
     "to.deep.equal()": "No Bucket Provided."
   },
   "logs": {

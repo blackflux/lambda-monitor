@@ -5,11 +5,11 @@
   },
   "success": false,
   "timeout": 10000,
-  "error": {
-    "to.contain": "Invalid API key"
+  "expect(message)": {
+    "to.contain()": "Invalid API key"
   },
   "logs": {
-    "to.deep.equal": [
+    "to.deep.equal()": [
       "Task timed out after 1.00 seconds\n\n",
       "403 - \"Invalid API key\""
     ]

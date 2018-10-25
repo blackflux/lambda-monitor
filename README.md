@@ -2,12 +2,12 @@
 
 [![Build Status](https://img.shields.io/travis/simlu/lambda-monitor/master.svg)](https://travis-ci.org/simlu/lambda-monitor)
 [![Test Coverage](https://img.shields.io/coveralls/simlu/lambda-monitor/master.svg)](https://coveralls.io/github/simlu/lambda-monitor?branch=master)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=simlu/lambda-monitor)](https://dependabot.com)
 [![Dependencies](https://david-dm.org/simlu/lambda-monitor/status.svg)](https://david-dm.org/simlu/lambda-monitor)
 [![NPM](https://img.shields.io/npm/v/lambda-monitor.svg)](https://www.npmjs.com/package/lambda-monitor)
 [![Downloads](https://img.shields.io/npm/dt/lambda-monitor.svg)](https://www.npmjs.com/package/lambda-monitor)
-[![Semantic-Release](https://github.com/simlu/js-gardener/blob/master/assets/icons/semver.svg)](https://github.com/semantic-release/semantic-release)
-[![Gardener](https://github.com/simlu/js-gardener/blob/master/assets/badge.svg)](https://github.com/simlu/js-gardener)
-[![Gitter](https://github.com/simlu/js-gardener/blob/master/assets/icons/gitter.svg)](https://gitter.im/simlu/lambda-monitor)
+[![Semantic-Release](https://github.com/blackflux/js-gardener/blob/master/assets/icons/semver.svg)](https://github.com/semantic-release/semantic-release)
+[![Gardener](https://github.com/blackflux/js-gardener/blob/master/assets/badge.svg)](https://github.com/blackflux/js-gardener)
 
 Automatically configure lambda log analysis and popagation to external services.
 
@@ -33,10 +33,10 @@ Getting set up is very easy:
 ```bash
 $ git clone https://github.com/simlu/lambda-monitor
 ```
-2) Run `npm install` inside newly created `lambda-monitor` directory.
-3) Copy `config/example.yml` to `config/STAGE.yml` for each `STAGE` (e.g. `dev`, `qa` or `prod`).
-4) Configure copied files with appropriate tokens. Unused token need to be removed.
-5) Install docker and start container with `. manage.sh`
+2) Copy `config/example.yml` to `config/STAGE.yml` for each `STAGE` (e.g. `dev`, `qa` or `prod`).
+3) Configure copied files with appropriate tokens. Unused token need to be removed.
+4) Install docker and start container with `. manage.sh`
+5) Run `npm ci` inside newly created `lambda-monitor` directory inside docker.
 6) Build with `npm run clean-build`
 7) Run `sls deploy --stage=STAGE --region=REGION` for each stage.
 

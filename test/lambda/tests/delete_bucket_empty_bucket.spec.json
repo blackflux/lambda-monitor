@@ -2,11 +2,11 @@
   "handler": "deleteBucket",
   "success": true,
   "timeout": 30000,
-  "response": {
-    "to.deep.equal": "Done."
+  "expect": {
+    "to.deep.equal()": "Done."
   },
   "logs": {
-    "to.deep.equal": [
+    "to.deep.equal()": [
       "emptyBucket(): {\"Bucket\":\"empty-bucket-32498uerfgjk45t89u34tjwer\"}",
       "empty-bucket-32498uerfgjk45t89u34tjwer emptied and deleted!",
       "Response body:\n",

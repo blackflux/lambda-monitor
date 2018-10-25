@@ -1,7 +1,7 @@
 #!/bin/sh
 
-sudo docker build -t lambda-environment-node ./docker &&
-sudo docker run \
+docker build -t lambda-environment-node ./docker &&
+docker run \
   -u=$UID:$(id -g $USER) \
   -v $(pwd):/user/project \
   -v ~/.aws:/user/.aws \
