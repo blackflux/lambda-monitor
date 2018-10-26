@@ -2,11 +2,26 @@
   "handler": "processLogs",
   "success": true,
   "timeout": 10000,
-  "response": {
-    "to.equal": "{\"messageType\":\"DATA_MESSAGE\",\"owner\":\"783629116497\",\"logGroup\":\"/aws/lambda/peg-solitiare-dev-overview\",\"logStream\":\"2017/11/23/[$LATEST]a5ec508845ef4e66a65e39a63736eefe\",\"subscriptionFilters\":[\"NoneFilter\"],\"logEvents\":[{\"id\":\"33705461790514130349916614322708657500528775737429655552\",\"timestamp\":1511405179085,\"message\":\"START RequestId: 7b221687-cff8-11e7-875c-81774d029543 Version: $LATEST\\n\"}]}"
+  "expect": {
+    "to.deep.equal()": {
+      "messageType": "DATA_MESSAGE",
+      "owner": "783629116497",
+      "logGroup": "/aws/lambda/peg-solitiare-dev-overview",
+      "logStream": "2017/11/23/[$LATEST]a5ec508845ef4e66a65e39a63736eefe",
+      "subscriptionFilters": [
+        "NoneFilter"
+      ],
+      "logEvents": [
+        {
+          "id": "33705461790514130349916614322708657500528775737429655552",
+          "timestamp": 1511405179085,
+          "message": "START RequestId: 7b221687-cff8-11e7-875c-81774d029543 Version: $LATEST\n"
+        }
+      ]
+    }
   },
   "logs": {
-    "to.deep.equal": []
+    "to.deep.equal()": []
   },
   "event": {
     "awslogs": {

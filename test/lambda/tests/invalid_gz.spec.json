@@ -2,11 +2,11 @@
   "handler": "processLogs",
   "success": false,
   "timeout": 10000,
-  "error": {
-    "to.equal": "incorrect header check"
+  "expect(message)": {
+    "to.equal()": "incorrect header check"
   },
   "logs": {
-    "to.deep.equal": [
+    "to.deep.equal()": [
       "incorrect header check"
     ]
   },

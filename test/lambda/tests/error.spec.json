@@ -2,11 +2,36 @@
   "handler": "processLogs",
   "success": true,
   "timeout": 10000,
-  "response": {
-    "to.equal": "{\"messageType\":\"DATA_MESSAGE\",\"owner\":\"783629116497\",\"logGroup\":\"/aws/lambda/peg-solitiare-dev-overview\",\"logStream\":\"2017/11/23/[$LATEST]1ce57f5c4c1549feb4c9edc021fef93e\",\"subscriptionFilters\":[\"NoneFilter\"],\"logEvents\":[{\"id\":\"33705525399286472041989494361812797248982273749060812800\",\"timestamp\":1511408031401,\"message\":\"Handler 'overview' missing on module 'lib/handler'\\n\"},{\"id\":\"33705525399687885455563045578360440177889944256168460289\",\"timestamp\":1511408031419,\"message\":\"END RequestId: 1f4bc9c5-cfff-11e7-94f4-dbafe2834581\\n\"},{\"id\":\"33705525399687885455563045578360440177889944256168460290\",\"timestamp\":1511408031419,\"message\":\"REPORT RequestId: 1f4bc9c5-cfff-11e7-94f4-dbafe2834581\\tDuration: 31.27 ms\\tBilled Duration: 100 ms \\tMemory Size: 256 MB\\tMax Memory Used: 42 MB\\t\\n\"}]}"
+  "expect": {
+    "to.deep.equal()": {
+      "messageType": "DATA_MESSAGE",
+      "owner": "783629116497",
+      "logGroup": "/aws/lambda/peg-solitiare-dev-overview",
+      "logStream": "2017/11/23/[$LATEST]1ce57f5c4c1549feb4c9edc021fef93e",
+      "subscriptionFilters": [
+        "NoneFilter"
+      ],
+      "logEvents": [
+        {
+          "id": "33705525399286472041989494361812797248982273749060812800",
+          "timestamp": 1511408031401,
+          "message": "Handler 'overview' missing on module 'lib/handler'\n"
+        },
+        {
+          "id": "33705525399687885455563045578360440177889944256168460289",
+          "timestamp": 1511408031419,
+          "message": "END RequestId: 1f4bc9c5-cfff-11e7-94f4-dbafe2834581\n"
+        },
+        {
+          "id": "33705525399687885455563045578360440177889944256168460290",
+          "timestamp": 1511408031419,
+          "message": "REPORT RequestId: 1f4bc9c5-cfff-11e7-94f4-dbafe2834581\tDuration: 31.27 ms\tBilled Duration: 100 ms \tMemory Size: 256 MB\tMax Memory Used: 42 MB\t\n"
+        }
+      ]
+    }
   },
   "logs": {
-    "to.deep.equal": [
+    "to.deep.equal()": [
       "Handler 'overview' missing on module 'lib/handler'\n"
     ]
   },
