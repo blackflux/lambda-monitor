@@ -1,6 +1,6 @@
 # Lambda Monitoring
 
-[![Build Status](https://circleci.com/gh/simlu/lambda-monitor.png?style=shield)](https://circleci.com/gh/simlu/lambda-monitor)
+[![Build Status](https://circleci.com/gh/blackflux/lambda-monitor.png?style=shield)](https://circleci.com/gh/blackflux/lambda-monitor)
 [![Test Coverage](https://img.shields.io/coveralls/blackflux/lambda-monitor/master.svg)](https://coveralls.io/github/blackflux/lambda-monitor?branch=master)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=blackflux/lambda-monitor)](https://dependabot.com)
 [![Dependencies](https://david-dm.org/blackflux/lambda-monitor/status.svg)](https://david-dm.org/blackflux/lambda-monitor)
