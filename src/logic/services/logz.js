@@ -1,4 +1,4 @@
-const request = require("request-promise");
+const request = require('request-promise');
 
 module.exports.log = (context, environment, logs) => {
   if (process.env.LOGZ_TOKEN === undefined || logs.length === 0) {
@@ -9,11 +9,13 @@ module.exports.log = (context, environment, logs) => {
     uri: 'https://listener.logz.io:8071',
     qs: {
       token: process.env.LOGZ_TOKEN,
-      type: 'lambda-execution-info'
+      type: 'lambda-execution-info',
     },
-    body: logs.map(JSON.stringify).join("\n")
+    body: logs
+      .map(JSON.stringify)
+      .join('\n')
       // Reference: http://tiny.cc/bru4oy
-      .replace(/"timestamp":/g, "\"@timestamp\":"),
-    resolveWithFullResponse: true
+      .replace(/"timestamp":/g, '"@timestamp":'),
+    resolveWithFullResponse: true,
   });
 };

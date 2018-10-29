@@ -1,14 +1,10 @@
 service: lambda-monitor
 
 package:
+  include:
+    - src/**
   exclude:
     - "*"
-    - .idea/**
-    - docs/**
-    - test/**
-    - coverage/**
-    - config/**
-    - src/**
 
 provider:
   name: aws
@@ -54,14 +50,14 @@ provider:
 
 functions:
   process-logs:
-    handler: lib/handler.processLogs
+    handler: src/handler.processLogs
     description: Processor for Lambda CloudWatch Streams
     tags:
       MONITOR: "1"
       MONITORED: "0"
 
   subscribe:
-    handler: lib/handler.subscribe
+    handler: src/handler.subscribe
     description: Subscribe Processor to Lambda CloudWatch Streams
     events:
       - schedule: rate(1 hour)
@@ -78,7 +74,7 @@ functions:
                 - CreateLogGroup
 
   set-retention:
-    handler: lib/handler.setRetention
+    handler: src/handler.setRetention
     description: Update Retention for Lambda CloudWatch Streams
     events:
       - schedule: rate(1 hour)
@@ -95,7 +91,7 @@ functions:
                 - CreateLogGroup
 
   delete-bucket:
-    handler: lib/handler.deleteBucket
+    handler: src/handler.deleteBucket
     description: Delete s3 bucket and all files in it
 
 resources:

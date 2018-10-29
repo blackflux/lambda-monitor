@@ -1,69 +1,105 @@
-const AWS = require("aws-sdk");
+const AWS = require('aws-sdk');
+var Promise = require('bluebird');
+AWS.config.setPromisesDependency(Promise);
 
-module.exports = (options) => {
+module.exports = options => {
   const resources = new AWS.ResourceGroupsTaggingAPI(options);
   const cloudwatchlogs = new AWS.CloudWatchLogs(options);
 
-  const getAllFunctions = (reqOptions = {}) => new Promise((resolve, reject) => resources
-    .getResources(Object.assign({}, reqOptions, {
-      ResourceTypeFilters: ['lambda']
-    }), (err, data) => {
-      if (err) {
-        return reject(err);
-      }
-      const result = data.ResourceTagMappingList.map(r => ({
-        FunctionARN: r.ResourceARN,
-        FunctionName: r.ResourceARN.substring(r.ResourceARN.lastIndexOf(":") + 1, r.ResourceARN.length),
-        Tags: Object.assign(...r.Tags.map(e => ({ [e.Key]: e.Value })))
-      }));
-      return data.PaginationToken === ''
-        ? resolve(result)
-        : getAllFunctions(Object.assign({}, reqOptions, { PaginationToken: data.PaginationToken }))
-          .then(resultList => resolve(resultList.concat(result)))
-          .catch(reject);
-    }));
+  const loggroupprefix = f => `/aws/lambda/${f.FunctionName}`;
 
-  const appendLogRetentionInfo = functions => Promise
-    .all(functions.map(f => new Promise((resolve, reject) => cloudwatchlogs.describeLogGroups({
-      logGroupNamePrefix: `/aws/lambda/${f.FunctionName}`
-    }, (err, res) => (err ? reject(err) : resolve(Object.assign({
-      logGroups: res.logGroups.filter(e => e.logGroupName === `/aws/lambda/${f.FunctionName}`)
-    }, f)))))));
+  const getAllFunctions = (reqOptions = {}) =>
+    resources
+      .getResources({
+        ...reqOptions,
+        ResourceTypeFilters: ['lambda'],
+      })
+      .promise()
+      .then(data => {
+        const { PaginationToken, ResourceTagMappingList } = data;
+        const result = ResourceTagMappingList.map(r => ({
+          FunctionARN: r.ResourceARN,
+          FunctionName: r.ResourceARN.substring(
+            r.ResourceARN.lastIndexOf(':') + 1,
+            r.ResourceARN.length,
+          ),
+          Tags: Object.assign(...r.Tags.map(e => ({ [e.Key]: e.Value }))),
+        }));
+        return PaginationToken === ''
+          ? result
+          : getAllFunctions({ ...reqOptions, PaginationToken }).then(
+              resultList => resultList.concat(result),
+            );
+      });
 
-  const appendLogSubscriptionInfo = functions => Promise
-    .all(functions.map(f => new Promise((resolve, reject) => cloudwatchlogs.describeSubscriptionFilters({
-      logGroupName: `/aws/lambda/${f.FunctionName}`
-    }, (err, res) => (err ? reject(err) : resolve(Object.assign(res, f)))))));
+  const appendLogRetentionInfo = functions =>
+    Promise.all(functions)
+      .filter(isLogGroup)
+      .map(f =>
+        cloudwatchlogs
+          .describeLogGroups({
+            logGroupNamePrefix: loggroupprefix(f),
+          })
+          .promise()
+          .then(res => ({
+            f,
+            logGroups: res.logGroups.filter(
+              e => e.logGroupName === loggroupprefix(f),
+            ),
+          })),
+      );
 
-  const setCloudWatchRetention = (f, retentionInDays) => new Promise((resolve, reject) => cloudwatchlogs
-    .putRetentionPolicy({
-      logGroupName: `/aws/lambda/${f.FunctionName}`,
-      retentionInDays
-    }, (err, resp) => {
-      if (err) {
-        return reject(err);
-      }
-      return resolve(resp);
-    }));
+  const appendLogSubscriptionInfo = functions =>
+    Promise.all(functions)
+      .filter(isLogGroup)
+      .mapSeries(f =>
+        cloudwatchlogs
+          .describeSubscriptionFilters({
+            logGroupName: loggroupprefix(f),
+          })
+          .promise()
+          .then(res => ({ ...res, ...f })),
+      );
 
-  const subscribeCloudWatchLogGroup = (monitor, producer) => new Promise((resolve, reject) => cloudwatchlogs
-    .putSubscriptionFilter({
-      destinationArn: monitor.FunctionARN,
-      filterName: 'NoneFilter',
-      filterPattern: "",
-      logGroupName: `/aws/lambda/${producer.FunctionName}`
-    }, (err, resp) => {
-      if (err) {
-        return reject(err);
-      }
-      return resolve(resp);
-    }));
+  const setCloudWatchRetention = (f, retentionInDays) =>
+    cloudwatchlogs
+      .putRetentionPolicy({
+        logGroupName: loggroupprefix(f),
+        retentionInDays,
+      })
+      .promise();
+
+  const subscribeCloudWatchLogGroup = (monitor, producer) =>
+    cloudwatchlogs
+      .putSubscriptionFilter({
+        destinationArn: monitor.FunctionARN,
+        filterName: 'NoneFilter',
+        filterPattern: '',
+        logGroupName: `/aws/lambda/${producer.FunctionName}`,
+      })
+      .promise();
+
+  const isLogGroup = f =>
+    cloudwatchlogs
+      .describeLogStreams({
+        logGroupName: loggroupprefix(f),
+        limit: 1,
+      })
+      .promise()
+      .then(data => {
+        console.log('DEBUG: isLogGroup', loggroupprefix(f));
+        return true;
+      })
+      .catch(err => {
+        console.log('ERROR: isLogGroup', loggroupprefix(f));
+        return false;
+      });
 
   return {
     getAllFunctions,
     appendLogRetentionInfo,
     appendLogSubscriptionInfo,
     setCloudWatchRetention,
-    subscribeCloudWatchLogGroup
+    subscribeCloudWatchLogGroup,
   };
 };
