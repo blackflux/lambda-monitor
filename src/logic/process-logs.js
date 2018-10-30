@@ -58,6 +58,7 @@ module.exports = (event, context, callback, rb) =>
     .then(resultParsed => {
       const toLog = [];
       resultParsed.logEvents.forEach(logEvent => {
+        console.log('logEvent', logEvent);
         const requestLog = requestLogRegex.exec(logEvent.message);
         if (requestLog) {
           toLog.push({
@@ -77,6 +78,7 @@ module.exports = (event, context, callback, rb) =>
           !logEvent.message.match(requestEndRegex) &&
           !logEvent.message.match(requestStartRegex)
         ) {
+          console.log('HEY', logEvent);
           const processedLogEvent = defaults(
             { message: logEvent.message.replace(genericPrefix, '') },
             logEvent,

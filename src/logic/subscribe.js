@@ -16,6 +16,7 @@ module.exports = cfnResponse.wrap((event, context, callback, rb) =>
     })
     .then(lambda.appendLogSubscriptionInfo)
     .then(functions => {
+      console.log(functions);
       const monitor = functions.find(f => get(f, 'Tags.MONITOR', null) === '1');
       const monitored = functions
         .filter(f => get(f, 'Tags.MONITORED', null) !== '0')
@@ -24,6 +25,8 @@ module.exports = cfnResponse.wrap((event, context, callback, rb) =>
             e => e.destinationArn !== monitor.FunctionARN,
           );
         });
+      console.log('monitor', monitor);
+      console.log('monitored', monitored);
       return Promise.all(
         monitored.map(producer =>
           lambda.subscribeCloudWatchLogGroup(monitor, producer),

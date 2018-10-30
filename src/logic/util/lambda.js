@@ -69,8 +69,9 @@ module.exports = options => {
       })
       .promise();
 
-  const subscribeCloudWatchLogGroup = (monitor, producer) =>
-    cloudwatchlogs
+  const subscribeCloudWatchLogGroup = (monitor, producer) => {
+    console.log('subscribeCloudWatchLogGroup', monitor, producer);
+    return cloudwatchlogs
       .putSubscriptionFilter({
         destinationArn: monitor.FunctionARN,
         filterName: 'NoneFilter',
@@ -78,6 +79,7 @@ module.exports = options => {
         logGroupName: `/aws/lambda/${producer.FunctionName}`,
       })
       .promise();
+  };
 
   const isLogGroup = f =>
     cloudwatchlogs
