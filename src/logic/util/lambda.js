@@ -1,19 +1,20 @@
-const AWS = require("aws-sdk");
+const AWS = require('aws-sdk');
 
 module.exports = (options) => {
   const resources = new AWS.ResourceGroupsTaggingAPI(options);
   const cloudwatchlogs = new AWS.CloudWatchLogs(options);
 
   const getAllFunctions = (reqOptions = {}) => new Promise((resolve, reject) => resources
-    .getResources(Object.assign({}, reqOptions, {
-      ResourceTypeFilters: ['lambda']
-    }), (err, data) => {
+    .getResources({
+      ResourceTypeFilters: ['lambda'],
+      ...reqOptions
+    }, (err, data) => {
       if (err) {
         return reject(err);
       }
       const result = data.ResourceTagMappingList.map(r => ({
         FunctionARN: r.ResourceARN,
-        FunctionName: r.ResourceARN.substring(r.ResourceARN.lastIndexOf(":") + 1, r.ResourceARN.length),
+        FunctionName: r.ResourceARN.substring(r.ResourceARN.lastIndexOf(':') + 1, r.ResourceARN.length),
         Tags: Object.assign(...r.Tags.map(e => ({ [e.Key]: e.Value })))
       }));
       return data.PaginationToken === ''
@@ -50,7 +51,7 @@ module.exports = (options) => {
     .putSubscriptionFilter({
       destinationArn: monitor.FunctionARN,
       filterName: 'NoneFilter',
-      filterPattern: "",
+      filterPattern: '',
       logGroupName: `/aws/lambda/${producer.FunctionName}`
     }, (err, resp) => {
       if (err) {

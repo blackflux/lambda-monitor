@@ -3,7 +3,7 @@ const gardener = require('js-gardener');
 
 if (require.main === module) {
   gardener({
-    author: "Lukas Siemon",
-    docker: ["lambda"]
-  }).catch(() => process.exit(1));
+    author: 'Lukas Siemon',
+    docker: ['lambda']
+  });
 }
