@@ -1,4 +1,4 @@
-const request = require("request-promise");
+const request = require('request-promise');
 
 module.exports.log = (context, environment, logs) => {
   if (process.env.LOGGLY_TOKEN === undefined || logs.length === 0) {
@@ -7,7 +7,7 @@ module.exports.log = (context, environment, logs) => {
   return request({
     method: 'POST',
     uri: `https://logs-01.loggly.com/bulk/${process.env.LOGGLY_TOKEN}/tag/${environment}/`,
-    body: logs.map(JSON.stringify).join("\n"),
+    body: logs.map(JSON.stringify).join('\n'),
     resolveWithFullResponse: true
   });
 };

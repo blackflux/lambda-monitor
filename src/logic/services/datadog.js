@@ -1,6 +1,6 @@
 const tls = require('tls');
 
-const host = "intake.logs.datadoghq.com";
+const host = 'intake.logs.datadoghq.com';
 const port = 10516;
 
 module.exports.log = (context, environment, logs) => {
@@ -36,8 +36,8 @@ module.exports.log = (context, environment, logs) => {
             context: log
           }))
           .map(log => `${process.env.DATADOG_API_KEY} ${JSON.stringify(log)}\n`)
-          .join("")
-          .toString("utf8");
+          .join('')
+          .toString('utf8');
         socket.write(data, 'utf8', () => socket.destroy());
       })
       .on('error', reject)
