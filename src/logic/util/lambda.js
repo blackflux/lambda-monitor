@@ -4,25 +4,20 @@ module.exports = (options) => {
   const resources = new AWS.ResourceGroupsTaggingAPI(options);
   const cloudwatchlogs = new AWS.CloudWatchLogs(options);
 
-  const getAllFunctions = (reqOptions = {}) => new Promise((resolve, reject) => resources
-    .getResources({
-      ResourceTypeFilters: ['lambda'],
-      ...reqOptions
-    }, (err, data) => {
-      if (err) {
-        return reject(err);
-      }
+  const getAllFunctions = (reqOptions = {}) => resources
+    .getResources({ ...reqOptions, ResourceTypeFilters: ['lambda'] }).promise()
+    .then((data) => {
       const result = data.ResourceTagMappingList.map(r => ({
         FunctionARN: r.ResourceARN,
         FunctionName: r.ResourceARN.substring(r.ResourceARN.lastIndexOf(':') + 1, r.ResourceARN.length),
-        Tags: Object.assign(...r.Tags.map(e => ({ [e.Key]: e.Value })))
+        Tags: r.Tags.reduce((p, e) => Object.assign(p, ({ [e.Key]: e.Value })), {})
       }));
-      return data.PaginationToken === ''
-        ? resolve(result)
-        : getAllFunctions(Object.assign({}, reqOptions, { PaginationToken: data.PaginationToken }))
-          .then(resultList => resolve(resultList.concat(result)))
-          .catch(reject);
-    }));
+      if (data.PaginationToken === '') {
+        return result;
+      }
+      return getAllFunctions({ ...reqOptions, PaginationToken: data.PaginationToken })
+        .then(resultList => resultList.concat(result));
+    });
 
   const appendLogRetentionInfo = functions => Promise
     .all(functions.map(f => new Promise((resolve, reject) => cloudwatchlogs.describeLogGroups({
