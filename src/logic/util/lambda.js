@@ -19,41 +19,36 @@ module.exports = (options) => {
         .then(resultList => resultList.concat(result));
     });
 
-  const appendLogRetentionInfo = functions => Promise
-    .all(functions.map(f => new Promise((resolve, reject) => cloudwatchlogs.describeLogGroups({
-      logGroupNamePrefix: `/aws/lambda/${f.FunctionName}`
-    }, (err, res) => (err ? reject(err) : resolve(Object.assign({
-      logGroups: res.logGroups.filter(e => e.logGroupName === `/aws/lambda/${f.FunctionName}`)
-    }, f)))))));
+  const appendLogRetentionInfo = fns => Promise
+    .all(fns.map(fn => cloudwatchlogs
+      .describeLogGroups({
+        logGroupNamePrefix: `/aws/lambda/${fn.FunctionName}`
+      }).promise()
+      .then(r => ({
+        logGroups: r.logGroups.filter(e => e.logGroupName === `/aws/lambda/${fn.FunctionName}`),
+        ...fn
+      }))));
 
-  const appendLogSubscriptionInfo = functions => Promise
-    .all(functions.map(f => new Promise((resolve, reject) => cloudwatchlogs.describeSubscriptionFilters({
-      logGroupName: `/aws/lambda/${f.FunctionName}`
-    }, (err, res) => (err ? reject(err) : resolve(Object.assign(res, f)))))));
+  const appendLogSubscriptionInfo = fns => Promise
+    .all(fns.map(fn => cloudwatchlogs
+      .describeSubscriptionFilters({
+        logGroupName: `/aws/lambda/${fn.FunctionName}`
+      }).promise()
+      .then(r => ({ ...r, ...fn }))));
 
-  const setCloudWatchRetention = (f, retentionInDays) => new Promise((resolve, reject) => cloudwatchlogs
+  const setCloudWatchRetention = (fn, retentionInDays) => cloudwatchlogs
     .putRetentionPolicy({
-      logGroupName: `/aws/lambda/${f.FunctionName}`,
+      logGroupName: `/aws/lambda/${fn.FunctionName}`,
       retentionInDays
-    }, (err, resp) => {
-      if (err) {
-        return reject(err);
-      }
-      return resolve(resp);
-    }));
+    }).promise();
 
-  const subscribeCloudWatchLogGroup = (monitor, producer) => new Promise((resolve, reject) => cloudwatchlogs
+  const subscribeCloudWatchLogGroup = (monitor, producer) => cloudwatchlogs
     .putSubscriptionFilter({
       destinationArn: monitor.FunctionARN,
       filterName: 'NoneFilter',
       filterPattern: '',
       logGroupName: `/aws/lambda/${producer.FunctionName}`
-    }, (err, resp) => {
-      if (err) {
-        return reject(err);
-      }
-      return resolve(resp);
-    }));
+    }).promise();
 
   return {
     getAllFunctions,
