@@ -1,11 +1,11 @@
-const get = require("lodash.get");
-const defaults = require("lodash.defaults");
-const zlibPromise = require("./util/zlib-promise");
-const timeoutPromise = require("./util/timeout-promise");
-const promiseComplete = require("./util/promise-complete");
-const logz = require("./services/logz");
-const loggly = require("./services/loggly");
-const datadog = require("./services/datadog");
+const get = require('lodash.get');
+const defaults = require('lodash.defaults');
+const zlibPromise = require('./util/zlib-promise');
+const timeoutPromise = require('./util/timeout-promise');
+const promiseComplete = require('./util/promise-complete');
+const logz = require('./services/logz');
+const loggly = require('./services/loggly');
+const datadog = require('./services/datadog');
 
 const requestLogRegex = new RegExp([
   /^REPORT RequestId: ([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\t/,
@@ -31,7 +31,7 @@ const requestLogLevel = new RegExp([
 
 module.exports = (event, context, callback, rb) => zlibPromise
   .gunzip(Buffer.from(event.awslogs.data, 'base64'))
-  .then(r => r.toString("ascii"))
+  .then(r => r.toString('ascii'))
   .then(JSON.parse)
   .then((resultParsed) => {
     const toLog = [];
@@ -53,7 +53,7 @@ module.exports = (event, context, callback, rb) => zlibPromise
         });
       } else if (!logEvent.message.match(requestEndRegex) && !logEvent.message.match(requestStartRegex)) {
         const processedLogEvent = defaults({ message: logEvent.message.replace(genericPrefix, '') }, logEvent);
-        const logLevel = get(requestLogLevel.exec(processedLogEvent.message), "1", "WARNING").toLowerCase();
+        const logLevel = get(requestLogLevel.exec(processedLogEvent.message), '1', 'WARNING').toLowerCase();
         rb[logLevel](processedLogEvent, process.env.STAGE);
       }
     });

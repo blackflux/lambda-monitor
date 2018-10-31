@@ -1,10 +1,10 @@
-const response = require("cfn-response");
-const defaults = require("lodash.defaults");
-const difference = require("lodash.difference");
+const response = require('cfn-response');
+const defaults = require('lodash.defaults');
+const difference = require('lodash.difference');
 
 const resourceInitEventKeys = [
-  "RequestType", "ServiceToken", "ResponseURL", "StackId", "RequestId",
-  "LogicalResourceId", "ResourceType", "ResourceProperties"
+  'RequestType', 'ServiceToken', 'ResponseURL', 'StackId', 'RequestId',
+  'LogicalResourceId', 'ResourceType', 'ResourceProperties'
 ];
 
 module.exports.wrap = fn => (event, context, callback, ...args) => fn(event, context, (err, ...cbargs) => {
