@@ -1,9 +1,9 @@
 # Lambda Monitoring
 
-[![Build Status](https://img.shields.io/travis/simlu/lambda-monitor/master.svg)](https://travis-ci.org/simlu/lambda-monitor)
-[![Test Coverage](https://img.shields.io/coveralls/simlu/lambda-monitor/master.svg)](https://coveralls.io/github/simlu/lambda-monitor?branch=master)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=simlu/lambda-monitor)](https://dependabot.com)
-[![Dependencies](https://david-dm.org/simlu/lambda-monitor/status.svg)](https://david-dm.org/simlu/lambda-monitor)
+[![Build Status](https://circleci.com/gh/blackflux/lambda-monitor.png?style=shield)](https://circleci.com/gh/blackflux/lambda-monitor)
+[![Test Coverage](https://img.shields.io/coveralls/blackflux/lambda-monitor/master.svg)](https://coveralls.io/github/blackflux/lambda-monitor?branch=master)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=blackflux/lambda-monitor)](https://dependabot.com)
+[![Dependencies](https://david-dm.org/blackflux/lambda-monitor/status.svg)](https://david-dm.org/blackflux/lambda-monitor)
 [![NPM](https://img.shields.io/npm/v/lambda-monitor.svg)](https://www.npmjs.com/package/lambda-monitor)
 [![Downloads](https://img.shields.io/npm/dt/lambda-monitor.svg)](https://www.npmjs.com/package/lambda-monitor)
 [![Semantic-Release](https://github.com/blackflux/js-gardener/blob/master/assets/icons/semver.svg)](https://github.com/semantic-release/semantic-release)
@@ -31,7 +31,7 @@ Automatically configure lambda log analysis and popagation to external services.
 Getting set up is very easy:
 1) Clone repository locally with
 ```bash
-$ git clone https://github.com/simlu/lambda-monitor
+$ git clone https://github.com/blackflux/lambda-monitor
 ```
 2) Copy `config/example.yml` to `config/STAGE.yml` for each `STAGE` (e.g. `dev`, `qa` or `prod`).
 3) Configure copied files with appropriate tokens. Unused token need to be removed.
@@ -53,7 +53,7 @@ To tag log messages just prefix them with, e.g. `DEBUG:`. Default log level is `
 
 If you decide not to enable rollbar logging please remove the token from the appropriate yml files.
 
-> :link: For Rollbar Logging directly from Lambda Function see [lambda-rollbar](https://github.com/simlu/lambda-rollbar).
+> :link: For Rollbar Logging directly from Lambda Function see [lambda-rollbar](https://github.com/blackflux/lambda-rollbar).
 
 ### Configure Log Services (All Optional)
 
