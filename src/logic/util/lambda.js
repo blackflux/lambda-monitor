@@ -6,13 +6,6 @@ module.exports = (options) => {
 
   const logGroupName = fn => `/aws/lambda/${fn.FunctionName}`;
 
-  const falseNotFound = (err) => {
-    if (err.code && err.code === 'ResourceNotFoundException') {
-      return false;
-    }
-    throw err;
-  };
-
   const getAllFunctions = (reqOptions = {}) => resources
     .getResources({ ...reqOptions, ResourceTypeFilters: ['lambda'] })
     .promise()
@@ -42,7 +35,12 @@ module.exports = (options) => {
         logGroups: r.logGroups.filter(e => e.logGroupName === logGroupName(fn)),
         ...fn
       }))
-      .catch(falseNotFound)))
+      .catch((err) => {
+        if (err.code === 'ResourceNotFoundException') {
+          return false;
+        }
+        throw err;
+      })))
     .then(res => res.filter(fn => fn !== false));
 
   const appendLogSubscriptionInfo = fns => Promise.all(
@@ -52,7 +50,12 @@ module.exports = (options) => {
       })
       .promise()
       .then(r => ({ ...r, ...fn }))
-      .catch(falseNotFound))
+      .catch((err) => {
+        if (err.code === 'ResourceNotFoundException') {
+          return false;
+        }
+        throw err;
+      }))
   ).then(res => res.filter(fn => fn !== false));
 
   const setCloudWatchRetention = (fn, retentionInDays) => cloudwatchlogs
