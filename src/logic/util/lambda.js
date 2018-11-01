@@ -4,6 +4,15 @@ module.exports = (options) => {
   const resources = new AWS.ResourceGroupsTaggingAPI(options);
   const cloudwatchlogs = new AWS.CloudWatchLogs(options);
 
+  const loggroupprefix = fn => `/aws/lambda/${fn.FunctionName}`;
+
+  const falseNotFound = (err) => {
+    if (err.code && err.code === 'ResourceNotFoundException') {
+      return false;
+    }
+    throw (err);
+  };
+
   const getAllFunctions = (reqOptions = {}) => resources
     .getResources({ ...reqOptions, ResourceTypeFilters: ['lambda'] }).promise()
     .then((data) => {
@@ -19,26 +28,31 @@ module.exports = (options) => {
         .then(resultList => resultList.concat(result));
     });
 
-  const appendLogRetentionInfo = fns => Promise
-    .all(fns.map(fn => cloudwatchlogs
+  const appendLogRetentionInfo = fns => Promise.all(
+    fns.map(fn => cloudwatchlogs
       .describeLogGroups({
-        logGroupNamePrefix: `/aws/lambda/${fn.FunctionName}`
+        logGroupNamePrefix: loggroupprefix(fn)
       }).promise()
       .then(r => ({
-        logGroups: r.logGroups.filter(e => e.logGroupName === `/aws/lambda/${fn.FunctionName}`),
+        logGroups: r.logGroups.filter(e => e.logGroupName === loggroupprefix(fn)),
         ...fn
-      }))));
+      }))
+      .catch(falseNotFound))
+  ).then(res => res.filter(fn => fn !== false));
 
-  const appendLogSubscriptionInfo = fns => Promise
-    .all(fns.map(fn => cloudwatchlogs
+  const appendLogSubscriptionInfo = fns => Promise.all(
+    fns.map(fn => cloudwatchlogs
       .describeSubscriptionFilters({
-        logGroupName: `/aws/lambda/${fn.FunctionName}`
-      }).promise()
-      .then(r => ({ ...r, ...fn }))));
+        logGroupName: loggroupprefix(fn)
+      })
+      .promise()
+      .then(r => ({ ...r, ...fn }))
+      .catch(falseNotFound))
+  ).then(res => res.filter(fn => fn !== false));
 
   const setCloudWatchRetention = (fn, retentionInDays) => cloudwatchlogs
     .putRetentionPolicy({
-      logGroupName: `/aws/lambda/${fn.FunctionName}`,
+      logGroupName: loggroupprefix(fn),
       retentionInDays
     }).promise();
 
@@ -47,7 +61,7 @@ module.exports = (options) => {
       destinationArn: monitor.FunctionARN,
       filterName: 'NoneFilter',
       filterPattern: '',
-      logGroupName: `/aws/lambda/${producer.FunctionName}`
+      logGroupName: loggroupprefix(producer)
     }).promise();
 
   return {
