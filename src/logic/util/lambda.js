@@ -42,8 +42,7 @@ module.exports = (options) => {
         logGroups: r.logGroups.filter(e => e.logGroupName === logGroupName(fn)),
         ...fn
       }))
-      .catch(falseNotFound))
-    )
+      .catch(falseNotFound)))
     .then(res => res.filter(fn => fn !== false));
 
   const appendLogSubscriptionInfo = fns => Promise.all(
