@@ -25,8 +25,8 @@ module.exports = (options) => {
         .then(resultList => resultList.concat(result));
     });
 
-  const appendLogRetentionInfo = fns => Promise
-    .all(fns.map(fn => cloudwatchlogs
+  const appendLogRetentionInfo = fns => Promise.all(
+    fns.map(fn => cloudwatchlogs
       .describeLogGroups({
         logGroupNamePrefix: logGroupName(fn)
       })
@@ -40,8 +40,8 @@ module.exports = (options) => {
           return false;
         }
         throw err;
-      })))
-    .then(res => res.filter(fn => fn !== false));
+      }))
+  ).then(res => res.filter(fn => fn !== false));
 
   const appendLogSubscriptionInfo = fns => Promise.all(
     fns.map(fn => cloudwatchlogs
@@ -49,7 +49,10 @@ module.exports = (options) => {
         logGroupName: logGroupName(fn)
       })
       .promise()
-      .then(r => ({ ...r, ...fn }))
+      .then(r => ({
+        ...r,
+        ...fn
+      }))
       .catch((err) => {
         if (err.code === 'ResourceNotFoundException') {
           return false;
