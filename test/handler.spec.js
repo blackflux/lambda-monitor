@@ -5,6 +5,7 @@ const lambdaTester = require('lambda-tdd')({
   handlerFile: path.join(__dirname, '..', 'src', 'handler.js'),
   cassetteFolder: path.join(__dirname, 'lambda', '__cassettes'),
   envVarYml: path.join(__dirname, 'lambda', 'env.yml'),
+  envVarYmlRecording: path.join(__dirname, 'lambda', 'env.recording.yml'),
   testFolder: path.join(__dirname, 'lambda', 'tests')
 });
 

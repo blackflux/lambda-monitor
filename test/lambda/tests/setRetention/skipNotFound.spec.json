@@ -1,0 +1,12 @@
+{
+  "handler": "setRetention",
+  "success": true,
+  "timeout": 30000,
+  "expect": {
+    "to.deep.equal()": "Done."
+  },
+  "logs": {
+    "to.deep.equal()": []
+  },
+  "event": {}
+}

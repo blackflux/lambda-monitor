@@ -4,8 +4,11 @@ module.exports = (options) => {
   const resources = new AWS.ResourceGroupsTaggingAPI(options);
   const cloudwatchlogs = new AWS.CloudWatchLogs(options);
 
+  const logGroupName = fn => `/aws/lambda/${fn.FunctionName}`;
+
   const getAllFunctions = (reqOptions = {}) => resources
-    .getResources({ ...reqOptions, ResourceTypeFilters: ['lambda'] }).promise()
+    .getResources({ ...reqOptions, ResourceTypeFilters: ['lambda'] })
+    .promise()
     .then((data) => {
       const result = data.ResourceTagMappingList.map(r => ({
         FunctionARN: r.ResourceARN,
@@ -15,30 +18,52 @@ module.exports = (options) => {
       if (data.PaginationToken === '') {
         return result;
       }
-      return getAllFunctions({ ...reqOptions, PaginationToken: data.PaginationToken })
+      return getAllFunctions({
+        ...reqOptions,
+        PaginationToken: data.PaginationToken
+      })
         .then(resultList => resultList.concat(result));
     });
 
-  const appendLogRetentionInfo = fns => Promise
-    .all(fns.map(fn => cloudwatchlogs
+  const appendLogRetentionInfo = fns => Promise.all(
+    fns.map(fn => cloudwatchlogs
       .describeLogGroups({
-        logGroupNamePrefix: `/aws/lambda/${fn.FunctionName}`
-      }).promise()
+        logGroupNamePrefix: logGroupName(fn)
+      })
+      .promise()
       .then(r => ({
-        logGroups: r.logGroups.filter(e => e.logGroupName === `/aws/lambda/${fn.FunctionName}`),
+        logGroups: r.logGroups.filter(e => e.logGroupName === logGroupName(fn)),
         ...fn
-      }))));
+      }))
+      .catch((err) => {
+        if (err.code === 'ResourceNotFoundException') {
+          return false;
+        }
+        throw err;
+      }))
+  ).then(res => res.filter(fn => fn !== false));
 
-  const appendLogSubscriptionInfo = fns => Promise
-    .all(fns.map(fn => cloudwatchlogs
+  const appendLogSubscriptionInfo = fns => Promise.all(
+    fns.map(fn => cloudwatchlogs
       .describeSubscriptionFilters({
-        logGroupName: `/aws/lambda/${fn.FunctionName}`
-      }).promise()
-      .then(r => ({ ...r, ...fn }))));
+        logGroupName: logGroupName(fn)
+      })
+      .promise()
+      .then(r => ({
+        ...r,
+        ...fn
+      }))
+      .catch((err) => {
+        if (err.code === 'ResourceNotFoundException') {
+          return false;
+        }
+        throw err;
+      }))
+  ).then(res => res.filter(fn => fn !== false));
 
   const setCloudWatchRetention = (fn, retentionInDays) => cloudwatchlogs
     .putRetentionPolicy({
-      logGroupName: `/aws/lambda/${fn.FunctionName}`,
+      logGroupName: logGroupName(fn),
       retentionInDays
     }).promise();
 
@@ -47,7 +72,7 @@ module.exports = (options) => {
       destinationArn: monitor.FunctionARN,
       filterName: 'NoneFilter',
       filterPattern: '',
-      logGroupName: `/aws/lambda/${producer.FunctionName}`
+      logGroupName: logGroupName(producer)
     }).promise();
 
   return {
