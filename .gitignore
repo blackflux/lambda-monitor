@@ -21,3 +21,6 @@ config/*
 lib/
 yarn-error.log
 release.tar.gz
+
+# ignore files containing secrets
+/test/lambda/env.recording.yml
