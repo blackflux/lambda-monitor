@@ -58,7 +58,7 @@
     "mocha": "5.2.0",
     "semantic-release": "15.10.6",
     "nyc": "13.1.0",
-    "@babel/cli": "7.1.2",
+    "@babel/cli": "7.1.5",
     "@babel/register": "7.0.0",
     "babel-eslint": "10.0.1",
     "@babel/core": "7.1.2",
