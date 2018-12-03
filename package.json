@@ -52,7 +52,7 @@
   "devDependencies": {
     "chai": "4.2.0",
     "nock": "10.0.1",
-    "js-gardener": "1.32.0",
+    "js-gardener": "1.34.0",
     "lambda-tdd": "1.25.2",
     "coveralls": "3.0.2",
     "mocha": "5.2.0",
