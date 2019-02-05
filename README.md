@@ -46,7 +46,7 @@ If you decide to uninstall, simply run `sls remove --stage=STAGE --region=REGION
 
 First create a new Rollbar project and call it `lambda-monitor` or similar. Now create a server write key for each stage that you are using and put it into the corresponding `STAGE.yml` file (see above).
 
-You can configure the minimum log level that should be send to rollbar using `ROLLBAR_LOG_LEVEL`. Available options are:
+You can configure the minimum log level that should be send to rollbar using `ROLLBAR_REPORT_LEVEL`. Available options are:
 `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`
 
 To tag log messages just prefix them with, e.g. `DEBUG:`. Default log level is `WARNING`.
