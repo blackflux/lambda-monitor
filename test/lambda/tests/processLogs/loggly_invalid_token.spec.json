@@ -11,7 +11,7 @@
   "logs": {
     "to.deep.equal()": [
       "Task timed out after 1.00 seconds\n\n",
-      "403 - \"Invalid API key\""
+      "403: 403 - \"Invalid API key\""
     ]
   },
   "event": {
