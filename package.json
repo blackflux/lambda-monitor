@@ -55,7 +55,7 @@
     "js-gardener": "1.35.1",
     "lambda-tdd": "2.1.2",
     "coveralls": "3.0.2",
-    "mocha": "5.2.0",
+    "mocha": "6.0.0",
     "semantic-release": "15.13.3",
     "nyc": "13.3.0",
     "@babel/cli": "7.2.3",
