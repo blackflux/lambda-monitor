@@ -2,25 +2,31 @@ FROM lambci/lambda:build-nodejs8.10
 
 WORKDIR /user
 
-# prevent npm update notifications
-ENV NO_UPDATE_NOTIFIER 0
-
-RUN yum install git vi -y \
-  && npm install -g serverless npm-check-updates \
-  && npm install -g npm@6.1.0
+RUN yum install git vi -y
 
 # set home folder
 ENV HOME /user
-RUN chmod 757 /user
 
-# set project root as execution env
-ENV AWS_EXECUTION_ENV ${pwd}
-# ensure npm spawn can write to folder
-ENV SPAWN_WRAP_SHIM_ROOT /tmp
+RUN touch ~/.bashrc && \
+  curl -o- -L https://yarnpkg.com/install.sh | bash && \
+  source ~/.bashrc && \
+  yarn global add serverless@1.35.0
+
+RUN touch ~/.bash_aliases && \
+  echo '# yarn-upgrade' >> ~/.bashrc && \
+  echo "alias yu='yarn cache clean && rm -rf node_modules offline/packages && yarn upgrade --latest --force && git add offline/package/.'" >> ~/.bashrc && \
+  echo '# yarn re-install' >> ~/.bashrc && \
+  echo "alias yi='yarn cache clean && rm -rf node_modules && yarn install --offline --frozen-lockfile'" >> ~/.bashrc && \
+  echo '# run tests' >> ~/.bashrc && \
+  echo "alias t='yarn test'" >> ~/.bashrc && \
+  echo "alias ts='yarn run test-simple'" >> ~/.bashrc && \
+  source ~/.bash_aliases
+
+RUN chmod -R 757 /user
+
+# set correct execution env
+ENV LAMBDA_TASK_ROOT /user/project
 # disable babel trying to access root file location
 ENV BABEL_DISABLE_CACHE 1
-# allow npm cache access for user
-RUN mkdir /user/.npm
-RUN chmod -R 757 /user/.npm
 
 ENTRYPOINT (cd project && bash)
