@@ -14,9 +14,9 @@ RUN touch ~/.bashrc && \
 
 RUN touch ~/.bash_aliases && \
   echo '# yarn-upgrade' >> ~/.bashrc && \
-  echo "alias yu='yarn cache clean && rm -rf node_modules offline/packages && yarn upgrade --latest --force && git add offline/package/.'" >> ~/.bashrc && \
+  echo "alias yu='yarn upgrade --latest --force'" >> ~/.bashrc && \
   echo '# yarn re-install' >> ~/.bashrc && \
-  echo "alias yi='yarn cache clean && rm -rf node_modules && yarn install --offline --frozen-lockfile'" >> ~/.bashrc && \
+  echo "alias yi='yarn install --offline --frozen-lockfile'" >> ~/.bashrc && \
   echo '# run tests' >> ~/.bashrc && \
   echo "alias t='yarn test'" >> ~/.bashrc && \
   echo "alias ts='yarn run test-simple'" >> ~/.bashrc && \
