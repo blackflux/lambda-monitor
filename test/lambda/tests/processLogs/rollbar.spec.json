@@ -3,6 +3,7 @@
   "env": {
     "ROLLBAR_ACCESS_TOKEN": "rollbar_dummy_token"
   },
+  "allowedUnmatchedRecordings": ["POST https://api.rollbar.com:443/api/1/item/"],
   "success": true,
   "timeout": 10000,
   "expect": {
