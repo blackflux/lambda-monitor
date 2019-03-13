@@ -3718,10 +3718,10 @@ lambda-rollbar@1.10.4:
     lodash.omit "4.5.0"
     rollbar "2.5.2"
 
-lambda-tdd@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.4.0.tgz#4e5bb4d6db0aac6650fa31a9a9f44d53faf2e605"
-  integrity sha512-4rvbUW4jPlRpjE/R2zMc/8Dtt0wyuLadDapohLyMZooOzYuWDrY/4MIxGYtK8DgWpNvySsT/0K48Sr2Q+j+4kA==
+lambda-tdd@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.4.1.tgz#72a51843b5f84b066bb6dd2a735039501d24ee72"
+  integrity sha512-mYSQfz43hGgWMR5IXj8X+YP0iPBnU3rvwIEtdH6Th9lE39CTIYcU8BdNzEvffVj5e/JICiGDW2Vu3wpJb68cdw==
   dependencies:
     app-root-path "2.1.0"
     glob "7.1.3"
@@ -3730,7 +3730,7 @@ lambda-tdd@2.4.0:
     lodash.defaults "4.2.0"
     lodash.get "4.4.2"
     lodash.pick "4.4.0"
-    timekeeper "2.1.2"
+    timekeeper "2.2.0"
 
 lambda-wrapper@0.3.0:
   version "0.3.0"
@@ -6780,10 +6780,10 @@ timed-out@^4.0.0:
   resolved "https://registry.yarnpkg.com/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
   integrity sha1-8y6srFoXW+ol1/q1Zas+2HQe9W8=
 
-timekeeper@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/timekeeper/-/timekeeper-2.1.2.tgz#0fd98dd839551f2ab6b92b283754ea5a24edc901"
-  integrity sha512-fc1DDqbiyz5vxRO4xkiATwfWUw1FV7W20+FJYal1SnoIYgNuB4WNxYLtbG3zjUBwOSk3P4u1TgBAZYG/aqBWMw==
+timekeeper@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/timekeeper/-/timekeeper-2.2.0.tgz#9645731fce9e3280a18614a57a9d1b72af3ca368"
+  integrity sha512-W3AmPTJWZkRwu+iSNxPIsLZ2ByADsOLbbLxe46UJyWj3mlYLlwucKiq+/dPm0l9wTzqoF3/2PH0AGFCebjq23A==
 
 tiny-relative-date@^1.3.0:
   version "1.3.0"
