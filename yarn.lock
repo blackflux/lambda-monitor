@@ -638,10 +638,10 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk@2.420.0, aws-sdk@^2.4.0:
-  version "2.420.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.420.0.tgz#b341c805b6206014fb5caebf2c5d4697d3de373d"
-  integrity sha512-lpkGYiJ3dvZ0e4OUE9S3eGuMGCdtG9f04wLwtvaoqSvoPb4PNgCFv42EwBeEkKr6VcnofwcRpqPpzN+cSLFBzQ==
+aws-sdk@2.421.0, aws-sdk@^2.4.0:
+  version "2.421.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.421.0.tgz#39c8066b103ef01849f7da587cec40cc874f2fbc"
+  integrity sha512-N0vY++NJc0MV96pu4vcnJIe8MXNKgcNLxlRPDALlIbaYHSC+btJSAdXpC5+4uFFF30uWCaIM1WiX8O/9Obg5oA==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -3556,10 +3556,10 @@ jmespath@0.15.0:
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
   integrity sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=
 
-js-gardener@1.38.1:
-  version "1.38.1"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-1.38.1.tgz#db9c5f44dfe25312ab1784703bc112bdb648db9e"
-  integrity sha512-lbjoM4aRrj26E4DWpCQCnvkw7K6HLU6r8fnlTz/GKxE/MwD7PWH6Yam5mKwvwXb35jT8nT4eqBaLZhVQMjrIXw==
+js-gardener@1.38.2:
+  version "1.38.2"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-1.38.2.tgz#5986df5d1f722765d7fe439ff19b611a5726e233"
+  integrity sha512-Bd/dlqM2OvZat7sbCZxC1TNf2pa4TaAZa0wGj4X2wcZZZvKviJ4DRd6lxMwOKNgEJVPhYWJhkY58YEcfaE6I3w==
   dependencies:
     chalk "2.4.2"
     eslint "5.15.1"
@@ -3718,10 +3718,10 @@ lambda-rollbar@1.10.4:
     lodash.omit "4.5.0"
     rollbar "2.5.2"
 
-lambda-tdd@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.4.0.tgz#4e5bb4d6db0aac6650fa31a9a9f44d53faf2e605"
-  integrity sha512-4rvbUW4jPlRpjE/R2zMc/8Dtt0wyuLadDapohLyMZooOzYuWDrY/4MIxGYtK8DgWpNvySsT/0K48Sr2Q+j+4kA==
+lambda-tdd@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.4.1.tgz#72a51843b5f84b066bb6dd2a735039501d24ee72"
+  integrity sha512-mYSQfz43hGgWMR5IXj8X+YP0iPBnU3rvwIEtdH6Th9lE39CTIYcU8BdNzEvffVj5e/JICiGDW2Vu3wpJb68cdw==
   dependencies:
     app-root-path "2.1.0"
     glob "7.1.3"
@@ -3730,7 +3730,7 @@ lambda-tdd@2.4.0:
     lodash.defaults "4.2.0"
     lodash.get "4.4.2"
     lodash.pick "4.4.0"
-    timekeeper "2.1.2"
+    timekeeper "2.2.0"
 
 lambda-wrapper@0.3.0:
   version "0.3.0"
@@ -6780,10 +6780,10 @@ timed-out@^4.0.0:
   resolved "https://registry.yarnpkg.com/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
   integrity sha1-8y6srFoXW+ol1/q1Zas+2HQe9W8=
 
-timekeeper@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/timekeeper/-/timekeeper-2.1.2.tgz#0fd98dd839551f2ab6b92b283754ea5a24edc901"
-  integrity sha512-fc1DDqbiyz5vxRO4xkiATwfWUw1FV7W20+FJYal1SnoIYgNuB4WNxYLtbG3zjUBwOSk3P4u1TgBAZYG/aqBWMw==
+timekeeper@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/timekeeper/-/timekeeper-2.2.0.tgz#9645731fce9e3280a18614a57a9d1b72af3ca368"
+  integrity sha512-W3AmPTJWZkRwu+iSNxPIsLZ2ByADsOLbbLxe46UJyWj3mlYLlwucKiq+/dPm0l9wTzqoF3/2PH0AGFCebjq23A==
 
 tiny-relative-date@^1.3.0:
   version "1.3.0"
