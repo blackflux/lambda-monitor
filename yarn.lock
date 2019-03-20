@@ -3587,14 +3587,6 @@ js-yaml@3.12.0:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-js-yaml@3.12.2:
-  version "3.12.2"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.2.tgz#ef1d067c5a9d9cb65bd72f285b5d8105c77f14fc"
-  integrity sha512-QHn/Lh/7HhZ/Twc7vJYQTkjuCa0kaCcDcjK5Zlk2rvnUpy7DxMJ23+Jc2dcyvltwQVg1nygAVlB2oRDFHoRS5Q==
-  dependencies:
-    argparse "^1.0.7"
-    esprima "^4.0.0"
-
 js-yaml@3.13.0, js-yaml@^3.11.0, js-yaml@^3.12.0, js-yaml@^3.4.2, js-yaml@^3.6.1, js-yaml@^3.9.0:
   version "3.13.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.0.tgz#38ee7178ac0eea2c97ff6d96fff4b18c7d8cf98e"
@@ -3706,14 +3698,14 @@ lambda-rollbar@1.10.4:
     lodash.omit "4.5.0"
     rollbar "2.5.2"
 
-lambda-tdd@2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.4.1.tgz#72a51843b5f84b066bb6dd2a735039501d24ee72"
-  integrity sha512-mYSQfz43hGgWMR5IXj8X+YP0iPBnU3rvwIEtdH6Th9lE39CTIYcU8BdNzEvffVj5e/JICiGDW2Vu3wpJb68cdw==
+lambda-tdd@2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.4.2.tgz#df19c5c383f3693418e7240fd6ba8d92f8ec7b33"
+  integrity sha512-SA9ktjo6QU7SsNMB2Bs03r43thHYgBSK5jC0kkE0IkYOlvS86aHQbfQMrNUiukS5LrOiXlG/+xbt0DQp0KBsuQ==
   dependencies:
     app-root-path "2.1.0"
     glob "7.1.3"
-    js-yaml "3.12.2"
+    js-yaml "3.13.0"
     lambda-wrapper "0.3.0"
     lodash.defaults "4.2.0"
     lodash.get "4.4.2"
