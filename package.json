@@ -62,7 +62,7 @@
     "eslint": "5.16.0",
     "js-gardener": "1.38.6",
     "lambda-tdd": "2.7.0",
-    "mocha": "6.1.2",
+    "mocha": "6.1.3",
     "nock": "10.0.6",
     "nyc": "13.3.0",
     "semantic-release": "15.13.3"
