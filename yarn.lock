@@ -3660,15 +3660,15 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lambda-rollbar@1.10.4:
-  version "1.10.4"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.4.tgz#a725b25cba79980b33823b9f7311ed1d8ee52a5b"
-  integrity sha512-l5KTyhGyaysJnZ8hM7ysJyqyvLduy7xbSGDzrWx8QpYMoKP6xk0za5NE/pPgN7ktns9GapOEZCBZNO1Zhpgxxg==
+lambda-rollbar@1.10.5:
+  version "1.10.5"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.5.tgz#7ec9845e9bc2aa24c5c19cefc66e4b8d5118ed4a"
+  integrity sha512-bmWFr3Jyrukn6oBaXFKIRk0pJZ6jP9/WmdAs++4l9NpL2b353YoUiNdhMndltSLkBjq8ZOU/picZ2d+cINOH7A==
   dependencies:
     fast-safe-stringify "2.0.6"
     lodash.get "4.4.2"
     lodash.omit "4.5.0"
-    rollbar "2.5.2"
+    rollbar "2.5.5"
 
 lambda-tdd@2.7.2:
   version "2.7.2"
@@ -6052,10 +6052,10 @@ robo-config@1.23.1:
     object-treeify "1.1.5"
     smart-fs "1.6.0"
 
-rollbar@2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/rollbar/-/rollbar-2.5.2.tgz#ebf830b1089146e9010d3fd4eca9ba65622b9c95"
-  integrity sha512-eZyZ6/vakNQm02NvdE10a1tB7EUNbN8Q4GSI5OOMzH3Tzw2okVXh2Lhhi0rvbB5mxA2Pa2Qp1xzqJHdmPL05gw==
+rollbar@2.5.5:
+  version "2.5.5"
+  resolved "https://registry.yarnpkg.com/rollbar/-/rollbar-2.5.5.tgz#6e4a9ee4942a0a063e06af8ab58b946ce7f9be4e"
+  integrity sha512-Cn+Why5DlPNg5jIDrU3ntjucsiAJgT0QOF/s+EVbdiDA2WD6eZJkdACQmK5S3JyINPUIjh+CWCtX9YPCnA/q4A==
   dependencies:
     async "~1.2.1"
     console-polyfill "0.3.0"
