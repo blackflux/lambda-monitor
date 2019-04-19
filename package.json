@@ -39,14 +39,14 @@
   "dependencies": {
     "aws-sdk": "2.440.0",
     "cfn-response": "1.0.1",
-    "lambda-rollbar": "1.10.5",
+    "lambda-rollbar": "1.10.6",
     "lodash.defaults": "4.2.0",
     "lodash.difference": "4.5.0",
     "lodash.get": "4.4.2",
     "optimist": "0.6.1",
     "request": "2.88.0",
     "request-promise": "4.2.4",
-    "yaml-boost": "1.9.1"
+    "yaml-boost": "1.9.2"
   },
   "devDependencies": {
     "@babel/cli": "7.4.3",
@@ -54,13 +54,13 @@
     "@babel/plugin-proposal-object-rest-spread": "7.4.3",
     "@babel/register": "7.4.0",
     "@blackflux/eslint-plugin-rules": "1.0.3",
-    "@blackflux/robo-config-plugin": "1.7.3",
+    "@blackflux/robo-config-plugin": "1.7.4",
     "babel-eslint": "10.0.1",
     "chai": "4.2.0",
     "coveralls": "3.0.3",
     "eslint": "5.16.0",
-    "js-gardener": "2.0.6",
-    "lambda-tdd": "2.7.2",
+    "js-gardener": "2.0.7",
+    "lambda-tdd": "2.7.3",
     "mocha": "6.1.4",
     "nock": "10.0.6",
     "nyc": "14.0.0",
