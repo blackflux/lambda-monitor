@@ -168,10 +168,10 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@blackflux/eslint-plugin-rules@1.0.11":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.0.11.tgz#8ae393478075c8bc173de9bb6764558d2fa9f257"
-  integrity sha512-NTQC2+Ap4aPRFhaFI3TbJ5CzmdOjhIdOfGPIDySaztCyX/tMBdUvtfUbufATzBs7//Nr3txXks6QWWgo9x79xg==
+"@blackflux/eslint-plugin-rules@1.0.12":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.0.12.tgz#3c6a87016dc466d1d8f13f7880a47a604033af7c"
+  integrity sha512-2yY85w1YZVphF1TPgo4V0XhoUpSDDQNAmM9/KIA+FQ/d6pl+lwCmlGC7p/hbZv/amKW8+VwKpIOXX5kpn55T7w==
   dependencies:
     smart-fs "1.7.4"
 
@@ -3668,10 +3668,10 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lambda-rollbar@1.10.10:
-  version "1.10.10"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.10.tgz#ff5e3824b37371b51e3dcbc648113a467597bc12"
-  integrity sha512-O+h+SJkVU6CvcMV0OmbsGPxWCjm82C69A5EhAOdHqAtMIqz9zeU2RodSwSUp1FIL1nWcbGRFAjt/hD1qaQwGIw==
+lambda-rollbar@1.10.11:
+  version "1.10.11"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.11.tgz#67fe6ad1a4af76b42093f54f4bb77b9da2c4390e"
+  integrity sha512-RoxOghVUkWNW+wqtq02+4AS7GxT66tE0cPD0As1ne1SNPIPkHdJlK6gYHPAw9CNpdJV0ctY92m3NX1MPN25IgA==
   dependencies:
     fast-safe-stringify "2.0.6"
     lodash.get "4.4.2"
