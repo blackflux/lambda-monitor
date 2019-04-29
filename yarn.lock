@@ -168,12 +168,12 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@blackflux/eslint-plugin-rules@1.0.12":
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.0.12.tgz#3c6a87016dc466d1d8f13f7880a47a604033af7c"
-  integrity sha512-2yY85w1YZVphF1TPgo4V0XhoUpSDDQNAmM9/KIA+FQ/d6pl+lwCmlGC7p/hbZv/amKW8+VwKpIOXX5kpn55T7w==
+"@blackflux/eslint-plugin-rules@1.0.14":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.0.14.tgz#971500a096c110774a46efb763de2a28a8ea5b06"
+  integrity sha512-6/ShMJohPzVyQtw2YGRTZOKDS61uo48xk2t+CxgWIuIMrq5jbu2aIbXzT6Hn3Qeax/EN6nNboV2ZWtBMnx6aig==
   dependencies:
-    smart-fs "1.7.4"
+    smart-fs "1.7.6"
 
 "@blackflux/robo-config-plugin@1.8.2":
   version "1.8.2"
@@ -6304,6 +6304,18 @@ smart-fs@1.7.4:
     lodash.isequal "4.5.0"
     xml-js "1.6.11"
     yaml-boost "1.9.4"
+
+smart-fs@1.7.6:
+  version "1.7.6"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.7.6.tgz#44ec5bdd761e82a8018af3bc74d8c90c10ef2ef2"
+  integrity sha512-xomXsiBJt8ASGxJN+aiVwP1IKlVnD8xrP9Wvm9ZiyMXqOCzTozo54FKTHFBCL+Xlvlm4Ucp6HgjEarK0J/c/5A==
+  dependencies:
+    fs-extra "7.0.1"
+    json-stringify-pretty-compact "2.0.0"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    xml-js "1.6.11"
+    yaml-boost "1.9.5"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
