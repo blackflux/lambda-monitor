@@ -60,7 +60,7 @@
     "coveralls": "3.0.3",
     "eslint": "5.16.0",
     "js-gardener": "2.0.27",
-    "lambda-tdd": "2.7.6",
+    "lambda-tdd": "2.7.7",
     "mocha": "6.1.4",
     "nock": "10.0.6",
     "nyc": "14.0.0",
