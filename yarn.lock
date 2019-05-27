@@ -168,17 +168,17 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@blackflux/eslint-plugin-rules@1.0.15":
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.0.15.tgz#4dbe831c320bda0bffb6a575a262a940272d9914"
-  integrity sha512-Fe1tTSwuLZzZJtJIFke86rvCydtCZ5ZsoHN+O7PhEdXzLtm2HyP2jEq5qZG469Mv80jW4mdic8uDGvJ8McuIsw==
+"@blackflux/eslint-plugin-rules@1.0.16":
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.0.16.tgz#a808629bc1be17dd41d00ad251df7ecb940df026"
+  integrity sha512-NRFZB07cOjwi8PbU9WH/sNPJarnG6riTX00QtOYx3l+4vwZxgq5gsNtY98EhP/kmR+sH906kWq5qCawBkA9/6A==
   dependencies:
-    smart-fs "1.7.6"
+    smart-fs "1.7.7"
 
-"@blackflux/robo-config-plugin@1.10.3":
-  version "1.10.3"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-1.10.3.tgz#b605de04fd83f58af80984844aa0ff2ffb97ffe7"
-  integrity sha512-d5siiEpkPom3kwsSJ8giDUghq0uMMtiWmdbW8eO8LgpYRlbbpdc18TB/9i+AGYfWoZ1RksjW4qzZtVGZlZGmig==
+"@blackflux/robo-config-plugin@1.10.4":
+  version "1.10.4"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-1.10.4.tgz#a4f44a3eb71aa06358c86d6a42acb88ea27a56a4"
+  integrity sha512-IxMScUPtT9TnrE8GnD0hekBMh7MSrNu88zC8xNutGh6v8xc3/BM8/KA2O4Kb9q8pkH8WpcK5MbcANRd8Wt3xQw==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -1608,7 +1608,7 @@ debug@^4.0.0, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1:
   dependencies:
     ms "^2.1.1"
 
-debuglog@*, debuglog@^1.0.1:
+debuglog@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/debuglog/-/debuglog-1.0.1.tgz#aa24ffb9ac3df9a2351837cfb2d279360cd78492"
   integrity sha1-qiT/uaw9+aI1GDfPstJ5NgzXhJI=
@@ -3015,7 +3015,7 @@ import-lazy@^2.1.0:
   resolved "https://registry.yarnpkg.com/import-lazy/-/import-lazy-2.1.0.tgz#05698e3d45c88e8d7e9d92cb0584e77f096f3e43"
   integrity sha1-BWmOPUXIjo1+nZLLBYTnfwlvPkM=
 
-imurmurhash@*, imurmurhash@^0.1.4:
+imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
@@ -3705,20 +3705,20 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lambda-rollbar@1.10.12:
-  version "1.10.12"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.12.tgz#e31eb509ca5ce5c53925702e61bdfa78cc1a0562"
-  integrity sha512-MO84Xt36ADrc2PYAwUZajvr4xls/++3aJ7e/vGnuGzAf6fvgeWFKnsWh0VxuoVf3RoElJ7rm2qvkQaD8kHitjQ==
+lambda-rollbar@1.10.13:
+  version "1.10.13"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.13.tgz#c57a1b5481176a78bed4bdb4a62dac5a47c843e6"
+  integrity sha512-2yQEeMciL2wlHIs1zQFzx1sizQgMZr4GT7FDPqlmADCEtDY6bKiloDb0Z8u0ib3wzuaRrbIx4E3AdtqYotRS/A==
   dependencies:
     fast-safe-stringify "2.0.6"
     lodash.get "4.4.2"
     lodash.omit "4.5.0"
-    rollbar "2.6.1"
+    rollbar "2.7.1"
 
-lambda-tdd@2.7.9:
-  version "2.7.9"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.7.9.tgz#d2cd205f25e27fc9959f097d82d682f39282d46a"
-  integrity sha512-QOav+RDSgJk3XhfVDGJl88GsVu/IxbJT0NZqjy/Tt/oyP9ODEyfZUCqlzioU72iUZMbp8IPTSE2jT9ocIDnDpw==
+lambda-tdd@2.7.10:
+  version "2.7.10"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.7.10.tgz#b93189b2eee4dc3420c7069021bef8c2d2213952"
+  integrity sha512-7qYuWKxvtbbzdpKzBMGBGiexvP38yriiHxkF88bFqacew+4aIYEUOYokguD26y2UMwSZq+dUpUAKk5vaJ2SKtw==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
@@ -3822,7 +3822,7 @@ libnpm@^2.0.1:
     read-package-json "^2.0.13"
     stringify-package "^1.0.0"
 
-libnpmaccess@*, libnpmaccess@^3.0.1:
+libnpmaccess@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/libnpmaccess/-/libnpmaccess-3.0.1.tgz#5b3a9de621f293d425191aa2e779102f84167fa8"
   integrity sha512-RlZ7PNarCBt+XbnP7R6PoVgOq9t+kou5rvhaInoNibhPO7eMlRfS0B8yjatgn2yaHIwWNyoJDolC/6Lc5L/IQA==
@@ -3851,7 +3851,7 @@ libnpmhook@^5.0.2:
     get-stream "^4.0.0"
     npm-registry-fetch "^3.8.0"
 
-libnpmorg@*, libnpmorg@^1.0.0:
+libnpmorg@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/libnpmorg/-/libnpmorg-1.0.0.tgz#979b868c48ba28c5820e3bb9d9e73c883c16a232"
   integrity sha512-o+4eVJBoDGMgRwh2lJY0a8pRV2c/tQM/SxlqXezjcAg26Qe9jigYVs+Xk0vvlYDWCDhP0g74J8UwWeAgsB7gGw==
@@ -3876,7 +3876,7 @@ libnpmpublish@^1.1.0:
     semver "^5.5.1"
     ssri "^6.0.1"
 
-libnpmsearch@*, libnpmsearch@^2.0.0:
+libnpmsearch@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/libnpmsearch/-/libnpmsearch-2.0.0.tgz#de05af47ada81554a5f64276a69599070d4a5685"
   integrity sha512-vd+JWbTGzOSfiOc+72MU6y7WqmBXn49egCCrIXp27iE/88bX8EpG64ST1blWQI1bSMUr9l1AKPMVsqa2tS5KWA==
@@ -3885,7 +3885,7 @@ libnpmsearch@*, libnpmsearch@^2.0.0:
     get-stream "^4.0.0"
     npm-registry-fetch "^3.8.0"
 
-libnpmteam@*, libnpmteam@^1.0.1:
+libnpmteam@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/libnpmteam/-/libnpmteam-1.0.1.tgz#ff704b1b6c06ea674b3b1101ac3e305f5114f213"
   integrity sha512-gDdrflKFCX7TNwOMX1snWojCoDE5LoRWcfOC0C/fqF7mBq8Uz9zWAX4B2RllYETNO7pBupBaSyBDkTAC15cAMg==
@@ -3981,11 +3981,6 @@ lockfile@^1.0.4:
   dependencies:
     signal-exit "^3.0.2"
 
-lodash._baseindexof@*:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/lodash._baseindexof/-/lodash._baseindexof-3.1.0.tgz#fe52b53a1c6761e42618d654e4a25789ed61822c"
-  integrity sha1-/lK1OhxnYeQmGNZU5KJXie1hgiw=
-
 lodash._baseuniq@~4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash._baseuniq/-/lodash._baseuniq-4.6.0.tgz#0ebb44e456814af7905c6212fa2c9b2d51b841e8"
@@ -3994,32 +3989,10 @@ lodash._baseuniq@~4.6.0:
     lodash._createset "~4.0.0"
     lodash._root "~3.0.0"
 
-lodash._bindcallback@*:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/lodash._bindcallback/-/lodash._bindcallback-3.0.1.tgz#e531c27644cf8b57a99e17ed95b35c748789392e"
-  integrity sha1-5THCdkTPi1epnhftlbNcdIeJOS4=
-
-lodash._cacheindexof@*:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/lodash._cacheindexof/-/lodash._cacheindexof-3.0.2.tgz#3dc69ac82498d2ee5e3ce56091bafd2adc7bde92"
-  integrity sha1-PcaayCSY0u5ePOVgkbr9Ktx73pI=
-
-lodash._createcache@*:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/lodash._createcache/-/lodash._createcache-3.1.2.tgz#56d6a064017625e79ebca6b8018e17440bdcf093"
-  integrity sha1-VtagZAF2JeeevKa4AY4XRAvc8JM=
-  dependencies:
-    lodash._getnative "^3.0.0"
-
 lodash._createset@~4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/lodash._createset/-/lodash._createset-4.0.3.tgz#0f4659fbb09d75194fa9e2b88a6644d363c9fe26"
   integrity sha1-D0ZZ+7CddRlPqeK4imZE02PJ/iY=
-
-lodash._getnative@*, lodash._getnative@^3.0.0:
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/lodash._getnative/-/lodash._getnative-3.9.1.tgz#570bc7dede46d61cdcde687d65d3eecbaa3aaff5"
-  integrity sha1-VwvH3t5G1hzc3mh9ZdPuy6o6r/U=
 
 lodash._root@~3.0.0:
   version "3.0.1"
@@ -4090,11 +4063,6 @@ lodash.pick@4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
   integrity sha1-UvBWEP/53tQiYRRB7R/BI6AwAbM=
-
-lodash.restparam@*:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
-  integrity sha1-k2pOMJ7zMKdkXtQUWYbIWuWyCAU=
 
 lodash.set@4.3.2, lodash.set@^4.3.2:
   version "4.3.2"
@@ -4829,7 +4797,7 @@ npm-pick-manifest@^2.2.3:
     npm-package-arg "^6.0.0"
     semver "^5.4.1"
 
-npm-profile@*, npm-profile@^4.0.1:
+npm-profile@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/npm-profile/-/npm-profile-4.0.1.tgz#d350f7a5e6b60691c7168fbb8392c3603583f5aa"
   integrity sha512-NQ1I/1Q7YRtHZXkcuU1/IyHeLy6pd+ScKg4+DQHdfsm769TGq6HPrkbuNJVJS4zwE+0mvvmeULzQdWn2L2EsVA==
@@ -5904,7 +5872,7 @@ readable-stream@~1.1.10:
     isarray "0.0.1"
     string_decoder "~0.10.x"
 
-readdir-scoped-modules@*, readdir-scoped-modules@^1.0.0:
+readdir-scoped-modules@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/readdir-scoped-modules/-/readdir-scoped-modules-1.0.2.tgz#9fafa37d286be5d92cbaebdee030dc9b5f406747"
   integrity sha1-n6+jfShr5dksuuve4DDcm19AZ0c=
@@ -6202,10 +6170,10 @@ robo-config@3.0.15:
     object-treeify "1.1.10"
     smart-fs "1.7.6"
 
-rollbar@2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/rollbar/-/rollbar-2.6.1.tgz#0a41e10bab82af81e852fd35ed8c9dd45ff0b2e1"
-  integrity sha512-tFO12aLXqGhIxjSCJmgruZT/TfJCLs1Ewb/QqSlmUDrKAhp0d3STRKSkIZWlcy5ogUXekJ1jciFBbo7PTMSMqA==
+rollbar@2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/rollbar/-/rollbar-2.7.1.tgz#4de388f76b69081a8ff0db68c98c2668f3f77492"
+  integrity sha512-xYKTyjgqUjObu8dMkmKqLuyfuJuTnRAJj8E2BIFZtUHdBHmHaZB3JFMgdJ9fHGMN26sN69eV2/gSZlNKVS1wfA==
   dependencies:
     async "~1.2.1"
     console-polyfill "0.3.0"
@@ -6429,6 +6397,18 @@ smart-fs@1.7.6:
   version "1.7.6"
   resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.7.6.tgz#44ec5bdd761e82a8018af3bc74d8c90c10ef2ef2"
   integrity sha512-xomXsiBJt8ASGxJN+aiVwP1IKlVnD8xrP9Wvm9ZiyMXqOCzTozo54FKTHFBCL+Xlvlm4Ucp6HgjEarK0J/c/5A==
+  dependencies:
+    fs-extra "7.0.1"
+    json-stringify-pretty-compact "2.0.0"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    xml-js "1.6.11"
+    yaml-boost "1.9.5"
+
+smart-fs@1.7.7:
+  version "1.7.7"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.7.7.tgz#13e59aafd6acbf88f12ba8e5abd898beabe9ef2e"
+  integrity sha512-HJaKlif3Yg5xK7d3TuWhvTf2NHlGViME1/eaR3WHtIhBTF2VneMcgvdRxdAYG8ZGU8UYdxwKPOBJLZ02FQEKAA==
   dependencies:
     fs-extra "7.0.1"
     json-stringify-pretty-compact "2.0.0"
@@ -7539,10 +7519,10 @@ yaml-boost@1.9.5:
     lodash.mergewith "4.6.1"
     lodash.set "4.3.2"
 
-yaml-boost@1.9.6:
-  version "1.9.6"
-  resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-1.9.6.tgz#6f063e5ea108e0265d1dc00b3721e4dcbbc883a1"
-  integrity sha512-w1gKjAESDm26OA0gRUi2vvhDd09v0eLulIhFewZYyMwS5IrIoyzkfAgF6ELUJN7K8OpM7BYj076G3Z32lanfyA==
+yaml-boost@1.9.7:
+  version "1.9.7"
+  resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-1.9.7.tgz#52cfd37dc2ff3ad5c14a1a014f1f44e47ee9762c"
+  integrity sha512-TSmoZXy1nGRCU825ga6uZ8QxwqbinW9Tj7BTDA7hBZGVSGZof4fqslU6/PZkuGKcbkYE3dKqfUqZKhmawRzpTQ==
   dependencies:
     js-yaml "3.13.1"
     lodash.get "4.4.2"
