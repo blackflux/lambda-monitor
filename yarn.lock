@@ -3565,10 +3565,10 @@ joi@14.3.1:
     isemail "3.x.x"
     topo "3.x.x"
 
-js-gardener@2.0.31:
-  version "2.0.31"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.31.tgz#f32b648b5f0257a257f212ee77fe4453ecea7f29"
-  integrity sha512-jwi0gXiEImC3x60KGNUM+a3LsXcQpTjZvD1XhqSPyaCWWLuO6V6Qcj/O/nJOPZQHBbC5kyNge4G/Soxpr8si4g==
+js-gardener@2.0.32:
+  version "2.0.32"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.32.tgz#2908b06c0167f2d0daacc2ac00c2bc9e98d207e0"
+  integrity sha512-cDQJWWBlKeYSXPHd1IPRGqGdPAypGukLkw5BFh73jcfM+Qz518wX/vOT8WFspreaSbpfMVH8EjmonZ+3ACNTpg==
   dependencies:
     chalk "2.4.2"
     eslint "5.16.0"
