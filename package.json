@@ -59,7 +59,7 @@
     "chai": "4.2.0",
     "coveralls": "3.0.3",
     "eslint": "5.16.0",
-    "js-gardener": "2.0.32",
+    "js-gardener": "2.0.33",
     "lambda-tdd": "2.7.10",
     "mocha": "6.1.4",
     "nock": "10.0.6",
