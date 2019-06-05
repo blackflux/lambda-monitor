@@ -88,3 +88,7 @@ lib/
 # ----------------------------------------
 # ----------------------------------------
 
+/test/lambda/env.recording.yml
+/config
+!/config/example.yml
+/.serverless
