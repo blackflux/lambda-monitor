@@ -2612,7 +2612,7 @@ fs-extra@8.0.1:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@^8.0.0:
+fs-extra@8.1.0, fs-extra@^8.0.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
   integrity sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
@@ -3857,10 +3857,10 @@ lambda-rollbar@1.10.13:
     lodash.omit "4.5.0"
     rollbar "2.7.1"
 
-lambda-tdd@2.7.10:
-  version "2.7.10"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.7.10.tgz#b93189b2eee4dc3420c7069021bef8c2d2213952"
-  integrity sha512-7qYuWKxvtbbzdpKzBMGBGiexvP38yriiHxkF88bFqacew+4aIYEUOYokguD26y2UMwSZq+dUpUAKk5vaJ2SKtw==
+lambda-tdd@2.7.12:
+  version "2.7.12"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.7.12.tgz#08bed22799a7a9e6c679561d727e7ad2c6146220"
+  integrity sha512-9X4aw8M/wnz4dtSXHnHmZmaC4EEWTEb9h4Dn208FLh7AuTdbEHYKmZMvgAXr+5FApK58yfFDopn9eWyweOERaw==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
@@ -3869,6 +3869,7 @@ lambda-tdd@2.7.10:
     lodash.defaults "4.2.0"
     lodash.get "4.4.2"
     lodash.pick "4.4.0"
+    smart-fs "1.8.1"
     timekeeper "2.2.0"
 
 lambda-wrapper@0.3.0:
@@ -6595,6 +6596,19 @@ smart-fs@1.8.0:
   integrity sha512-E8JPp2LacrCCuLTsADyEL0ZmB4ZjhLVPOvAJi0snKMHqNr33mKgH/DRcgV0aGKbnyc7YACBdMmmRT5v6uLy/2Q==
   dependencies:
     fs-extra "8.0.1"
+    json-stringify-pretty-compact "2.0.0"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    object-align "1.0.0"
+    xml-js "1.6.11"
+    yaml-boost "1.9.7"
+
+smart-fs@1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.8.1.tgz#9eb6287f1d3f041e77e31ee59c33f7e5c6f4034c"
+  integrity sha512-rAwD9pDf6alMKctP5C9U0g1fpRNGJ/5BGgGx5co5PLkfaXzITlcIP830gtmZPUk09qSw+HybgQ2rfZOlU+P0Rw==
+  dependencies:
+    fs-extra "8.1.0"
     json-stringify-pretty-compact "2.0.0"
     lodash.clonedeep "4.5.0"
     lodash.isequal "4.5.0"
