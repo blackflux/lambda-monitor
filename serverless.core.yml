@@ -15,7 +15,7 @@ provider:
   runtime: nodejs8.10
   stage: ${opt:stage}
   region: ${opt:region}
-  memorySize: 256
+  memorySize: 128
   timeout: 300
   versionFunctions: false
   environment:
