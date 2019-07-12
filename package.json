@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/blackflux/lambda-monitor#readme",
   "dependencies": {
-    "aws-sdk": "2.490.0",
+    "aws-sdk": "2.493.0",
     "cfn-response": "1.0.1",
     "lambda-rollbar": "1.10.14",
     "lodash.defaults": "4.2.0",
@@ -46,7 +46,7 @@
     "optimist": "0.6.1",
     "request": "2.88.0",
     "request-promise": "4.2.4",
-    "yaml-boost": "1.9.8"
+    "yaml-boost": "1.9.9"
   },
   "devDependencies": {
     "@babel/cli": "7.5.0",
@@ -57,7 +57,7 @@
     "@blackflux/robo-config-plugin": "2.0.1",
     "babel-eslint": "10.0.2",
     "chai": "4.2.0",
-    "coveralls": "3.0.4",
+    "coveralls": "3.0.5",
     "eslint": "6.0.1",
     "js-gardener": "2.0.42",
     "lambda-tdd": "2.7.13",
