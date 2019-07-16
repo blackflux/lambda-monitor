@@ -3786,10 +3786,10 @@ lambda-rollbar@1.10.14:
     lodash.omit "4.5.0"
     rollbar "2.8.1"
 
-lambda-tdd@2.7.13:
-  version "2.7.13"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.7.13.tgz#e4b2ddcd2aedbb4a0b66201c7333fe030551f90c"
-  integrity sha512-o77m5ZK7a1rjDfbQeVJfgAsliggvmyF6HBsP0BzGquMXJ1iphJLD+UxY8vGbQkawF/0/G/dwNmx7yi6xUH8rXw==
+lambda-tdd@2.7.14:
+  version "2.7.14"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.7.14.tgz#22e92c19dabf00c4205902563ab0957de0367935"
+  integrity sha512-KaNqKXo1Fgp9tSpIlD62f5zBsEV61f8SieRgIyUECVpwuocPFh3PxqUei8DFGZym08Z31/fyjUwboTm5g+Qy2g==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
@@ -3798,7 +3798,7 @@ lambda-tdd@2.7.13:
     lodash.defaults "4.2.0"
     lodash.get "4.4.2"
     lodash.pick "4.4.0"
-    smart-fs "1.8.2"
+    smart-fs "1.8.3"
     timekeeper "2.2.0"
 
 lambda-wrapper@0.3.0:
@@ -5091,6 +5091,11 @@ object-align@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/object-align/-/object-align-1.0.0.tgz#b3a32e8ca6e0fc4bf827e88eadaa64268c050a39"
   integrity sha512-bb2pxv0UCIZ+g7sMarmX7xKE9hmGE2lUOadwVswbIvEI51dRSmLsq7TmJwbd7FMH9PL+HMGbGcaEL35+yu0IDA==
+
+object-align@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/object-align/-/object-align-1.0.1.tgz#91eba86ed342a011e13ff1534a48b9ce0298cff2"
+  integrity sha512-rBfg93vNLK4thCFXK9ioC8zbnZwb5jK7f4AV8A8aF7z4ohiZe73lxqT1YQRREdWFiE/D/EdodI19mjaA/bZLYw==
 
 object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.1"
@@ -6540,6 +6545,19 @@ smart-fs@1.8.2:
     object-align "1.0.0"
     xml-js "1.6.11"
     yaml-boost "1.9.8"
+
+smart-fs@1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.8.3.tgz#b747bcffaff96594a8a0bb3d1d247354bbd3e2eb"
+  integrity sha512-mug/XC2FxJ/c0N5zmlIwKeEQf4oIrSfNVBYNah8x4uxIOuE0Jz563LD6NstVCoiDCVFuArOFHFVPzAyc3LnxrA==
+  dependencies:
+    fs-extra "8.1.0"
+    json-stringify-pretty-compact "2.0.0"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    object-align "1.0.1"
+    xml-js "1.6.11"
+    yaml-boost "1.9.9"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
