@@ -4668,10 +4668,10 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-nock@v11.0.0-beta.25:
-  version "11.0.0-beta.25"
-  resolved "https://registry.yarnpkg.com/nock/-/nock-11.0.0-beta.25.tgz#af238864e70ced7b274a135d40fba742abfff7b0"
-  integrity sha512-k5IHvKfPlUd5dvjBKu3lnib2793s/vgfG8uhHvD/O8ycZnSuVSfyLy4lbYjg+xeC6CzCq0uPW10wOV+CThW/dg==
+nock@v11.0.0-beta.26:
+  version "11.0.0-beta.26"
+  resolved "https://registry.yarnpkg.com/nock/-/nock-11.0.0-beta.26.tgz#70c39409262da020ae9ec9218d7fd37782bd097f"
+  integrity sha512-0nwr5RrkQh9CblGk/9NCihmh+mbCUSDwMss+v/RgpHafM3/Eo3UQZe+Z8vrDfjcf1Lv8/4OFdgfpl2qhufAI7g==
   dependencies:
     chai "^4.1.2"
     debug "^4.1.0"
