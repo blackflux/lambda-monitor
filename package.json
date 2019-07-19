@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/blackflux/lambda-monitor#readme",
   "dependencies": {
-    "aws-sdk": "2.494.0",
+    "aws-sdk": "2.495.0",
     "cfn-response": "1.0.1",
     "lambda-rollbar": "1.10.14",
     "lodash.defaults": "4.2.0",
@@ -61,7 +61,7 @@
     "eslint": "6.0.1",
     "js-gardener": "2.0.49",
     "lambda-tdd": "2.7.15",
-    "mocha": "6.1.4",
+    "mocha": "6.2.0",
     "nock": "v11.0.0-beta.27",
     "nyc": "14.1.1",
     "semantic-release": "15.13.18"
