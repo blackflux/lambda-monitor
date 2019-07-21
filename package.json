@@ -11,7 +11,13 @@
     "test": "npm run clean && npm run gardener && npm run test-simple",
     "coveralls": "node ./node_modules/coveralls/bin/coveralls.js < ./coverage/lcov.info",
     "semantic-release": "npm run build-clean && npx semantic-release",
-    "gardener": "node gardener"
+    "gardener": "node gardener",
+    "docker": "docker run -u`id -u`:`id -g` -v $(pwd):/user/project -v ~/.aws:/user/.aws -v ~/.npmrc:/user/.npmrc -w /user/project -it --entrypoint /bin/bash",
+    "yu": "yarn upgrade --latest --force",
+    "yi": "yarn install --frozen-lockfile",
+    "t": "yarn test",
+    "ts": "yarn run test-simple",
+    "tsv": "yarn run test-simple --verbose"
   },
   "repository": {
     "type": "git",
@@ -32,9 +38,7 @@
   ],
   "author": "Lukas Siemon",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/blackflux/lambda-monitor/issues"
-  },
+  "bugs": {"url": "https://github.com/blackflux/lambda-monitor/issues"},
   "homepage": "https://github.com/blackflux/lambda-monitor#readme",
   "dependencies": {
     "aws-sdk": "2.496.0",
@@ -54,12 +58,12 @@
     "@babel/plugin-proposal-object-rest-spread": "7.5.5",
     "@babel/register": "7.5.5",
     "@blackflux/eslint-plugin-rules": "1.0.23",
-    "@blackflux/robo-config-plugin": "2.0.1",
+    "@blackflux/robo-config-plugin": "2.1.3",
     "babel-eslint": "10.0.2",
     "chai": "4.2.0",
     "coveralls": "3.0.5",
-    "eslint": "6.0.1",
-    "js-gardener": "2.0.51",
+    "eslint": "6.1.0",
+    "js-gardener": "2.0.52",
     "lambda-tdd": "2.7.15",
     "mocha": "6.2.0",
     "nock": "v11.0.0-beta.27",
@@ -72,12 +76,8 @@
       "url": "https://github.com/blackflux/lambda-monitor/blob/master/LICENSE"
     }
   ],
-  "engines": {
-    "node": ">= 8.10"
-  },
-  "files": [
-    "lib"
-  ],
+  "engines": {"node": ">= 8.10"},
+  "files": ["lib"],
   "peerDependencies": {},
   "nyc": {
     "tempDir": "./coverage/.nyc_output",
@@ -88,9 +88,7 @@
     "statements": 100,
     "functions": 100,
     "branches": 100,
-    "include": [
-      "**/*.js"
-    ],
+    "include": ["**/*.js"],
     "exclude": [
       "gardener.js",
       "node_modules/*",
@@ -98,13 +96,8 @@
       "lib/*",
       "serverless.js"
     ],
-    "reporter": [
-      "lcov",
-      "text-summary"
-    ],
-    "require": [
-      "@babel/register"
-    ],
+    "reporter": ["lcov", "text-summary"],
+    "require": ["@babel/register"],
     "extension": [],
     "cache": true,
     "all": true,
