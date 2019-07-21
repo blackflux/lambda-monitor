@@ -50,7 +50,7 @@
     "optimist": "0.6.1",
     "request": "2.88.0",
     "request-promise": "4.2.4",
-    "yaml-boost": "1.9.9"
+    "yaml-boost": "1.9.10"
   },
   "devDependencies": {
     "@babel/cli": "7.5.5",
