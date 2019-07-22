@@ -168,17 +168,17 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@blackflux/eslint-plugin-rules@1.0.23":
-  version "1.0.23"
-  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.0.23.tgz#051b7fcca4062eea536457aa8bfbe172c2fab691"
-  integrity sha512-xy6KHM8rHtitgy+W8UXI43pEA//WiUPggSbNzbaS9cQWSeWtdcPznPTu8ZVWFaEo+9JJzYbCVzttUZxRJ4ZzSQ==
+"@blackflux/eslint-plugin-rules@1.0.24":
+  version "1.0.24"
+  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.0.24.tgz#9fc319e8d3f75ef2a3658566f98b36ded38b285e"
+  integrity sha512-J/wdUWsKKEW91nr9VDKQxzSpvh7LJGSKVRmL/Lz8PgDQ2jVtY2bpG1ODH/x63P8jrhwReECK2UAPCyxz75diuw==
   dependencies:
     smart-fs "1.9.0"
 
-"@blackflux/robo-config-plugin@2.1.3":
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-2.1.3.tgz#6eab17634b4c196cde1020b298805f774f0f19a7"
-  integrity sha512-BPEIDP3h2MClW3Z7QJ9Bj5Jf3QiF1nKaCyR0ei9JH4Sk14dnpmu92RAo7TwNfEwkakE0j5K2i2fw5e9hMttecg==
+"@blackflux/robo-config-plugin@2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-2.1.4.tgz#6a53aa8a0e0cfecdd9e0c434947508760b5062fa"
+  integrity sha512-J59bYoR04j1jKdsiFUQcXzQONlMoWDm04xScw83ZfIZm6kGMFhoc8QDnpSXY++KSOcwfIyfvqkUnkZ2TX9MMTQ==
 
 "@hapi/address@2.x.x":
   version "2.0.0"
@@ -3805,20 +3805,20 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lambda-rollbar@1.10.14:
-  version "1.10.14"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.14.tgz#318d1398efc3660c1b3892060f0e3535e000bb4f"
-  integrity sha512-gqm+dhsQDbUSRyF5AD1l1g/k/nbSwHEJID6BITbeerxHxoDnL3Q0VB3CPxfwc6M8PskrPvfrLqMcy4IKuqdssQ==
+lambda-rollbar@1.10.15:
+  version "1.10.15"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.15.tgz#128192c07e5be721828520396bf499a548899bb0"
+  integrity sha512-xPwnb2uw/in29JhTkzMt+bQuOK5TgLSvxnLsGnfi1SQwy2288skB5jthYVBgYhAHyPvrKJn4ClI9/U1RvJGJSg==
   dependencies:
     fast-safe-stringify "2.0.6"
     lodash.get "4.4.2"
     lodash.omit "4.5.0"
     rollbar "2.8.1"
 
-lambda-tdd@2.7.15:
-  version "2.7.15"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.7.15.tgz#265cca0da7f2e9fd46e9b873e4159944d0621741"
-  integrity sha512-syFrYsxHtGFbSBAWVHAn6Vhyif3hZBlw9FkUmRLpjJqzoHvE4LnPSrValIL20dkdtvmLAgW6dxav0Xgeeso1Ag==
+lambda-tdd@2.7.16:
+  version "2.7.16"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.7.16.tgz#97c80494ba33dfee9ef697f2bbc9c158973584d7"
+  integrity sha512-MhrsjYmEvDrlRlawHP5Ua57z33J2WbDoEFeg5ckzlhwDfzKJPm3XjxnDMPpV1mo5cj7Hj+SPiDLV1JI0hz8GqA==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
@@ -7713,6 +7713,16 @@ yallist@^3.0.0, yallist@^3.0.2, yallist@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.0.3.tgz#b4b049e314be545e3ce802236d6cd22cd91c3de9"
   integrity sha512-S+Zk8DEWE6oKpV+vI3qWkaK+jSbIK86pCwe2IF/xwIpQ8jEuxpw9NyaGjmp9+BoJv5FV2piqCDcoCtStppiq2A==
+
+yaml-boost@1.9.10:
+  version "1.9.10"
+  resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-1.9.10.tgz#4a9bc4a092576389c680fe0bc6033f3a2bdcfdb2"
+  integrity sha512-MZMcHMzKzL1Y9MVj6vO2Txk1TRBojlvjXsRBcsgkk08OxL3tuAa+H8pZXF4y5kOLlZfVYusrDZmOhog1hiHsWw==
+  dependencies:
+    js-yaml "3.13.1"
+    lodash.get "4.4.2"
+    lodash.mergewith "4.6.2"
+    lodash.set "4.3.2"
 
 yaml-boost@1.9.9:
   version "1.9.9"
