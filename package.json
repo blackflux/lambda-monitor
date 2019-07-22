@@ -43,7 +43,7 @@
   "dependencies": {
     "aws-sdk": "2.496.0",
     "cfn-response": "1.0.1",
-    "lambda-rollbar": "1.10.14",
+    "lambda-rollbar": "1.10.15",
     "lodash.defaults": "4.2.0",
     "lodash.difference": "4.5.0",
     "lodash.get": "4.4.2",
