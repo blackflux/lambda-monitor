@@ -63,10 +63,10 @@
     "chai": "4.2.0",
     "coveralls": "3.0.5",
     "eslint": "6.1.0",
-    "js-gardener": "2.0.54",
+    "js-gardener": "2.0.55",
     "lambda-tdd": "2.7.17",
     "mocha": "6.2.0",
-    "nock": "v11.0.0-beta.27",
+    "nock": "v11.0.0-beta.28",
     "nyc": "14.1.1",
     "semantic-release": "15.13.18"
   },
