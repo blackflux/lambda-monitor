@@ -3815,10 +3815,10 @@ lambda-rollbar@1.10.15:
     lodash.omit "4.5.0"
     rollbar "2.8.1"
 
-lambda-tdd@2.7.17:
-  version "2.7.17"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.7.17.tgz#c14dde64af41f486445c541f6a470b52efd1b6c3"
-  integrity sha512-HI89BO/G7xDc6xaFHh7vhwpEILAx/yP5iclGcdKil3BAEdj/g4FoO9gdTjMU0jpkfZeaajb0J67W/OLdGTwM/A==
+lambda-tdd@2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.8.0.tgz#4086a1af1f6aed4bc5b5497cb9fe573a33ab152d"
+  integrity sha512-+zp47c/yM8xN0ntUBI+r++OKNZ1cgAwaqwkPLuaq3eCgbFU9Q2pizMZaM46g5/M+cph2dvx8lVguQbYoz3sXIw==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
@@ -3827,7 +3827,7 @@ lambda-tdd@2.7.17:
     lodash.defaults "4.2.0"
     lodash.get "4.4.2"
     lodash.pick "4.4.0"
-    smart-fs "1.9.1"
+    smart-fs "1.9.2"
     timekeeper "2.2.0"
 
 lambda-wrapper@0.3.0:
@@ -5139,11 +5139,6 @@ oauth-sign@~0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
   integrity sha512-fexhUFFPTGV8ybAtSIGbV6gOkSv8UtRbDBnAyLQw4QPKkgNlsH2ByPGtMUqdWkos6YCRmAqViwgZrJc/mRDzZQ==
-
-object-align@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/object-align/-/object-align-1.0.1.tgz#91eba86ed342a011e13ff1534a48b9ce0298cff2"
-  integrity sha512-rBfg93vNLK4thCFXK9ioC8zbnZwb5jK7f4AV8A8aF7z4ohiZe73lxqT1YQRREdWFiE/D/EdodI19mjaA/bZLYw==
 
 object-align@1.0.2:
   version "1.0.2"
@@ -6596,32 +6591,6 @@ smart-buffer@4.0.2:
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-4.0.2.tgz#5207858c3815cc69110703c6b94e46c15634395d"
   integrity sha512-JDhEpTKzXusOqXZ0BUIdH+CjFdO/CR3tLlf5CN34IypI+xMmXW1uB16OOY8z3cICbJlDAVJzNbwBhNO0wt9OAw==
 
-smart-fs@1.9.1:
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.9.1.tgz#551a11228b4f2e4b6d6adb830a198cd5e6974d5a"
-  integrity sha512-xlI7cfGrKa9kEMd8Uga2cz/sWJoMJGDqqLmlqT4PnNMPYpEPbv5nm18T+NE63VlNonnhUhkNVGxWaqsK01rMRg==
-  dependencies:
-    fs-extra "8.1.0"
-    json-stringify-pretty-compact "2.0.0"
-    lodash.clonedeep "4.5.0"
-    lodash.isequal "4.5.0"
-    object-align "1.0.1"
-    xml-js "1.6.11"
-    yaml-boost "1.9.9"
-
-smart-fs@1.9.2:
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.9.2.tgz#d516a3004c61f86585f0f8ed0f9b82d96d9b8abe"
-  integrity sha512-PfHv+bi2e+lJe5qDo7xvSfgHDRlR7mPyE3EgrUmJ8aeqNUTBrzF67tRcLeLr7t4oz3jfukXOWKOcATiwbJx2fA==
-  dependencies:
-    fs-extra "8.1.0"
-    json-stringify-pretty-compact "2.0.0"
-    lodash.clonedeep "4.5.0"
-    lodash.isequal "4.5.0"
-    object-align "1.0.2"
-    xml-js "1.6.11"
-    yaml-boost "1.9.10"
-
 smart-fs@1.9.2:
   version "1.9.2"
   resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.9.2.tgz#d516a3004c61f86585f0f8ed0f9b82d96d9b8abe"
@@ -7749,16 +7718,6 @@ yaml-boost@1.9.10:
   version "1.9.10"
   resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-1.9.10.tgz#4a9bc4a092576389c680fe0bc6033f3a2bdcfdb2"
   integrity sha512-MZMcHMzKzL1Y9MVj6vO2Txk1TRBojlvjXsRBcsgkk08OxL3tuAa+H8pZXF4y5kOLlZfVYusrDZmOhog1hiHsWw==
-  dependencies:
-    js-yaml "3.13.1"
-    lodash.get "4.4.2"
-    lodash.mergewith "4.6.2"
-    lodash.set "4.3.2"
-
-yaml-boost@1.9.9:
-  version "1.9.9"
-  resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-1.9.9.tgz#9657a87b93bae480a644a05b66be2217490cb85a"
-  integrity sha512-CGzH0ExWNo+BsXPXiF+ykc8Ve+OksxVzsNslJwgAqWmtShiHJH47m1FmHkhEl3JzAWRw0T/YJHE4XlacUSOyqw==
   dependencies:
     js-yaml "3.13.1"
     lodash.get "4.4.2"
