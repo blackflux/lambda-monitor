@@ -41,7 +41,7 @@
   "bugs": {"url": "https://github.com/blackflux/lambda-monitor/issues"},
   "homepage": "https://github.com/blackflux/lambda-monitor#readme",
   "dependencies": {
-    "aws-sdk": "2.496.0",
+    "aws-sdk": "2.500.0",
     "cfn-response": "1.0.1",
     "lambda-rollbar": "1.10.15",
     "lodash.defaults": "4.2.0",
@@ -64,9 +64,9 @@
     "coveralls": "3.0.5",
     "eslint": "6.1.0",
     "js-gardener": "2.0.56",
-    "lambda-tdd": "2.7.17",
+    "lambda-tdd": "2.8.0",
     "mocha": "6.2.0",
-    "nock": "v11.0.0-beta.28",
+    "nock": "v11.0.0-beta.29",
     "nyc": "14.1.1",
     "semantic-release": "15.13.18"
   },
