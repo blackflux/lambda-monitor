@@ -705,10 +705,10 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk@2.500.0, aws-sdk@^2.4.0:
-  version "2.500.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.500.0.tgz#2e4c5b7027c2d583fd0018f0aeed712cea135f7f"
-  integrity sha512-zVSO6STyBbbn5foqiH8Z0agpudtOibSRLhTXNkVnJTwJwYK5f9mv5WKOKcLivx/fvXwVE8QehZWyE3vBzl8I+w==
+aws-sdk@2.502.0, aws-sdk@^2.4.0:
+  version "2.502.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.502.0.tgz#b3192f82389db982605462c8394cc3fa8c475b3e"
+  integrity sha512-VHFdbnJLuzON/35qE4x33PwzWFxAR/0A1wCIvc3sfOVisiGFuvBhQKC24uBlvFMrdPDnrL+8wKCHwfICgCqZtw==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -3805,15 +3805,15 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lambda-rollbar@1.10.15:
-  version "1.10.15"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.15.tgz#128192c07e5be721828520396bf499a548899bb0"
-  integrity sha512-xPwnb2uw/in29JhTkzMt+bQuOK5TgLSvxnLsGnfi1SQwy2288skB5jthYVBgYhAHyPvrKJn4ClI9/U1RvJGJSg==
+lambda-rollbar@1.10.16:
+  version "1.10.16"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.16.tgz#6ee67af545df69c10a28094cb5b34fe474ceb3ab"
+  integrity sha512-bAkmXAURUudoZgriEjtYHWf46GmKNniSv+W5l4aXd4oqTa6vDukOLq+ydLlaGmY6IFF0Eku9PzFn15aTaFaCSw==
   dependencies:
     fast-safe-stringify "2.0.6"
     lodash.get "4.4.2"
     lodash.omit "4.5.0"
-    rollbar "2.8.1"
+    rollbar "2.9.0"
 
 lambda-tdd@2.8.0:
   version "2.8.0"
@@ -6362,10 +6362,10 @@ robo-config@3.0.32:
     object-treeify "1.1.14"
     smart-fs "1.9.2"
 
-rollbar@2.8.1:
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/rollbar/-/rollbar-2.8.1.tgz#f2a3edc58a8d00d4e1aab22d51ce9705858853cd"
-  integrity sha512-Va/cdaZfLUbp7ZvHhWV/PY+HZLBcOghtKd/w64G/NC60Qpl7QM/xzZKLkDhwx3Z0kLtSMonqwE3l7p0fgL9gOQ==
+rollbar@2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/rollbar/-/rollbar-2.9.0.tgz#ec68b3838b38ea012895ee26600c839b354c881b"
+  integrity sha512-U6rJDASAKnFAQY9SB2+is1vNceyIbnggsZgtE8+69LauN6QoEJr6l8bhna2+TatfVm6+vWBmq2zj2IRwTA/Eew==
   dependencies:
     async "~1.2.1"
     buffer-from ">=1.1"
