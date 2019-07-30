@@ -41,7 +41,7 @@
   "bugs": {"url": "https://github.com/blackflux/lambda-monitor/issues"},
   "homepage": "https://github.com/blackflux/lambda-monitor#readme",
   "dependencies": {
-    "aws-sdk": "2.500.0",
+    "aws-sdk": "2.502.0",
     "cfn-response": "1.0.1",
     "lambda-rollbar": "1.10.16",
     "lodash.defaults": "4.2.0",
