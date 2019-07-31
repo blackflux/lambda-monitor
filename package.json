@@ -68,7 +68,7 @@
     "mocha": "6.2.0",
     "nock": "v11.0.0-beta.29",
     "nyc": "14.1.1",
-    "semantic-release": "15.13.18"
+    "semantic-release": "15.13.19"
   },
   "licenses": [
     {
