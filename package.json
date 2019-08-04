@@ -38,7 +38,9 @@
   ],
   "author": "Lukas Siemon",
   "license": "MIT",
-  "bugs": {"url": "https://github.com/blackflux/lambda-monitor/issues"},
+  "bugs": {
+    "url": "https://github.com/blackflux/lambda-monitor/issues"
+  },
   "homepage": "https://github.com/blackflux/lambda-monitor#readme",
   "dependencies": {
     "aws-sdk": "2.503.0",
@@ -58,7 +60,7 @@
     "@babel/plugin-proposal-object-rest-spread": "7.5.5",
     "@babel/register": "7.5.5",
     "@blackflux/eslint-plugin-rules": "1.1.0",
-    "@blackflux/robo-config-plugin": "2.2.3",
+    "@blackflux/robo-config-plugin": "2.3.0",
     "babel-eslint": "10.0.2",
     "chai": "4.2.0",
     "coveralls": "3.0.5",
@@ -76,8 +78,12 @@
       "url": "https://github.com/blackflux/lambda-monitor/blob/master/LICENSE"
     }
   ],
-  "engines": {"node": ">= 8.10"},
-  "files": ["lib"],
+  "engines": {
+    "node": ">= 8.10"
+  },
+  "files": [
+    "lib"
+  ],
   "peerDependencies": {},
   "nyc": {
     "tempDir": "./coverage/.nyc_output",
@@ -88,7 +94,9 @@
     "statements": 100,
     "functions": 100,
     "branches": 100,
-    "include": ["**/*.js"],
+    "include": [
+      "**/*.js"
+    ],
     "exclude": [
       "gardener.js",
       "node_modules/*",
@@ -96,8 +104,13 @@
       "lib/*",
       "serverless.js"
     ],
-    "reporter": ["lcov", "text-summary"],
-    "require": ["@babel/register"],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "require": [
+      "@babel/register"
+    ],
     "extension": [],
     "cache": true,
     "all": true,
