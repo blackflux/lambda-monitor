@@ -43,7 +43,7 @@
   },
   "homepage": "https://github.com/blackflux/lambda-monitor#readme",
   "dependencies": {
-    "aws-sdk": "2.504.0",
+    "aws-sdk": "2.505.0",
     "cfn-response": "1.0.1",
     "lambda-rollbar": "1.10.18",
     "lodash.defaults": "4.2.0",
@@ -60,7 +60,7 @@
     "@babel/plugin-proposal-object-rest-spread": "7.5.5",
     "@babel/register": "7.5.5",
     "@blackflux/eslint-plugin-rules": "1.1.0",
-    "@blackflux/robo-config-plugin": "2.4.2",
+    "@blackflux/robo-config-plugin": "2.4.3",
     "babel-eslint": "10.0.2",
     "chai": "4.2.0",
     "coveralls": "3.0.6",
