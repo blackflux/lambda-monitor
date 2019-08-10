@@ -14,7 +14,7 @@ module.exports.log = (context, environment, logs) => {
     socket
       .connect(port, host, () => {
         const data = logs
-          .map(log => ({
+          .map((log) => ({
             message: log.message,
             ddsource: 'lambda',
             ddsourcecategory: 'aws',
@@ -35,7 +35,7 @@ module.exports.log = (context, environment, logs) => {
             timestamp: log.timestamp,
             context: log
           }))
-          .map(log => `${process.env.DATADOG_API_KEY} ${JSON.stringify(log)}\n`)
+          .map((log) => `${process.env.DATADOG_API_KEY} ${JSON.stringify(log)}\n`)
           .join('')
           .toString('utf8');
         socket.write(data, 'utf8', () => socket.destroy());
