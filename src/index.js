@@ -12,7 +12,7 @@ const subscribe = require('./logic/subscribe');
 const setRetention = require('./logic/set-retention');
 const deleteBucket = require('./logic/delete-bucket');
 
-const callbackify = fn => (event, context, rb) => new Promise((resolve, reject) => fn(
+const callbackify = (fn) => (event, context, rb) => new Promise((resolve, reject) => fn(
   event,
   context,
   (err, resp) => (err ? reject(err) : resolve(resp)),

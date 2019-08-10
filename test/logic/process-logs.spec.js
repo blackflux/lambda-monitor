@@ -20,6 +20,6 @@ describe('Testing process-logs', () => {
       expect(logs).to.deep.equal(['INFO: Task timed out after 1.00 seconds\n\n']);
       expect(err).to.equal(null);
       done();
-    }, { info: msg => logs.push(msg.message) });
+    }, { info: (msg) => logs.push(msg.message) });
   });
 });

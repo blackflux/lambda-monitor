@@ -7,7 +7,7 @@ const resourceInitEventKeys = [
   'LogicalResourceId', 'ResourceType', 'ResourceProperties'
 ];
 
-module.exports.wrap = fn => (event, context, callback, ...args) => fn(event, context, (err, ...cbargs) => {
+module.exports.wrap = (fn) => (event, context, callback, ...args) => fn(event, context, (err, ...cbargs) => {
   if (difference(resourceInitEventKeys, Object.keys(event)).length === 0) {
     return response.send(event, defaults({
       done: () => callback(err, ...cbargs)
