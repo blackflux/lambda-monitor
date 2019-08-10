@@ -13,25 +13,25 @@ const requestLogRegex = new RegExp([
   /Billed Duration: (\d+) ms \t/,
   /Memory Size: (\d+) MB\t/,
   /Max Memory Used: (\d+) MB\t\n$/
-].map(r => r.source).join(''), '');
+].map((r) => r.source).join(''), '');
 const requestStartRegex = new RegExp([
   /^START RequestId: [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} /,
   /Version: (\$LATEST|\d+)\n$/
-].map(r => r.source).join(''), '');
+].map((r) => r.source).join(''), '');
 const requestEndRegex = new RegExp([
   /^END RequestId: [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\n$/
-].map(r => r.source).join(''), '');
+].map((r) => r.source).join(''), '');
 const genericPrefix = new RegExp([
   /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z[\s\t]/,
   /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}[\s\t]/
-].map(r => r.source).join(''), '');
+].map((r) => r.source).join(''), '');
 const requestLogLevel = new RegExp([
   /^(DEBUG|INFO|WARNING|ERROR|CRITICAL):/
-].map(r => r.source).join(''), '');
+].map((r) => r.source).join(''), '');
 
 module.exports = (event, context, callback, rb) => zlibPromise
   .gunzip(Buffer.from(event.awslogs.data, 'base64'))
-  .then(r => r.toString('ascii'))
+  .then((r) => r.toString('ascii'))
   .then(JSON.parse)
   .then((resultParsed) => {
     const toLog = [];
@@ -67,5 +67,5 @@ module.exports = (event, context, callback, rb) => zlibPromise
       timeoutPromise(datadog.log(context, process.env.STAGE, toLog), timeout, 'datadog')
     ]).then(() => resultParsed);
   })
-  .then(resultParsed => callback(null, resultParsed))
+  .then((resultParsed) => callback(null, resultParsed))
   .catch(callback);
