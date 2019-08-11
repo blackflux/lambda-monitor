@@ -3649,10 +3649,10 @@ joi-strict@1.0.4:
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.0.4.tgz#8bf55f7b4d6accd5b530ac98276131b59e982254"
   integrity sha512-ChSFFa+Z3iD9x9QsBFMEHwXrwt2Gq2OD1fg+Mgje1Tx+Pqt7ma+LXgMdzVoC7GHCxhO3ySDVBtDumES/yycMXg==
 
-js-gardener@2.0.59:
-  version "2.0.59"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.59.tgz#d4f0ecdfb387403b4fc4e4ee0aa956be1ea0b29e"
-  integrity sha512-cRFWSkHQ/bs5VmEVPkjOKU2oaFd7ynuKC37jeN9vwzYP4lDbJI9pC7gHv4T9j2gqiKw8g7nWPncgle4haA6wHQ==
+js-gardener@2.0.60:
+  version "2.0.60"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.60.tgz#5bf43234a2bc31e491222a88e3804f4b56bcd0f3"
+  integrity sha512-BQBrqypnvIdQ/exF+gUgHESsahR8DKciEMGZz3yJ6xcv/c3dvruhKIE+CT5QQr2/B9e3EoB/jRCDQq3o2AX1nA==
   dependencies:
     "@hapi/joi" "15.1.0"
     chalk "2.4.2"
@@ -3790,20 +3790,20 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lambda-rollbar@1.10.18:
-  version "1.10.18"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.18.tgz#5c7e340d995e587f3837a3801b6bc823b781cd42"
-  integrity sha512-bZuHGSJC+Ur2Fyu+f73LKybrrrmf8XpP7NvWiQ/HbLzye8sbgKAQEyswvBqRiyA9jeXF1cFy2OJxjR20Vvnv3Q==
+lambda-rollbar@1.10.19:
+  version "1.10.19"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.19.tgz#45cc27a59ec8976eeeec71bc9aa51d1d1756c503"
+  integrity sha512-H5ztvyvQbUU7KaDU5M8PQwqqvf7bJeJtqAg1l9Td/zce5S09HVefOFBLOW7BIStjNKtQyMuiysCV2tmlD1x5IA==
   dependencies:
     fast-safe-stringify "2.0.6"
     lodash.get "4.4.2"
     lodash.omit "4.5.0"
     rollbar "2.11.0"
 
-lambda-tdd@2.8.1:
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.8.1.tgz#8249b83d64b844699c75284f884bd36f8e572578"
-  integrity sha512-4hZjKZUHeq22bxAdYtWFctKUyfprV45Wr4AwVG7Gu0CF+YfM3pF3w0lrGvjV/tmqGj9ewsqFaH1kc4GA0oHC4g==
+lambda-tdd@2.8.2:
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.8.2.tgz#75ec0cc99dcd2e7b12c4d93c15e7b096fce17274"
+  integrity sha512-95vWNWHiZcllssnThPICY5KRAgb1X+zSRC8MQL7foaXWC4TPYZEfAF9WjxrR+LPWjDrzNGWwh1RyiYnI2BBz+Q==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
