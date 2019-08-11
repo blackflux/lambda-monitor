@@ -3790,10 +3790,10 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lambda-rollbar@1.10.18:
-  version "1.10.18"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.18.tgz#5c7e340d995e587f3837a3801b6bc823b781cd42"
-  integrity sha512-bZuHGSJC+Ur2Fyu+f73LKybrrrmf8XpP7NvWiQ/HbLzye8sbgKAQEyswvBqRiyA9jeXF1cFy2OJxjR20Vvnv3Q==
+lambda-rollbar@1.10.19:
+  version "1.10.19"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.19.tgz#45cc27a59ec8976eeeec71bc9aa51d1d1756c503"
+  integrity sha512-H5ztvyvQbUU7KaDU5M8PQwqqvf7bJeJtqAg1l9Td/zce5S09HVefOFBLOW7BIStjNKtQyMuiysCV2tmlD1x5IA==
   dependencies:
     fast-safe-stringify "2.0.6"
     lodash.get "4.4.2"
