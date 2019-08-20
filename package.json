@@ -74,7 +74,7 @@
     "js-gardener": "2.0.71",
     "lambda-tdd": "2.9.4",
     "mocha": "6.2.0",
-    "nock": "v11.0.0",
+    "nock": "v11.3.0",
     "nyc": "14.1.1",
     "semantic-release": "15.13.21"
   },
