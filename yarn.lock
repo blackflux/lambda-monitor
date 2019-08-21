@@ -707,10 +707,10 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk@2.514.0, aws-sdk@^2.4.0:
-  version "2.514.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.514.0.tgz#fe1cc76eb93982b3d6062866a1bc0fd501a02ee5"
-  integrity sha512-QKfmUJhn8iapnmx1pc86zLuJIKj5ereMz/ujjaFxMl6zKyypzdMJbNcZQHSqyQyVoU/EDsHt838L4sWbwVLCNQ==
+aws-sdk@2.515.0, aws-sdk@^2.4.0:
+  version "2.515.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.515.0.tgz#5c433a722fbe5865301bd9c8ff7f1be0c8ba9997"
+  integrity sha512-ek/mSJIjJEQpUJTyl9uFw+mENcpTb/InThEKiDKBYoCSvJVPbkxcke9GYvb+1nyL0B+WJbPmboFpFm6r06pjrg==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -3810,15 +3810,15 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lambda-rollbar@1.10.22:
-  version "1.10.22"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.22.tgz#5b7212e9021d32eb4f118b74c1cb2248dcfb5708"
-  integrity sha512-uCvcMO5xpAo+UJDZFNyxokPI5ZmYPFsf9jtmJXWWs3slZA5cXOXFZA+YQpHm0yQr2oDK2tdO/ZlQzBabStEzig==
+lambda-rollbar@1.10.23:
+  version "1.10.23"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.23.tgz#66a421e1c9420094de3d82a5249c9f10cd6dee3d"
+  integrity sha512-QYU6W6TzqawXCTWEZml3O3LhkT/bsYhWb7CmTeuy9r95Dlv0z3oF9716QfpsJjwxim0rVv4k4KuQuJHYUJKnew==
   dependencies:
     fast-safe-stringify "2.0.6"
     lodash.get "4.4.2"
     lodash.omit "4.5.0"
-    rollbar "2.12.0"
+    rollbar "2.12.1"
 
 lambda-tdd@2.9.8:
   version "2.9.8"
@@ -6362,10 +6362,10 @@ robo-config@3.2.4:
     object-treeify "1.1.17"
     smart-fs "1.9.8"
 
-rollbar@2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/rollbar/-/rollbar-2.12.0.tgz#542fc92c7f70ae95a8fdfa5ebeaf175b5b488900"
-  integrity sha512-h2sGyC91VQpRdp4sPP1uEwXg92g/gQ9SLMarJr9w2w73YAFrJXCPlgFmJDMZb3mGuZlOW33lmf9fa1wevqEy7w==
+rollbar@2.12.1:
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/rollbar/-/rollbar-2.12.1.tgz#8f7957a52b18b51355663f56392bb474f7d634bf"
+  integrity sha512-xCHbVUTT+6ksn+u8AEiuI2Nhtkwn7dNvK2WaoFGk0aJ4qaqHjztPdGYxKbWO6dSfpKb6TtATcsvfUf2QNqWz/Q==
   dependencies:
     async "~1.2.1"
     buffer-from ">=1.1"
@@ -7739,6 +7739,16 @@ yaml-boost@1.9.13:
   version "1.9.13"
   resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-1.9.13.tgz#176121bd5400a3173281148db15a47313be8e5c7"
   integrity sha512-UM5ZXPDHHq8SgNI4SjeF6VEfTVs8f0iql+DFUzQWMOv5i733iVzXYgxBkh2aAtyuTiMgev8JpjseMwtxAhG6TA==
+  dependencies:
+    js-yaml "3.13.1"
+    lodash.get "4.4.2"
+    lodash.mergewith "4.6.2"
+    lodash.set "4.3.2"
+
+yaml-boost@1.9.14:
+  version "1.9.14"
+  resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-1.9.14.tgz#c2e2c62c61b196f5a2453cb55d98286c48c31d62"
+  integrity sha512-MCDiptbbmfXHzetpZbrC/F1SKcz6CfDPz91IPPv/NX6DjAhlNmE2aYkWYGF3ssU/wC+triVqdkITn15JpyL0Vw==
   dependencies:
     js-yaml "3.13.1"
     lodash.get "4.4.2"
