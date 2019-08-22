@@ -1,0 +1,30 @@
+[
+  {
+    "scope": "https://logs.us-east-1.amazonaws.com:443",
+    "method": "POST",
+    "path": "/",
+    "body": {
+      "destinationArn": "FUNCTION_ARN",
+      "filterName": "NoneFilter",
+      "filterPattern": "",
+      "logGroupName": "/aws/lambda/FUNCTION_NAME"
+    },
+    "status": 400,
+    "response": {
+      "__type": "UnrecognizedClientException",
+      "message": "The security token included in the request is invalid."
+    },
+    "rawHeaders": [
+      "x-amzn-RequestId",
+      "d9fe5080-d799-11e7-9a0f-a3f3a4803e94",
+      "Content-Type",
+      "application/x-amz-json-1.1",
+      "Content-Length",
+      "107",
+      "Date",
+      "Sat, 02 Dec 2017 19:49:03 GMT",
+      "Connection",
+      "close"
+    ]
+  }
+]

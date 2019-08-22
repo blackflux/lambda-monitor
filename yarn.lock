@@ -4689,7 +4689,7 @@ nock@11.3.0:
     mkdirp "^0.5.0"
     propagate "^2.0.0"
 
-nock@v11.3.1:
+nock@11.3.1, nock@v11.3.1:
   version "11.3.1"
   resolved "https://registry.yarnpkg.com/nock/-/nock-11.3.1.tgz#3bafe0820a60f0900b948d31ab92b38ea6917b06"
   integrity sha512-fsFRKNoH6R6hQuaasbAS5vmy4ujVaqKOb/9NCFP0TkhwbH1e5bPN8bn37FCIF9/0ZhayBrClUmSbN6Rm61+WSg==
@@ -4779,6 +4779,20 @@ node-tdd@2.0.4:
     lodash.get "4.4.2"
     nock "11.3.0"
     smart-fs "1.9.9"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+
+node-tdd@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.0.5.tgz#e71984820e3fb83c0d9dab4ba767947ba7877f8c"
+  integrity sha512-Xh7YsWVBD5wOlZG6knTOnWvwkUDYvLdm1V8AqXTkGRORNwJsJZreMMnnxHv3FF6+qqUXW7cSfzPKzuBpzOs1/A==
+  dependencies:
+    "@hapi/joi" "15.1.1"
+    callsites "3.1.0"
+    joi-strict "1.0.8"
+    lodash.get "4.4.2"
+    nock "11.3.1"
+    smart-fs "1.9.10"
     timekeeper "2.2.0"
     tmp "0.1.0"
 
