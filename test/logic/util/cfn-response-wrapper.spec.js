@@ -24,7 +24,7 @@ const doTest = async (errObject, respObject, status, getConsoleOutput) => {
   })(sampleEvent, {}, (e, r) => resolve([e, r]), 'rb'));
   expect(err).to.equal(errObject);
   expect(resp).to.equal(respObject);
-  expect(getConsoleOutput().log).to.deep.equal([
+  expect(getConsoleOutput()).to.deep.equal([
     'Response body:\n',
     `{"Status":"${status.toUpperCase()}","Reason":"See the details in CloudWatch Log Stream: undefined",`
     + '"StackId":"arn:aws:cloudformation:eu-west-1:...","RequestId":"afd8d7c5-9376-4013-8b3b-307517b8719e",'
