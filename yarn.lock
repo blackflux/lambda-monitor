@@ -3820,10 +3820,10 @@ lambda-rollbar@1.10.23:
     lodash.omit "4.5.0"
     rollbar "2.12.1"
 
-lambda-tdd@2.9.8:
-  version "2.9.8"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.9.8.tgz#8be3db63eb593cbf104e88c671ca55007b9ada95"
-  integrity sha512-WuO3vNjZH4K8gUuhnDPe0ZKhu58MqXaA4/hkwubMVLg1nRTK37K/N45vkajdpYmN0UlLF+YJI2V9ZKfDBQvm+A==
+lambda-tdd@2.9.9:
+  version "2.9.9"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.9.9.tgz#e9346134f68f4d680139c22650ce9e87899bc150"
+  integrity sha512-Xk4fONmzYX0oJirjY7n5ZhnF25WFJMUwOdmi1aZjfZwuuY+ioCwMKm7F8bHnQvs51KMtb/yN+9DwazOLISdO9A==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
@@ -3831,8 +3831,8 @@ lambda-tdd@2.9.8:
     lambda-wrapper "0.3.0"
     lodash.defaults "4.2.0"
     lodash.get "4.4.2"
-    node-tdd "2.0.3"
-    smart-fs "1.9.8"
+    node-tdd "2.0.4"
+    smart-fs "1.9.9"
 
 lambda-wrapper@0.3.0:
   version "0.3.0"
@@ -4756,17 +4756,17 @@ node-pre-gyp@^0.12.0:
     semver "^5.3.0"
     tar "^4"
 
-node-tdd@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.0.3.tgz#7b72a6a971cbb60192066c8eff11ecb1e3a1940a"
-  integrity sha512-ppoiq6b/spioIgNU2GCwtrwNgYzDoHG1rii2QD9Qxc79MzgVG+Jd6yYVFn6od3yk7rqRZ9nTNUeB6MTdYM7/VA==
+node-tdd@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.0.4.tgz#cf41568e2b56b88ded14b96e3a588d9169678871"
+  integrity sha512-b5juPRFHC8PwMl+3VwXwTx8DFq64CdOx1N6bmCfROJK2UDZUm/oy69PwzKrSCL0xwQycE8nCrgVYYSS8TEK1Nw==
   dependencies:
     "@hapi/joi" "15.1.1"
     callsites "3.1.0"
     joi-strict "1.0.8"
     lodash.get "4.4.2"
     nock "11.3.0"
-    smart-fs "1.9.8"
+    smart-fs "1.9.9"
     timekeeper "2.2.0"
     tmp "0.1.0"
 
