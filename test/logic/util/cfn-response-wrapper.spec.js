@@ -17,46 +17,29 @@ const sampleEvent = {
   }
 };
 
-const logs = [];
-const consoleLogOriginal = console.log;
-
-const doTest = (errObject, respObject, status) => {
-  response.wrap((event, context, callback, rb) => {
+const doTest = async (errObject, respObject, status, getConsoleOutput) => {
+  const [err, resp] = await new Promise((resolve) => response.wrap((event, context, callback, rb) => {
     expect(rb).to.equal('rb');
     callback(errObject, respObject);
-  })(sampleEvent, {}, (err, resp) => {
-    expect(err).to.equal(errObject);
-    expect(resp).to.equal(respObject);
-    expect(logs).to.deep.equal([
-      'Response body:\n',
-      `{"Status":"${status.toUpperCase()}","Reason":"See the details in CloudWatch Log Stream: undefined",`
-      + '"StackId":"arn:aws:cloudformation:eu-west-1:...","RequestId":"afd8d7c5-9376-4013-8b3b-307517b8719e",'
-      + '"LogicalResourceId":"Route53","Data":{}}',
-      'Status code: 200',
-      'Status message: null'
-    ]);
-  }, 'rb');
+  })(sampleEvent, {}, (e, r) => resolve([e, r]), 'rb'));
+  expect(err).to.equal(errObject);
+  expect(resp).to.equal(respObject);
+  expect(getConsoleOutput().log).to.deep.equal([
+    'Response body:\n',
+    `{"Status":"${status.toUpperCase()}","Reason":"See the details in CloudWatch Log Stream: undefined",`
+    + '"StackId":"arn:aws:cloudformation:eu-west-1:...","RequestId":"afd8d7c5-9376-4013-8b3b-307517b8719e",'
+    + '"LogicalResourceId":"Route53","Data":{}}',
+    'Status code: 200',
+    'Status message: null'
+  ]);
 };
 
-describe('Testing cfn-response-wrapper', { useNock: true }, () => {
-  before(() => {
-    console.log = (...args) => {
-      logs.push(...args);
-    };
-  });
-  after(() => {
-    console.log = consoleLogOriginal;
+describe('Testing cfn-response-wrapper', { recordConsole: true, useNock: true }, () => {
+  it('Testing Callback Execution Success', async ({ getConsoleOutput }) => {
+    await doTest(null, 'response', 'SUCCESS', getConsoleOutput);
   });
 
-  beforeEach(() => {
-    logs.length = 0;
-  });
-
-  it('Testing Callback Execution Success', () => {
-    doTest(null, 'response', 'SUCCESS');
-  });
-
-  it('Testing Callback Execution Failure', () => {
-    doTest('err', undefined, 'FAILED');
+  it('Testing Callback Execution Failure', async ({ getConsoleOutput }) => {
+    await doTest('err', undefined, 'FAILED', getConsoleOutput);
   });
 });

@@ -1,22 +1,17 @@
 const expect = require('chai').expect;
 const { describe } = require('node-tdd');
-const LambdaInvalid = require('../../../src/logic/util/lambda');
-const Lambda = require('../../../src/logic/util/lambda');
+const lambdaInvalid = require('../../../src/logic/util/lambda')({
+  region: 'us-east-1',
+  accessKeyId: 'INVALID_ACCESS_KEY_ID',
+  secretAccessKey: 'INVALID_SECRET_ACCESS_KEY'
+});
+const lambda = require('../../../src/logic/util/lambda')({
+  region: 'us-east-1'
+});
 
 const func = { FunctionARN: 'FUNCTION_ARN', FunctionName: 'FUNCTION_NAME' };
 
 describe('Testing Lambda', { useNock: true }, () => {
-  let lambdaInvalid;
-  let lambda;
-  before(() => {
-    lambdaInvalid = LambdaInvalid({
-      region: process.env.AWS_REGION,
-      accessKeyId: process.env.INTER_SERVICE_ACCESS_KEY_ID,
-      secretAccessKey: process.env.INTER_SERVICE_SECRET_ACCESS_KEY
-    });
-    lambda = Lambda({ region: process.env.AWS_REGION });
-  });
-
   it('Testing getAllFunctions Error', async () => {
     try {
       await lambdaInvalid.getAllFunctions();
