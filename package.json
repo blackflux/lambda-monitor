@@ -70,7 +70,7 @@
     "eslint-plugin-jasmine": "2.10.1",
     "eslint-plugin-json": "1.4.0",
     "eslint-plugin-markdown": "1.0.0",
-    "eslint-plugin-mocha": "6.0.0",
+    "eslint-plugin-mocha": "6.1.0",
     "js-gardener": "2.0.76",
     "lambda-tdd": "2.9.9",
     "mocha": "6.2.0",
