@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
-const path = require('path');
 const expect = require('chai').expect;
-const nockBack = require('nock').back;
+const { describe } = require('node-tdd');
 const response = require('../../../src/logic/util/cfn-response-wrapper');
 
 const sampleEvent = {
@@ -18,52 +17,29 @@ const sampleEvent = {
   }
 };
 
-const logs = [];
-const consoleLogOriginal = console.log;
-nockBack.setMode('record');
-
-const doTest = (errObject, respObject, status, done) => {
-  nockBack(`cfb-response-wrapper-callback-${status.toLowerCase()}.json_recording.json`, {}, (nockDone) => {
-    response.wrap((event, context, callback, rb) => {
-      expect(rb).to.equal('rb');
-      callback(errObject, respObject);
-    })(sampleEvent, {}, (err, resp) => {
-      expect(err).to.equal(errObject);
-      expect(resp).to.equal(respObject);
-      expect(logs).to.deep.equal([
-        'Response body:\n',
-        `{"Status":"${status.toUpperCase()}","Reason":"See the details in CloudWatch Log Stream: undefined",`
-        + '"StackId":"arn:aws:cloudformation:eu-west-1:...","RequestId":"afd8d7c5-9376-4013-8b3b-307517b8719e",'
-        + '"LogicalResourceId":"Route53","Data":{}}',
-        'Status code: 200',
-        'Status message: null'
-      ]);
-      nockDone();
-      done();
-    }, 'rb');
-  });
+const doTest = async (errObject, respObject, status, getConsoleOutput) => {
+  const [err, resp] = await new Promise((resolve) => response.wrap((event, context, callback, rb) => {
+    expect(rb).to.equal('rb');
+    callback(errObject, respObject);
+  })(sampleEvent, {}, (e, r) => resolve([e, r]), 'rb'));
+  expect(err).to.equal(errObject);
+  expect(resp).to.equal(respObject);
+  expect(getConsoleOutput()).to.deep.equal([
+    'Response body:\n',
+    `{"Status":"${status.toUpperCase()}","Reason":"See the details in CloudWatch Log Stream: undefined",`
+    + '"StackId":"arn:aws:cloudformation:eu-west-1:...","RequestId":"afd8d7c5-9376-4013-8b3b-307517b8719e",'
+    + '"LogicalResourceId":"Route53","Data":{}}',
+    'Status code: 200',
+    'Status message: null'
+  ]);
 };
 
-describe('Testing cfn-response-wrapper', () => {
-  before(() => {
-    nockBack.fixtures = path.join(__dirname, '__cassette');
-    console.log = (...args) => {
-      logs.push(...args);
-    };
-  });
-  after(() => {
-    console.log = consoleLogOriginal;
+describe('Testing cfn-response-wrapper', { recordConsole: true, useNock: true }, () => {
+  it('Testing Callback Execution Success', async ({ getConsoleOutput }) => {
+    await doTest(null, 'response', 'SUCCESS', getConsoleOutput);
   });
 
-  beforeEach(() => {
-    logs.length = 0;
-  });
-
-  it('Testing Callback Execution Success', (done) => {
-    doTest(null, 'response', 'SUCCESS', done);
-  });
-
-  it('Testing Callback Execution Failure', (done) => {
-    doTest('err', undefined, 'FAILED', done);
+  it('Testing Callback Execution Failure', async ({ getConsoleOutput }) => {
+    await doTest('err', undefined, 'FAILED', getConsoleOutput);
   });
 });

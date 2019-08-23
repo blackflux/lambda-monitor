@@ -1,4 +1,5 @@
 const expect = require('chai').expect;
+const { describe } = require('node-tdd');
 const promiseComplete = require('../../../src/logic/util/promise-complete');
 
 describe('Testing promise-complete', () => {
