@@ -4782,10 +4782,10 @@ node-tdd@2.0.4:
     timekeeper "2.2.0"
     tmp "0.1.0"
 
-node-tdd@2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.0.5.tgz#e71984820e3fb83c0d9dab4ba767947ba7877f8c"
-  integrity sha512-Xh7YsWVBD5wOlZG6knTOnWvwkUDYvLdm1V8AqXTkGRORNwJsJZreMMnnxHv3FF6+qqUXW7cSfzPKzuBpzOs1/A==
+node-tdd@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.2.0.tgz#2e0dc6ba74244877a2d9cad2f8f06393a17b3782"
+  integrity sha512-SrdmqJrCJPgk9MjLhGMYKkTQSniDidgpmDMaNy71s6086rxqpeFqsCn5l/t39dGZ9eGiy04kq/URlL1QEK2hmg==
   dependencies:
     "@hapi/joi" "15.1.1"
     callsites "3.1.0"

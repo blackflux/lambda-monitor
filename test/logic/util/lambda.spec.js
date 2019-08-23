@@ -14,44 +14,29 @@ describe('Testing Lambda', { useNock: true }, () => {
     });
     lambda = Lambda();
   });
-  it('Testing getAllFunctions Error', async () => {
-    try {
-      await lambdaInvalid.getAllFunctions();
-    } catch (e) {
-      expect(e.message).to.equal('The security token included in the request is invalid.');
-    }
+  it('Testing getAllFunctions Error', async ({ capture }) => {
+    const e = await capture(() => lambdaInvalid.getAllFunctions());
+    expect(e.message).to.equal('The security token included in the request is invalid.');
   });
 
-  it('Testing setCloudWatchRetention Error', async () => {
-    try {
-      await lambdaInvalid.setCloudWatchRetention(func, 30);
-    } catch (e) {
-      expect(e.message).to.equal('The security token included in the request is invalid.');
-    }
+  it('Testing setCloudWatchRetention Error', async ({ capture }) => {
+    const e = await capture(() => lambdaInvalid.setCloudWatchRetention(func, 30));
+    expect(e.message).to.equal('The security token included in the request is invalid.');
   });
 
-  it('Testing subscribeCloudWatchLogGroup Error', async () => {
-    try {
-      await lambdaInvalid.subscribeCloudWatchLogGroup(func, func);
-    } catch (e) {
-      expect(e.message).to.equal('The security token included in the request is invalid.');
-    }
+  it('Testing subscribeCloudWatchLogGroup Error', async ({ capture }) => {
+    const e = await capture(() => lambdaInvalid.subscribeCloudWatchLogGroup(func, func));
+    expect(e.message).to.equal('The security token included in the request is invalid.');
   });
 
-  it('Testing appendLogRetentionInfo Error', async () => {
-    try {
-      await lambdaInvalid.appendLogRetentionInfo([func]);
-    } catch (e) {
-      expect(e.message).to.equal('The security token included in the request is invalid.');
-    }
+  it('Testing appendLogRetentionInfo Error', async ({ capture }) => {
+    const e = await capture(() => lambdaInvalid.appendLogRetentionInfo([func]));
+    expect(e.message).to.equal('The security token included in the request is invalid.');
   });
 
-  it('Testing appendLogSubscriptionInfo Error', async () => {
-    try {
-      await lambdaInvalid.appendLogSubscriptionInfo([func]);
-    } catch (e) {
-      expect(e.message).to.equal('The security token included in the request is invalid.');
-    }
+  it('Testing appendLogSubscriptionInfo Error', async ({ capture }) => {
+    const e = await capture(() => lambdaInvalid.appendLogSubscriptionInfo([func]));
+    expect(e.message).to.equal('The security token included in the request is invalid.');
   });
 
   it('Testing getAllFunctions Batched', async () => {

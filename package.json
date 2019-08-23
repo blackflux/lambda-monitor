@@ -75,7 +75,7 @@
     "lambda-tdd": "2.9.10",
     "mocha": "6.2.0",
     "nock": "v11.3.1",
-    "node-tdd": "2.0.5",
+    "node-tdd": "2.2.0",
     "nyc": "14.1.1",
     "semantic-release": "15.13.24"
   },
