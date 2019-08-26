@@ -2,7 +2,8 @@
 
 docker build -t lambda-environment-node ./docker &&
 docker run \
-  -u=$UID:$(id -g $USER) \
+  --net host \
+  -u`id -u`:`id -g` \
   -v $(pwd):/user/project \
   -v ~/.aws:/user/.aws \
   -v ~/.npmrc:/user/.npmrc \
