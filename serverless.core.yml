@@ -45,7 +45,6 @@ provider:
     - Effect: "Allow"
       Action:
         - "s3:ListBucket"
-        - "s3:DeleteBucket"
       Resource:
         Fn::Join:
           - ""
@@ -94,9 +93,9 @@ functions:
               eventName:
                 - CreateLogGroup
 
-  delete-bucket:
-    handler: lib/handler.deleteBucket
-    description: Delete s3 bucket and all files in it
+  empty-bucket:
+    handler: lib/handler.emptyBucket
+    description: Empty s3 bucket and all files in it
 
 resources:
   Resources:
@@ -134,19 +133,18 @@ resources:
     # Used to receive CloudTrail logs (required for cloudwatchEvent above)
     CloudTrailBucket:
       Type: AWS::S3::Bucket
-      DeletionPolicy: Retain
 
     # Reference: https://community.alfresco.com/community/platform/blog/2016/10/13/how-a-lambda-backed-custom-resource-saved-the-day
-    DeleteCloudTrailBucket:
+    EmptyCloudTrailBucket:
       Type: Custom::LambdaDependency
       Properties:
         ServiceToken:
-          Fn::GetAtt: [DeleteDashbucketLambdaFunction, Arn]
+          Fn::GetAtt: [EmptyDashbucketLambdaFunction, Arn]
         BucketName:
           Ref: CloudTrailBucket
       DependsOn:
         - CloudTrailBucket
-        - DeleteDashbucketLambdaFunction
+        - EmptyDashbucketLambdaFunction
 
     # Reference: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html
     CloudTrailBucketPolicy:
@@ -186,7 +184,7 @@ resources:
                   s3:x-amz-acl: bucket-owner-full-control
       DependsOn:
         - CloudTrailBucket
-        - DeleteCloudTrailBucket # ensure the policy gets removed before bucket gets cleared (no more files)
+        - EmptyCloudTrailBucket # ensure the policy gets removed before bucket gets cleared (no more files)
 
     CloudTrail:
       Type: AWS::CloudTrail::Trail
