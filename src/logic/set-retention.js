@@ -1,5 +1,5 @@
 const lambda = require('./util/lambda')({
-  region: process.env.REGION
+  region: process.env.AWS_REGION
 });
 const cfnResponse = require('./util/cfn-response-wrapper');
 
@@ -9,7 +9,7 @@ module.exports = cfnResponse.wrap((event, context, callback, rb) => lambda
   .getAllFunctions({
     TagFilters: [{
       Key: 'STAGE',
-      Values: [process.env.STAGE]
+      Values: [process.env.ENVIRONMENT]
     }]
   })
   .then(lambda.appendLogRetentionInfo)
