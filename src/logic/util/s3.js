@@ -5,7 +5,6 @@ const s3 = new aws.S3();
 const listObjectsV2 = (p) => s3.listObjectsV2(p).promise();
 const deleteObjects = (p) => s3.deleteObjects(p).promise();
 
-module.exports.deleteBucket = (p) => s3.deleteBucket(p).promise();
 module.exports.emptyBucket = (objParams, logger) => {
   logger.info(`emptyBucket(): ${JSON.stringify(objParams)}`);
   return listObjectsV2(objParams).then((result) => {

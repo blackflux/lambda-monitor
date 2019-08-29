@@ -24,24 +24,6 @@
     ]
   },
   {
-    "scope": "https://empty-bucket-32498uerfgjk45t89u34tjwer.s3.amazonaws.com:443",
-    "method": "DELETE",
-    "path": "/",
-    "body": "",
-    "status": 204,
-    "response": "",
-    "rawHeaders": [
-      "x-amz-id-2",
-      "YqLVhVQuN68qIgIV9A6cAejMaZz9M54Idbz6fp6Rrcf+SsAxz8wpGoOpicdglZQ6iCtLwvzi2EE=",
-      "x-amz-request-id",
-      "F863FAD28F090DA3",
-      "Date",
-      "Mon, 11 Dec 2017 03:34:53 GMT",
-      "Server",
-      "AmazonS3"
-    ]
-  },
-  {
     "scope": "https://requestb.in:443",
     "method": "PUT",
     "path": "/1b23n7c1",

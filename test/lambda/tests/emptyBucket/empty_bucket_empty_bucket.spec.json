@@ -1,5 +1,5 @@
 {
-  "handler": "deleteBucket",
+  "handler": "emptyBucket",
   "success": true,
   "timeout": 30000,
   "expect": {
@@ -8,7 +8,7 @@
   "logs": {
     "to.deep.equal()": [
       "emptyBucket(): {\"Bucket\":\"empty-bucket-32498uerfgjk45t89u34tjwer\"}",
-      "empty-bucket-32498uerfgjk45t89u34tjwer emptied and deleted!",
+      "empty-bucket-32498uerfgjk45t89u34tjwer emptied!",
       "Response body:\n",
       "{\"Status\":\"SUCCESS\",\"Reason\":\"See the details in CloudWatch Log Stream: undefined\",\"StackId\":\"arn:aws:cloudformation:eu-west-1:...\",\"RequestId\":\"afd8d7c5-9376-4013-8b3b-307517b8719e\",\"LogicalResourceId\":\"Route53\",\"Data\":{}}",
       "Status code: 200",
