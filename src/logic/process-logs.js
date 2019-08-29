@@ -49,12 +49,12 @@ module.exports = (event, context, callback, rb) => zlibPromise
           billedDuration: parseInt(requestLog[3], 10),
           maxMemory: parseInt(requestLog[4], 10),
           memory: parseInt(requestLog[5], 10),
-          env: process.env.STAGE
+          env: process.env.ENVIRONMENT
         });
       } else if (!logEvent.message.match(requestEndRegex) && !logEvent.message.match(requestStartRegex)) {
         const processedLogEvent = defaults({ message: logEvent.message.replace(genericPrefix, '') }, logEvent);
         const logLevel = get(requestLogLevel.exec(processedLogEvent.message), '1', 'WARNING').toLowerCase();
-        rb[logLevel](processedLogEvent, process.env.STAGE);
+        rb[logLevel](processedLogEvent, process.env.ENVIRONMENT);
       }
     });
     return [resultParsed, toLog];
@@ -62,9 +62,9 @@ module.exports = (event, context, callback, rb) => zlibPromise
   .then(([resultParsed, toLog]) => {
     const timeout = Math.floor((context.getRemainingTimeInMillis() - 5000.0) / 1000.0) * 1000;
     return promiseComplete([
-      timeoutPromise(logz.log(context, process.env.STAGE, toLog), timeout, 'logz'),
-      timeoutPromise(loggly.log(context, process.env.STAGE, toLog), timeout, 'loggly'),
-      timeoutPromise(datadog.log(context, process.env.STAGE, toLog), timeout, 'datadog')
+      timeoutPromise(logz.log(context, process.env.ENVIRONMENT, toLog), timeout, 'logz'),
+      timeoutPromise(loggly.log(context, process.env.ENVIRONMENT, toLog), timeout, 'loggly'),
+      timeoutPromise(datadog.log(context, process.env.ENVIRONMENT, toLog), timeout, 'datadog')
     ]).then(() => resultParsed);
   })
   .then((resultParsed) => callback(null, resultParsed))

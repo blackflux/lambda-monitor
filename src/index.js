@@ -2,7 +2,7 @@ const get = require('lodash.get');
 const rollbar = require('lambda-rollbar')({
   verbose: process.env.VERBOSE === '1',
   accessToken: process.env.ROLLBAR_ACCESS_TOKEN,
-  environment: process.env.DEFAULT_ENVIRONMENT,
+  environment: process.env.ENVIRONMENT,
   enabled: process.env.ROLLBAR_ACCESS_TOKEN !== undefined,
   reportLevel: get(process.env, 'ROLLBAR_REPORT_LEVEL', 'WARNING').toLowerCase(),
   template: 'aws-cloud-watch'
