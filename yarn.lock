@@ -175,10 +175,10 @@
   dependencies:
     smart-fs "1.9.10"
 
-"@blackflux/robo-config-plugin@2.5.11":
-  version "2.5.11"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-2.5.11.tgz#5fa9ad9771e60e1ab4d11a52bb49e779d1daf5ca"
-  integrity sha512-KZtrq2JabHTSpIWF5c9Al0i1GayrjuAAEKgUwjNmz0zE4HVUpjaEtyiZZ9rPtcBthnxNHe4Od8iat6US0pCyhw==
+"@blackflux/robo-config-plugin@2.5.13":
+  version "2.5.13"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-2.5.13.tgz#71eff9fc3dc572278715742f424ab5f6232dd080"
+  integrity sha512-XjBYxqaSZBTTdQEGdHv0XtoRH7V55Q71AxLz/hRYf0Oc1AjYtLL98g7ycJC1fd3dbZGGwOv8QEbOTcFfWqY67g==
 
 "@hapi/address@2.x.x":
   version "2.0.0"
@@ -700,10 +700,10 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk@2.519.0, aws-sdk@^2.4.0:
-  version "2.519.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.519.0.tgz#8219ecb56c93685ed6ca360250d7f1a1f4f37bba"
-  integrity sha512-bQqHiYBpvRUhHyvxgXaz1hERF9tSG1n/i+x2jNrvDjWzxkUpNexOIaNqaGb1JanTaQTQHVxqiAKjJqfimcWzxw==
+aws-sdk@2.520.0, aws-sdk@^2.4.0:
+  version "2.520.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.520.0.tgz#6d3ff7784617b477f283857e49667d190d51a550"
+  integrity sha512-I0BnCLyoqJ17bW48LYMpBcyhSpMW+c+H0GPnFoB7T8Xi2uype3sNV+4qzmHMVhVYv+2Xba9CMenyiH6qeYSwvQ==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -3666,23 +3666,27 @@ joi-strict@1.0.8:
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.0.8.tgz#c2a0c56274780a8ca8beff22253a0bc8634dd6e9"
   integrity sha512-HltgaAoeKPoVWU/XE00MoCm4CHEHMudSWUd+RJkujrmm+Ms2U04PHa0lJWX+IQJ1UPz4S0Z06Pos4IsNdupklg==
 
-js-gardener@2.0.77:
-  version "2.0.77"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.77.tgz#af92844f6f1843679e9cf269eb203d1447688ec3"
-  integrity sha512-Pefe37aP9bjLmt7y4RyEmGMIpXfGkQtXm8LrxkDns89G8BGmgSIDvr5/eBQUcfE1PLnsP/q42dOjDdVmSkGCrA==
+joi-strict@1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.0.9.tgz#9b05887cbf7160e5bff6bd9a901ce0f6af42f57c"
+  integrity sha512-fxky2GApiaabDQ+Itq2T5QPn7y+qpHesSHH1YcA4R81S+/zlvpweiLxbfUEP871SNS9XR+/x5XymwHSMkfbNOg==
+
+js-gardener@2.0.79:
+  version "2.0.79"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.79.tgz#49c6046b1d3a4590020eab676b088b167e5e7100"
+  integrity sha512-YWV05Ynw3Q8fr+XKX65VVSQd4S8Adgj56ZZEOaKmraxQhM3zTicIkWnQQVLc4AjCxqSWbSGpi697JudhseUVjg==
   dependencies:
     "@hapi/joi" "15.1.1"
     chalk "2.4.2"
     fancy-log "1.3.3"
     glob "7.1.4"
-    joi-strict "1.0.8"
+    joi-strict "1.0.9"
     js-yaml "3.13.1"
     lodash.difference "4.5.0"
     lodash.get "4.4.2"
     mocha "6.2.0"
     npm-check "5.9.0"
-    robo-config "3.2.6"
-    tmp "0.1.0"
+    robo-config "3.3.0"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
@@ -3810,10 +3814,10 @@ lambda-rollbar@1.10.24:
     lodash.omit "4.5.0"
     rollbar "2.12.2"
 
-lambda-tdd@2.9.10:
-  version "2.9.10"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.9.10.tgz#28d38f89e90de6effaa65828a2655e13c46049f5"
-  integrity sha512-xJWrOB8498VNUAC2bCOQXt4VQPE55TYGvNvzrwIfRWekzXRCEpUAw40pi+JIJ97aFrRWqX4jLxNrmeLcmJWs/w==
+lambda-tdd@2.9.13:
+  version "2.9.13"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.9.13.tgz#a1c195250b3628c1c7964d40254798e2b69815c0"
+  integrity sha512-W90czWmADPTzVcVEeyamOYFS+CX4k9j4B5DIwT6/0EvkPDK05j/r6WWbDucktz/CqWmdQn2V/hlfigHfJ1walQ==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
@@ -3821,7 +3825,7 @@ lambda-tdd@2.9.10:
     lambda-wrapper "0.3.0"
     lodash.defaults "4.2.0"
     lodash.get "4.4.2"
-    node-tdd "2.0.4"
+    node-tdd "2.2.4"
     smart-fs "1.9.10"
 
 lambda-wrapper@0.3.0:
@@ -4677,18 +4681,6 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-nock@11.3.0:
-  version "11.3.0"
-  resolved "https://registry.yarnpkg.com/nock/-/nock-11.3.0.tgz#a9ddc8271c7f74c4a815bc11eee0ef21e6d3be08"
-  integrity sha512-j5KXO096ov2XLvISUJQwl3UYJZy5dvArbK8Gt7+r0+gjtTU2uYiWJwhU4yIMXbtlHoX0od2LQgShAKXUObVbrA==
-  dependencies:
-    chai "^4.1.2"
-    debug "^4.1.0"
-    json-stringify-safe "^5.0.1"
-    lodash "^4.17.13"
-    mkdirp "^0.5.0"
-    propagate "^2.0.0"
-
 nock@11.3.1:
   version "11.3.1"
   resolved "https://registry.yarnpkg.com/nock/-/nock-11.3.1.tgz#3bafe0820a60f0900b948d31ab92b38ea6917b06"
@@ -4701,7 +4693,7 @@ nock@11.3.1:
     mkdirp "^0.5.0"
     propagate "^2.0.0"
 
-nock@v11.3.2:
+nock@11.3.2, nock@v11.3.2:
   version "11.3.2"
   resolved "https://registry.yarnpkg.com/nock/-/nock-11.3.2.tgz#8f14e690a6cc839c6c585ba22acd0277d128766a"
   integrity sha512-Bb00vTmuXyucMT9gcnMSiE2n6P5yrRoAyej0eF6ik6VUxG0FKp4RcSx1TzFusEDtY3hMNpsd7ZYUSIvwtNpTrw==
@@ -4780,20 +4772,6 @@ node-pre-gyp@^0.12.0:
     semver "^5.3.0"
     tar "^4"
 
-node-tdd@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.0.4.tgz#cf41568e2b56b88ded14b96e3a588d9169678871"
-  integrity sha512-b5juPRFHC8PwMl+3VwXwTx8DFq64CdOx1N6bmCfROJK2UDZUm/oy69PwzKrSCL0xwQycE8nCrgVYYSS8TEK1Nw==
-  dependencies:
-    "@hapi/joi" "15.1.1"
-    callsites "3.1.0"
-    joi-strict "1.0.8"
-    lodash.get "4.4.2"
-    nock "11.3.0"
-    smart-fs "1.9.9"
-    timekeeper "2.2.0"
-    tmp "0.1.0"
-
 node-tdd@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.2.0.tgz#2e0dc6ba74244877a2d9cad2f8f06393a17b3782"
@@ -4804,6 +4782,20 @@ node-tdd@2.2.0:
     joi-strict "1.0.8"
     lodash.get "4.4.2"
     nock "11.3.1"
+    smart-fs "1.9.10"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+
+node-tdd@2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.2.4.tgz#111cd516ec7e4d4df94ffcd4d6eb076cb47b49f7"
+  integrity sha512-wR1hgLW7briOhnRDzXojWmQfcdjAAHikihn99EUbZp1KPwwYe3SZ7y6+nl5FyXQoR1bBQkQd3HWj/hD2vj4oKw==
+  dependencies:
+    "@hapi/joi" "15.1.1"
+    callsites "3.1.0"
+    joi-strict "1.0.9"
+    lodash.get "4.4.2"
+    nock "11.3.2"
     smart-fs "1.9.10"
     timekeeper "2.2.0"
     tmp "0.1.0"
@@ -6398,10 +6390,10 @@ rimraf@2.6.3:
   dependencies:
     glob "^7.1.3"
 
-robo-config@3.2.6:
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.2.6.tgz#6663054a8fd00c6bfc90fca553e4cd2427574819"
-  integrity sha512-vQgLxAKHWI8FDSYOJIAJUaqRoOG0hZQONBPLJ3zU6CdEMEosJCsGTKuyOQzVgaTuf5E8nZtKThbxp4jlNYv4PQ==
+robo-config@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.3.0.tgz#23d8df91e9ab4f244307c782d73ca28200037b64"
+  integrity sha512-CVdI7XRFbxueJuuEkiDj45ghiEPH3lkRe216dblRQbX7EHC3tyPide46vs3xxdaidcZ88zjrZw6IHuQHp0mV8g==
   dependencies:
     "@hapi/joi" "15.1.1"
     app-root-path "2.2.1"
@@ -6413,7 +6405,7 @@ robo-config@3.2.6:
     object-deep-contain "1.0.17"
     object-scan "10.0.10"
     object-treeify "1.1.18"
-    smart-fs "1.9.9"
+    smart-fs "1.9.10"
 
 rollbar@2.12.2:
   version "2.12.2"
@@ -6656,19 +6648,6 @@ smart-fs@1.9.10:
     object-align "1.0.6"
     xml-js "1.6.11"
     yaml-boost "1.9.14"
-
-smart-fs@1.9.9:
-  version "1.9.9"
-  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.9.9.tgz#6fc3ffa06e480969c649774dcc148eb9a0f8a995"
-  integrity sha512-r4RjVJtqmv+lisdCa9RHx1ORVZF04gxuX2rGp7iRU26/c/0E86HI5S7uAoxX6QqkhFxPg/ctpn9jgizlhEXciQ==
-  dependencies:
-    fs-extra "8.1.0"
-    json-stringify-pretty-compact "2.0.0"
-    lodash.clonedeep "4.5.0"
-    lodash.isequal "4.5.0"
-    object-align "1.0.6"
-    xml-js "1.6.11"
-    yaml-boost "1.9.13"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
@@ -7796,16 +7775,6 @@ yallist@^3.0.0, yallist@^3.0.2, yallist@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.0.3.tgz#b4b049e314be545e3ce802236d6cd22cd91c3de9"
   integrity sha512-S+Zk8DEWE6oKpV+vI3qWkaK+jSbIK86pCwe2IF/xwIpQ8jEuxpw9NyaGjmp9+BoJv5FV2piqCDcoCtStppiq2A==
-
-yaml-boost@1.9.13:
-  version "1.9.13"
-  resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-1.9.13.tgz#176121bd5400a3173281148db15a47313be8e5c7"
-  integrity sha512-UM5ZXPDHHq8SgNI4SjeF6VEfTVs8f0iql+DFUzQWMOv5i733iVzXYgxBkh2aAtyuTiMgev8JpjseMwtxAhG6TA==
-  dependencies:
-    js-yaml "3.13.1"
-    lodash.get "4.4.2"
-    lodash.mergewith "4.6.2"
-    lodash.set "4.3.2"
 
 yaml-boost@1.9.14:
   version "1.9.14"
