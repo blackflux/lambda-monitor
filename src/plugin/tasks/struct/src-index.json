@@ -1,0 +1,14 @@
+{
+  "target": "src/index.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "src/index.js"
+  ],
+  "requires": [
+    "javascript"
+  ],
+  "purpose": [
+    "Define main code file."
+  ]
+}

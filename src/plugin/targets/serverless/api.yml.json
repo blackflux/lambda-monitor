@@ -1,0 +1,7 @@
+{
+  "description": "Api stack resource definition.",
+  "details": ["Contains monitoring api stack resource definitions."],
+  "formats": ["yml"],
+  "requires": ["serverless", "javascript"],
+  "website": null
+}

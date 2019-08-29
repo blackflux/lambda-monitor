@@ -1,0 +1,167 @@
+provider:
+  memorySize: 128
+  environment:
+    LOGGLY_TOKEN: ${ssm:LOGGLY_TOKEN}
+    LOGZ_TOKEN: ${ssm:LOGZ_TOKEN}
+    DATADOG_API_KEY: ${ssm:DATADOG_API_KEY}
+    ROLLBAR_ACCESS_TOKEN: ${ssm:ROLLBAR_ACCESS_TOKEN}
+    ROLLBAR_REPORT_LEVEL: ${ssm:ROLLBAR_REPORT_LEVEL}
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "tag:GetResources"
+        - "logs:DescribeLogGroups"
+        - "logs:DescribeSubscriptionFilters"
+        - "logs:PutRetentionPolicy"
+        - "logs:PutSubscriptionFilter"
+      Resource:
+        - "*"
+    - Effect: "Allow"
+      Action:
+        - "s3:DeleteObject"
+      Resource:
+        - arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.CloudTrailS3BucketName}/*
+    - Effect: "Allow"
+      Action:
+        - "s3:ListBucket"
+      Resource:
+        - arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.CloudTrailS3BucketName}
+
+functions:
+  process-logs:
+    timeout: 30
+    handler: lib/index.processLogs
+    description: Processor for Lambda CloudWatch Streams
+    tags:
+      MONITOR: "1"
+      MONITORED: "0"
+
+  subscribe:
+    timeout: 300
+    handler: lib/index.subscribe
+    description: Subscribe Processor to Lambda CloudWatch Streams
+    events:
+      - schedule: rate(1 hour)
+      - cloudwatchEvent:
+          event:
+            source:
+              - aws.logs
+            detail-type:
+              - AWS API Call via CloudTrail
+            detail:
+              eventSource:
+                - logs.amazonaws.com
+              eventName:
+                - CreateLogGroup
+
+  set-retention:
+    timeout: 300
+    handler: lib/index.setRetention
+    description: Update Retention for Lambda CloudWatch Streams
+    events:
+      - schedule: rate(1 hour)
+      - cloudwatchEvent:
+          event:
+            source:
+              - aws.logs
+            detail-type:
+              - AWS API Call via CloudTrail
+            detail:
+              eventSource:
+                - logs.amazonaws.com
+              eventName:
+                - CreateLogGroup
+
+  empty-bucket:
+    timeout: 900
+    handler: lib/index.emptyBucket
+    description: Empty s3 bucket
+
+resources:
+  Resources:
+    LambdaInvokePermission:
+      Type: AWS::Lambda::Permission
+      Properties:
+        Action: lambda:InvokeFunction
+        FunctionName: ${self:service}-${opt:env}-process-logs
+        Principal: logs.${opt:region}.amazonaws.com
+      DependsOn:
+        - ProcessDashlogsLambdaFunction
+
+    # Dummy Resource to ensure Subscribe gets invoked on first deploy
+    TriggerLambdaSubscribeResource:
+      Type: Custom::LambdaDependency
+      Properties:
+        ServiceToken:
+          Fn::GetAtt: [SubscribeLambdaFunction, Arn]
+      DependsOn:
+        - LambdaInvokePermission
+        - SubscribeLambdaFunction
+        - ProcessDashlogsLambdaFunction
+
+    # Dummy Resource to ensure setRetention gets invoked on first deploy
+    TriggerLambdaSetRetentionResource:
+      Type: Custom::LambdaDependency
+      Properties:
+        ServiceToken:
+          Fn::GetAtt: [SetDashretentionLambdaFunction, Arn]
+      DependsOn:
+        - LambdaInvokePermission
+        - SetDashretentionLambdaFunction
+        - ProcessDashlogsLambdaFunction
+
+    # Reference: https://community.alfresco.com/community/platform/blog/2016/10/13/how-a-lambda-backed-custom-resource-saved-the-day
+    EmptyCloudTrailS3Bucket:
+      Type: Custom::LambdaDependency
+      Properties:
+        ServiceToken:
+          Fn::GetAtt: [EmptyDashbucketLambdaFunction, Arn]
+        BucketName: ${cf:${opt:service}-data-${self:provider.stage}.CloudTrailS3BucketName}
+      DependsOn:
+        - EmptyDashbucketLambdaFunction
+
+    # Reference: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html
+    CloudTrailS3BucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket: ${cf:${opt:service}-data-${self:provider.stage}.CloudTrailS3BucketName}
+        PolicyDocument:
+          Statement:
+            -
+              Sid: AWSCloudTrailAclCheck
+              Effect: Allow
+              Principal:
+                Service: cloudtrail.amazonaws.com
+              Action: s3:GetBucketAcl
+              Resource:
+                Fn::Join:
+                  - ""
+                  - - "arn:aws:s3:::"
+                    - ${cf:${opt:service}-data-${self:provider.stage}.CloudTrailS3BucketName}
+            -
+              Sid: AWSCloudTrailWrite
+              Effect: Allow
+              Principal:
+                Service: cloudtrail.amazonaws.com
+              Action: s3:PutObject
+              Resource:
+                Fn::Join:
+                  - ""
+                  - - "arn:aws:s3:::"
+                    - ${cf:${opt:service}-data-${self:provider.stage}.CloudTrailS3BucketName}
+                    - "/AWSLogs/"
+                    - Ref: "AWS::AccountId"
+                    - "/*"
+              Condition:
+                StringEquals:
+                  s3:x-amz-acl: bucket-owner-full-control
+      DependsOn:
+        - EmptyCloudTrailS3Bucket # ensure the policy gets removed before bucket gets cleared (no more files)
+
+    CloudTrail:
+      Type: AWS::CloudTrail::Trail
+      Properties:
+        S3BucketName: ${cf:${opt:service}-data-${self:provider.stage}.CloudTrailS3BucketName}
+        IsLogging: "enableCloudTrail"
+      DependsOn:
+        - CloudTrailS3BucketPolicy

@@ -1,0 +1,20 @@
+{
+  "target": "serverless/api.yml",
+  "format": "yml",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "serverless/api.yml",
+      "variables": {
+        "enableCloudTrail": "${enableCloudTrail}"
+      }
+    }
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Define api stack resource definition file."
+  ]
+}

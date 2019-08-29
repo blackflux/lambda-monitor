@@ -1,0 +1,15 @@
+{
+  "target": "serverless/data.yml",
+  "format": "yml",
+  "strategy": "overwrite",
+  "snippets": [
+    "serverless/data.yml"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Define data stack resource definition file."
+  ]
+}

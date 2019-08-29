@@ -1,0 +1,8 @@
+{
+  "description": "Serverless Framework.",
+  "details": [
+    "The Serverless Framework is a free and open-source web framework that was ",
+    "developed for building serverless applications."
+  ],
+  "website": "https://serverless.com/"
+}

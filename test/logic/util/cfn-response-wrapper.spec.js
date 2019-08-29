@@ -17,14 +17,14 @@ const sampleEvent = {
   }
 };
 
-const doTest = async (errObject, respObject, status, getConsoleOutput) => {
+const doTest = async (errObject, respObject, status, recorder) => {
   const [err, resp] = await new Promise((resolve) => response.wrap((event, context, callback, rb) => {
     expect(rb).to.equal('rb');
     callback(errObject, respObject);
   })(sampleEvent, {}, (e, r) => resolve([e, r]), 'rb'));
   expect(err).to.equal(errObject);
   expect(resp).to.equal(respObject);
-  expect(getConsoleOutput()).to.deep.equal([
+  expect(recorder.get()).to.deep.equal([
     'Response body:\n',
     `{"Status":"${status.toUpperCase()}","Reason":"See the details in CloudWatch Log Stream: undefined",`
     + '"StackId":"arn:aws:cloudformation:eu-west-1:...","RequestId":"afd8d7c5-9376-4013-8b3b-307517b8719e",'
@@ -34,12 +34,12 @@ const doTest = async (errObject, respObject, status, getConsoleOutput) => {
   ]);
 };
 
-describe('Testing cfn-response-wrapper', { recordConsole: true, useNock: true }, () => {
-  it('Testing Callback Execution Success', async ({ getConsoleOutput }) => {
-    await doTest(null, 'response', 'SUCCESS', getConsoleOutput);
+describe('Testing cfn-response-wrapper', { record: console, useNock: true }, () => {
+  it('Testing Callback Execution Success', async ({ recorder }) => {
+    await doTest(null, 'response', 'SUCCESS', recorder);
   });
 
-  it('Testing Callback Execution Failure', async ({ getConsoleOutput }) => {
-    await doTest('err', undefined, 'FAILED', getConsoleOutput);
+  it('Testing Callback Execution Failure', async ({ recorder }) => {
+    await doTest('err', undefined, 'FAILED', recorder);
   });
 });
