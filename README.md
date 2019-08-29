@@ -91,7 +91,7 @@ There are four lambda function created per stage. All operations are only perfor
 
 **set-retention** - Updates the retention for all relevant CloudWatch Groups.
 
-**empty-bucket** - Empty and delete CloudTrail bucket when stage is removed from AWS.
+**empty-bucket** - Empty CloudTrail bucket when stage is removed from AWS.
 
 ## Alternative Setup (More Work)
 

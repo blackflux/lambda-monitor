@@ -10,7 +10,7 @@ const rollbar = require('lambda-rollbar')({
 const processLogs = require('./logic/process-logs');
 const subscribe = require('./logic/subscribe');
 const setRetention = require('./logic/set-retention');
-const deleteBucket = require('./logic/delete-bucket');
+const emptyBucket = require('./logic/empty-bucket');
 
 const callbackify = (fn) => (event, context, rb) => new Promise((resolve, reject) => fn(
   event,
@@ -22,4 +22,4 @@ const callbackify = (fn) => (event, context, rb) => new Promise((resolve, reject
 module.exports.processLogs = rollbar.wrap(callbackify(processLogs));
 module.exports.subscribe = rollbar.wrap(callbackify(subscribe));
 module.exports.setRetention = rollbar.wrap(callbackify(setRetention));
-module.exports.deleteBucket = rollbar.wrap(callbackify(deleteBucket));
+module.exports.emptyBucket = rollbar.wrap(callbackify(emptyBucket));

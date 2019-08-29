@@ -10,9 +10,8 @@ module.exports = cfnResponse.wrap((event, context, callback, rb) => new Promise(
       return reject(new Error('No Bucket Provided.'));
     }
     return s3.emptyBucket({ Bucket }, rb)
-      .then(() => s3.deleteBucket({ Bucket }))
       .then(() => {
-        rb.info(`${Bucket} emptied and deleted!`);
+        rb.info(`${Bucket} emptied!`);
         resolve();
       }).catch(reject);
   }
