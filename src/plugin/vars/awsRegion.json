@@ -1,0 +1,7 @@
+{
+  "description": "Aws data center region code gets deployed to.",
+  "details": [
+    "List of available regions can be found [here](https://docs.aws.amazon.com/general/latest/gr/rande.html)."
+  ],
+  "type": "string"
+}
