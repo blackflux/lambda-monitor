@@ -1,0 +1,15 @@
+{
+  "target": "HOWTO.md",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "HOWTO.md"
+  ],
+  "requires": [
+    "javascript",
+    "chai"
+  ],
+  "purpose": [
+    "Define setup file detailing how to set-up monitoring project."
+  ]
+}
