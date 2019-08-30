@@ -59,7 +59,8 @@ if (require.main === module) {
       "assorted/@default"
     ],
     "variables": {
-      "enableCloudTrail": "FILL_IN"
+      "enableCloudTrail": "FILL_IN",
+      "awsRegion": "AWS_REGION"
     }
   }
 }
