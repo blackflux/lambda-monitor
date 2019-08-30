@@ -39,6 +39,15 @@ if (require.main === module) {
 - Add `.roboconfig.json` containing (adjust as necessary!)
 ```json
 {
+  "lambda-monitor": {
+    "tasks": [
+      "assorted/@default"
+    ],
+    "variables": {
+      "enableCloudTrail": "FILL_IN",
+      "awsRegion": "AWS_REGION"
+    }
+  },
   "@blackflux/robo-config-plugin": {
     "tasks": [
       "assorted/@sls-closedsource"
@@ -52,14 +61,6 @@ if (require.main === module) {
       "mergeBot": "MERGE_BOT_NAME",
       "awsRegion": "AWS_REGION",
       "namespace": "com.sls.ORG_NAME"
-    }
-  },
-  "lambda-monitor": {
-    "tasks": [
-      "assorted/@default"
-    ],
-    "variables": {
-      "enableCloudTrail": "FILL_IN"
     }
   }
 }
