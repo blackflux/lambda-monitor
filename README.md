@@ -25,8 +25,8 @@ Lambda log monitoring and streaming to external services.
 
 ### 1. Create New Github Project
 
-- Initialize project with `yarn init -y`
-- Install dependencies with `yarn add -DE js-gardener robo-config-plugin eslint` and `yarn add -E lambda-monitor`
+- Install dev dependencies with `yarn add -DE js-gardener @blackflux/robo-config-plugin eslint object-hash` and
+- Dependencies with `yarn add -E lambda-monitor`
 - Add `gardener.js` containing 
 ```js
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -36,7 +36,7 @@ if (require.main === module) {
   gardener().catch(() => process.exit(1));
 }
 ```
-- Add `roboconfig.json` containing (adjust as necessary!)
+- Add `.roboconfig.json` containing (adjust as necessary!)
 ```json
 {
   "@blackflux/robo-config-plugin": {
@@ -64,7 +64,16 @@ if (require.main === module) {
   }
 }
 ```
-- Run `node gardener.js && yarn install && yarn u && yarn test && yarn install && yarn u && yarn test`
+- Run `node gardener.js`
+- Then run `yarn install && yarn u`
+- Then enter docker container with `. manage.sh`
+- Then run `yarn install && u && t`
+- Create `.depunusedignore`
+```text
+@blackflux/robo-config-plugin
+@blackflux/eslint-plugin-rules
+object-hash
+```
 - Follow instructions of generated file `HOWTO.md` (and generated `CONFDOCS.md`)
 
 ## Disable Logging for a Lambda Function
