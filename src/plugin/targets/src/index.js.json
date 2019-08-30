@@ -1,0 +1,7 @@
+{
+  "description": "Main project file.",
+  "details": ["Contains code functionality for monitoring."],
+  "formats": ["other"],
+  "requires": ["javascript"],
+  "website": null
+}

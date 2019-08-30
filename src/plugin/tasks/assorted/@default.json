@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    "serverless/#default",
+    "struct/#default"
+  ],
+  "description": "Manages files for monitoring project."
+}

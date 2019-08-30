@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    "serverless-api",
+    "serverless-data"
+  ],
+  "description": "Manages configuration files for monitoring project."
+}

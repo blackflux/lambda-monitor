@@ -21,6 +21,13 @@ Automatically configure lambda log analysis and popagation to external services.
 
 ![Cloudwatch To Loggly](/docs/assets/cloudwatch_to_loggly.png)
 
+
+
+// TODO: Below is completely outdated, needs to be rewritten
+// ..................
+
+
+
 ## Requirements
 
 - Install [Serverless Framework](https://serverless.com/) with `npm install -g serverless`.

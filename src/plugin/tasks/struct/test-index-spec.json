@@ -1,0 +1,15 @@
+{
+  "target": "test/index.spec.js",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "test/index.spec.js"
+  ],
+  "requires": [
+    "javascript",
+    "chai"
+  ],
+  "purpose": [
+    "Define main test file."
+  ]
+}

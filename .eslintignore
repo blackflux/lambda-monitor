@@ -1,0 +1,2 @@
+src/plugin/tasks/*/**/*.js
+test/projects/*/**/*.js
