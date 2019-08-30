@@ -45,7 +45,7 @@
   "dependencies": {
     "aws-sdk": "2.520.0",
     "cfn-response": "1.0.1",
-    "lambda-rollbar": "1.10.24",
+    "lambda-rollbar": "1.10.25",
     "lodash.defaults": "4.2.0",
     "lodash.difference": "4.5.0",
     "lodash.get": "4.4.2",
@@ -74,7 +74,7 @@
     "nock": "v11.3.2",
     "node-tdd": "2.2.4",
     "nyc": "14.1.1",
-    "robo-config": "3.3.0",
+    "robo-config": "3.3.1",
     "semantic-release": "15.13.24"
   },
   "licenses": [
