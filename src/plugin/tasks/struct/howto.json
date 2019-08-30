@@ -1,0 +1,20 @@
+{
+  "target": "HOWTO.md",
+  "format": "txt",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "HOWTO.md",
+      "variables": {
+        "awsRegion": "${awsRegion}"
+      }
+    }
+  ],
+  "requires": [
+    "javascript",
+    "chai"
+  ],
+  "purpose": [
+    "Define setup file detailing how to set-up monitoring project."
+  ]
+}

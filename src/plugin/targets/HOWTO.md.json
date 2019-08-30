@@ -1,0 +1,7 @@
+{
+  "description": "File describing how to setup project.",
+  "details": ["Contains basic instructions on how to set up monitoring project."],
+  "formats": ["other"],
+  "requires": [],
+  "website": null
+}

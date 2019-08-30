@@ -4,6 +4,7 @@
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-structdefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structdefault">`struct/#default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtest-index-spec">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtest-index-spec">`struct/test-index-spec`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsrc-index">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsrc-index">`struct/src-index`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structhowto">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structhowto">`struct/howto`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessdefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessdefault">`serverless/#default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data">`serverless/serverless-data`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-api">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-api">`serverless/serverless-api`</a>
@@ -23,6 +24,7 @@ Manages files for monitoring project.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-howtomd">HOWTO.md</a></code><br/>
 <code>├─&nbsp;serverless</code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
@@ -42,6 +44,7 @@ Manages files for monitoring project.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-enablecloudtrail">enableCloudTrail</a></li>
         </ul>
       </td>
@@ -58,11 +61,13 @@ Manages structure files for monitoring project.
     <tr>
       <th>Targets</th>
       <th>Requires</th>
+      <th>Variables</th>
     </tr>
     <tr>
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-howtomd">HOWTO.md</a></code><br/>
 <code>├─&nbsp;src</code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srcindexjs">index.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
@@ -73,6 +78,11 @@ Manages structure files for monitoring project.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
     </tr>
@@ -132,6 +142,41 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-srcindexjs">src/index
       <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structhowto">struct/howto</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structhowto">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-howtomd">HOWTO.md</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Define setup file detailing how to set-up monitoring project.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-howtomd">HOWTO.md</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
     </tr>
@@ -274,6 +319,12 @@ computing platforms to individuals, companies and governments, on a metered pay-
 
 ## Variables
 
+### <a name="blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a>  : `string`
+
+*Aws data center region code gets deployed to.*
+
+List of available regions can be found [here](https://docs.aws.amazon.com/general/latest/gr/rande.html).
+
 ### <a name="blackfluxrobo-config-plugin-var-ref-enablecloudtrail">enableCloudTrail</a>  : `string`
 
 *Whether or not to enable CloudTrail.*
@@ -303,6 +354,14 @@ Contains basic testing of code functionality for monitoring.
 *Main project file.*
 
 Contains code functionality for monitoring.
+
+### <a name="blackfluxrobo-config-plugin-target-ref-howtomd">HOWTO.md</a>  
+
+:small_blue_diamond: `other`
+
+*File describing how to setup project.*
+
+Contains basic instructions on how to set up monitoring project.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-serverlessdatayml">serverless/data.yml</a>  
 

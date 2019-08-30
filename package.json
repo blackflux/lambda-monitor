@@ -1,7 +1,7 @@
 {
   "name": "lambda-monitor",
   "version": "0.0.0-development",
-  "description": "Automatically configure lambda log analysis and popagation to external services.",
+  "description": "Lambda log monitoring and streaming to external services.",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rm -rf lib",
