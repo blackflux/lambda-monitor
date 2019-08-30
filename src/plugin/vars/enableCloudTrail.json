@@ -1,0 +1,7 @@
+{
+  "description": "Whether or not to enable CloudTrail.",
+  "details": [
+    "Should only be enabled if cloud trail logging is not already enabled on this aws account. Otherwise significant costs can occur. Set to either \"true\" or \"false\"."
+  ],
+  "type": "string"
+}

@@ -1,0 +1,42 @@
+# Used to receive CloudTrail logs (required for cloudwatchEvent)
+resources:
+  Resources:
+    CfnAssumePolicy:
+      Properties:
+        PolicyDocument:
+          Statement:
+            - Effect: Allow
+              Action:
+                - "s3:GetBucketPolicy"
+                - "s3:PutBucketPolicy"
+                - "s3:DeleteBucketPolicy"
+              Resource:
+                - '*'
+            - Effect: Allow
+              Action:
+                - "cloudtrail:CreateTrail"
+                - "cloudtrail:UpdateTrail"
+                - "cloudtrail:DeleteTrail"
+                - "cloudtrail:StartLogging"
+                - "cloudtrail:StopLogging"
+                - "cloudtrail:AddTags"
+                - "cloudtrail:ListTags"
+                - "cloudtrail:RemoveTags"
+              Resource:
+                - 'Fn::Join':
+                    - ':'
+                    - - 'arn:aws:cloudtrail'
+                      - Ref: 'AWS::Region'
+                      - Ref: 'AWS::AccountId'
+                      - 'trail/*'
+
+    CloudTrailS3Bucket:
+      Type: AWS::S3::Bucket
+
+  Outputs:
+    CloudTrailS3BucketName:
+      Value:
+        "Ref": CloudTrailS3Bucket
+    CloudTrailS3BucketArn:
+      Value:
+        Fn::GetAtt: [ CloudTrailS3Bucket , Arn ]

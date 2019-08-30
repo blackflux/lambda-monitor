@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    "src-index",
+    "test-index-spec"
+  ],
+  "description": "Manages structure files for monitoring project."
+}

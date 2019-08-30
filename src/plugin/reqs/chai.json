@@ -1,0 +1,7 @@
+{
+  "description": "JavaScript assertion library.",
+  "details": [
+    "Chai is a BDD / TDD assertion library for node and the browser that can be paired with any javascript testing framework."
+  ],
+  "website": "https://www.chaijs.com/"
+}

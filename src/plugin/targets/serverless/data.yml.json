@@ -1,0 +1,7 @@
+{
+  "description": "Data stack resource definition.",
+  "details": ["Contains monitoring data stack resource definitions."],
+  "formats": ["yml"],
+  "requires": ["serverless", "javascript"],
+  "website": null
+}
