@@ -1,6 +1,7 @@
 {
   "@blackflux/robo-config-plugin": {
     "tasks": [
+      "assorted/@docker-lambda",
       "assorted/@npm-opensource"
     ],
     "variables": {
