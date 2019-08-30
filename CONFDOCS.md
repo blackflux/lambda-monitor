@@ -4,6 +4,10 @@ Documents configuration tasks managed by [robo-config](https://github.com/blackf
 
 ## Plugin [@blackflux/robo-config-plugin](https://www.npmjs.com/package/@blackflux/robo-config-plugin)
 
+- <a name="blackfluxrobo-config-plugin-task-idx-ref-assorteddocker-lambda">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assorteddocker-lambda">`assorted/@docker-lambda`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockerserverless">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockerserverless">`docker/#serverless`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockersls-manage">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockersls-manage">`docker/sls-manage`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-dockersls-docker">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dockersls-docker">`docker/sls-docker`</a>
 - <a name="blackfluxrobo-config-plugin-task-idx-ref-assortednpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assortednpm-opensource">`assorted/@npm-opensource`</a>
   - <a name="blackfluxrobo-config-plugin-task-idx-ref-structnpm-default">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structnpm-default">`struct/#npm-default`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-structforce-gardener">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structforce-gardener">`struct/force-gardener`</a>
@@ -47,6 +51,123 @@ Documents configuration tasks managed by [robo-config](https://github.com/blackf
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesdavid-dm">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesdavid-dm">`badges/david-dm`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgescoveralls">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgescoveralls">`badges/coveralls`</a>
     - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgescircleci">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgescircleci">`badges/circleci`</a>
+
+### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assorteddocker-lambda">assorted/@docker-lambda</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assorteddocker-lambda">`index`</a>)
+
+Manage AWS Lambda docker runner for project.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</a></code><br/>
+<code>└─&nbsp;docker</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-dockerdockerfile">Dockerfile</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-dockerserverless">docker/#serverless</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-dockerserverless">`index`</a>)
+
+Manage docker test configuration for serverless project.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</a></code><br/>
+<code>└─&nbsp;docker</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-dockerdockerfile">Dockerfile</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-dockersls-manage">docker/sls-manage</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-dockersls-manage">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Spawn docker container for serverless testing and deploying.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-dockersls-docker">docker/sls-docker</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-dockersls-docker">`index`</a>)
+
+_Updating <a href="#blackfluxrobo-config-plugin-target-ref-dockerdockerfile">docker/Dockerfile</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Docker environment definition for running tests in AWS Lambda container.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;docker</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-dockerdockerfile">Dockerfile</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a></li>
+          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortednpm-opensource">assorted/@npm-opensource</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assortednpm-opensource">`index`</a>)
 
@@ -1454,6 +1575,20 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-readmemd">README.md</
 
 ## Requires
 
+### <a name="blackfluxrobo-config-plugin-req-ref-docker">docker</a> ([`link`](https://www.docker.com/)) 
+
+*Container Platform.*
+
+Docker is a computer program that performs operating-system-level virtualization.
+Makes it for example possible to easily create and tear down complex test setups.
+
+### <a name="blackfluxrobo-config-plugin-req-ref-serverless">serverless</a> ([`link`](https://serverless.com/)) 
+
+*Serverless Framework.*
+
+The Serverless Framework is a free and open-source web framework that was 
+developed for building serverless applications.
+
 ### <a name="blackfluxrobo-config-plugin-req-ref-javascript">javascript</a> ([`link`](https://en.wikipedia.org/wiki/JavaScript)) 
 
 *Programming Language.*
@@ -1626,6 +1761,26 @@ The code owner is the gatekeeper of the project, ultimately responsible for all 
 ------
 
 ## Targets
+
+### <a name="blackfluxrobo-config-plugin-target-ref-managesh">manage.sh</a>  
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a>
+
+:small_blue_diamond: `other`
+
+*Prepare project to run tests.*
+
+File starts docker container(s) with necessary setup to execute the project tests.
+
+### <a name="blackfluxrobo-config-plugin-target-ref-dockerdockerfile">docker/Dockerfile</a> ([`link`](https://docs.docker.com/engine/reference/builder/)) 
+
+:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-docker">docker</a>
+
+:small_blue_diamond: `other`
+
+*Main docker container configuration file.*
+
+Contains instructions for the main docker container this repository uses for testing.
 
 ### <a name="blackfluxrobo-config-plugin-target-ref-gardenerjs">gardener.js</a> ([`link`](https://github.com/blackflux/js-gardener#run-basic-setup)) 
 
