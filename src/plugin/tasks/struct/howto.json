@@ -3,7 +3,12 @@
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "HOWTO.md"
+    {
+      "name": "HOWTO.md",
+      "variables": {
+        "awsRegion": "${awsRegion}"
+      }
+    }
   ],
   "requires": [
     "javascript",

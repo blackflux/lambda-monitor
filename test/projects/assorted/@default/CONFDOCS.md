@@ -44,6 +44,7 @@ Manages files for monitoring project.
       </td>
       <td align="left" valign="top">
         <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-enablecloudtrail">enableCloudTrail</a></li>
         </ul>
       </td>
@@ -60,6 +61,7 @@ Manages structure files for monitoring project.
     <tr>
       <th>Targets</th>
       <th>Requires</th>
+      <th>Variables</th>
     </tr>
     <tr>
       <td align="left" valign="top">
@@ -76,6 +78,11 @@ Manages structure files for monitoring project.
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
     </tr>
@@ -145,13 +152,14 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-srcindexjs">src/index
 
 _Updating <a href="#blackfluxrobo-config-plugin-target-ref-howtomd">HOWTO.md</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
-- Define setup file detailing how to set-up lambda-monitor.
+- Define setup file detailing how to set-up monitoring project.
 
 <table>
   <tbody>
     <tr>
       <th>Targets</th>
       <th>Requires</th>
+      <th>Variables</th>
     </tr>
     <tr>
       <td align="left" valign="top">
@@ -164,6 +172,11 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-howtomd">HOWTO.md</a>
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
     </tr>
@@ -306,6 +319,12 @@ computing platforms to individuals, companies and governments, on a metered pay-
 
 ## Variables
 
+### <a name="blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a>  : `string`
+
+*Aws data center region code gets deployed to.*
+
+List of available regions can be found [here](https://docs.aws.amazon.com/general/latest/gr/rande.html).
+
 ### <a name="blackfluxrobo-config-plugin-var-ref-enablecloudtrail">enableCloudTrail</a>  : `string`
 
 *Whether or not to enable CloudTrail.*
@@ -340,7 +359,7 @@ Contains code functionality for monitoring.
 
 :small_blue_diamond: `other`
 
-*File describing how to setup monitoring.*
+*File describing how to setup project.*
 
 Contains basic instructions on how to set up monitoring project.
 
