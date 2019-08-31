@@ -4766,6 +4766,20 @@ node-tdd@2.2.4:
     timekeeper "2.2.0"
     tmp "0.1.0"
 
+node-tdd@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.3.0.tgz#e8e020c158fe2772fb562a35a2e4528704eee4b2"
+  integrity sha512-A1cmSHHrDls+Nx4oiY1Sz5zrb0NRu1lsglejK2RAyU+hNbwbaNbHM8W1gwKLDmHwabs4WgD4fjLrVxU+SQse5A==
+  dependencies:
+    "@hapi/joi" "15.1.1"
+    callsites "3.1.0"
+    joi-strict "1.0.9"
+    lodash.get "4.4.2"
+    nock "11.3.2"
+    smart-fs "1.9.10"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+
 "nopt@2 || 3":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"
