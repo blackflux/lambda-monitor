@@ -700,10 +700,10 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk@2.521.0, aws-sdk@^2.4.0:
-  version "2.521.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.521.0.tgz#b7b41084fdc9e8b134520f054c06e3908df9321a"
-  integrity sha512-YRViGahZoHq0lEsy0Cq7bqaLzP8OTzjg35Hz08Rv88ltk+b5UWVpDgIWls7mXCBNTBTYjbfbeGXzNaHJBLKlpA==
+aws-sdk@2.522.0, aws-sdk@^2.4.0:
+  version "2.522.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.522.0.tgz#f3419800fad29c03c9344d433c0782c4ad7cf0bb"
+  integrity sha512-JNUVaBqXwzDVqR/9dDw4a55aVsdDQYlf/cBM5bSj/g95wbuNWMzrY1TfAxEfSKwH0llp/1/xdXP75AKKp2UoSg==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -4751,6 +4751,20 @@ node-tdd@2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.4.0.tgz#fe1005139782e9391f8fc9198bf74de9a52a6517"
   integrity sha512-r9A4bospZ8Ew1r/yd/nQm6wOYpxxmRGLu4e2d4Gconggxkb20qq7kincdXLyhwFkfmCMuZW/z6J9o5fFn1qn7Q==
+  dependencies:
+    "@hapi/joi" "15.1.1"
+    callsites "3.1.0"
+    joi-strict "1.0.9"
+    lodash.get "4.4.2"
+    nock "11.3.2"
+    smart-fs "1.9.10"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+
+node-tdd@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.0.tgz#3e71df00f452b271adc11e11fddac48d46e57fd6"
+  integrity sha512-rJqbcD+MrFXgwZUppJOVu89W4mS2eW+xT7SoPBWRA7p5i3ZA7QcOigKrNzdU1JIUzyw/LlqlGoQnSEHUpJ0F+w==
   dependencies:
     "@hapi/joi" "15.1.1"
     callsites "3.1.0"
