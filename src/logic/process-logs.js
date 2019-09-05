@@ -52,7 +52,7 @@ module.exports = (event, context, callback, rb) => zlibPromise
           billedDuration: parseInt(requestLog[3], 10),
           maxMemory: parseInt(requestLog[4], 10),
           memory: parseInt(requestLog[5], 10),
-          initDuration: requestLog[6] === undefined ? null : parseInt(requestLog[6], 10),
+          initDuration: requestLog[6] === undefined ? null : parseFloat(requestLog[6]),
           traceId: requestLog[7] === undefined ? null : requestLog[7],
           segmentId: requestLog[8] === undefined ? null : requestLog[8],
           sampled: requestLog[9] === undefined ? null : requestLog[9],

@@ -14,7 +14,7 @@
       "billedDuration": 5700,
       "maxMemory": 128,
       "memory": 119,
-      "initDuration": 799,
+      "initDuration": 799.43,
       "traceId": "1-5d716d64-b570b380d8e36a802457fb00",
       "segmentId": "07918f362e186398",
       "sampled": "false",
