@@ -15,7 +15,7 @@ const requestLogRegex = new RegExp([
   /Max Memory Used: (\d+) MB\t/,
   /(?:Init Duration: (\d+.\d+) ms\t)?\n/,
   // https://docs.aws.amazon.com/xray/latest/devguide/xray-api-sendingdata.html
-  /(?:XRAY TraceId: (1-[0-9a-f]{8}-[0-9a-f]{24})\tSegmentId: ([0-9a-f]{16})\tSampled: (true|false)\t\n)?$/
+  /(?:XRAY TraceId: (\d+-[0-9a-f]{8}-[0-9a-f]{24})\tSegmentId: ([0-9a-f]{16})\tSampled: (true|false)\t\n)?$/
 ].map((r) => r.source).join(''), '');
 const requestStartRegex = new RegExp([
   /^START RequestId: [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} /,
@@ -52,9 +52,10 @@ module.exports = (event, context, callback, rb) => zlibPromise
           billedDuration: parseInt(requestLog[3], 10),
           maxMemory: parseInt(requestLog[4], 10),
           memory: parseInt(requestLog[5], 10),
-          traceId: requestLog[6] === undefined ? null : requestLog[6],
-          segmentId: requestLog[7] === undefined ? null : requestLog[7],
-          sampled: requestLog[8] === undefined ? null : requestLog[8],
+          initDuration: requestLog[6] === undefined ? null : parseInt(requestLog[6], 10),
+          traceId: requestLog[7] === undefined ? null : requestLog[7],
+          segmentId: requestLog[8] === undefined ? null : requestLog[8],
+          sampled: requestLog[9] === undefined ? null : requestLog[9],
           env: process.env.ENVIRONMENT
         });
       } else if (!logEvent.message.match(requestEndRegex) && !logEvent.message.match(requestStartRegex)) {
