@@ -42,7 +42,32 @@
   },
   "event": {
     "awslogs": {
-      "data": "H4sIABSHcV0A/6WS3WobMRCFX0UsvYxsafUzku8c4oZAkxZ7C23jULTSrFm6P+7u2mka8u6RnBZyGcil5ozmHH2ax6zFcXQ7LB72mC1IdrEslj+vV5vN8nKVnWX9fYdDqoMROreca2kh1pt+dzn0h32S5u5+nDeuLYOb73FHx76pp9oNSAMeaX/E4Vjj/culzTSga9OtnHGYcz7Pxfz2w6dlsdoUd6gNq1DkXpdOGo/GCycAXK58kMZgnDEeytEP9X6q++5j3Uw4jHHabXbTd/hyzu5OTqsjdtNJe8zqkByFAKYkgOTCAov+SmjFmAKltQabA2PAhM2lkMCV5By0sULK6DrVEdPk2vRerjiXTBmwWquz//ySwermgqzx9yG2XoXY6HMHlUDqq8pRzhGoc1DSIHxQrALmS7btsqezdwZUbw64Xn35vC5eZ8QSSqFLTyvBPZXcWWoRkOYiaBc/o6y02E4Xh8El4AuiNFez3JB23E7nddNgIK/EGPCkXGPbDw9kU//FGCe2X5/HovtD/glfR0x8uD0JV109vZoC1s6kOM3Zdt/Wy++kGJzHE1GqAnAdtKRlNCuFYcGgSElzqaAqGdtOG9y18etTPwPLTRUXF7nRwpooRkQx9IJUrhkxObyfv34z/7TzcREi3YLlCwULZWex58ebVoUUbvxFklEg/WEirorLTvgsMh/R910Yt116zt3TM7jwEdrVAwAA"
+      "data|JSON.stringify|toGzip|toBase64": {
+        "messageType": "DATA_MESSAGE",
+        "owner": "783629116497",
+        "logGroup": "/aws/lambda/peg-solitiare-dev-overview",
+        "logStream": "2017/11/23/[$LATEST]e680fe32c6ba48ce8c3a377a25cd488e",
+        "subscriptionFilters": [
+          "NoneFilter"
+        ],
+        "logEvents": [
+          {
+            "id": "33705477413970201536500575666792700703924347154117689344",
+            "timestamp": 1511405879665,
+            "message": "END RequestId: 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0\n"
+          },
+          {
+            "id": "33705477413970201536500575666792700703924347154117689345",
+            "timestamp": 1511405879665,
+            "message": "REPORT RequestId: eb7b36bc-f31c-41a9-9e7e-23d6a80fbf63\tDuration: 5615.28 ms\tBilled Duration: 5700 ms\tMemory Size: 128 MB\tMax Memory Used: 119 MB\tInit Duration: 799.43 ms\t\nXRAY TraceId: 1-5d716d64-b570b380d8e36a802457fb00\tSegmentId: 07918f362e186398\tSampled: false\t\n"
+          },
+          {
+            "id": "33705477413970201536500575666792700703924347154117689346",
+            "timestamp": 1511405879665,
+            "message": "2017-11-23T02:57:59.665Z 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0 Task timed out after 1.00 seconds\n\n"
+          }
+        ]
+      }
     }
   }
 }
