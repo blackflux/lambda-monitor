@@ -10,7 +10,7 @@ const datadog = require('./services/datadog');
 const requestLogRegex = new RegExp([
   /^REPORT RequestId: ([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\t/,
   /Duration: (\d+.\d+) ms\t/,
-  /Billed Duration: (\d+) ms \t/,
+  /Billed Duration: (\d+) ms\s?\t/,
   /Memory Size: (\d+) MB\t/,
   /Max Memory Used: (\d+) MB\t\n/
 ].map((r) => r.source).join(''), '');
