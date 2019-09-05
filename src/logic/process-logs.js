@@ -12,7 +12,7 @@ const requestLogRegex = new RegExp([
   /Duration: (\d+.\d+) ms\t/,
   /Billed Duration: (\d+) ms \t/,
   /Memory Size: (\d+) MB\t/,
-  /Max Memory Used: (\d+) MB\t\n$/
+  /Max Memory Used: (\d+) MB\t\n/
 ].map((r) => r.source).join(''), '');
 const requestStartRegex = new RegExp([
   /^START RequestId: [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} /,
