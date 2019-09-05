@@ -1,0 +1,26 @@
+[
+  {
+    "scope": "https://listener.logz.io:8071",
+    "method": "POST",
+    "path": "/?token=logz_dummy_token&type=lambda-execution-info",
+    "body": {
+      "message": "REPORT RequestId: eb7b36bc-f31c-41a9-9e7e-23d6a80fbf63\tDuration: 5615.28 ms\tBilled Duration: 5700 ms\tMemory Size: 128 MB\tMax Memory Used: 119 MB\tInit Duration: 799.43 ms\t\nXRAY TraceId: 1-5d716d64-b570b380d8e36a802457fb00\tSegmentId: 07918f362e186398\tSampled: false\t\n",
+      "logGroupName": "/aws/lambda/peg-solitiare-dev-overview",
+      "logStreamName": "2017/11/23/[$LATEST]e680fe32c6ba48ce8c3a377a25cd488e",
+      "owner": "783629116497",
+      "@timestamp": "2017-11-23T02:57:59.665Z",
+      "requestId": "eb7b36bc-f31c-41a9-9e7e-23d6a80fbf63",
+      "duration": 5615.28,
+      "billedDuration": 5700,
+      "maxMemory": 128,
+      "memory": 119,
+      "initDuration": 799.43,
+      "traceId": "1-5d716d64-b570b380d8e36a802457fb00",
+      "segmentId": "07918f362e186398",
+      "sampled": "false",
+      "env": "local-dev"
+    },
+    "status": 200,
+    "response": ""
+  }
+]

@@ -14,6 +14,10 @@
             "billedDuration": 1000,
             "maxMemory": 256,
             "memory": 44,
+            "initDuration": null,
+            "traceId": null,
+            "segmentId": null,
+            "sampled": null,
             "env": "local-dev"
         },
         "status": 401,
