@@ -3796,18 +3796,18 @@ lambda-rollbar@1.10.26:
     lodash.omit "4.5.0"
     rollbar "2.12.3"
 
-lambda-tdd@2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.0.tgz#f91d6e79f3d825b10c6bb70c9f781e8f7d21bd27"
-  integrity sha512-3222dkbmGsbngEgQN/6Yfijj1xDV4RLn/92jI7i9B6Zx+Tm2p+ASCgxW05qUwQQ1lCp3f0kws9OUfLzk194CkQ==
+lambda-tdd@2.10.1:
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.1.tgz#48abb2497c2802de99fb13f68b49c27f191f8679"
+  integrity sha512-XlCBFpJXh1Par2dMIPnJbFOi4Zr2uoqkJ4b6GcLMAYQZH0YwJjRIkehby2dYtstvpoPJ0EYXrN5hLt0bgA66IQ==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
+    joi-strict "1.0.9"
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
-    lodash.defaults "4.2.0"
     lodash.get "4.4.2"
-    node-tdd "2.5.1"
+    node-tdd "2.5.2"
     smart-fs "1.9.11"
 
 lambda-wrapper@0.3.0:
@@ -4663,18 +4663,6 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-nock@11.3.2:
-  version "11.3.2"
-  resolved "https://registry.yarnpkg.com/nock/-/nock-11.3.2.tgz#8f14e690a6cc839c6c585ba22acd0277d128766a"
-  integrity sha512-Bb00vTmuXyucMT9gcnMSiE2n6P5yrRoAyej0eF6ik6VUxG0FKp4RcSx1TzFusEDtY3hMNpsd7ZYUSIvwtNpTrw==
-  dependencies:
-    chai "^4.1.2"
-    debug "^4.1.0"
-    json-stringify-safe "^5.0.1"
-    lodash "^4.17.13"
-    mkdirp "^0.5.0"
-    propagate "^2.0.0"
-
 nock@11.3.3:
   version "11.3.3"
   resolved "https://registry.yarnpkg.com/nock/-/nock-11.3.3.tgz#f4553d87ac8e501d7a995a50df7e24857f879f58"
@@ -4753,20 +4741,6 @@ node-pre-gyp@^0.12.0:
     rimraf "^2.6.1"
     semver "^5.3.0"
     tar "^4"
-
-node-tdd@2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.1.tgz#a1d04d6928fc8133372e9cdc2bc88b81801c660e"
-  integrity sha512-dEENz4vUZ3UiRRlKx/FepWV73hUgCZeCUyZAMmrgkbApBVhL+RmFuTT7R7D1NjOQ28jI8N/L3dZi2teXNOuwdg==
-  dependencies:
-    "@hapi/joi" "15.1.1"
-    callsites "3.1.0"
-    joi-strict "1.0.9"
-    lodash.get "4.4.2"
-    nock "11.3.2"
-    smart-fs "1.9.11"
-    timekeeper "2.2.0"
-    tmp "0.1.0"
 
 node-tdd@2.5.2:
   version "2.5.2"
