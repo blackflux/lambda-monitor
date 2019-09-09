@@ -16,7 +16,32 @@
   },
   "event": {
     "awslogs": {
-      "data": "H4sIAAAAAAAAAK1STW/TQBD9KyuLYxzv99i+pYqpkEhBsbnQRGhtjyMLfwTvJqFU/e+sW3roLQiO897MvHlP8xj0aK05YPFwxCAN1qti9W2T5fnqNgsWwXgZcPIwxELzhDEtE/BwNx5up/F09ExkLjbqTF/WJjriIbRj17rWTBjWeA7HM07nFi8vM7mb0PR+iFMGEWMRF9H9u4+rIsuLPeqYNih4pUsj4wrjShgBYLiqahnH6FfYU2mrqT26dhzet53DyQbpfXA3DvhSBvtnneyMg5upx6CtvZwQQJUEkEwkQL24ElpRqkBprSHhQClQkXApJDAlGQMdJ0JKL+lan48zvbfKFGOSqhgSrdXiNTe/Prtbky3+OPnGD3VKWMUNNALDqmlMyBhCaAyUYS2qWtEGaFXS3RA8Lf7tOnXlddvs86dt8dcHuvVpMnPQvp9StmSS9Hbnbtquw5q8IalnyM5tsB+nB5K3vzAlXGmyufGg+Un+EF8senEpn/H/EIC+MoD52bzLkIuC8lRBqpKlb/l6VQ6kMPY7mWVqMp4cMY1/M8KW3rTFahxquxtmL/un3xg+XUZKAwAA"
+      "data|JSON.stringify|toGzip|toBase64": {
+        "messageType": "DATA_MESSAGE",
+        "owner": "783629116497",
+        "logGroup": "/aws/lambda/peg-solitiare-dev-overview",
+        "logStream": "2017/11/23/[$LATEST]e680fe32c6ba48ce8c3a377a25cd488e",
+        "subscriptionFilters": [
+          "NoneFilter"
+        ],
+        "logEvents": [
+          {
+            "id": "33705477413970201536500575666792700703924347154117689344",
+            "timestamp": 1511405879665,
+            "message": "END RequestId: 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0\n"
+          },
+          {
+            "id": "33705477413970201536500575666792700703924347154117689345",
+            "timestamp": 1511405879665,
+            "message": "REPORT RequestId: 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0\tDuration: 1001.14 ms\tBilled Duration: 1000 ms\tMemory Size: 256 MB\tMax Memory Used: 44 MB\t\nXRAY TraceId: 1-5d716d64-b570b380d8e36a802457fb00\tSegmentId: 07918f362e186398\tSampled: false\t\n"
+          },
+          {
+            "id": "33705477413970201536500575666792700703924347154117689346",
+            "timestamp": 1511405879665,
+            "message": "2017-11-23T02:57:59.665Z 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0 Task timed out after 1.00 seconds\n\n"
+          }
+        ]
+      }
     }
   }
 }

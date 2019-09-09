@@ -10,14 +10,14 @@ const datadog = require('./services/datadog');
 const requestLogRegex = new RegExp([
   /^REPORT RequestId: (?<requestId>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\t/,
   /Duration: (?<duration>\d+.\d+) ms\t/,
-  /Billed Duration: (?<billedDuration>\d+) ms\s?\t/,
+  /Billed Duration: (?<billedDuration>\d+) ms\t/,
   /Memory Size: (?<maxMemory>\d+) MB\t/,
   /Max Memory Used: (?<memory>\d+) MB\t/,
   /(?:Init Duration: (?<initDuration>\d+.\d+) ms\t)?\n/,
   // https://docs.aws.amazon.com/xray/latest/devguide/xray-api-sendingdata.html
-  // TODO: Make required and split into multiple lines.
-  // eslint-disable-next-line max-len
-  /(?:XRAY TraceId: (?<traceId>\d+-[0-9a-f]{8}-[0-9a-f]{24})\tSegmentId: (?<segmentId>[0-9a-f]{16})\tSampled: (?<sampled>true|false)\t\n)?$/
+  /XRAY TraceId: (?<traceId>\d+-[0-9a-f]{8}-[0-9a-f]{24})\t/,
+  /SegmentId: (?<segmentId>[0-9a-f]{16})\t/,
+  /Sampled: (?<sampled>true|false)\t\n?$/
 ].map((r) => r.source).join(''), '');
 const requestStartRegex = new RegExp([
   /^START RequestId: [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} /,
@@ -58,9 +58,9 @@ module.exports = (event, context, callback, rb) => zlibPromise
           maxMemory: parseInt(maxMemory, 10),
           memory: parseInt(memory, 10),
           initDuration: initDuration === undefined ? null : parseFloat(initDuration),
-          traceId: traceId === undefined ? null : traceId,
-          segmentId: segmentId === undefined ? null : segmentId,
-          sampled: sampled === undefined ? null : sampled,
+          traceId,
+          segmentId,
+          sampled,
           env: process.env.ENVIRONMENT
         });
       } else if (!logEvent.message.match(requestEndRegex) && !logEvent.message.match(requestStartRegex)) {

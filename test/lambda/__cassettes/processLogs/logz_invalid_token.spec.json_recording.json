@@ -4,7 +4,7 @@
         "method": "POST",
         "path": "/?token=logz_invalid_token&type=lambda-execution-info",
         "body": {
-            "message": "REPORT RequestId: 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0\tDuration: 1001.14 ms\tBilled Duration: 1000 ms \tMemory Size: 256 MB\tMax Memory Used: 44 MB\t\n",
+            "message": "REPORT RequestId: 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0\tDuration: 1001.14 ms\tBilled Duration: 1000 ms\tMemory Size: 256 MB\tMax Memory Used: 44 MB\t\nXRAY TraceId: 1-5d716d64-b570b380d8e36a802457fb00\tSegmentId: 07918f362e186398\tSampled: false\t\n",
             "logGroupName": "/aws/lambda/peg-solitiare-dev-overview",
             "logStreamName": "2017/11/23/[$LATEST]e680fe32c6ba48ce8c3a377a25cd488e",
             "owner": "783629116497",
@@ -15,9 +15,9 @@
             "maxMemory": 256,
             "memory": 44,
             "initDuration": null,
-            "traceId": null,
-            "segmentId": null,
-            "sampled": null,
+            "traceId": "1-5d716d64-b570b380d8e36a802457fb00",
+            "segmentId": "07918f362e186398",
+            "sampled": "false",
             "env": "local-dev"
         },
         "status": 401,
