@@ -43,7 +43,7 @@
   },
   "homepage": "https://github.com/blackflux/lambda-monitor#readme",
   "dependencies": {
-    "aws-sdk": "2.524.0",
+    "aws-sdk": "2.525.0",
     "cfn-response": "1.0.1",
     "lambda-rollbar": "1.10.26",
     "lodash.defaults": "4.2.0",
@@ -53,7 +53,7 @@
     "request-promise": "4.2.4"
   },
   "devDependencies": {
-    "@babel/cli": "7.5.5",
+    "@babel/cli": "7.6.0",
     "@babel/core": "7.6.0",
     "@babel/plugin-proposal-object-rest-spread": "7.5.5",
     "@babel/register": "7.6.0",
