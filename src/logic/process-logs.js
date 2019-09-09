@@ -16,7 +16,7 @@ const requestLogRegex = new RegExp([
   /(?:Init Duration: (?<initDuration>\d+.\d+) ms\t)?\n/,
   // https://docs.aws.amazon.com/xray/latest/devguide/xray-api-sendingdata.html
   // eslint-disable-next-line max-len
-  /(?:XRAY TraceId: (?<traceId>\d+-[0-9a-f]{8}-[0-9a-f]{24})\tSegmentId: (?<segmentId>[0-9a-f]{16})\tSampled: (?<sampled>true|false)\t\n)?$/
+  /(?:XRAY TraceId: (?<traceId>\d+-[0-9a-f]{8}-[0-9a-f]{24})\tSegmentId: (?<segmentId>[0-9a-f]{16})\tSampled: (?<sampled>true|false)\t\n)?$/ // TODO: Make required and split into multiple lines.
 ].map((r) => r.source).join(''), '');
 const requestStartRegex = new RegExp([
   /^START RequestId: [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} /,
