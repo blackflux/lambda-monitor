@@ -11,8 +11,8 @@ const requestLogRegex = new RegExp([
   /^REPORT RequestId: (?<requestId>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\t/,
   /Duration: (?<duration>\d+.\d+) ms\t/,
   /Billed Duration: (?<billedDuration>\d+) ms\t/,
-  /Memory Size: (?<maxMemory>\d+) MB\t/,
-  /Max Memory Used: (?<memory>\d+) MB\t/,
+  /Memory Size: (?<memory>\d+) MB\t/,
+  /Max Memory Used: (?<maxMemory>\d+) MB\t/,
   /(?:Init Duration: (?<initDuration>\d+.\d+) ms\t)?\n/,
   // https://docs.aws.amazon.com/xray/latest/devguide/xray-api-sendingdata.html
   /XRAY TraceId: (?<traceId>\d+-[0-9a-f]{8}-[0-9a-f]{24})\t/,
