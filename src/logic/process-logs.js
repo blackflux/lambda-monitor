@@ -8,14 +8,16 @@ const loggly = require('./services/loggly');
 const datadog = require('./services/datadog');
 
 const requestLogRegex = new RegExp([
-  /^REPORT RequestId: ([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\t/,
-  /Duration: (\d+.\d+) ms\t/,
-  /Billed Duration: (\d+) ms\s?\t/,
-  /Memory Size: (\d+) MB\t/,
-  /Max Memory Used: (\d+) MB\t/,
-  /(?:Init Duration: (\d+.\d+) ms\t)?\n/,
+  /^REPORT RequestId: (?<requestId>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\t/,
+  /Duration: (?<duration>\d+.\d+) ms\t/,
+  /Billed Duration: (?<billedDuration>\d+) ms\t/,
+  /Memory Size: (?<memory>\d+) MB\t/,
+  /Max Memory Used: (?<maxMemory>\d+) MB\t/,
+  /(?:Init Duration: (?<initDuration>\d+.\d+) ms\t)?\n/,
   // https://docs.aws.amazon.com/xray/latest/devguide/xray-api-sendingdata.html
-  /(?:XRAY TraceId: (\d+-[0-9a-f]{8}-[0-9a-f]{24})\tSegmentId: ([0-9a-f]{16})\tSampled: (true|false)\t\n)?$/
+  /XRAY TraceId: (?<traceId>\d+-[0-9a-f]{8}-[0-9a-f]{24})\t/,
+  /SegmentId: (?<segmentId>[0-9a-f]{16})\t/,
+  /Sampled: (?<sampled>true|false)\t\n?$/
 ].map((r) => r.source).join(''), '');
 const requestStartRegex = new RegExp([
   /^START RequestId: [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} /,
@@ -29,7 +31,7 @@ const genericPrefix = new RegExp([
   /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}[\s\t]/
 ].map((r) => r.source).join(''), '');
 const requestLogLevel = new RegExp([
-  /^(DEBUG|INFO|WARNING|ERROR|CRITICAL):/
+  /^(?<logLevel>DEBUG|INFO|WARNING|ERROR|CRITICAL):/
 ].map((r) => r.source).join(''), '');
 
 module.exports = (event, context, callback, rb) => zlibPromise
@@ -41,26 +43,33 @@ module.exports = (event, context, callback, rb) => zlibPromise
     resultParsed.logEvents.forEach((logEvent) => {
       const requestLog = requestLogRegex.exec(logEvent.message);
       if (requestLog) {
+        const {
+          duration, billedDuration, maxMemory, requestId, memory, initDuration, traceId, segmentId, sampled
+        } = requestLog.groups;
         toLog.push({
           message: logEvent.message,
           logGroupName: resultParsed.logGroup,
           logStreamName: resultParsed.logStream,
           owner: resultParsed.owner,
           timestamp: new Date(logEvent.timestamp).toISOString(),
-          requestId: requestLog[1],
-          duration: parseFloat(requestLog[2]),
-          billedDuration: parseInt(requestLog[3], 10),
-          maxMemory: parseInt(requestLog[4], 10),
-          memory: parseInt(requestLog[5], 10),
-          initDuration: requestLog[6] === undefined ? null : parseFloat(requestLog[6]),
-          traceId: requestLog[7] === undefined ? null : requestLog[7],
-          segmentId: requestLog[8] === undefined ? null : requestLog[8],
-          sampled: requestLog[9] === undefined ? null : requestLog[9],
+          requestId,
+          duration: parseFloat(duration),
+          billedDuration: parseInt(billedDuration, 10),
+          maxMemory: parseInt(maxMemory, 10),
+          memory: parseInt(memory, 10),
+          initDuration: initDuration === undefined ? null : parseFloat(initDuration),
+          traceId,
+          segmentId,
+          sampled,
           env: process.env.ENVIRONMENT
         });
       } else if (!logEvent.message.match(requestEndRegex) && !logEvent.message.match(requestStartRegex)) {
         const processedLogEvent = defaults({ message: logEvent.message.replace(genericPrefix, '') }, logEvent);
-        const logLevel = get(requestLogLevel.exec(processedLogEvent.message), '1', 'WARNING').toLowerCase();
+        const logLevel = get(
+          requestLogLevel.exec(processedLogEvent.message),
+          'groups.logLevel',
+          'WARNING'
+        ).toLowerCase();
         rb[logLevel](processedLogEvent, process.env.ENVIRONMENT);
       }
     });
