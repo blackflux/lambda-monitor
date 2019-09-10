@@ -3786,14 +3786,14 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lambda-rollbar@1.10.26:
-  version "1.10.26"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-1.10.26.tgz#ce1c023c3a5414f46b49127337fee29aa18fb417"
-  integrity sha512-4qNNjbr0Pr5PDhhGtjhZStsiR1swDuqUlp7yfCh9IUbj26w6nDT6oHs4EgHEfL9ddsLF6yThGOl9yOCmhzpCug==
+lambda-rollbar@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.0.tgz#4a32a065ce3c451e96f78ad0ecf3f85a6f56b862"
+  integrity sha512-PO8VOx3ZlbH+gFb1RYpvnOEKMEK0hLRWXj7fTjuNTrFe8w037T+UZ6JSJjd9+XcLzOx4WiRsa6lvHFC6L+IP5w==
   dependencies:
     fast-safe-stringify "2.0.6"
+    joi-strict "1.0.9"
     lodash.get "4.4.2"
-    lodash.omit "4.5.0"
     rollbar "2.12.3"
 
 lambda-tdd@2.10.1:
@@ -4151,11 +4151,6 @@ lodash.mergewith@4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
   integrity sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==
-
-lodash.omit@4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/lodash.omit/-/lodash.omit-4.5.0.tgz#6eb19ae5a1ee1dd9df0b969e66ce0b7fa30b5e60"
-  integrity sha1-brGa5aHuHdnfC5aeZs4Lf6MLXmA=
 
 lodash.set@4.3.2, lodash.set@^4.3.2:
   version "4.3.2"
