@@ -3791,10 +3791,10 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lambda-rollbar@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.0.tgz#4a32a065ce3c451e96f78ad0ecf3f85a6f56b862"
-  integrity sha512-PO8VOx3ZlbH+gFb1RYpvnOEKMEK0hLRWXj7fTjuNTrFe8w037T+UZ6JSJjd9+XcLzOx4WiRsa6lvHFC6L+IP5w==
+lambda-rollbar@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.1.tgz#2aa6337c4fb5dd7dc015040b8e76c285edd084d0"
+  integrity sha512-OLmzktSnRCglW62/ORGGrEAIekIEiHLD6+NiMZNiIaXlX1rc2zkLHR50nWOcyOtLAzWhQcoTUdHf1z1Kjo+J7A==
   dependencies:
     fast-safe-stringify "2.0.6"
     joi-strict "1.0.9"
