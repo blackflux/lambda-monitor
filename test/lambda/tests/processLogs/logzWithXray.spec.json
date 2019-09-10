@@ -1,5 +1,8 @@
 {
   "handler": "processLogs",
+  "env": {
+    "LOGZ_TOKEN": "logz_dummy_token"
+  },
   "success": true,
   "timeout": 10000,
   "expect": {
@@ -20,7 +23,7 @@
         {
           "id": "33705477413970201536500575666792700703924347154117689345",
           "timestamp": 1511405879665,
-          "message": "REPORT RequestId: 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0\tDuration: 1001.14 ms\tBilled Duration: 1000 ms\tMemory Size: 256 MB\tMax Memory Used: 44 MB\t\nXRAY TraceId: 1-5d716d64-b570b380d8e36a802457fb00\tSegmentId: 07918f362e186398\tSampled: false\t\n"
+          "message": "REPORT RequestId: eb7b36bc-f31c-41a9-9e7e-23d6a80fbf63\tDuration: 5615.28 ms\tBilled Duration: 5700 ms\tMemory Size: 128 MB\tMax Memory Used: 119 MB\tInit Duration: 799.43 ms\t\nXRAY TraceId: 1-5d716d64-b570b380d8e36a802457fb00\tSegmentId: 07918f362e186398\tSampled: false\t\n"
         },
         {
           "id": "33705477413970201536500575666792700703924347154117689346",
@@ -54,7 +57,7 @@
           {
             "id": "33705477413970201536500575666792700703924347154117689345",
             "timestamp": 1511405879665,
-            "message": "REPORT RequestId: 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0\tDuration: 1001.14 ms\tBilled Duration: 1000 ms\tMemory Size: 256 MB\tMax Memory Used: 44 MB\t\nXRAY TraceId: 1-5d716d64-b570b380d8e36a802457fb00\tSegmentId: 07918f362e186398\tSampled: false\t\n"
+            "message": "REPORT RequestId: eb7b36bc-f31c-41a9-9e7e-23d6a80fbf63\tDuration: 5615.28 ms\tBilled Duration: 5700 ms\tMemory Size: 128 MB\tMax Memory Used: 119 MB\tInit Duration: 799.43 ms\t\nXRAY TraceId: 1-5d716d64-b570b380d8e36a802457fb00\tSegmentId: 07918f362e186398\tSampled: false\t\n"
           },
           {
             "id": "33705477413970201536500575666792700703924347154117689346",

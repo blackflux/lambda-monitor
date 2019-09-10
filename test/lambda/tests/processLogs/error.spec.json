@@ -25,7 +25,7 @@
         {
           "id": "33705525399687885455563045578360440177889944256168460290",
           "timestamp": 1511408031419,
-          "message": "REPORT RequestId: 1f4bc9c5-cfff-11e7-94f4-dbafe2834581\tDuration: 31.27 ms\tBilled Duration: 100 ms \tMemory Size: 256 MB\tMax Memory Used: 42 MB\t\n"
+          "message": "REPORT RequestId: 1f4bc9c5-cfff-11e7-94f4-dbafe2834581\tDuration: 31.27 ms\tBilled Duration: 100 ms\tMemory Size: 256 MB\tMax Memory Used: 42 MB\t\nXRAY TraceId: 1-5d716d64-b570b380d8e36a802457fb00\tSegmentId: 07918f362e186398\tSampled: false\t\n"
         }
       ]
     }
@@ -37,7 +37,32 @@
   },
   "event": {
     "awslogs": {
-      "data": "H4sIAAAAAAAAAKVSy27bMBD8FUIo4ItVcfkQSd8cWE0L1GlhK6fYKChp5RLQwxVlu2mQfy8dN0iLIoeiFxKc2d2ZHfAhatF7u8P8fo/RLFrM8/mXZbZez6+zaBr1pw6HACvNU2YAUmFUgJt+dz30h31gEnvySWPborLJHnex7xs3OjtgXOEx7o84HB2eLj3rcUDbhiZGQSUACePJ3ZuP8zxb51soUapalqIEKUyNhSgNViVlUGNtOIYR/lD4cnD70fXdO9eMOPhodhfd9B1entH2SSc7YjeeqYfIVUGOc0WlZJIbw3QqFKMCjDbCCJ6CBqaMYkIbzZjiShia0gBqSoPk6EI+o23DqiABBNWUhxOmz7mF8e9tVzU4kMnzthPSOu9dtyN9R9q+OjRIJo0rkq+Xysmmix6nf5tLtdJaCillymm4zqlTEdRUwI0RgskUUi1SyrR51RyY381lNwuywm+HUPihmhGoRVGaUsZlXdcxAKrYiFrEVWFrZJoLqeH/3ZnXo/vT3Sr7/GmV/7PBcXEY7PkXzAiHt0yR1m/GK9c0WJEXCigNBNmMS2z74Z6s3Q+ckeCSLK8CaL+TX8Stx6As2BN+3n77+BNgISX3GAMAAA=="
+      "data|JSON.stringify|toGzip|toBase64": {
+        "messageType": "DATA_MESSAGE",
+        "owner": "783629116497",
+        "logGroup": "/aws/lambda/peg-solitiare-dev-overview",
+        "logStream": "2017/11/23/[$LATEST]1ce57f5c4c1549feb4c9edc021fef93e",
+        "subscriptionFilters": [
+          "NoneFilter"
+        ],
+        "logEvents": [
+          {
+            "id": "33705525399286472041989494361812797248982273749060812800",
+            "timestamp": 1511408031401,
+            "message": "Handler 'overview' missing on module 'lib/handler'\n"
+          },
+          {
+            "id": "33705525399687885455563045578360440177889944256168460289",
+            "timestamp": 1511408031419,
+            "message": "END RequestId: 1f4bc9c5-cfff-11e7-94f4-dbafe2834581\n"
+          },
+          {
+            "id": "33705525399687885455563045578360440177889944256168460290",
+            "timestamp": 1511408031419,
+            "message": "REPORT RequestId: 1f4bc9c5-cfff-11e7-94f4-dbafe2834581\tDuration: 31.27 ms\tBilled Duration: 100 ms\tMemory Size: 256 MB\tMax Memory Used: 42 MB\t\nXRAY TraceId: 1-5d716d64-b570b380d8e36a802457fb00\tSegmentId: 07918f362e186398\tSampled: false\t\n"
+          }
+        ]
+      }
     }
   }
 }
