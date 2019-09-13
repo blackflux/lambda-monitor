@@ -2354,10 +2354,10 @@ fast-levenshtein@~2.0.4:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
-fast-safe-stringify@2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-2.0.6.tgz#04b26106cc56681f51a044cfc0d76cf0008ac2c2"
-  integrity sha512-q8BZ89jjc+mz08rSxROs8VsrBBcn1SIw1kq9NjolL509tkABRk9io01RAjSaEv1Xb2uFLt8VtRiZbGp5H8iDtg==
+fast-safe-stringify@2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-2.0.7.tgz#124aa885899261f68aedb42a7c080de9da608743"
+  integrity sha512-Utm6CdzT+6xsDk2m8S6uL8VHxNwI6Jub+e9NYTcAms28T84pTa25GJQV9j0CY0N1rM8hK4x6grpF2BQf+2qwVA==
 
 fastq@^1.6.0:
   version "1.6.0"
@@ -3791,12 +3791,12 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lambda-rollbar@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.1.tgz#2aa6337c4fb5dd7dc015040b8e76c285edd084d0"
-  integrity sha512-OLmzktSnRCglW62/ORGGrEAIekIEiHLD6+NiMZNiIaXlX1rc2zkLHR50nWOcyOtLAzWhQcoTUdHf1z1Kjo+J7A==
+lambda-rollbar@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.2.tgz#0a3965b8512c06019aab983be75779fa787f2e38"
+  integrity sha512-m0A0McJLUdQhcixHQTENF0lHX7wSTaoIsQiq/YGUnFFqd9GGCRt5F5AIkVn+v/ug94ezuWjsS8xxStEJNmTBdQ==
   dependencies:
-    fast-safe-stringify "2.0.6"
+    fast-safe-stringify "2.0.7"
     joi-strict "1.0.9"
     lodash.get "4.4.2"
     rollbar "2.12.3"
