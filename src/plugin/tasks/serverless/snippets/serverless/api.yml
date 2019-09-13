@@ -33,12 +33,12 @@ provider:
         - "s3:PutObject"
         - "s3:DeleteObject"
       Resource:
-        - arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3Bucket}/*
+        - arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}/*
     - Effect: Allow
       Action:
         - "s3:ListBucket"
       Resource:
-        - arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3Bucket}
+        - arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}
 
 functions:
   process-logs:
