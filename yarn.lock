@@ -194,6 +194,11 @@
   resolved "https://registry.yarnpkg.com/@hapi/bourne/-/bourne-1.3.2.tgz#0a7095adea067243ce3283e1b56b8a8f453b242a"
   integrity sha512-1dVNHT76Uu5N3eJNTYcvxee+jzX4Z9lfciqRRHCU27ihbUcYi+iSc2iml5Ke1LXe1SyJCLA0+14Jh4tXJgOppA==
 
+"@hapi/formula@1.x.x":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@hapi/formula/-/formula-1.2.0.tgz#994649c7fea1a90b91a0a1e6d983523f680e10cd"
+  integrity sha512-UFbtbGPjstz0eWHb+ga/GM3Z9EzqKXFWIbSOFURU0A/Gku0Bky4bCk9/h//K2Xr3IrCfjFNhMm4jyZ5dbCewGA==
+
 "@hapi/hoek@8.x.x":
   version "8.2.4"
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-8.2.4.tgz#684a14f4ca35d46f44abc87dfc696e5e4fe8a020"
@@ -208,6 +213,22 @@
     "@hapi/bourne" "1.x.x"
     "@hapi/hoek" "8.x.x"
     "@hapi/topo" "3.x.x"
+
+"@hapi/joi@16.0.0":
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/@hapi/joi/-/joi-16.0.0.tgz#b8bc1bc2608f12ad56edecf4bafa695071991555"
+  integrity sha512-OYWoI/uqs40IdRvPmgn5ame35esBnPR4qhzrE03o+Pb8NnlXIBJZWMXgAlwp43781Ybm0R1iEEMDx0H2lP8mJQ==
+  dependencies:
+    "@hapi/address" "2.x.x"
+    "@hapi/formula" "1.x.x"
+    "@hapi/hoek" "8.x.x"
+    "@hapi/pinpoint" "1.x.x"
+    "@hapi/topo" "3.x.x"
+
+"@hapi/pinpoint@1.x.x":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@hapi/pinpoint/-/pinpoint-1.0.2.tgz#025b7a36dbbf4d35bf1acd071c26b20ef41e0d13"
+  integrity sha512-dtXC/WkZBfC5vxscazuiJ6iq4j9oNx1SHknmIr8hofarpKUZKmlUVYVIhNVzIEgK5Wrc4GMHL5lZtt1uS2flmQ==
 
 "@hapi/topo@3.x.x":
   version "3.1.3"
@@ -3653,6 +3674,13 @@ jmespath@0.15.0:
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
   integrity sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=
 
+joi-strict@1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.0.10.tgz#fe5c83834ba2921dcea8adb903676de46851f880"
+  integrity sha512-PLcFUzmymaaIrGpQ1H5uvpj7jiW8r+QakCTS1/14BBgoBdyj3XqEJXKHyxRuuCf9d9ux1iBj6OfkWb3GNbFZeg==
+  dependencies:
+    "@hapi/joi" "16.0.0"
+
 joi-strict@1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.0.9.tgz#9b05887cbf7160e5bff6bd9a901ce0f6af42f57c"
@@ -3791,15 +3819,15 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-lambda-rollbar@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.2.tgz#0a3965b8512c06019aab983be75779fa787f2e38"
-  integrity sha512-m0A0McJLUdQhcixHQTENF0lHX7wSTaoIsQiq/YGUnFFqd9GGCRt5F5AIkVn+v/ug94ezuWjsS8xxStEJNmTBdQ==
+lambda-rollbar@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.3.tgz#797509dc7666b6ef2f2199dfe06ca280ae58de53"
+  integrity sha512-ExMtIEKgjhdt4gjwiXJp7vsNc9Dd78CAinbC2VnK8ktvXaw32Tm+pOLUeElJpWS1+2tEx4XrwIvkmuvgC7gcpg==
   dependencies:
     fast-safe-stringify "2.0.7"
-    joi-strict "1.0.9"
+    joi-strict "1.0.10"
     lodash.get "4.4.2"
-    rollbar "2.12.3"
+    rollbar "2.13.0"
 
 lambda-tdd@2.10.2:
   version "2.10.2"
@@ -6380,10 +6408,10 @@ robo-config@3.3.5:
     object-treeify "1.1.19"
     smart-fs "1.9.11"
 
-rollbar@2.12.3:
-  version "2.12.3"
-  resolved "https://registry.yarnpkg.com/rollbar/-/rollbar-2.12.3.tgz#ae0e4c5ba58528ea4483a9b6590045c324d22d25"
-  integrity sha512-r+d3YiRr8U5ucpI19YzO081UIN7vXRTRsRMtSnLwgfoOUmCMHJPklYMbV0bhfGYyGpq7LAej7N89O6aI3zMGtw==
+rollbar@2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/rollbar/-/rollbar-2.13.0.tgz#6b16a96058ddc929bef43efa3e94ac7b94c8fb26"
+  integrity sha512-bIJeTkaeZ8nD/fw/bTkf1m1jlCfZkx6yE+qdzZM+QE1M0dDO0uW4LEXlBrVEYrmn359ITubRTlt4vH5Ezaulhg==
   dependencies:
     async "~1.2.1"
     buffer-from ">=1.1"
