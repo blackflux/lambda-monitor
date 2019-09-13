@@ -1,6 +1,6 @@
-const aws = require('aws-sdk');
+const aws = require('aws-sdk-wrap')();
 
-const s3 = new aws.S3();
+const s3 = aws.get('s3');
 
 const listObjectsV2 = (p) => s3.listObjectsV2(p).promise();
 const deleteObjects = (p) => s3.deleteObjects(p).promise();

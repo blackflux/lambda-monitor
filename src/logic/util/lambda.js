@@ -1,8 +1,9 @@
-const AWS = require('aws-sdk');
+const Aws = require('aws-sdk-wrap');
 
 module.exports = (options) => {
-  const resources = new AWS.ResourceGroupsTaggingAPI(options);
-  const cloudwatchlogs = new AWS.CloudWatchLogs(options);
+  const aws = Aws({ config: options });
+  const resources = aws.get('ResourceGroupsTaggingAPI');
+  const cloudwatchlogs = aws.get('CloudWatchLogs');
 
   const logGroupName = (fn) => `/aws/lambda/${fn.FunctionName}`;
 
