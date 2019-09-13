@@ -2,10 +2,7 @@ const expect = require('chai').expect;
 const { describe } = require('node-tdd');
 const processLogs = require('../../src/logic/process-logs');
 
-describe('Testing process-logs', {
-  useNock: true,
-  timestamp: 1568412724
-}, () => {
+describe('Testing process-logs', { useNock: true }, () => {
   it('Testing Log Level Extraction', (done) => {
     const logs = [];
     processLogs({
