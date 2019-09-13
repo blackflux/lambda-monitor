@@ -6,7 +6,7 @@ provider:
     DATADOG_API_KEY: ${ssm:DATADOG_API_KEY}
     ROLLBAR_ACCESS_TOKEN: ${ssm:ROLLBAR_ACCESS_TOKEN}
     ROLLBAR_REPORT_LEVEL: ${ssm:ROLLBAR_REPORT_LEVEL}
-    LOG_STREAM_BUCKET_NAME: ${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3Bucket}
+    LOG_STREAM_BUCKET_NAME: ${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -33,12 +33,12 @@ provider:
         - "s3:PutObject"
         - "s3:DeleteObject"
       Resource:
-        - arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3Bucket}/*
+        - arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}/*
     - Effect: Allow
       Action:
         - "s3:ListBucket"
       Resource:
-        - arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3Bucket}
+        - arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}
 
 functions:
   process-logs:
