@@ -174,10 +174,10 @@
   dependencies:
     smart-fs "1.9.11"
 
-"@blackflux/robo-config-plugin@2.6.3":
-  version "2.6.3"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-2.6.3.tgz#11dcbcfc4309a7cd7d9c3ab85f646eee9d813fd7"
-  integrity sha512-DTja80z1islgbhooDjbvfeA/YhPOZMQwpTz4G1pWR7j0K5ItmQmI5RKqs6h/V5uI/d88kY54ufX9riRRXJSMdw==
+"@blackflux/robo-config-plugin@2.6.5":
+  version "2.6.5"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-2.6.5.tgz#9603de38711b4663af2318769d6a7b7a75a91182"
+  integrity sha512-gxO7LywiimPn8JrgdoFZAdx0sinwmkLJDY4uV+X8HBlXaylqsPpOVQ9UkWXCNQBD32Y+DADiVxfi43CIIOKUOw==
 
 "@hapi/address@2.x.x":
   version "2.1.1"
@@ -717,10 +717,10 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk-wrap@3.3.3:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-3.3.3.tgz#7d7742e487b2ccc38dbe4f52e979f3da0f10e92f"
-  integrity sha512-bAB1ZxzBVcXKSlJeu/+FKks/TEBTuO9bfY4BtFf7jrjJhTM3c7yP7RZIar9+IwKBp4PNlbHKLgYZEh+ldUmVIw==
+aws-sdk-wrap@3.3.4:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-3.3.4.tgz#cd066cf861776c7cae5a7fc6f698bb042b906d59"
+  integrity sha512-oL89/Ro/3N5cqI0/MOsR8i9UtLuQxftn+aU29g6ddTkaMiGMuri8s+d9k1OEBd5OcQj9fI/hcpE41z6NsWG1qA==
   dependencies:
     joi-strict "1.1.0"
     lambda-async "1.0.1"
@@ -4812,6 +4812,19 @@ node-tdd@2.5.3:
     timekeeper "2.2.0"
     tmp "0.1.0"
 
+node-tdd@2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.4.tgz#a08d4a0dee0f477b4e950b94b78cad332971ae3d"
+  integrity sha512-53osqpWlw4hDHYc0WVqgNMqeKQGmj9pvWyDChp9Ud4q8I/XyJOGYKDfE3OSeFGFSreG8mZlovDyeamV7uina3A==
+  dependencies:
+    callsites "3.1.0"
+    joi-strict "1.1.0"
+    lodash.get "4.4.2"
+    nock "11.3.4"
+    smart-fs "1.9.11"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+
 "nopt@2 || 3":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"
@@ -6422,6 +6435,22 @@ robo-config@3.3.5:
     app-root-path "2.2.1"
     deepmerge "4.0.0"
     joi-strict "1.0.9"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.18"
+    object-scan "10.0.11"
+    object-treeify "1.1.19"
+    smart-fs "1.9.11"
+
+robo-config@3.3.6:
+  version "3.3.6"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.3.6.tgz#e2aaa1d6c86baa9fa8f122f9b2d3f1553a953e7e"
+  integrity sha512-Xx/rzuFpKb+Fj47BnPG5qMY4QzQj4D8nn4/OYldP1EnbENDGZfZUId5Pd4SdkLWn2TwA8C830Qkm3eJKfWatxg==
+  dependencies:
+    app-root-path "2.2.1"
+    deepmerge "4.0.0"
+    joi-strict "1.1.0"
     lodash.clonedeep "4.5.0"
     lodash.difference "4.5.0"
     lodash.get "4.4.2"
