@@ -103,12 +103,7 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.0.0", "@babel/parser@^7.4.3":
-  version "7.5.5"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.5.5.tgz#02f077ac8817d3df4a832ef59de67565e71cca4b"
-  integrity sha512-E5BN68cqR7dhKan1SfqgPGhQ178bkVKpXTPEXnFJBrEt8/DKRZlybmy+IgYLTeN7tp1R5Ccmbm2rBk17sHYU3g==
-
-"@babel/parser@^7.6.0":
+"@babel/parser@^7.0.0", "@babel/parser@^7.4.3", "@babel/parser@^7.6.0":
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.6.0.tgz#3e05d0647432a8326cb28d0de03895ae5a57f39b"
   integrity sha512-+o2q111WEx4srBs7L9eJmcwi655eD8sXniLqMB93TBK9GrNzGrxDWSjiqz2hLU0Ha8MTXFIP0yd9fNdP+m43ZQ==
@@ -212,17 +207,6 @@
     "@hapi/address" "2.x.x"
     "@hapi/bourne" "1.x.x"
     "@hapi/hoek" "8.x.x"
-    "@hapi/topo" "3.x.x"
-
-"@hapi/joi@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@hapi/joi/-/joi-16.0.0.tgz#b8bc1bc2608f12ad56edecf4bafa695071991555"
-  integrity sha512-OYWoI/uqs40IdRvPmgn5ame35esBnPR4qhzrE03o+Pb8NnlXIBJZWMXgAlwp43781Ybm0R1iEEMDx0H2lP8mJQ==
-  dependencies:
-    "@hapi/address" "2.x.x"
-    "@hapi/formula" "1.x.x"
-    "@hapi/hoek" "8.x.x"
-    "@hapi/pinpoint" "1.x.x"
     "@hapi/topo" "3.x.x"
 
 "@hapi/joi@16.0.1":
@@ -409,9 +393,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*":
-  version "12.7.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.4.tgz#64db61e0359eb5a8d99b55e05c729f130a678b04"
-  integrity sha512-W0+n1Y+gK/8G2P/piTkBBN38Qc5Q1ZSO6B5H3QmPCUewaiXOo2GCAWZ4ElZCcNhjJuBSUSLGFUJnmlCn5+nxOQ==
+  version "12.7.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.5.tgz#e19436e7f8e9b4601005d73673b6dc4784ffcc2f"
+  integrity sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -733,12 +717,12 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk-wrap@3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-3.3.1.tgz#a5accb6358d705402c9b71fd3d11f48e85d89f5c"
-  integrity sha512-VO7QhOodL1Fzwb2CD/U9fokQg2n0yF1H8cJXxulUbT10nM4IKFTkThXv3vkQnEgaaMlsNraLDelyrRt3Zr01ww==
+aws-sdk-wrap@3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-3.3.3.tgz#7d7742e487b2ccc38dbe4f52e979f3da0f10e92f"
+  integrity sha512-bAB1ZxzBVcXKSlJeu/+FKks/TEBTuO9bfY4BtFf7jrjJhTM3c7yP7RZIar9+IwKBp4PNlbHKLgYZEh+ldUmVIw==
   dependencies:
-    joi-strict "1.0.10"
+    joi-strict "1.1.0"
     lambda-async "1.0.1"
     lodash.chunk "4.2.0"
     lodash.get "4.4.2"
@@ -3697,20 +3681,6 @@ jmespath@0.15.0:
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
   integrity sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=
 
-joi-strict@1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.0.10.tgz#fe5c83834ba2921dcea8adb903676de46851f880"
-  integrity sha512-PLcFUzmymaaIrGpQ1H5uvpj7jiW8r+QakCTS1/14BBgoBdyj3XqEJXKHyxRuuCf9d9ux1iBj6OfkWb3GNbFZeg==
-  dependencies:
-    "@hapi/joi" "16.0.0"
-
-joi-strict@1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.0.11.tgz#33ab93215a96cd56a0b6c694be36757ee2f3bb73"
-  integrity sha512-0Zqzcu1wP67ns4IQapoArKmq1JyOhNNc+W6o2vYby7Fa1YeQHjXuRt1DJW7YE4m14fFhM6goC14KFFUDqXoHiA==
-  dependencies:
-    "@hapi/joi" "16.0.1"
-
 joi-strict@1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.0.9.tgz#9b05887cbf7160e5bff6bd9a901ce0f6af42f57c"
@@ -3860,24 +3830,24 @@ lambda-async@1.0.1:
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.1.tgz#b9e1d0c835054b8c1fe6a9ea73ba56a78e7aa433"
   integrity sha512-IDpfhrvglH03qo1DrMIio/MkB7hVVyXZaAAwO58OjYGo1I694SDDQntIzfMUEQVuHq+8xXk9692FgH+gQEoF/A==
 
-lambda-rollbar@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.3.tgz#797509dc7666b6ef2f2199dfe06ca280ae58de53"
-  integrity sha512-ExMtIEKgjhdt4gjwiXJp7vsNc9Dd78CAinbC2VnK8ktvXaw32Tm+pOLUeElJpWS1+2tEx4XrwIvkmuvgC7gcpg==
+lambda-rollbar@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.5.tgz#30501485d454b12e882b59225867f19fa9fda7aa"
+  integrity sha512-zghk4i30/OQa86Z0jYTvL9Yj+pIJT6M7eoD/ZA5sch138mRPYkU4khS0FR4BzF0+07VYjqdFVU3F+iMnlzbSOQ==
   dependencies:
     fast-safe-stringify "2.0.7"
-    joi-strict "1.0.10"
+    joi-strict "1.1.0"
     lodash.get "4.4.2"
     rollbar "2.13.0"
 
-lambda-tdd@2.10.3:
-  version "2.10.3"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.3.tgz#2300c264bdbf673842e72037b9e15e44dffcef0d"
-  integrity sha512-tCc69iFUts/DbQgvC0k6WebKROfc2YeGaiZzTyrNWebQpbUuFjgLwmbp1CqY9dZH908SVuTjxc59Nl8OFyDoNQ==
+lambda-tdd@2.10.4:
+  version "2.10.4"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.4.tgz#9a61771d51aa991d96abee619867adb67fd9a413"
+  integrity sha512-OC7q/U1bmT/cxcACzFO8EB1d58ikCE3WP2eelwKE6d5hGioCvrBE/DHl8RbpDlC2+oUqTRHltWqHYpbV24GPIQ==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
-    joi-strict "1.0.11"
+    joi-strict "1.1.0"
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
@@ -4471,9 +4441,9 @@ merge-stream@^2.0.0:
   integrity sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==
 
 merge2@^1.2.3:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.2.4.tgz#c9269589e6885a60cf80605d9522d4b67ca646e3"
-  integrity sha512-FYE8xI+6pjFOhokZu0We3S5NKCirLbCzSh2Usf3qEyr4X8U+0jNg9P8RZ4qz+V2UoECLVwSyzU3LxXBaLGtD3A==
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.3.0.tgz#5b366ee83b2f1582c48f87e47cf1a9352103ca81"
+  integrity sha512-2j4DAdlBOkiSZIsaXk4mTE3sRS02yBHAtfy127xRV3bQUFqXkjHCHLW6Scv7DwNRbIWNHH8zpnz9zMaKXIdvYw==
 
 micromatch@^3.1.10, micromatch@^3.1.4:
   version "3.1.10"
@@ -4568,9 +4538,9 @@ minipass@^2.2.1, minipass@^2.3.5:
     yallist "^3.0.0"
 
 minizlib@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/minizlib/-/minizlib-1.2.1.tgz#dd27ea6136243c7c880684e8672bb3a45fd9b614"
-  integrity sha512-7+4oTUOWKg7AuL3vloEWekXY2/D20cevzsrNT2kGWm+39J9hGTCBv8VI5Pm5lXZ/o3/mdR4f8rflAPhnQb8mPA==
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/minizlib/-/minizlib-1.2.2.tgz#6f0ccc82fa53e1bf2ff145f220d2da9fa6e3a166"
+  integrity sha512-hR3At21uSrsjjDTWrbu0IMLTpnkpv8IIMFDFaoz43Tmu4LkmAXfH44vNNzpTnf+OAQQCHrb91y/wc2J4x5XgSQ==
   dependencies:
     minipass "^2.2.1"
 
@@ -4997,9 +4967,9 @@ npm-profile@^4.0.2:
     npm-registry-fetch "^4.0.0"
 
 npm-registry-fetch@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/npm-registry-fetch/-/npm-registry-fetch-4.0.0.tgz#5ef75845b605855c7964472542c25da172af8677"
-  integrity sha512-Jllq35Jag8dtv0M17ue74XtdQTyqKzuAYGiX9mAjOhkmNjib3bBUgK6mUY61+AHnXeSRobQkpY3/xIOS/omptw==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/npm-registry-fetch/-/npm-registry-fetch-4.0.1.tgz#4ec0964dce6f29d253801a47cd381a7d6ad13a5e"
+  integrity sha512-1ZQ+yjnxc698R5h9Yje9CASapzAZr7aYDkJDdERg9xg2hOEY0vRJwskOaJAXq8N/eLavzvW4g564YAfq6zMn/A==
   dependencies:
     JSONStream "^1.3.4"
     bluebird "^3.5.1"
@@ -5007,6 +4977,7 @@ npm-registry-fetch@^4.0.0:
     lru-cache "^5.1.1"
     make-fetch-happen "^5.0.0"
     npm-package-arg "^6.1.0"
+    safe-buffer "^5.2.0"
 
 npm-run-path@^1.0.0:
   version "1.0.0"
@@ -6515,7 +6486,7 @@ rxjs@^6.4.0:
   dependencies:
     tslib "^1.9.0"
 
-safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@^5.1.2, safe-buffer@~5.2.0:
+safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@^5.1.2, safe-buffer@^5.2.0, safe-buffer@~5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.2.0.tgz#b74daec49b1148f88c64b68d49b1e815c1f2f519"
   integrity sha512-fZEwUGbVl7kouZs1jCdMLdt95hdIv0ZeHg6L7qPeciMZhZ+/gdesW4wgTARkrFWEpspjEATAzUGPG8N2jJiwbg==
