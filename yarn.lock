@@ -3817,13 +3817,13 @@ lambda-async@1.0.1:
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.1.tgz#b9e1d0c835054b8c1fe6a9ea73ba56a78e7aa433"
   integrity sha512-IDpfhrvglH03qo1DrMIio/MkB7hVVyXZaAAwO58OjYGo1I694SDDQntIzfMUEQVuHq+8xXk9692FgH+gQEoF/A==
 
-lambda-rollbar@2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.7.tgz#7cbe106b41fd24c8b315e2ab0f38c8ff6e7b2351"
-  integrity sha512-w4ffbSbzjbt0KYM42h/zItmVM32EYUOmiT8kLMMJaT3gTbzu9DcpSg3Vi8VP06NQ4sNNyTENYOJsa43Ax51O6A==
+lambda-rollbar@2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.8.tgz#6121f90f25c6d2e364cf4a9056c52e989937043f"
+  integrity sha512-sx0PaxQLWX20E6REhjmQNy5jnGblGHCRlf1+ZFquDDvdznyCMUBndxPlFU1UjYrDHCd8C93qSZm1EqywG1UliA==
   dependencies:
     fast-safe-stringify "2.0.7"
-    joi-strict "1.1.2"
+    joi-strict "1.1.3"
     lodash.get "4.4.2"
     rollbar "2.13.0"
 
