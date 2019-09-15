@@ -3666,13 +3666,6 @@ jmespath@0.15.0:
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
   integrity sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=
 
-joi-strict@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.1.2.tgz#6ccc94f615ccafb4bf707a7764b184ae152690a4"
-  integrity sha512-5FJarK5iGIUL4e+CBhvv4B9ptW2GcpUVkTKhNfwYNYMjG2UjQV2PGO5c5oQLUIS7s7ugO5Z9W5+LGuLfeQUqDA==
-  dependencies:
-    "@hapi/joi" "16.0.1"
-
 joi-strict@1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.1.3.tgz#7ffd4c722826d3082f67d3f51f21cd445635c5f7"
@@ -3827,18 +3820,18 @@ lambda-rollbar@2.0.8:
     lodash.get "4.4.2"
     rollbar "2.13.0"
 
-lambda-tdd@2.10.7:
-  version "2.10.7"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.7.tgz#b55321b130230b9826982dc21f1f0adb335f29f5"
-  integrity sha512-TwiLdMCTY2UOkf4CNeiTvobtiNDzP6ISzXNsi6gjsZ06KbmJ+RsB6wwdpzBizsmpN7K5HHP1i69A4fycFGgR5Q==
+lambda-tdd@2.10.8:
+  version "2.10.8"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.8.tgz#4054b26d77e97138694e584430b03be2a1636a60"
+  integrity sha512-VlxeYwjfNSGoRNi+sBaFxItLInkUPGYiLw/d6znV2FprYR0ohs5MXcGuA21vUMm25pyRLiFjIJL+aBNrN+QlzA==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
-    joi-strict "1.1.2"
+    joi-strict "1.1.3"
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
-    node-tdd "2.5.7"
+    node-tdd "2.5.8"
     smart-fs "1.9.14"
 
 lambda-wrapper@0.3.0:
@@ -4772,19 +4765,6 @@ node-pre-gyp@^0.12.0:
     rimraf "^2.6.1"
     semver "^5.3.0"
     tar "^4"
-
-node-tdd@2.5.7:
-  version "2.5.7"
-  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.7.tgz#cf9d0535aeafd90f6d9bcd3028598a48a3ab60a1"
-  integrity sha512-z0ibU6AZ/AY4b9lcl1iI3qYu+krZ4/b9Cs16ck0hMnaTAqGqpyH7CRE8z5WtAzbvuCYabRLfxFeM66INiVLvCg==
-  dependencies:
-    callsites "3.1.0"
-    joi-strict "1.1.2"
-    lodash.get "4.4.2"
-    nock "11.3.4"
-    smart-fs "1.9.14"
-    timekeeper "2.2.0"
-    tmp "0.1.0"
 
 node-tdd@2.5.8:
   version "2.5.8"
