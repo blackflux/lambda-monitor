@@ -3817,13 +3817,13 @@ lambda-async@1.0.1:
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.1.tgz#b9e1d0c835054b8c1fe6a9ea73ba56a78e7aa433"
   integrity sha512-IDpfhrvglH03qo1DrMIio/MkB7hVVyXZaAAwO58OjYGo1I694SDDQntIzfMUEQVuHq+8xXk9692FgH+gQEoF/A==
 
-lambda-rollbar@2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.5.tgz#30501485d454b12e882b59225867f19fa9fda7aa"
-  integrity sha512-zghk4i30/OQa86Z0jYTvL9Yj+pIJT6M7eoD/ZA5sch138mRPYkU4khS0FR4BzF0+07VYjqdFVU3F+iMnlzbSOQ==
+lambda-rollbar@2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.6.tgz#787bf3339c3f5ee1a685fa9ec098fa83fafbff12"
+  integrity sha512-I44AEOStB4ljoUm8HzAM6ifY4ulLguaoamrJY5XXxrkVmz6wBARCEKxuCZxpOjk3RENPNbtYtOhfqDIBW5jUTQ==
   dependencies:
     fast-safe-stringify "2.0.7"
-    joi-strict "1.1.0"
+    joi-strict "1.1.1"
     lodash.get "4.4.2"
     rollbar "2.13.0"
 
@@ -4786,6 +4786,19 @@ node-tdd@2.5.4:
     timekeeper "2.2.0"
     tmp "0.1.0"
 
+node-tdd@2.5.5:
+  version "2.5.5"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.5.tgz#3a40b31b8a8a5659fba023a06ed8652e3167d77a"
+  integrity sha512-quWBFiqMDb3ZsrHzIMS9A0/LMTGY7ViPVYak5wa+J0DlMFeNzXV2AfkzJVF2v3X6Ox4IWecx/p7dwrMMclvoCw==
+  dependencies:
+    callsites "3.1.0"
+    joi-strict "1.1.1"
+    lodash.get "4.4.2"
+    nock "11.3.4"
+    smart-fs "1.9.12"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+
 "nopt@2 || 3":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"
@@ -5194,6 +5207,11 @@ object-scan@10.0.11:
   version "10.0.11"
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-10.0.11.tgz#e559093079658bf8a2de7bcae17c15746aeb4c20"
   integrity sha512-mLCcwD6uVdKLOp/wKKNb06g5YW7ayXrMr1iagl9QOdP3da6CBxSSJW94gbPozWDg+dTuVX2aJ6z5Aqx0brwDUw==
+
+object-scan@10.0.13:
+  version "10.0.13"
+  resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-10.0.13.tgz#5b6ebbc34bba32fdc92f30edde231eaf53735b41"
+  integrity sha512-5w/BPfsSFwjWct98ON3Rjd/s2jQBshjSo3pZCLd7b9P/sUbggUfOFdhMNbDzvKXsYvPc3Y133+BhYGwj0Ot8gw==
 
 object-treeify@1.1.19:
   version "1.1.19"
@@ -6402,6 +6420,22 @@ robo-config@3.3.6:
     object-scan "10.0.11"
     object-treeify "1.1.19"
     smart-fs "1.9.11"
+
+robo-config@3.3.7:
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.3.7.tgz#339ba8ad5f57b311584f96386c4165ae43df78bd"
+  integrity sha512-OQK24nBOBaFTd7OuF4p3aT77m7XCuc2ckFg3srOe05jpzCqvFv/RSw39PnYTrakrDxYvGLZYPQlWq/yoattF1Q==
+  dependencies:
+    app-root-path "2.2.1"
+    deepmerge "4.0.0"
+    joi-strict "1.1.1"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.18"
+    object-scan "10.0.13"
+    object-treeify "1.1.19"
+    smart-fs "1.9.12"
 
 rollbar@2.13.0:
   version "2.13.0"
