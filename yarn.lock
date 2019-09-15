@@ -6416,22 +6416,6 @@ robo-config@3.3.10:
     object-treeify "1.1.20"
     smart-fs "1.9.14"
 
-robo-config@3.3.9:
-  version "3.3.9"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.3.9.tgz#ee034d457d507fa2e61d1ac229d20d0c7c54bc64"
-  integrity sha512-F0roXdxFf/Y8AzDjEqlyIauVDgzuKMK8MiKUIZw/9wrbPCxgwn98WJoptG2S1mKfwfUYBQXL3T5c29dOyKrfaw==
-  dependencies:
-    app-root-path "2.2.1"
-    deepmerge "4.0.0"
-    joi-strict "1.1.2"
-    lodash.clonedeep "4.5.0"
-    lodash.difference "4.5.0"
-    lodash.get "4.4.2"
-    object-deep-contain "1.0.19"
-    object-scan "10.0.13"
-    object-treeify "1.1.20"
-    smart-fs "1.9.14"
-
 rollbar@2.13.0:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/rollbar/-/rollbar-2.13.0.tgz#6b16a96058ddc929bef43efa3e94ac7b94c8fb26"
