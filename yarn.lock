@@ -6418,10 +6418,10 @@ robo-config@3.3.7:
     object-treeify "1.1.19"
     smart-fs "1.9.12"
 
-robo-config@3.3.8:
-  version "3.3.8"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.3.8.tgz#f506031062b80b5933c467ead8a9222f3491ad5d"
-  integrity sha512-MkT1eGl7bkVnsGKodApmNIlL4Jmy0Fe2B1BPOG1B8tiP5RbkMD6M1D5gnGph4AZkodAPPHkhNn8AQVWcBQtnNQ==
+robo-config@3.3.9:
+  version "3.3.9"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.3.9.tgz#ee034d457d507fa2e61d1ac229d20d0c7c54bc64"
+  integrity sha512-F0roXdxFf/Y8AzDjEqlyIauVDgzuKMK8MiKUIZw/9wrbPCxgwn98WJoptG2S1mKfwfUYBQXL3T5c29dOyKrfaw==
   dependencies:
     app-root-path "2.2.1"
     deepmerge "4.0.0"
@@ -6432,7 +6432,7 @@ robo-config@3.3.8:
     object-deep-contain "1.0.19"
     object-scan "10.0.13"
     object-treeify "1.1.20"
-    smart-fs "1.9.12"
+    smart-fs "1.9.14"
 
 rollbar@2.13.0:
   version "2.13.0"
