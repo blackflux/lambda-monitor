@@ -3827,10 +3827,10 @@ lambda-rollbar@2.0.7:
     lodash.get "4.4.2"
     rollbar "2.13.0"
 
-lambda-tdd@2.10.6:
-  version "2.10.6"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.6.tgz#1a7665ffd9224520faf7791e4b1db007d14cafe0"
-  integrity sha512-27lZbM3Yzki07dQYuBrSjh6EULtEqnuBHFeUfQDbcLaoqZ5PfEmdUBvwJqBny3I2ZKbyeLGdKFuX5dzYSS/7cw==
+lambda-tdd@2.10.7:
+  version "2.10.7"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.7.tgz#b55321b130230b9826982dc21f1f0adb335f29f5"
+  integrity sha512-TwiLdMCTY2UOkf4CNeiTvobtiNDzP6ISzXNsi6gjsZ06KbmJ+RsB6wwdpzBizsmpN7K5HHP1i69A4fycFGgR5Q==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
@@ -3838,7 +3838,7 @@ lambda-tdd@2.10.6:
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
-    node-tdd "2.5.6"
+    node-tdd "2.5.7"
     smart-fs "1.9.14"
 
 lambda-wrapper@0.3.0:
@@ -4783,6 +4783,19 @@ node-tdd@2.5.6:
     lodash.get "4.4.2"
     nock "11.3.4"
     smart-fs "1.9.13"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+
+node-tdd@2.5.7:
+  version "2.5.7"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.7.tgz#cf9d0535aeafd90f6d9bcd3028598a48a3ab60a1"
+  integrity sha512-z0ibU6AZ/AY4b9lcl1iI3qYu+krZ4/b9Cs16ck0hMnaTAqGqpyH7CRE8z5WtAzbvuCYabRLfxFeM66INiVLvCg==
+  dependencies:
+    callsites "3.1.0"
+    joi-strict "1.1.2"
+    lodash.get "4.4.2"
+    nock "11.3.4"
+    smart-fs "1.9.14"
     timekeeper "2.2.0"
     tmp "0.1.0"
 
