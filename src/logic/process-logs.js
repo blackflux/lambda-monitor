@@ -70,7 +70,7 @@ const getToLog = async (resultParsed, rb) => {
       const [year, month, day] = new Date(processedLogEvent.timestamp).toISOString().split('T')[0].split('-');
       await s3.putGzipObject(
         process.env.LOG_STREAM_BUCKET_NAME,
-        `${resultParsed.logGroup.slice(12)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
+        `${resultParsed.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
         JSON.stringify(processedLogEvent)
       );
       rb[logLevel](processedLogEvent, process.env.ENVIRONMENT);
