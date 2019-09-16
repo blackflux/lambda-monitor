@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "scope": "https://log-stream-bucket-name.s3.amazonaws.com:443",
+    "method": "PUT",
+    "path": "/aws/lambda/peg-solitiare-dev-overview/2017/11/23/warning-33705525399286472041989494361812797248982273749060812800.json.gz",
+    "body": "1f8b0800000000000203258e410ac2301045af12b2c94670663269667a020fe1a6d250034d2aa6d6857877036efee2f11efc8f2da9b5694976b497a9ce6b7a1ab71de979e4f476a6e4d6725dcc564dd9e6d79a8c5bf3ed7cff9bee5aedc9e6b9b7de47088182572519381230aa282bfb0105296a241615a2e8232b0cd0a100f47ecffdc23e95871d31203208f8bef8fd0114692cfb9c000000",
+    "status": 200,
+    "response": ""
+  }
+]

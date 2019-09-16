@@ -1,6 +1,7 @@
 const zlib = require('zlib');
 const get = require('lodash.get');
 const defaults = require('lodash.defaults');
+const s3 = require('./util/s3');
 const timeoutPromise = require('./util/timeout-promise');
 const promiseComplete = require('./util/promise-complete');
 const logz = require('./services/logz');
@@ -34,9 +35,9 @@ const requestLogLevel = new RegExp([
   /^(?<logLevel>DEBUG|INFO|WARNING|ERROR|CRITICAL):/
 ].map((r) => r.source).join(''), '');
 
-const getToLog = (resultParsed, rb) => {
+const getToLog = async (resultParsed, rb) => {
   const result = [];
-  resultParsed.logEvents.forEach((logEvent) => {
+  await Promise.all(resultParsed.logEvents.map(async (logEvent) => {
     const requestLog = requestLogRegex.exec(logEvent.message);
     if (requestLog) {
       const {
@@ -66,9 +67,15 @@ const getToLog = (resultParsed, rb) => {
         'groups.logLevel',
         'WARNING'
       ).toLowerCase();
+      const [year, month, day] = new Date(processedLogEvent.timestamp).toISOString().split('T')[0].split('-');
+      await s3.putGzipObject(
+        process.env.LOG_STREAM_BUCKET_NAME,
+        `${resultParsed.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
+        JSON.stringify(processedLogEvent)
+      );
       rb[logLevel](processedLogEvent, process.env.ENVIRONMENT);
     }
-  });
+  }));
   return result;
 };
 
@@ -77,7 +84,7 @@ const processLogs = async (event, context, rb) => {
     .gunzipSync(Buffer.from(event.awslogs.data, 'base64'))
     .toString('ascii'));
 
-  const toLog = getToLog(resultParsed, rb);
+  const toLog = await getToLog(resultParsed, rb);
   const timeout = Math.floor((context.getRemainingTimeInMillis() - 5000.0) / 1000.0) * 1000;
   await promiseComplete([
     timeoutPromise(logz.log(context, process.env.ENVIRONMENT, toLog), timeout, 'logz'),
