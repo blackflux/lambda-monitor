@@ -2,7 +2,7 @@ const expect = require('chai').expect;
 const { describe } = require('node-tdd');
 const processLogs = require('../../src/logic/process-logs');
 
-describe('Testing process-logs', () => {
+describe('Testing process-logs', { useNock: true }, () => {
   it('Testing Log Level Extraction', (done) => {
     const logs = [];
     processLogs({
@@ -18,8 +18,8 @@ describe('Testing process-logs', () => {
     }, {
       getRemainingTimeInMillis: () => 30000
     }, (err) => {
+      expect(err, JSON.stringify(err)).to.equal(null);
       expect(logs).to.deep.equal(['INFO: Task timed out after 1.00 seconds\n\n']);
-      expect(err).to.equal(null);
       done();
     }, { info: (msg) => logs.push(msg.message) });
   });
