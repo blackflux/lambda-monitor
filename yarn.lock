@@ -4797,6 +4797,19 @@ node-tdd@2.5.8:
     timekeeper "2.2.0"
     tmp "0.1.0"
 
+node-tdd@2.5.9:
+  version "2.5.9"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.9.tgz#96f13f9347d86e558c8597e4b0596ea536c1afcd"
+  integrity sha512-F5S9amABe4jbOZB4RXoNbG8Xt4iTS9VxswHjWQ1N2TMQJ+LqdI8YNvd7abZ4KYLXHk9/jZWB+EuCKpF0g/ouLA==
+  dependencies:
+    callsites "3.1.0"
+    joi-strict "1.1.4"
+    lodash.get "4.4.2"
+    nock "11.3.4"
+    smart-fs "1.9.14"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+
 "nopt@2 || 3":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"
