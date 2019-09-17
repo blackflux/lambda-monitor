@@ -2,8 +2,7 @@
   "handler": "processLogs",
   "timestamp": 1559595312,
   "env": {
-    "ROLLBAR_ACCESS_TOKEN": "rollbar_dummy_token",
-    "VERBOSE": "0"
+    "ROLLBAR_ACCESS_TOKEN": "rollbar_dummy_token"
   },
   "allowedUnmatchedRecordings": ["POST https://api.rollbar.com:443/api/1/item/"],
   "success": true,

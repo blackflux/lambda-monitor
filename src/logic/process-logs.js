@@ -1,13 +1,41 @@
 const zlib = require('zlib');
 const get = require('lodash.get');
 const defaults = require('lodash.defaults');
-const rb = require('./util/rollbar');
+const request = require('request-promise');
 const s3 = require('./util/s3');
 const timeoutPromise = require('./util/timeout-promise');
 const promiseComplete = require('./util/promise-complete');
 const logz = require('./services/logz');
 const loggly = require('./services/loggly');
 const datadog = require('./services/datadog');
+
+const postToRollbar = ({
+  level,
+  message,
+  timestamp
+}) => (get(process, 'env.ROLLBAR_ACCESS_TOKEN', '') === ''
+  ? Promise.resolve()
+  : request({
+    method: 'POST',
+    url: 'https://api.rollbar.com/api/1/item/',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify({
+      access_token: process.env.ROLLBAR_ACCESS_TOKEN,
+      data: {
+        level,
+        environment: process.env.ENVIRONMENT,
+        body: {
+          message: {
+            body: message
+          }
+        },
+        timestamp,
+        fingerprint: message.split('\n')[0]
+      }
+    })
+  }));
 
 const requestLogRegex = new RegExp([
   /^REPORT RequestId: (?<requestId>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\t/,
@@ -76,7 +104,7 @@ const getToLog = async (resultParsed) => {
           `${resultParsed.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
           JSON.stringify(processedLogEvent)
         ),
-        rb({
+        postToRollbar({
           level: logLevel,
           message: processedLogEvent.message,
           timestamp: Math.floor(processedLogEvent.timestamp / 1000)

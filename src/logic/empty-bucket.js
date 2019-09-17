@@ -1,7 +1,7 @@
 const get = require('lodash.get');
+const { logger } = require('lambda-monitor-logger');
 const cfnResponse = require('./util/cfn-response-wrapper');
 const s3 = require('./util/s3');
-const rb = require('./util/rollbar');
 
 module.exports = cfnResponse.wrap((event, context, callback) => new Promise((resolve, reject) => {
   const requestType = get(event, 'RequestType');
@@ -11,8 +11,10 @@ module.exports = cfnResponse.wrap((event, context, callback) => new Promise((res
       return reject(new Error('No Bucket Provided.'));
     }
     return s3.emptyBucket({ Bucket })
-      .then(() => rb({ level: 'info', message: `${Bucket} emptied!` }))
-      .then(resolve)
+      .then(() => {
+        logger.info(`${Bucket} emptied!`);
+        resolve();
+      })
       .catch(reject);
   }
   return resolve();

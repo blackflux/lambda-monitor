@@ -9,9 +9,7 @@
     "to.equal()": "401 - \"Logging token is not valid\""
   },
   "logs": {
-    "to.deep.equal()": [
-      "Task timed out after 1.00 seconds\n\n"
-    ]
+    "to.deep.equal()": []
   },
   "event": {
     "awslogs": {

@@ -7,10 +7,10 @@
   },
   "logs": {
     "to.deep.equal()": [
-      "emptyBucket(): {\"Bucket\":\"non-empty-bucket-32498uerfgjk45t89u34tjwer\"}",
-      "Deleting 1 items...",
-      "Deleted 1 items ok.",
-      "non-empty-bucket-32498uerfgjk45t89u34tjwer emptied!",
+      "INFO: emptyBucket(): {\"Bucket\":\"non-empty-bucket-32498uerfgjk45t89u34tjwer\"}",
+      "INFO: Deleting 1 items...",
+      "INFO: Deleted 1 items ok.",
+      "INFO: non-empty-bucket-32498uerfgjk45t89u34tjwer emptied!",
       "Response body:\n",
       "{\"Status\":\"SUCCESS\",\"Reason\":\"See the details in CloudWatch Log Stream: undefined\",\"StackId\":\"arn:aws:cloudformation:eu-west-1:...\",\"RequestId\":\"afd8d7c5-9376-4013-8b3b-307517b8719e\",\"LogicalResourceId\":\"Route53\",\"Data\":{}}",
       "Status code: 200",
