@@ -10,8 +10,7 @@
   },
   "logs": {
     "to.deep.equal()": [
-      "Task timed out after 1.00 seconds\n\n",
-      "401: 401 - \"Logging token is not valid\""
+      "Task timed out after 1.00 seconds\n\n"
     ]
   },
   "event": {

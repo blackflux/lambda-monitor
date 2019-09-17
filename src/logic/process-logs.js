@@ -1,6 +1,7 @@
 const zlib = require('zlib');
 const get = require('lodash.get');
 const defaults = require('lodash.defaults');
+const rb = require('./util/rollbar');
 const s3 = require('./util/s3');
 const timeoutPromise = require('./util/timeout-promise');
 const promiseComplete = require('./util/promise-complete');
@@ -36,7 +37,7 @@ const requestLogLevel = new RegExp([
   /^(?<logLevel>DEBUG|INFO|WARNING|ERROR|CRITICAL):/
 ].map((r) => r.source).join(''), '');
 
-const getToLog = async (resultParsed, rb) => {
+const getToLog = async (resultParsed) => {
   const result = [];
   await Promise.all(resultParsed.logEvents.map(async (logEvent) => {
     const requestLog = requestLogRegex.exec(logEvent.message);
@@ -69,23 +70,29 @@ const getToLog = async (resultParsed, rb) => {
         'WARNING'
       ).toLowerCase();
       const [year, month, day] = new Date(processedLogEvent.timestamp).toISOString().split('T')[0].split('-');
-      await s3.putGzipObject(
-        process.env.LOG_STREAM_BUCKET_NAME,
-        `${resultParsed.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
-        JSON.stringify(processedLogEvent)
-      );
-      rb[logLevel](processedLogEvent, process.env.ENVIRONMENT);
+      await Promise.all([
+        s3.putGzipObject(
+          process.env.LOG_STREAM_BUCKET_NAME,
+          `${resultParsed.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
+          JSON.stringify(processedLogEvent)
+        ),
+        rb({
+          level: logLevel,
+          message: processedLogEvent.message,
+          timestamp: Math.floor(processedLogEvent.timestamp / 1000)
+        })
+      ]);
     }
   }));
   return result;
 };
 
-const processLogs = async (event, context, rb) => {
+const processLogs = async (event, context) => {
   const resultParsed = JSON.parse(zlib
     .gunzipSync(Buffer.from(event.awslogs.data, 'base64'))
     .toString('ascii'));
 
-  const toLog = await getToLog(resultParsed, rb);
+  const toLog = await getToLog(resultParsed);
   const timeout = Math.floor((context.getRemainingTimeInMillis() - 5000.0) / 1000.0) * 1000;
   await promiseComplete([
     timeoutPromise(logz.log(context, process.env.ENVIRONMENT, toLog), timeout, 'logz'),
@@ -95,9 +102,9 @@ const processLogs = async (event, context, rb) => {
   return resultParsed;
 };
 
-module.exports = async (event, context, callback, rb) => {
+module.exports = async (event, context, callback) => {
   try {
-    callback(null, await processLogs(event, context, rb));
+    callback(null, await processLogs(event, context));
   } catch (err) {
     callback(err);
   }

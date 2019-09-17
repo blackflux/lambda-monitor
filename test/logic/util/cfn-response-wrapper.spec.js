@@ -18,10 +18,10 @@ const sampleEvent = {
 };
 
 const doTest = async (errObject, respObject, status, recorder) => {
-  const [err, resp] = await new Promise((resolve) => response.wrap((event, context, callback, rb) => {
-    expect(rb).to.equal('rb');
+  const [err, resp] = await new Promise((resolve) => response.wrap((event, context, callback, args) => {
+    expect(args).to.equal('args');
     callback(errObject, respObject);
-  })(sampleEvent, {}, (e, r) => resolve([e, r]), 'rb'));
+  })(sampleEvent, {}, (e, r) => resolve([e, r]), 'args'));
   expect(err).to.equal(errObject);
   expect(resp).to.equal(respObject);
   expect(recorder.get()).to.deep.equal([

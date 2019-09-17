@@ -5,7 +5,7 @@ const cfnResponse = require('./util/cfn-response-wrapper');
 
 const logGroupRetentionInDays = 30;
 
-module.exports = cfnResponse.wrap((event, context, callback, rb) => lambda
+module.exports = cfnResponse.wrap((event, context, callback) => lambda
   .getAllFunctions({
     TagFilters: [{
       Key: 'STAGE',

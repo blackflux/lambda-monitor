@@ -4,7 +4,7 @@ const lambda = require('./util/lambda')({
 });
 const cfnResponse = require('./util/cfn-response-wrapper');
 
-module.exports = cfnResponse.wrap((event, context, callback, rb) => lambda
+module.exports = cfnResponse.wrap((event, context, callback) => lambda
   .getAllFunctions({
     TagFilters: [{
       Key: 'STAGE',

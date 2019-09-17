@@ -1,27 +1,16 @@
-const get = require('lodash.get');
-const rollbar = require('lambda-rollbar')({
-  rollbar: {
-    verbose: process.env.VERBOSE === '1',
-    accessToken: process.env.ROLLBAR_ACCESS_TOKEN,
-    environment: process.env.ENVIRONMENT,
-    enabled: process.env.ROLLBAR_ACCESS_TOKEN !== undefined,
-    reportLevel: get(process.env, 'ROLLBAR_REPORT_LEVEL', 'WARNING').toLowerCase()
-  },
-  template: 'aws-cloud-watch'
-});
+const { wrap } = require('lambda-async');
 const processLogs = require('./logic/process-logs');
 const subscribe = require('./logic/subscribe');
 const setRetention = require('./logic/set-retention');
 const emptyBucket = require('./logic/empty-bucket');
 
-const callbackify = (fn) => (event, context, rb) => new Promise((resolve, reject) => fn(
+const callbackify = (fn) => (event, context) => new Promise((resolve, reject) => fn(
   event,
   context,
-  (err, resp) => (err ? reject(err) : resolve(resp)),
-  rb
+  (err, resp) => (err ? reject(err) : resolve(resp))
 ));
 
-module.exports.processLogs = rollbar.wrap(callbackify(processLogs));
-module.exports.subscribe = rollbar.wrap(callbackify(subscribe));
-module.exports.setRetention = rollbar.wrap(callbackify(setRetention));
-module.exports.emptyBucket = rollbar.wrap(callbackify(emptyBucket));
+module.exports.processLogs = wrap(callbackify(processLogs));
+module.exports.subscribe = wrap(callbackify(subscribe));
+module.exports.setRetention = wrap(callbackify(setRetention));
+module.exports.emptyBucket = wrap(callbackify(emptyBucket));
