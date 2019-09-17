@@ -1,4 +1,5 @@
 const zlib = require('zlib');
+const crypto = require('crypto');
 const get = require('lodash.get');
 const defaults = require('lodash.defaults');
 const request = require('request-promise');
@@ -32,7 +33,7 @@ const postToRollbar = ({
           }
         },
         timestamp,
-        fingerprint: message.split('\n')[0]
+        fingerprint: crypto.createHash('md5').update(message.split('\n')[0]).digest('hex')
       }
     })
   }));
