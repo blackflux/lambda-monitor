@@ -179,17 +179,17 @@
   resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-2.6.8.tgz#58bd672fa76bd9221e1d3c1bb13bc51fd73485e9"
   integrity sha512-CqXGjFEua9lOYzLYVVEGR0e3PYxxBFnCNWKqRLORg66lA1Sw4sKhSGfD+hUMm/ugdr+bUo9T2GyUI+OPqP19vA==
 
-"@hapi/address@2.x.x":
+"@hapi/address@2.x.x", "@hapi/address@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.1.tgz#61395b5ed94c4cb19c2dc4c85969cff3d40d583f"
   integrity sha512-DYuHzu978pP1XW1GD3HGvLnAFjbQTIgc2+V153FGkbS2pgo9haigCdwBnUDrbhaOkgiJlbZvoEqDrcxSLHpiWA==
 
-"@hapi/formula@1.x.x":
+"@hapi/formula@1.x.x", "@hapi/formula@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@hapi/formula/-/formula-1.2.0.tgz#994649c7fea1a90b91a0a1e6d983523f680e10cd"
   integrity sha512-UFbtbGPjstz0eWHb+ga/GM3Z9EzqKXFWIbSOFURU0A/Gku0Bky4bCk9/h//K2Xr3IrCfjFNhMm4jyZ5dbCewGA==
 
-"@hapi/hoek@8.x.x":
+"@hapi/hoek@8.x.x", "@hapi/hoek@^8.2.4":
   version "8.2.4"
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-8.2.4.tgz#684a14f4ca35d46f44abc87dfc696e5e4fe8a020"
   integrity sha512-Ze5SDNt325yZvNO7s5C4fXDscjJ6dcqLFXJQ/M7dZRQCewuDj2iDUuBi6jLQt+APbW9RjjVEvLr35FXuOEqjow==
@@ -205,12 +205,23 @@
     "@hapi/pinpoint" "1.x.x"
     "@hapi/topo" "3.x.x"
 
-"@hapi/pinpoint@1.x.x":
+"@hapi/joi@16.1.1":
+  version "16.1.1"
+  resolved "https://registry.yarnpkg.com/@hapi/joi/-/joi-16.1.1.tgz#67a47cf46b163782ab69802b17ac4a86fb89f83e"
+  integrity sha512-v/XNMGNz+Nx7578Cx2bMunoQHuY4LFxRltJ6uA1LjS6LWakgPCJC4MTr1ucfCnjjbDtaQizrQx9oWXY3WcFcyw==
+  dependencies:
+    "@hapi/address" "^2.1.1"
+    "@hapi/formula" "^1.2.0"
+    "@hapi/hoek" "^8.2.4"
+    "@hapi/pinpoint" "^1.0.2"
+    "@hapi/topo" "^3.1.3"
+
+"@hapi/pinpoint@1.x.x", "@hapi/pinpoint@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@hapi/pinpoint/-/pinpoint-1.0.2.tgz#025b7a36dbbf4d35bf1acd071c26b20ef41e0d13"
   integrity sha512-dtXC/WkZBfC5vxscazuiJ6iq4j9oNx1SHknmIr8hofarpKUZKmlUVYVIhNVzIEgK5Wrc4GMHL5lZtt1uS2flmQ==
 
-"@hapi/topo@3.x.x":
+"@hapi/topo@3.x.x", "@hapi/topo@^3.1.3":
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/@hapi/topo/-/topo-3.1.3.tgz#c7a02e0d936596d29f184e6d7fdc07e8b5efce11"
   integrity sha512-JmS9/vQK6dcUYn7wc2YZTqzIKubAQcJKu2KCKAru6es482U5RT5fP1EXCPtlXpiK7PR0On/kpQKI4fRKkzpZBQ==
@@ -3673,6 +3684,13 @@ joi-strict@1.1.3:
   dependencies:
     "@hapi/joi" "16.0.1"
 
+joi-strict@1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.1.4.tgz#282935d3b33891e4067b32de2c1149b661aa9121"
+  integrity sha512-2p/p3r36aEiOEOS73oFbLq2bkVOeUs3LIitKS2rQpV2W1fg7Co3uhC6THs0j9JWOhKuKUC9RdMm9i7TNxhfvTw==
+  dependencies:
+    "@hapi/joi" "16.1.1"
+
 js-gardener@2.0.95:
   version "2.0.95"
   resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.95.tgz#6169579448c3a841781c6d9ba7efbea9d4e0812e"
@@ -3810,13 +3828,13 @@ lambda-async@1.0.1:
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.1.tgz#b9e1d0c835054b8c1fe6a9ea73ba56a78e7aa433"
   integrity sha512-IDpfhrvglH03qo1DrMIio/MkB7hVVyXZaAAwO58OjYGo1I694SDDQntIzfMUEQVuHq+8xXk9692FgH+gQEoF/A==
 
-lambda-rollbar@2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.8.tgz#6121f90f25c6d2e364cf4a9056c52e989937043f"
-  integrity sha512-sx0PaxQLWX20E6REhjmQNy5jnGblGHCRlf1+ZFquDDvdznyCMUBndxPlFU1UjYrDHCd8C93qSZm1EqywG1UliA==
+lambda-rollbar@2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/lambda-rollbar/-/lambda-rollbar-2.0.9.tgz#0438bac5c8b46f8348decae994121e16e7566e72"
+  integrity sha512-rIfjQWhdqexcZZANwljnh7NvtfPyhxfJXC7cOeRKP6lGqen13J6yBSwyjrpZPkygxxrWs+VnRAp+bG3ZdeGcqg==
   dependencies:
     fast-safe-stringify "2.0.7"
-    joi-strict "1.1.3"
+    joi-strict "1.1.4"
     lodash.get "4.4.2"
     rollbar "2.13.0"
 
