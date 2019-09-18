@@ -2,7 +2,7 @@ const get = require('lodash.get');
 const { logger } = require('lambda-monitor-logger');
 const s3 = require('./util/s3');
 
-const emptyBucket = async (event) => {
+module.exports = async (event) => {
   const requestType = get(event, 'RequestType');
   if (requestType === 'Delete') {
     const Bucket = get(event, 'ResourceProperties.BucketName');
@@ -13,6 +13,3 @@ const emptyBucket = async (event) => {
     logger.info(`${Bucket} emptied!`);
   }
 };
-
-module.exports = (event) => emptyBucket(event)
-  .then(() => 'Done.');

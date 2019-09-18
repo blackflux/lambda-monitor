@@ -17,5 +17,4 @@ module.exports = () => lambda
       .filter((f) => get(f, 'Tags.MONITORED', null) !== '0')
       .filter((f) => f.subscriptionFilters.every((e) => e.destinationArn !== monitor.FunctionARN));
     return Promise.all(monitored.map((producer) => lambda.subscribeCloudWatchLogGroup(monitor, producer)));
-  })
-  .then(() => 'Done.');
+  });

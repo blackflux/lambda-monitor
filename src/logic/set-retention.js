@@ -14,5 +14,4 @@ module.exports = () => lambda
   .then(lambda.appendLogRetentionInfo)
   .then((functions) => functions.filter((f) => f.logGroups.every((e) => e.retentionInDays !== logGroupRetentionInDays)))
   .then((functions) => Promise
-    .all(functions.map((f) => lambda.setCloudWatchRetention(f, logGroupRetentionInDays))))
-  .then(() => 'Done.');
+    .all(functions.map((f) => lambda.setCloudWatchRetention(f, logGroupRetentionInDays))));
