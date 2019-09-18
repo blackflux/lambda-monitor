@@ -10,7 +10,7 @@ const callbackify = (fn) => (event, context) => new Promise((resolve, reject) =>
   (err, resp) => (err ? reject(err) : resolve(resp))
 ));
 
-module.exports.processLogs = wrap(callbackify(processLogs));
+module.exports.processLogs = wrap(processLogs);
 module.exports.subscribe = wrap(callbackify(subscribe));
 module.exports.setRetention = wrap(callbackify(setRetention));
 module.exports.emptyBucket = wrap(callbackify(emptyBucket));

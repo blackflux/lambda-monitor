@@ -15,7 +15,7 @@ module.exports.putGzipObject = (bucket, key, data) => aws.call('s3:putObject', {
   Body: zlib.gzipSync(data, { level: 9 })
 });
 
-module.exports.emptyBucket = async (objParams,) => {
+module.exports.emptyBucket = async (objParams) => {
   logger.info(`emptyBucket(): ${JSON.stringify(objParams)}`);
   const result = await listObjectsV2(objParams);
   if (result.Contents.length === 0) {

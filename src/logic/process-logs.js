@@ -131,10 +131,4 @@ const processLogs = async (event, context) => {
   return resultParsed;
 };
 
-module.exports = async (event, context, callback) => {
-  try {
-    callback(null, await processLogs(event, context));
-  } catch (err) {
-    callback(err);
-  }
-};
+module.exports = processLogs;
