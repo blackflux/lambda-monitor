@@ -14,9 +14,8 @@ const postToRollbar = ({
   level,
   message,
   timestamp
-}) => (get(process, 'env.ROLLBAR_ACCESS_TOKEN', '') === ''
-  ? Promise.resolve()
-  : request({
+}) => (process.env.ROLLBAR_ACCESS_TOKEN
+  ? request({
     method: 'POST',
     url: 'https://api.rollbar.com/api/1/item/',
     headers: {
@@ -36,7 +35,8 @@ const postToRollbar = ({
         fingerprint: crypto.createHash('md5').update(message.split('\n')[0]).digest('hex')
       }
     })
-  }));
+  })
+  : Promise.resolve());
 
 const requestLogRegex = new RegExp([
   /^REPORT RequestId: (?<requestId>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\t/,
