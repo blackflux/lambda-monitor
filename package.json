@@ -46,7 +46,7 @@
     "aws-sdk": "2.530.0",
     "aws-sdk-wrap": "3.3.8",
     "lambda-async": "1.0.1",
-    "lambda-cfn-hook": "1.1.4",
+    "lambda-cfn-hook": "1.1.5",
     "lambda-monitor-logger": "2.2.1",
     "lodash.defaults": "4.2.0",
     "lodash.get": "4.4.2",
