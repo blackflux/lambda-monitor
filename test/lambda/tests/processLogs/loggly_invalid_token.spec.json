@@ -9,10 +9,7 @@
     "to.contain()": "Invalid API key"
   },
   "logs": {
-    "to.deep.equal()": [
-      "Task timed out after 1.00 seconds\n\n",
-      "403: 403 - \"Invalid API key\""
-    ]
+    "to.deep.equal()": []
   },
   "event": {
     "awslogs": {

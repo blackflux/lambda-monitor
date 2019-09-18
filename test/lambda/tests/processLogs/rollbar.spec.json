@@ -1,5 +1,6 @@
 {
   "handler": "processLogs",
+  "timestamp": 1559595312,
   "env": {
     "ROLLBAR_ACCESS_TOKEN": "rollbar_dummy_token"
   },
@@ -35,10 +36,7 @@
     }
   },
   "logs": {
-    "to.deep.equal()": [
-      "Task timed out after 1.00 seconds\n\n",
-      "Task timed out after 1.00 seconds\n\n"
-    ]
+    "to.deep.equal()": []
   },
   "event": {
     "awslogs": {
