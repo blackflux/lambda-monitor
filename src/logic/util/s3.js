@@ -19,7 +19,7 @@ module.exports.emptyBucket = async (objParams) => {
   logger.info(`emptyBucket(): ${JSON.stringify(objParams)}`);
   const result = await listObjectsV2(objParams);
   if (result.Contents.length === 0) {
-    return Promise.resolve();
+    return;
   }
   const objectList = result.Contents.map((c) => ({ Key: c.Key }));
   logger.info(`Deleting ${objectList.length} items...`);
@@ -31,10 +31,9 @@ module.exports.emptyBucket = async (objParams) => {
   });
   logger.info(`Deleted ${data.Deleted.length} items ok.`);
   if (result.IsTruncated) {
-    return this.emptyBucket({
+    await this.emptyBucket({
       Bucket: objParams.Bucket,
       ContinuationToken: result.NextContinuationToken
     });
   }
-  return Promise.resolve();
 };
