@@ -11,6 +11,8 @@ const loggly = require('./services/loggly');
 const datadog = require('./services/datadog');
 
 const postToRollbar = ({
+  logGroup,
+  logStream,
   level,
   message,
   timestamp
@@ -28,7 +30,9 @@ const postToRollbar = ({
         environment: process.env.ENVIRONMENT,
         body: {
           message: {
-            body: message
+            body: message,
+            logGroup,
+            url: `https://console.aws.amazon.com/cloudwatch/home#logEventViewer:group=${logGroup};stream=${logStream}`
           }
         },
         timestamp,
@@ -106,6 +110,8 @@ const getToLog = async (resultParsed) => {
           JSON.stringify(processedLogEvent)
         ),
         postToRollbar({
+          logGroup: resultParsed.logGroup,
+          logStream: resultParsed.logStream,
           level: logLevel,
           message: processedLogEvent.message,
           timestamp: Math.floor(processedLogEvent.timestamp / 1000)
