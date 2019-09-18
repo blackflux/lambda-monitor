@@ -18,7 +18,9 @@
         "environment": "local-dev",
         "body": {
           "message": {
-            "body": "Task timed out after 1.00 seconds\n\n"
+            "body": "Task timed out after 1.00 seconds\n\n",
+            "logGroup": "/aws/lambda/peg-solitiare-dev-overview",
+            "url": "https://console.aws.amazon.com/cloudwatch/home#logEventViewer:group=/aws/lambda/peg-solitiare-dev-overview;stream=2017/11/23/[$LATEST]e680fe32c6ba48ce8c3a377a25cd488e"
           }
         },
         "timestamp": 1511405879,
