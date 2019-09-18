@@ -1,5 +1,6 @@
 const zlib = require('zlib');
 const aws = require('aws-sdk-wrap')();
+const { logger } = require('lambda-monitor-logger');
 
 const s3 = aws.get('s3');
 
@@ -14,28 +15,25 @@ module.exports.putGzipObject = (bucket, key, data) => aws.call('s3:putObject', {
   Body: zlib.gzipSync(data, { level: 9 })
 });
 
-module.exports.emptyBucket = (objParams, logger) => {
+module.exports.emptyBucket = async (objParams) => {
   logger.info(`emptyBucket(): ${JSON.stringify(objParams)}`);
-  return listObjectsV2(objParams).then((result) => {
-    if (result.Contents.length === 0) {
-      return Promise.resolve();
+  const result = await listObjectsV2(objParams);
+  if (result.Contents.length === 0) {
+    return;
+  }
+  const objectList = result.Contents.map((c) => ({ Key: c.Key }));
+  logger.info(`Deleting ${objectList.length} items...`);
+  const data = await deleteObjects({
+    Bucket: objParams.Bucket,
+    Delete: {
+      Objects: objectList
     }
-    const objectList = result.Contents.map((c) => ({ Key: c.Key }));
-    logger.info(`Deleting ${objectList.length} items...`);
-    return deleteObjects({
-      Bucket: objParams.Bucket,
-      Delete: {
-        Objects: objectList
-      }
-    }).then((data) => {
-      logger.info(`Deleted ${data.Deleted.length} items ok.`);
-      if (result.IsTruncated) {
-        return this.emptyBucket({
-          Bucket: objParams.Bucket,
-          ContinuationToken: result.NextContinuationToken
-        }, logger);
-      }
-      return Promise.resolve();
-    });
   });
+  logger.info(`Deleted ${data.Deleted.length} items ok.`);
+  if (result.IsTruncated) {
+    await this.emptyBucket({
+      Bucket: objParams.Bucket,
+      ContinuationToken: result.NextContinuationToken
+    });
+  }
 };

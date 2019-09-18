@@ -6,9 +6,7 @@
     "to.equal()": "incorrect header check"
   },
   "logs": {
-    "to.deep.equal()": [
-      "incorrect header check"
-    ]
+    "to.deep.equal()": []
   },
   "event": {
     "awslogs": {

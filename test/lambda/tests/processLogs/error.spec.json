@@ -31,9 +31,7 @@
     }
   },
   "logs": {
-    "to.deep.equal()": [
-      "Handler 'overview' missing on module 'lib/handler'\n"
-    ]
+    "to.deep.equal()": []
   },
   "event": {
     "awslogs": {

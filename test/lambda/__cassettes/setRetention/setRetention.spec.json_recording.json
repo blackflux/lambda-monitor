@@ -48,7 +48,6 @@
         }
       ]
     }
-
   },
   {
     "scope": "https://logs.us-east-1.amazonaws.com:443",
@@ -99,6 +98,18 @@
     "body": {
       "logGroupName": "/aws/lambda/lambda-function-two",
       "retentionInDays": 30
+    },
+    "status": 200,
+    "response": ""
+  },
+  {
+    "scope": "https://cloudformation-custom-resource-response-uswest2.s3-us-west-2.amazonaws.com:443",
+    "method": "PUT",
+    "path": "/arn",
+    "body": "{\"Status\":\"SUCCESS\",\"Reason\":\"See the details in CloudWatch Log Stream: log\",\"PhysicalResourceId\":\"log\",\"StackId\":\"arn:aws:cloudformation:us-west-2:...\",\"RequestId\":\"d373acbe-b7fd-46f1-a645-95b3002ec39b\",\"LogicalResourceId\":\"TriggerPostDeployLambdaResource\",\"Data\":{}}",
+    "headers": {
+      "content-type": "",
+      "content-length": 366
     },
     "status": 200,
     "response": ""

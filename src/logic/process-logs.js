@@ -1,12 +1,46 @@
 const zlib = require('zlib');
+const crypto = require('crypto');
 const get = require('lodash.get');
 const defaults = require('lodash.defaults');
+const request = require('request-promise');
 const s3 = require('./util/s3');
 const timeoutPromise = require('./util/timeout-promise');
 const promiseComplete = require('./util/promise-complete');
 const logz = require('./services/logz');
 const loggly = require('./services/loggly');
 const datadog = require('./services/datadog');
+
+const postToRollbar = ({
+  logGroup,
+  logStream,
+  level,
+  message,
+  timestamp
+}) => (process.env.ROLLBAR_ACCESS_TOKEN
+  ? request({
+    method: 'POST',
+    url: 'https://api.rollbar.com/api/1/item/',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify({
+      access_token: process.env.ROLLBAR_ACCESS_TOKEN,
+      data: {
+        level,
+        environment: process.env.ENVIRONMENT,
+        body: {
+          message: {
+            body: message,
+            logGroup,
+            url: `https://console.aws.amazon.com/cloudwatch/home#logEventViewer:group=${logGroup};stream=${logStream}`
+          }
+        },
+        timestamp,
+        fingerprint: crypto.createHash('md5').update(message.split('\n')[0]).digest('hex')
+      }
+    })
+  })
+  : Promise.resolve());
 
 const requestLogRegex = new RegExp([
   /^REPORT RequestId: (?<requestId>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\t/,
@@ -36,7 +70,7 @@ const requestLogLevel = new RegExp([
   /^(?<logLevel>DEBUG|INFO|WARNING|ERROR|CRITICAL):/
 ].map((r) => r.source).join(''), '');
 
-const getToLog = async (resultParsed, rb) => {
+const getToLog = async (resultParsed) => {
   const result = [];
   await Promise.all(resultParsed.logEvents.map(async (logEvent) => {
     const requestLog = requestLogRegex.exec(logEvent.message);
@@ -69,23 +103,31 @@ const getToLog = async (resultParsed, rb) => {
         'WARNING'
       ).toLowerCase();
       const [year, month, day] = new Date(processedLogEvent.timestamp).toISOString().split('T')[0].split('-');
-      await s3.putGzipObject(
-        process.env.LOG_STREAM_BUCKET_NAME,
-        `${resultParsed.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
-        JSON.stringify(processedLogEvent)
-      );
-      rb[logLevel](processedLogEvent, process.env.ENVIRONMENT);
+      await Promise.all([
+        s3.putGzipObject(
+          process.env.LOG_STREAM_BUCKET_NAME,
+          `${resultParsed.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
+          JSON.stringify(processedLogEvent)
+        ),
+        postToRollbar({
+          logGroup: resultParsed.logGroup,
+          logStream: resultParsed.logStream,
+          level: logLevel,
+          message: processedLogEvent.message,
+          timestamp: Math.floor(processedLogEvent.timestamp / 1000)
+        })
+      ]);
     }
   }));
   return result;
 };
 
-const processLogs = async (event, context, rb) => {
+const processLogs = async (event, context) => {
   const resultParsed = JSON.parse(zlib
     .gunzipSync(Buffer.from(event.awslogs.data, 'base64'))
     .toString('ascii'));
 
-  const toLog = await getToLog(resultParsed, rb);
+  const toLog = await getToLog(resultParsed);
   const timeout = Math.floor((context.getRemainingTimeInMillis() - 5000.0) / 1000.0) * 1000;
   await promiseComplete([
     timeoutPromise(logz.log(context, process.env.ENVIRONMENT, toLog), timeout, 'logz'),
@@ -95,10 +137,4 @@ const processLogs = async (event, context, rb) => {
   return resultParsed;
 };
 
-module.exports = async (event, context, callback, rb) => {
-  try {
-    callback(null, await processLogs(event, context, rb));
-  } catch (err) {
-    callback(err);
-  }
-};
+module.exports = processLogs;
