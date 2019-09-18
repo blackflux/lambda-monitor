@@ -1107,11 +1107,6 @@ caseless@~0.12.0:
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
-cfn-response@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/cfn-response/-/cfn-response-1.0.1.tgz#a8ec03950c0683c51495e8ca680d9dc0b884b137"
-  integrity sha1-qOwDlQwGg8UUlejKaA2dwLiEsTc=
-
 chai@4.2.0, chai@^4.1.2:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/chai/-/chai-4.2.0.tgz#760aa72cf20e3795e84b12877ce0e83737aa29e5"
@@ -3786,6 +3781,21 @@ lambda-async@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.1.tgz#b9e1d0c835054b8c1fe6a9ea73ba56a78e7aa433"
   integrity sha512-IDpfhrvglH03qo1DrMIio/MkB7hVVyXZaAAwO58OjYGo1I694SDDQntIzfMUEQVuHq+8xXk9692FgH+gQEoF/A==
+
+lambda-async@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.2.tgz#ae558377b659977b6c8aa3f07a1126371f208228"
+  integrity sha512-kzkwDRknDlFrKmMGP5SMuxuY0YLxq+Ajbu5z4UFuecumLA7ioxM7R8SwYCs2Av6Fa/Jrp3xt6wuoAhci42Py4g==
+
+lambda-cfn-hook@1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.1.4.tgz#f9bdbdeb40a56d3a7795edff3f703950e2ec1976"
+  integrity sha512-YWzjAeLWAspAT7VtweIdmq6Z+2KZd1aQxjX//JJqfjeUKCUEYy4BdWmBg120hRD+fOo6SAWefvBgPjVHSi9ZxA==
+  dependencies:
+    lambda-async "1.0.2"
+    lambda-monitor-logger "2.2.1"
+    request "2.88.0"
+    request-promise "4.2.4"
 
 lambda-monitor-logger@2.2.1:
   version "2.2.1"

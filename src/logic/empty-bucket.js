@@ -1,6 +1,5 @@
 const get = require('lodash.get');
 const { logger } = require('lambda-monitor-logger');
-const cfnResponse = require('./util/cfn-response-wrapper');
 const s3 = require('./util/s3');
 
 const emptyBucket = async (event) => {
@@ -15,6 +14,5 @@ const emptyBucket = async (event) => {
   }
 };
 
-module.exports = cfnResponse.wrap((event, context, callback) => emptyBucket(event)
-  .then(() => callback(null, 'Done.'))
-  .catch(callback));
+module.exports = (event) => emptyBucket(event)
+  .then(() => 'Done.');
