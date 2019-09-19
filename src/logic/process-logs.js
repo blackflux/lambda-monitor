@@ -75,7 +75,7 @@ const requestEndRegex = new RegExp([
 const genericPrefix = new RegExp([
   /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z[\s\t]/,
   /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}[\s\t]/,
-  /(?:ERROR|INFO)[\s\t]/
+  /(?:(?:ERROR|INFO)[\s\t])?/
 ].map((r) => r.source).join(''), '');
 const requestLogLevel = new RegExp([
   /^(?<logLevel>DEBUG|INFO|WARNING|ERROR|CRITICAL):/
