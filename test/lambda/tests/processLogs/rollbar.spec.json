@@ -30,7 +30,7 @@
         {
           "id": "33705477413970201536500575666792700703924347154117689346",
           "timestamp": 1511405879665,
-          "message": "2017-11-23T02:57:59.665Z 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0 INFO Task timed out after 1.00 seconds\n\n"
+          "message": "2017-11-23T02:57:59.665Z 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0 Task timed out after 1.00 seconds\n\n"
         }
       ]
     }
@@ -62,7 +62,7 @@
           {
             "id": "33705477413970201536500575666792700703924347154117689346",
             "timestamp": 1511405879665,
-            "message": "2017-11-23T02:57:59.665Z 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0 INFO Task timed out after 1.00 seconds\n\n"
+            "message": "2017-11-23T02:57:59.665Z 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0 Task timed out after 1.00 seconds\n\n"
           }
         ]
       }
