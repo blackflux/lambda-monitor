@@ -20,7 +20,7 @@ const postToRollbar = ({
   timestamp
 }) => (
   process.env.ROLLBAR_ACCESS_TOKEN
-  && logLevels.indexOf(process.env.ROLLBAR_REPORT_LEVEL) <= logLevels.indexOf(level)
+  && logLevels.indexOf(process.env.ROLLBAR_REPORT_LEVEL) <= logLevels.indexOf(level.toUpperCase())
     ? request({
       method: 'POST',
       url: 'https://api.rollbar.com/api/1/item/',
