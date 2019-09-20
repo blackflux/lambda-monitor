@@ -3794,14 +3794,14 @@ lambda-monitor-logger@2.2.1:
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.1.tgz#ceb339c9d13a59082a5cf37cc8ab42f8379b20fd"
   integrity sha512-1NUm+EcbrkYqfFPZfjKRUL3SAsAw2KrcoaV9KewKFi/eVRCkx0ZAHTO+PbrBuHsw+TxEs1FsiZMaLnIdXWO/XA==
 
-lambda-tdd@2.10.10:
-  version "2.10.10"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.10.tgz#9b1def986041a4a10653e4067d0da8fa23e5c61d"
-  integrity sha512-Fb3S3shr2/kVOa1upeJI4n0eRLFVdmuGkc+76XL/cOEVO3UVy+JijJMP6+KAvEHHxrZGqBmqUawsqlliXfdiiA==
+lambda-tdd@2.10.11:
+  version "2.10.11"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.11.tgz#287f25cf068d6670ff0c30334ae5398e4aa972f2"
+  integrity sha512-2SCJOFegO9JNzFuaIKLhhNsbEE9dSHSbOpYCjorP+23BrCkaBpEDK41lJ/jOFy9L7raGAytHsfYWNyH7TtYuCg==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
-    joi-strict "1.1.4"
+    joi-strict "1.1.5"
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
@@ -4655,6 +4655,18 @@ nock@11.3.4:
   version "11.3.4"
   resolved "https://registry.yarnpkg.com/nock/-/nock-11.3.4.tgz#b3d8fde986da8f8484f4b8958e270fbb91250430"
   integrity sha512-Mqjk3DeOkuji8eYaveUku+vMswxzVyhrKAz1J9jE86IsEHQg4136Z/PHz81lcjyz9F3yrJXu56Gb/S+LFUOZVg==
+  dependencies:
+    chai "^4.1.2"
+    debug "^4.1.0"
+    json-stringify-safe "^5.0.1"
+    lodash "^4.17.13"
+    mkdirp "^0.5.0"
+    propagate "^2.0.0"
+
+nock@11.3.5:
+  version "11.3.5"
+  resolved "https://registry.yarnpkg.com/nock/-/nock-11.3.5.tgz#f2c7b4b672a04c35342593b6bfd821497881199c"
+  integrity sha512-6WGeZcWc3RExkBcMSYSrUm/5YukDo52m/jhwniQyrnuiCnKRljBwwje9vTwJyEi4J6m2bq0Aj6C1vzuM6iuaeg==
   dependencies:
     chai "^4.1.2"
     debug "^4.1.0"
