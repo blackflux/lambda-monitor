@@ -1,0 +1,39 @@
+[
+  {
+    "scope": "https://log-stream-bucket-name.s3.amazonaws.com:443",
+    "method": "PUT",
+    "path": "/aws/lambda/peg-solitiare-dev-overview/2017/11/23/error-33705477413970201536500575666792700703924347154117689346.json.gz",
+    "body": "1f8b08000000000002030dcc3b0e83400c05c0ab44ae29ecf5e761fa9c202d0d525611c542b4d045b93bb453cc8fd6374da40a76034c34c185c5359cd9e111812c60066b165383b88920c6540b1ae85c5b3dcea57d69121731f61119e103dd7e2c9f7af7afbdd5c7b3f7bdcfdbbcd1ff02b38cd00b76000000",
+    "status": 200,
+    "response": ""
+  },
+  {
+    "scope": "https://api.rollbar.com:443",
+    "method": "POST",
+    "path": "/api/1/item/",
+    "body": {
+      "access_token": "rollbar_dummy_token",
+      "data": {
+        "level": "error",
+        "environment": "local-dev",
+        "body": {
+          "message": {
+            "body": "Some Error\n\n",
+            "logGroup": "/aws/lambda/peg-solitiare-dev-overview",
+            "url": "https://console.aws.amazon.com/cloudwatch/home#logEventViewer:group=/aws/lambda/peg-solitiare-dev-overview;stream=2017/11/23/[$LATEST]e680fe32c6ba48ce8c3a377a25cd488e"
+          }
+        },
+        "timestamp": 1511405879,
+        "fingerprint": "7b931b88e26ee5f16c88d41f7d67d26d"
+      }
+    },
+    "status": 200,
+    "response": {
+      "err": 0,
+      "result": {
+        "id": null,
+        "uuid": "a18037f4-6871-43ee-ea46-3ebd14e58771"
+      }
+    }
+  }
+]
