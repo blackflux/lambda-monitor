@@ -1,0 +1,39 @@
+[
+  {
+    "scope": "https://log-stream-bucket-name.s3.amazonaws.com:443",
+    "method": "PUT",
+    "path": "/aws/lambda/peg-solitiare-dev-overview/2017/11/23/warning-33705477413970201536500575666792700703924347154117689346.json.gz",
+    "body": "1f8b080000000000020315cc4d0ac2301040e1ab84591799e9fc353d87cb6e828952a4a9987425deddba7d7cbc0fac19666076547117e2e83822299b22aaab99791c1dd191e3282c4e2a446e53643118a0af5b693d6d2f9849890475f268a6039cbda54739f7d7d49ee10f73d88f1ed2bd9777a00b6268e5b6d7dc96ba54f8fe00607f27728d000000",
+    "status": 200,
+    "response": ""
+  },
+  {
+    "scope": "https://api.rollbar.com:443",
+    "method": "POST",
+    "path": "/api/1/item/",
+    "body": {
+      "access_token": "rollbar_dummy_token",
+      "data": {
+        "level": "warning",
+        "environment": "local-dev",
+        "body": {
+          "message": {
+            "body": "Task timed out after 1.00 seconds\n\n",
+            "logGroup": "/aws/lambda/peg-solitiare-dev-overview",
+            "url": "https://console.aws.amazon.com/cloudwatch/home#logEventViewer:group=/aws/lambda/peg-solitiare-dev-overview;stream=2017/11/23/[$LATEST]e680fe32c6ba48ce8c3a377a25cd488e"
+          }
+        },
+        "timestamp": 1511405879,
+        "fingerprint": "be2caabddaf62b7670724b28f386dbba"
+      }
+    },
+    "status": 200,
+    "response": {
+      "err": 0,
+      "result": {
+        "id": null,
+        "uuid": "a18037f4-6871-43ee-ea46-3ebd14e58771"
+      }
+    }
+  }
+]
