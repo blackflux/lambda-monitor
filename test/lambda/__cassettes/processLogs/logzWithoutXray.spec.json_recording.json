@@ -1,0 +1,34 @@
+[
+  {
+    "scope": "https://log-stream-bucket-name.s3.amazonaws.com:443",
+    "method": "PUT",
+    "path": "/aws/lambda/peg-solitiare-dev-overview/2017/11/23/warning-33705477413970201536500575666792700703924347154117689346.json.gz",
+    "body": "1f8b080000000000020315cc4d0ac2301040e1ab84591799e9fc353d87cb6e828952a4a9987425deddba7d7cbc0fac19666076547117e2e83822299b22aaab99791c1dd191e3282c4e2a446e53643118a0af5b693d6d2f9849890475f268a6039cbda54739f7d7d49ee10f73d88f1ed2bd9777a00b6268e5b6d7dc96ba54f8fe00607f27728d000000",
+    "status": 200,
+    "response": ""
+  },
+  {
+    "scope": "https://listener.logz.io:8071",
+    "method": "POST",
+    "path": "/?token=logz_dummy_token&type=lambda-execution-info",
+    "body": {
+      "message": "REPORT RequestId: eb7b36bc-f31c-41a9-9e7e-23d6a80fbf63\tDuration: 5615.28 ms\tBilled Duration: 5700 ms\tMemory Size: 128 MB\tMax Memory Used: 119 MB\tInit Duration: 799.43 ms\t\n",
+      "logGroupName": "/aws/lambda/peg-solitiare-dev-overview",
+      "logStreamName": "2017/11/23/[$LATEST]e680fe32c6ba48ce8c3a377a25cd488e",
+      "owner": "783629116497",
+      "@timestamp": "2017-11-23T02:57:59.665Z",
+      "requestId": "eb7b36bc-f31c-41a9-9e7e-23d6a80fbf63",
+      "duration": 5615.28,
+      "billedDuration": 5700,
+      "maxMemory": 119,
+      "memory": 128,
+      "initDuration": 799.43,
+      "traceId": null,
+      "segmentId": null,
+      "sampled": null,
+      "env": "local-dev"
+    },
+    "status": 200,
+    "response": ""
+  }
+]
