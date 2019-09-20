@@ -134,34 +134,33 @@ const parseMessage = (() => {
 
 const getToLog = async (resultParsed) => {
   const result = [];
-  await Promise.all(resultParsed.logEvents
-    .map(async (logEvent) => {
-      if (isRequestStartOrEnd(logEvent.message)) {
-        return;
-      }
-      const report = extractReport(resultParsed, logEvent);
-      if (report !== null) {
-        result.push(report);
-        return;
-      }
-      const { logLevel, message } = parseMessage(logEvent.message);
-      const processedLogEvent = { ...logEvent, message };
-      const [year, month, day] = new Date(processedLogEvent.timestamp).toISOString().split('T')[0].split('-');
-      await Promise.all([
-        s3.putGzipObject(
-          process.env.LOG_STREAM_BUCKET_NAME,
-          `${resultParsed.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
-          JSON.stringify(processedLogEvent)
-        ),
-        postToRollbar({
-          logGroup: resultParsed.logGroup,
-          logStream: resultParsed.logStream,
-          level: logLevel,
-          message: processedLogEvent.message,
-          timestamp: Math.floor(processedLogEvent.timestamp / 1000)
-        })
-      ]);
-    }));
+  await Promise.all(resultParsed.logEvents.map(async (logEvent) => {
+    if (isRequestStartOrEnd(logEvent.message)) {
+      return;
+    }
+    const report = extractReport(resultParsed, logEvent);
+    if (report !== null) {
+      result.push(report);
+      return;
+    }
+    const { logLevel, message } = parseMessage(logEvent.message);
+    const processedLogEvent = { ...logEvent, message };
+    const [year, month, day] = new Date(processedLogEvent.timestamp).toISOString().split('T')[0].split('-');
+    await Promise.all([
+      s3.putGzipObject(
+        process.env.LOG_STREAM_BUCKET_NAME,
+        `${resultParsed.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
+        JSON.stringify(processedLogEvent)
+      ),
+      postToRollbar({
+        logGroup: resultParsed.logGroup,
+        logStream: resultParsed.logStream,
+        level: logLevel,
+        message: processedLogEvent.message,
+        timestamp: Math.floor(processedLogEvent.timestamp / 1000)
+      })
+    ]);
+  }));
   return result;
 };
 
