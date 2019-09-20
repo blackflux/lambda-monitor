@@ -72,7 +72,7 @@
     "lambda-tdd": "2.10.12",
     "mocha": "6.2.0",
     "nock": "11.3.5",
-    "node-tdd": "2.5.9",
+    "node-tdd": "2.5.11",
     "nyc": "14.1.1",
     "robo-config": "3.3.11",
     "semantic-release": "15.13.24"
