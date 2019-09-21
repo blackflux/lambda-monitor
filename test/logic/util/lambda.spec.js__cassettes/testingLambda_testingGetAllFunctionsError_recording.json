@@ -6,7 +6,8 @@
     "body": {
       "ResourceTypeFilters": [
         "lambda"
-      ]
+      ],
+      "ResourcesPerPage": 100
     },
     "status": 400,
     "response": {

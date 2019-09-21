@@ -14,7 +14,8 @@
       ],
       "ResourceTypeFilters": [
         "lambda"
-      ]
+      ],
+      "ResourcesPerPage": 100
     },
     "status": 200,
     "response": {
@@ -54,7 +55,8 @@
     "method": "POST",
     "path": "/",
     "body": {
-      "logGroupNamePrefix": "/aws/lambda/lambda-function-two"
+      "logGroupNamePrefix": "/aws/lambda/",
+      "limit": 50
     },
     "status": 200,
     "response": {
@@ -66,20 +68,7 @@
           "metricFilterCount": 0,
           "retentionInDays": 30,
           "storedBytes": 713
-        }
-      ]
-    }
-  },
-  {
-    "scope": "https://logs.us-east-1.amazonaws.com:443",
-    "method": "POST",
-    "path": "/",
-    "body": {
-      "logGroupNamePrefix": "/aws/lambda/lambda-function-one"
-    },
-    "status": 200,
-    "response": {
-      "logGroups": [
+        },
         {
           "arn": "arn:aws:logs:us-east-1:1234567890:log-group:/aws/lambda/lambda-function-one:*",
           "creationTime": 1512425328974,
