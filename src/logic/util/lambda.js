@@ -5,28 +5,28 @@ module.exports = (options) => {
 
   const logGroupName = (fn) => `/aws/lambda/${fn.FunctionName}`;
 
-  const getAllFunctions = (reqOptions = {}) => aws
-    .call('ResourceGroupsTaggingAPI:getResources', {
-      ...reqOptions,
-      ResourceTypeFilters: ['lambda'],
-      ResourcesPerPage: 100
-    })
-    .then((data) => {
-      const result = data.ResourceTagMappingList.map((r) => ({
+  const getAllFunctions = async (reqOptions = {}) => {
+    const result = [];
+    let PaginationToken;
+    do {
+      // eslint-disable-next-line no-await-in-loop
+      const response = await aws.call('ResourceGroupsTaggingAPI:getResources', {
+        ...reqOptions,
+        ...(PaginationToken ? { PaginationToken } : {}),
+        ResourceTypeFilters: ['lambda'],
+        ResourcesPerPage: 100
+      });
+      result.push(...response.ResourceTagMappingList.map((r) => ({
         FunctionARN: r.ResourceARN,
         FunctionName: r.ResourceARN.substring(r.ResourceARN.lastIndexOf(':') + 1, r.ResourceARN.length),
         Tags: r.Tags.reduce((p, e) => Object.assign(p, ({ [e.Key]: e.Value })), {})
-      }));
-      if (data.PaginationToken === '') {
-        return result;
-      }
-      return getAllFunctions({
-        ...reqOptions,
-        PaginationToken: data.PaginationToken
-      })
-        .then((resultList) => resultList.concat(result));
-    });
+      })));
+      PaginationToken = response.PaginationToken;
+    } while (PaginationToken);
+    return result;
+  };
 
+  // todo: convert into paged call
   const appendLogRetentionInfo = (fns) => Promise.all(
     fns.map((fn) => aws
       .call('CloudWatchLogs:describeLogGroups', { logGroupNamePrefix: logGroupName(fn) })
