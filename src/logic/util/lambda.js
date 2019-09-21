@@ -2,14 +2,14 @@ const Aws = require('aws-sdk-wrap');
 
 module.exports = (options) => {
   const aws = Aws({ config: options });
-  const resources = aws.get('ResourceGroupsTaggingAPI');
-  const cloudwatchlogs = aws.get('CloudWatchLogs');
 
   const logGroupName = (fn) => `/aws/lambda/${fn.FunctionName}`;
 
-  const getAllFunctions = (reqOptions = {}) => resources
-    .getResources({ ...reqOptions, ResourceTypeFilters: ['lambda'] })
-    .promise()
+  const getAllFunctions = (reqOptions = {}) => aws
+    .call('ResourceGroupsTaggingAPI:getResources', {
+      ...reqOptions,
+      ResourceTypeFilters: ['lambda']
+    })
     .then((data) => {
       const result = data.ResourceTagMappingList.map((r) => ({
         FunctionARN: r.ResourceARN,
@@ -27,11 +27,8 @@ module.exports = (options) => {
     });
 
   const appendLogRetentionInfo = (fns) => Promise.all(
-    fns.map((fn) => cloudwatchlogs
-      .describeLogGroups({
-        logGroupNamePrefix: logGroupName(fn)
-      })
-      .promise()
+    fns.map((fn) => aws
+      .call('CloudWatchLogs:describeLogGroups', { logGroupNamePrefix: logGroupName(fn) })
       .then((r) => ({
         logGroups: r.logGroups.filter((e) => e.logGroupName === logGroupName(fn)),
         ...fn
@@ -45,11 +42,8 @@ module.exports = (options) => {
   ).then((res) => res.filter((fn) => fn !== false));
 
   const appendLogSubscriptionInfo = (fns) => Promise.all(
-    fns.map((fn) => cloudwatchlogs
-      .describeSubscriptionFilters({
-        logGroupName: logGroupName(fn)
-      })
-      .promise()
+    fns.map((fn) => aws
+      .call('CloudWatchLogs:describeSubscriptionFilters', { logGroupName: logGroupName(fn) })
       .then((r) => ({
         ...r,
         ...fn
@@ -62,19 +56,19 @@ module.exports = (options) => {
       }))
   ).then((res) => res.filter((fn) => fn !== false));
 
-  const setCloudWatchRetention = (fn, retentionInDays) => cloudwatchlogs
-    .putRetentionPolicy({
+  const setCloudWatchRetention = (fn, retentionInDays) => aws
+    .call('CloudWatchLogs:putRetentionPolicy', {
       logGroupName: logGroupName(fn),
       retentionInDays
-    }).promise();
+    });
 
-  const subscribeCloudWatchLogGroup = (monitor, producer) => cloudwatchlogs
-    .putSubscriptionFilter({
+  const subscribeCloudWatchLogGroup = (monitor, producer) => aws
+    .call('CloudWatchLogs:putSubscriptionFilter', {
       destinationArn: monitor.FunctionARN,
       filterName: 'NoneFilter',
       filterPattern: '',
       logGroupName: logGroupName(producer)
-    }).promise();
+    });
 
   return {
     getAllFunctions,
