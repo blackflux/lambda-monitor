@@ -14,7 +14,8 @@
       ],
       "ResourceTypeFilters": [
         "lambda"
-      ]
+      ],
+      "ResourcesPerPage": 100
     },
     "status": 200,
     "response": {
@@ -37,7 +38,8 @@
     "method": "POST",
     "path": "/",
     "body": {
-      "logGroupNamePrefix": "/aws/lambda/lambda-function-two"
+      "logGroupNamePrefix": "/aws/lambda/",
+      "limit": 50
     },
     "status": 400,
     "response": {
