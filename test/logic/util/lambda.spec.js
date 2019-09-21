@@ -29,8 +29,8 @@ describe('Testing Lambda', { useNock: true }, () => {
     expect(e.message).to.equal('The security token included in the request is invalid.');
   });
 
-  it('Testing appendLogRetentionInfo Error', async ({ capture }) => {
-    const e = await capture(() => lambdaInvalid.appendLogRetentionInfo([func]));
+  it('Testing appendLogGroupInfo Error', async ({ capture }) => {
+    const e = await capture(() => lambdaInvalid.appendLogGroupInfo([func]));
     expect(e.message).to.equal('The security token included in the request is invalid.');
   });
 
