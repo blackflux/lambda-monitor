@@ -14,7 +14,8 @@
       ],
       "ResourceTypeFilters": [
         "lambda"
-      ]
+      ],
+      "ResourcesPerPage": 100
     },
     "status": 200,
     "response": {

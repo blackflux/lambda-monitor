@@ -8,7 +8,8 @@ module.exports = (options) => {
   const getAllFunctions = (reqOptions = {}) => aws
     .call('ResourceGroupsTaggingAPI:getResources', {
       ...reqOptions,
-      ResourceTypeFilters: ['lambda']
+      ResourceTypeFilters: ['lambda'],
+      ResourcesPerPage: 100
     })
     .then((data) => {
       const result = data.ResourceTagMappingList.map((r) => ({

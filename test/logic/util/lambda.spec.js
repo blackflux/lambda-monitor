@@ -40,7 +40,7 @@ describe('Testing Lambda', { useNock: true }, () => {
   });
 
   it('Testing getAllFunctions Batched', async () => {
-    const result = await lambda.getAllFunctions({ ResourcesPerPage: 1 });
+    const result = await lambda.getAllFunctions();
     expect(result.length).to.equal(2);
   });
 });

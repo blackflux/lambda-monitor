@@ -4,10 +4,10 @@
     "method": "POST",
     "path": "/",
     "body": {
-      "ResourcesPerPage": 1,
       "ResourceTypeFilters": [
         "lambda"
-      ]
+      ],
+      "ResourcesPerPage": 100
     },
     "status": 200,
     "response": {
@@ -30,11 +30,11 @@
     "method": "POST",
     "path": "/",
     "body": {
-      "ResourcesPerPage": 1,
       "PaginationToken": "token1",
       "ResourceTypeFilters": [
         "lambda"
-      ]
+      ],
+      "ResourcesPerPage": 100
     },
     "status": 200,
     "response": {
@@ -57,11 +57,11 @@
     "method": "POST",
     "path": "/",
     "body": {
-      "ResourcesPerPage": 1,
       "PaginationToken": "token2",
       "ResourceTypeFilters": [
         "lambda"
-      ]
+      ],
+      "ResourcesPerPage": 100
     },
     "status": 200,
     "response": {
