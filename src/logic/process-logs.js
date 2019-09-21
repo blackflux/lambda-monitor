@@ -46,7 +46,11 @@ const postToRollbar = async ({
           }
         },
         timestamp,
-        fingerprint: crypto.createHash('md5').update(message.split(/[\n\r]/)[0]).digest('hex')
+        fingerprint: crypto
+          .createHash('md5')
+          .update(logGroup)
+          .update(message.split(/[\n\r]/)[0])
+          .digest('hex')
       }
     })
   });
