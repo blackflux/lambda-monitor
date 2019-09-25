@@ -6,7 +6,6 @@ describe('Testing index.js', () => {
     expect(Object.keys(index)).to.deep.equal([
       'processLogs',
       'subscribe',
-      'setRetention',
       'emptyBucket'
     ]);
   });

@@ -13,7 +13,6 @@ provider:
         - 'tag:GetResources'
         - 'logs:DescribeLogGroups'
         - 'logs:DescribeSubscriptionFilters'
-        - 'logs:PutRetentionPolicy'
         - 'logs:PutSubscriptionFilter'
       Resource:
         - '*'
@@ -68,23 +67,6 @@ functions:
                 - logs.amazonaws.com
               eventName:
                 - CreateLogGroup
-  set-retention:
-    timeout: 300
-    handler: lib/index.setRetention
-    description: Update Retention for Lambda CloudWatch Streams
-    events:
-      - schedule: rate(1 hour)
-      - cloudwatchEvent:
-          event:
-            source:
-              - aws.logs
-            detail-type:
-              - AWS API Call via CloudTrail
-            detail:
-              eventSource:
-                - logs.amazonaws.com
-              eventName:
-                - CreateLogGroup
   empty-bucket:
     timeout: 900
     handler: lib/index.emptyBucket
@@ -109,17 +91,6 @@ resources:
       DependsOn:
         - LambdaInvokePermission
         - SubscribeLambdaFunction
-        - ProcessDashlogsLambdaFunction
-    TriggerLambdaSetRetentionResource:
-      Type: 'Custom::LambdaDependency'
-      Properties:
-        ServiceToken:
-          'Fn::GetAtt':
-            - SetDashretentionLambdaFunction
-            - Arn
-      DependsOn:
-        - LambdaInvokePermission
-        - SetDashretentionLambdaFunction
         - ProcessDashlogsLambdaFunction
     EmptyCloudTrailS3Bucket:
       Type: 'Custom::LambdaDependency'
