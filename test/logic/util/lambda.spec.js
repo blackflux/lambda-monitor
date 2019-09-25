@@ -19,18 +19,8 @@ describe('Testing Lambda', { useNock: true }, () => {
     expect(e.message).to.equal('The security token included in the request is invalid.');
   });
 
-  it('Testing setCloudWatchRetention Error', async ({ capture }) => {
-    const e = await capture(() => lambdaInvalid.setCloudWatchRetention(func, 30));
-    expect(e.message).to.equal('The security token included in the request is invalid.');
-  });
-
   it('Testing subscribeCloudWatchLogGroup Error', async ({ capture }) => {
     const e = await capture(() => lambdaInvalid.subscribeCloudWatchLogGroup(func, func));
-    expect(e.message).to.equal('The security token included in the request is invalid.');
-  });
-
-  it('Testing appendLogGroupInfo Error', async ({ capture }) => {
-    const e = await capture(() => lambdaInvalid.appendLogGroupInfo([func]));
     expect(e.message).to.equal('The security token included in the request is invalid.');
   });
 

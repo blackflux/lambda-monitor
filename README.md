@@ -14,7 +14,6 @@ Lambda log monitoring and streaming to external services.
 ## What it does
 
 - Parsing and analysis of AWS Lambda CloudWatch Logs
-- Sets Lambda CloudWatch log retention to 30 days to reduce storage cost
 - Pipes AWS Lambda Logs to external logging services (i.e. [Loggly](https://loggly.com), [Logz](https://logz.io) or [Datadog](https://www.datadoghq.com))
 - Detects and sends AWS Lambda anomalies to external monitoring service (i.e. [Rollbar](https://rollbar.com))
 - Fully transparent, no changes to existing Lambda functions required
@@ -94,7 +93,5 @@ There are four lambda function created per stage. All operations are only perfor
 **process-logs** - This lambda function is subscribed to CloudWatch and processes the logs. Anomalies are submitted to rollbar and all detected log events are sent to the configured logging services. Tagged with `"MONITOR": "1"` and `"MONITORED": "0"`.
 
 **subscribe** - Subscribes the *process-logs* lambda function (detected using the `MONITOR` tag) to all relevant CloudWatch Groups, excluding those functions that have the `MONITORED` tag set to `0`. 
-
-**set-retention** - Updates the retention for all relevant CloudWatch Groups.
 
 **empty-bucket** - Empty CloudTrail bucket when stage is removed from AWS.

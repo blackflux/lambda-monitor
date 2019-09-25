@@ -26,27 +26,6 @@ module.exports = (options) => {
     return result;
   };
 
-  const appendLogGroupInfo = async (fns) => {
-    const lambdaLogGroups = [];
-    let nextToken;
-    do {
-      // eslint-disable-next-line no-await-in-loop
-      const response = await aws.call('CloudWatchLogs:describeLogGroups', {
-        ...(nextToken ? { nextToken } : {}),
-        logGroupNamePrefix: '/aws/lambda/',
-        limit: 50
-      }, { expectedErrorCodes: ['ResourceNotFoundException'] });
-      if (response !== 'ResourceNotFoundException') {
-        lambdaLogGroups.push(...response.logGroups);
-      }
-      nextToken = response.nextToken;
-    } while (nextToken);
-    return fns.map((fn) => ({
-      ...fn,
-      logGroup: lambdaLogGroups.find((g) => g.logGroupName === logGroupName(fn))
-    }));
-  };
-
   const appendLogSubscriptionInfo = (fns) => Promise.all(
     fns.map((fn) => aws
       .call('CloudWatchLogs:describeSubscriptionFilters', { logGroupName: logGroupName(fn) })
@@ -62,12 +41,6 @@ module.exports = (options) => {
       }))
   ).then((res) => res.filter((fn) => fn !== false));
 
-  const setCloudWatchRetention = (fn, retentionInDays) => aws
-    .call('CloudWatchLogs:putRetentionPolicy', {
-      logGroupName: logGroupName(fn),
-      retentionInDays
-    });
-
   const subscribeCloudWatchLogGroup = (monitor, producer) => aws
     .call('CloudWatchLogs:putSubscriptionFilter', {
       destinationArn: monitor.FunctionARN,
@@ -78,9 +51,7 @@ module.exports = (options) => {
 
   return {
     getAllFunctions,
-    appendLogGroupInfo,
     appendLogSubscriptionInfo,
-    setCloudWatchRetention,
     subscribeCloudWatchLogGroup
   };
 };
