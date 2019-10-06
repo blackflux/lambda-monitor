@@ -46,7 +46,7 @@
     "aws-sdk": "2.543.0",
     "aws-sdk-wrap": "3.5.7",
     "lambda-async": "1.0.2",
-    "lambda-cfn-hook": "1.2.3",
+    "lambda-cfn-hook": "1.2.4",
     "lambda-monitor-logger": "2.2.2",
     "lodash.get": "4.4.2",
     "request": "2.88.0",
@@ -69,12 +69,12 @@
     "eslint-plugin-markdown": "1.0.0",
     "eslint-plugin-mocha": "6.1.1",
     "js-gardener": "2.0.104",
-    "lambda-tdd": "2.10.18",
+    "lambda-tdd": "2.10.19",
     "mocha": "6.2.1",
     "nock": "11.3.6",
     "node-tdd": "2.5.14",
     "nyc": "14.1.1",
-    "robo-config": "3.4.0",
+    "robo-config": "3.4.1",
     "semantic-release": "15.13.24"
   },
   "licenses": [

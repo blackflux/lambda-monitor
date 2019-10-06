@@ -3771,12 +3771,12 @@ lambda-async@1.0.2:
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.2.tgz#ae558377b659977b6c8aa3f07a1126371f208228"
   integrity sha512-kzkwDRknDlFrKmMGP5SMuxuY0YLxq+Ajbu5z4UFuecumLA7ioxM7R8SwYCs2Av6Fa/Jrp3xt6wuoAhci42Py4g==
 
-lambda-cfn-hook@1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.3.tgz#da96f97b1a6d8dae18d23fe217b4eafec93131ed"
-  integrity sha512-LGSHnDPCWnBpBIbfOfqCRrUe9+BS88foBoYeMJz/8GQxjzjc7fjboWGP97sMmrrKQsMwcCr3M6YmFx3ZUZSWKw==
+lambda-cfn-hook@1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.4.tgz#7a7dc8eebf62760f4c7ae57112f7153907499722"
+  integrity sha512-LJTg2Igyovn8OqWpz7qTAf6teL6fvZ6qJkVCuewBdfLH/8omgkgKPHGWo1+1R9HelyhlCCkH6NiolxWxIXeM9w==
   dependencies:
-    joi-strict "1.1.6"
+    joi-strict "1.1.7"
     lambda-async "1.0.2"
     lambda-monitor-logger "2.2.2"
     lodash.get "4.4.2"
@@ -3788,14 +3788,14 @@ lambda-monitor-logger@2.2.2:
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.2.tgz#37c4858a63336a31b6a84c8bc8c27966569320ca"
   integrity sha512-W77R4crzBq/iMTQzBQbgZrJLgmAJLCe4QEXbXMwnF3iQtQEQ8XkvngedVXip0zjv0WRucJtJs0TADDqJMnsunQ==
 
-lambda-tdd@2.10.18:
-  version "2.10.18"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.18.tgz#db77130401a2f9d6c87a2a0d7757c12dbc27bb7f"
-  integrity sha512-o9saewcAXllKukkM8juUa0ccGeKIXvJsm1+n6Ws2XPIFz0cEPM0HsehlARYJf++5ZAhisQMR81sbvGutdTn7pg==
+lambda-tdd@2.10.19:
+  version "2.10.19"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.19.tgz#7bd78add9308219481f0217d59ecee0e6e86b7a2"
+  integrity sha512-R6CZrHks5t1uQoIQzD1AqORDrSkRprjcN4DEHtv3g4GlPZcTfhDEOhxgiM5lELLwd1zRJdh3ol5wutPmi89R6w==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
-    joi-strict "1.1.6"
+    joi-strict "1.1.7"
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
@@ -6302,6 +6302,22 @@ robo-config@3.4.0:
     app-root-path "2.2.1"
     deepmerge "4.0.0"
     joi-strict "1.1.6"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.19"
+    object-scan "10.0.13"
+    object-treeify "1.1.20"
+    smart-fs "1.11.0"
+
+robo-config@3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.4.1.tgz#cbe389eeb115ca7e47d5a89942361b37b91f2409"
+  integrity sha512-MfJRkcBfL64XCcCpu/XwqgeJpeBJrxsy8tufXLo2inZwhXm+GCn8nnN58cKja8R/rmzMRXr3gx+YGN8dMJYa1A==
+  dependencies:
+    app-root-path "2.2.1"
+    deepmerge "4.0.0"
+    joi-strict "1.1.7"
     lodash.clonedeep "4.5.0"
     lodash.difference "4.5.0"
     lodash.get "4.4.2"
