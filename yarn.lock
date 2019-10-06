@@ -3788,10 +3788,10 @@ lambda-monitor-logger@2.2.2:
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.2.tgz#37c4858a63336a31b6a84c8bc8c27966569320ca"
   integrity sha512-W77R4crzBq/iMTQzBQbgZrJLgmAJLCe4QEXbXMwnF3iQtQEQ8XkvngedVXip0zjv0WRucJtJs0TADDqJMnsunQ==
 
-lambda-tdd@2.10.17:
-  version "2.10.17"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.17.tgz#832801513c99d670acbeaae62bbbc85a07a4987f"
-  integrity sha512-yL4Dh955Y/wBC/XBDkHInj8hHS/USDuiWCNuj7vUpW4lWPuhTZVwiSbpa5k7le4taMlfQFCkYcJA4spHGv9Icw==
+lambda-tdd@2.10.18:
+  version "2.10.18"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.18.tgz#db77130401a2f9d6c87a2a0d7757c12dbc27bb7f"
+  integrity sha512-o9saewcAXllKukkM8juUa0ccGeKIXvJsm1+n6Ws2XPIFz0cEPM0HsehlARYJf++5ZAhisQMR81sbvGutdTn7pg==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
@@ -3799,7 +3799,7 @@ lambda-tdd@2.10.17:
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
-    node-tdd "2.5.13"
+    node-tdd "2.5.14"
     smart-fs "1.11.0"
 
 lambda-wrapper@0.3.0:
@@ -4622,18 +4622,6 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-nock@11.3.5:
-  version "11.3.5"
-  resolved "https://registry.yarnpkg.com/nock/-/nock-11.3.5.tgz#f2c7b4b672a04c35342593b6bfd821497881199c"
-  integrity sha512-6WGeZcWc3RExkBcMSYSrUm/5YukDo52m/jhwniQyrnuiCnKRljBwwje9vTwJyEi4J6m2bq0Aj6C1vzuM6iuaeg==
-  dependencies:
-    chai "^4.1.2"
-    debug "^4.1.0"
-    json-stringify-safe "^5.0.1"
-    lodash "^4.17.13"
-    mkdirp "^0.5.0"
-    propagate "^2.0.0"
-
 nock@11.3.6:
   version "11.3.6"
   resolved "https://registry.yarnpkg.com/nock/-/nock-11.3.6.tgz#cd87eb47ed9755d6d1e04dee1d56722267cb3283"
@@ -4713,16 +4701,16 @@ node-pre-gyp@^0.12.0:
     semver "^5.3.0"
     tar "^4"
 
-node-tdd@2.5.13:
-  version "2.5.13"
-  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.13.tgz#a333ec9ef18a3b88d2f32a9fc10486850b4fc990"
-  integrity sha512-CcV7OAMSiX8a752BBPkfNevvaiFDSH6OrNotZ7wAmGCIUSJ/TEL0xBEn5nsvrdsDh7FqM5bY7PpWSMvtsVXPCg==
+node-tdd@2.5.14:
+  version "2.5.14"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.14.tgz#ebfd95591f0c106fa3843a702fbedee04ea914cf"
+  integrity sha512-y2JCe9JnV0X4HYpeR5yGKxm29polG+Gs/pUWLuQzLZbnbA4+JunOAWnTjn2e5c1UyxpZluBTV+eNEJA0RSsDjw==
   dependencies:
     callsites "3.1.0"
     joi-strict "1.1.6"
     lodash.get "4.4.2"
-    nock "11.3.5"
-    smart-fs "1.10.1"
+    nock "11.3.6"
+    smart-fs "1.11.0"
     timekeeper "2.2.0"
     tmp "0.1.0"
 
@@ -6305,22 +6293,6 @@ rimraf@2.6.3:
   integrity sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==
   dependencies:
     glob "^7.1.3"
-
-robo-config@3.3.16:
-  version "3.3.16"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.3.16.tgz#5917efb8dd980c6601997c9a237d1a733a92a3f1"
-  integrity sha512-/VZhgAvGW1pCYryiH6IS/nCONcy+UfH7lxDzwPJwgK77TruUnVSNcq/9iOat10wKFx4D+I5926gyUEq2uDry4A==
-  dependencies:
-    app-root-path "2.2.1"
-    deepmerge "4.0.0"
-    joi-strict "1.1.6"
-    lodash.clonedeep "4.5.0"
-    lodash.difference "4.5.0"
-    lodash.get "4.4.2"
-    object-deep-contain "1.0.19"
-    object-scan "10.0.13"
-    object-treeify "1.1.20"
-    smart-fs "1.11.0"
 
 robo-config@3.4.0:
   version "3.4.0"
