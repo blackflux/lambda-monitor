@@ -3788,10 +3788,10 @@ lambda-monitor-logger@2.2.2:
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.2.tgz#37c4858a63336a31b6a84c8bc8c27966569320ca"
   integrity sha512-W77R4crzBq/iMTQzBQbgZrJLgmAJLCe4QEXbXMwnF3iQtQEQ8XkvngedVXip0zjv0WRucJtJs0TADDqJMnsunQ==
 
-lambda-tdd@2.10.19:
-  version "2.10.19"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.19.tgz#7bd78add9308219481f0217d59ecee0e6e86b7a2"
-  integrity sha512-R6CZrHks5t1uQoIQzD1AqORDrSkRprjcN4DEHtv3g4GlPZcTfhDEOhxgiM5lELLwd1zRJdh3ol5wutPmi89R6w==
+lambda-tdd@2.10.20:
+  version "2.10.20"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.20.tgz#120d7f8167afae6d727d3418a8864c6056428988"
+  integrity sha512-eL3VEh8GEPeONcLIfnt3lKSAcO1elrGzf3enTfQjlD6z8huNbKDiQ+EOKVJXEDGidAcH6jWHSW4Ysyefn5DadQ==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
@@ -3799,7 +3799,7 @@ lambda-tdd@2.10.19:
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
-    node-tdd "2.5.14"
+    node-tdd "2.5.15"
     smart-fs "1.11.0"
 
 lambda-wrapper@0.3.0:
@@ -4708,6 +4708,19 @@ node-tdd@2.5.14:
   dependencies:
     callsites "3.1.0"
     joi-strict "1.1.6"
+    lodash.get "4.4.2"
+    nock "11.3.6"
+    smart-fs "1.11.0"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+
+node-tdd@2.5.15:
+  version "2.5.15"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.15.tgz#e42873c658867ab406626406e937d78b85610dc0"
+  integrity sha512-X73pJikJZDxB6Y3JixGX3PGbc40+0dgwy1Kz9Xh6HlJjfZHOXo0q54KiNEyDhyfFsd59AM/MkULvmqHdUP861Q==
+  dependencies:
+    callsites "3.1.0"
+    joi-strict "1.1.7"
     lodash.get "4.4.2"
     nock "11.3.6"
     smart-fs "1.11.0"
