@@ -3788,14 +3788,14 @@ lambda-monitor-logger@2.2.2:
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.2.tgz#37c4858a63336a31b6a84c8bc8c27966569320ca"
   integrity sha512-W77R4crzBq/iMTQzBQbgZrJLgmAJLCe4QEXbXMwnF3iQtQEQ8XkvngedVXip0zjv0WRucJtJs0TADDqJMnsunQ==
 
-lambda-tdd@2.10.18:
-  version "2.10.18"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.18.tgz#db77130401a2f9d6c87a2a0d7757c12dbc27bb7f"
-  integrity sha512-o9saewcAXllKukkM8juUa0ccGeKIXvJsm1+n6Ws2XPIFz0cEPM0HsehlARYJf++5ZAhisQMR81sbvGutdTn7pg==
+lambda-tdd@2.10.19:
+  version "2.10.19"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.19.tgz#7bd78add9308219481f0217d59ecee0e6e86b7a2"
+  integrity sha512-R6CZrHks5t1uQoIQzD1AqORDrSkRprjcN4DEHtv3g4GlPZcTfhDEOhxgiM5lELLwd1zRJdh3ol5wutPmi89R6w==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
-    joi-strict "1.1.6"
+    joi-strict "1.1.7"
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
