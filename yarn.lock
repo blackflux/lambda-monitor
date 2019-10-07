@@ -193,17 +193,6 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-8.2.5.tgz#b307d3f1aced22e05bd6a2403c302eaebb577da3"
   integrity sha512-rmGFzok1zR3xZKd5m3ihWdqafXFxvPHoQ/78+AG5URKbEbJiwBBfRgzbu+07W5f3+07JRshw6QqGbVmCp8ntig==
 
-"@hapi/joi@16.1.4":
-  version "16.1.4"
-  resolved "https://registry.yarnpkg.com/@hapi/joi/-/joi-16.1.4.tgz#b039fe474a0ab838c1a90620c53a208fcef75d99"
-  integrity sha512-m7ctezhxjob+dSpXnCNlgAj6rrEpdSsaWu3GWL3g1AybQCU36mlAo9IwGFJwIxD+oHgdO6mYyviYlaejX+qN6g==
-  dependencies:
-    "@hapi/address" "^2.1.2"
-    "@hapi/formula" "^1.2.0"
-    "@hapi/hoek" "^8.2.4"
-    "@hapi/pinpoint" "^1.0.2"
-    "@hapi/topo" "^3.1.3"
-
 "@hapi/joi@16.1.7":
   version "16.1.7"
   resolved "https://registry.yarnpkg.com/@hapi/joi/-/joi-16.1.7.tgz#360857223a87bb1f5f67691537964c1b4908ed93"
@@ -3620,13 +3609,6 @@ jmespath@0.15.0:
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
   integrity sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=
 
-joi-strict@1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.1.6.tgz#3aa7608dc7776cfb8d3e9ea677b64c9879871c60"
-  integrity sha512-691Ut0N7toXMeqDMfY7f7A0NrWOhdC8kPec1n4ydgAKv8WxXK7vdSHwA754PlIkR4TFE3bnkO9ijrziw7rIJfg==
-  dependencies:
-    "@hapi/joi" "16.1.4"
-
 joi-strict@1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.1.7.tgz#972f305cdaba6858e9a6bb0eefb49d966a6deffe"
@@ -4700,19 +4682,6 @@ node-pre-gyp@^0.12.0:
     rimraf "^2.6.1"
     semver "^5.3.0"
     tar "^4"
-
-node-tdd@2.5.14:
-  version "2.5.14"
-  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.14.tgz#ebfd95591f0c106fa3843a702fbedee04ea914cf"
-  integrity sha512-y2JCe9JnV0X4HYpeR5yGKxm29polG+Gs/pUWLuQzLZbnbA4+JunOAWnTjn2e5c1UyxpZluBTV+eNEJA0RSsDjw==
-  dependencies:
-    callsites "3.1.0"
-    joi-strict "1.1.6"
-    lodash.get "4.4.2"
-    nock "11.3.6"
-    smart-fs "1.11.0"
-    timekeeper "2.2.0"
-    tmp "0.1.0"
 
 node-tdd@2.5.15:
   version "2.5.15"
