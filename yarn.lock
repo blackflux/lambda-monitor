@@ -3770,10 +3770,10 @@ lambda-monitor-logger@2.2.2:
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.2.tgz#37c4858a63336a31b6a84c8bc8c27966569320ca"
   integrity sha512-W77R4crzBq/iMTQzBQbgZrJLgmAJLCe4QEXbXMwnF3iQtQEQ8XkvngedVXip0zjv0WRucJtJs0TADDqJMnsunQ==
 
-lambda-tdd@2.10.20:
-  version "2.10.20"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.20.tgz#120d7f8167afae6d727d3418a8864c6056428988"
-  integrity sha512-eL3VEh8GEPeONcLIfnt3lKSAcO1elrGzf3enTfQjlD6z8huNbKDiQ+EOKVJXEDGidAcH6jWHSW4Ysyefn5DadQ==
+lambda-tdd@2.10.21:
+  version "2.10.21"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.21.tgz#abad45d542acd6ba4d694c17784d0e4cfe0f74e8"
+  integrity sha512-rFDVhI/lW2mNJScisK5/ZMb4FcdCYvOThTwRKbJRMEaHxWKu6+TnS6Imx45iGHm2VqmeJJ0N+GoJdDOyB9QlGQ==
   dependencies:
     app-root-path "2.2.1"
     glob "7.1.4"
@@ -3781,7 +3781,7 @@ lambda-tdd@2.10.20:
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
-    node-tdd "2.5.15"
+    node-tdd "2.5.16"
     smart-fs "1.11.0"
 
 lambda-wrapper@0.3.0:
@@ -4604,18 +4604,6 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-nock@11.3.6:
-  version "11.3.6"
-  resolved "https://registry.yarnpkg.com/nock/-/nock-11.3.6.tgz#cd87eb47ed9755d6d1e04dee1d56722267cb3283"
-  integrity sha512-54MSX4qeRnhwQQ2PSHlHc6pM6zNf7Dq9ni0BTFTurnDbUUssXl2Jy3E95ffaE8rZ/W/FWa9VSfzWDDnbdAsoTg==
-  dependencies:
-    chai "^4.1.2"
-    debug "^4.1.0"
-    json-stringify-safe "^5.0.1"
-    lodash "^4.17.13"
-    mkdirp "^0.5.0"
-    propagate "^2.0.0"
-
 nock@11.4.0:
   version "11.4.0"
   resolved "https://registry.yarnpkg.com/nock/-/nock-11.4.0.tgz#68c2f9cf533f13ecb1a43e956823dbfba5593d17"
@@ -4694,19 +4682,6 @@ node-pre-gyp@^0.12.0:
     rimraf "^2.6.1"
     semver "^5.3.0"
     tar "^4"
-
-node-tdd@2.5.15:
-  version "2.5.15"
-  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.15.tgz#e42873c658867ab406626406e937d78b85610dc0"
-  integrity sha512-X73pJikJZDxB6Y3JixGX3PGbc40+0dgwy1Kz9Xh6HlJjfZHOXo0q54KiNEyDhyfFsd59AM/MkULvmqHdUP861Q==
-  dependencies:
-    callsites "3.1.0"
-    joi-strict "1.1.7"
-    lodash.get "4.4.2"
-    nock "11.3.6"
-    smart-fs "1.11.0"
-    timekeeper "2.2.0"
-    tmp "0.1.0"
 
 node-tdd@2.5.16:
   version "2.5.16"
