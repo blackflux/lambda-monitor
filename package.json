@@ -68,13 +68,13 @@
     "eslint-plugin-json": "1.4.0",
     "eslint-plugin-markdown": "1.0.0",
     "eslint-plugin-mocha": "6.1.1",
-    "js-gardener": "2.0.105",
+    "js-gardener": "2.0.107",
     "lambda-tdd": "2.10.20",
     "mocha": "6.2.1",
     "nock": "11.4.0",
-    "node-tdd": "2.5.15",
+    "node-tdd": "2.5.16",
     "nyc": "14.1.1",
-    "robo-config": "3.4.1",
+    "robo-config": "3.4.3",
     "semantic-release": "15.13.24"
   },
   "licenses": [
