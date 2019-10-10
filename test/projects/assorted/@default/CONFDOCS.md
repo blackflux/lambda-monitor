@@ -1,15 +1,15 @@
-## Plugin [@blackflux/robo-config-plugin](https://www.npmjs.com/package/@blackflux/robo-config-plugin)
+## Plugin [lambda-monitor](https://www.npmjs.com/package/lambda-monitor)
 
-- <a name="blackfluxrobo-config-plugin-task-idx-ref-assorteddefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assorteddefault">`assorted/@default`</a>
-  - <a name="blackfluxrobo-config-plugin-task-idx-ref-structdefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structdefault">`struct/#default`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structtest-index-spec">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structtest-index-spec">`struct/test-index-spec`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structsrc-index">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structsrc-index">`struct/src-index`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-structhowto">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-structhowto">`struct/howto`</a>
-  - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessdefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessdefault">`serverless/#default`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-data">`serverless/serverless-data`</a>
-    - <a name="blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-api">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-serverlessserverless-api">`serverless/serverless-api`</a>
+- <a name="lambda-monitor-task-idx-ref-assorteddefault">:open_file_folder:</a> <a href="#lambda-monitor-task-ref-assorteddefault">`assorted/@default`</a>
+  - <a name="lambda-monitor-task-idx-ref-structdefault">:open_file_folder:</a> <a href="#lambda-monitor-task-ref-structdefault">`struct/#default`</a>
+    - <a name="lambda-monitor-task-idx-ref-structtest-index-spec">:clipboard:</a> <a href="#lambda-monitor-task-ref-structtest-index-spec">`struct/test-index-spec`</a>
+    - <a name="lambda-monitor-task-idx-ref-structsrc-index">:clipboard:</a> <a href="#lambda-monitor-task-ref-structsrc-index">`struct/src-index`</a>
+    - <a name="lambda-monitor-task-idx-ref-structhowto">:clipboard:</a> <a href="#lambda-monitor-task-ref-structhowto">`struct/howto`</a>
+  - <a name="lambda-monitor-task-idx-ref-serverlessdefault">:open_file_folder:</a> <a href="#lambda-monitor-task-ref-serverlessdefault">`serverless/#default`</a>
+    - <a name="lambda-monitor-task-idx-ref-serverlessserverless-data">:clipboard:</a> <a href="#lambda-monitor-task-ref-serverlessserverless-data">`serverless/serverless-data`</a>
+    - <a name="lambda-monitor-task-idx-ref-serverlessserverless-api">:clipboard:</a> <a href="#lambda-monitor-task-ref-serverlessserverless-api">`serverless/serverless-api`</a>
 
-### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assorteddefault">assorted/@default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assorteddefault">`index`</a>)
+### :open_file_folder: <a name="lambda-monitor-task-ref-assorteddefault">assorted/@default</a> (<a href="#lambda-monitor-task-idx-ref-assorteddefault">`index`</a>)
 
 Manages files for monitoring project.
 
@@ -24,35 +24,35 @@ Manages files for monitoring project.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-howtomd">HOWTO.md</a></code><br/>
+<code>├─&nbsp;<a href="#lambda-monitor-target-ref-howtomd">HOWTO.md</a></code><br/>
 <code>├─&nbsp;serverless</code><br/>
-<code>│&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
-<code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#lambda-monitor-target-ref-serverlessapiyml">api.yml</a></code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-serverlessdatayml">data.yml</a></code><br/>
 <code>├─&nbsp;src</code><br/>
-<code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srcindexjs">index.js</a></code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-srcindexjs">index.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testindexspecjs">index.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-testindexspecjs">index.spec.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+          <li><a href="#lambda-monitor-req-ref-javascript">javascript</a></li>
+          <li><a href="#lambda-monitor-req-ref-chai">chai</a></li>
+          <li><a href="#lambda-monitor-req-ref-serverless">serverless</a></li>
+          <li><a href="#lambda-monitor-req-ref-aws">aws</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-enablecloudtrail">enableCloudTrail</a></li>
+          <li><a href="#lambda-monitor-var-ref-awsregion">awsRegion</a></li>
+          <li><a href="#lambda-monitor-var-ref-enablecloudtrail">enableCloudTrail</a></li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-structdefault">struct/#default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structdefault">`index`</a>)
+#### :open_file_folder: <a name="lambda-monitor-task-ref-structdefault">struct/#default</a> (<a href="#lambda-monitor-task-idx-ref-structdefault">`index`</a>)
 
 Manages structure files for monitoring project.
 
@@ -67,31 +67,31 @@ Manages structure files for monitoring project.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-howtomd">HOWTO.md</a></code><br/>
+<code>├─&nbsp;<a href="#lambda-monitor-target-ref-howtomd">HOWTO.md</a></code><br/>
 <code>├─&nbsp;src</code><br/>
-<code>│&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srcindexjs">index.js</a></code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-srcindexjs">index.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testindexspecjs">index.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-testindexspecjs">index.spec.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
+          <li><a href="#lambda-monitor-req-ref-javascript">javascript</a></li>
+          <li><a href="#lambda-monitor-req-ref-chai">chai</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
+          <li><a href="#lambda-monitor-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structtest-index-spec">struct/test-index-spec</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structtest-index-spec">`index`</a>)
+##### :clipboard: <a name="lambda-monitor-task-ref-structtest-index-spec">struct/test-index-spec</a> (<a href="#lambda-monitor-task-idx-ref-structtest-index-spec">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-testindexspecjs">test/index.spec.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#lambda-monitor-target-ref-testindexspecjs">test/index.spec.js</a> using <a href="#lambda-monitor-strat-ref-overwrite">overwrite</a>._
 
 - Define main test file.
 
@@ -106,22 +106,22 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-testindexspecjs">test
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-testindexspecjs">index.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-testindexspecjs">index.spec.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
+          <li><a href="#lambda-monitor-req-ref-javascript">javascript</a></li>
+          <li><a href="#lambda-monitor-req-ref-chai">chai</a></li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structsrc-index">struct/src-index</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structsrc-index">`index`</a>)
+##### :clipboard: <a name="lambda-monitor-task-ref-structsrc-index">struct/src-index</a> (<a href="#lambda-monitor-task-idx-ref-structsrc-index">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-srcindexjs">src/index.js</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#lambda-monitor-target-ref-srcindexjs">src/index.js</a> using <a href="#lambda-monitor-strat-ref-overwrite">overwrite</a>._
 
 - Define main code file.
 
@@ -136,21 +136,21 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-srcindexjs">src/index
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;src</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-srcindexjs">index.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-srcindexjs">index.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
+          <li><a href="#lambda-monitor-req-ref-javascript">javascript</a></li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-structhowto">struct/howto</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-structhowto">`index`</a>)
+##### :clipboard: <a name="lambda-monitor-task-ref-structhowto">struct/howto</a> (<a href="#lambda-monitor-task-idx-ref-structhowto">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-howtomd">HOWTO.md</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#lambda-monitor-target-ref-howtomd">HOWTO.md</a> using <a href="#lambda-monitor-strat-ref-overwrite">overwrite</a>._
 
 - Define setup file detailing how to set-up monitoring project.
 
@@ -165,25 +165,25 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-howtomd">HOWTO.md</a>
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-howtomd">HOWTO.md</a></code><br/>
+<code>└─&nbsp;<a href="#lambda-monitor-target-ref-howtomd">HOWTO.md</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-chai">chai</a></li>
+          <li><a href="#lambda-monitor-req-ref-javascript">javascript</a></li>
+          <li><a href="#lambda-monitor-req-ref-chai">chai</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a></li>
+          <li><a href="#lambda-monitor-var-ref-awsregion">awsRegion</a></li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-serverlessdefault">serverless/#default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessdefault">`index`</a>)
+#### :open_file_folder: <a name="lambda-monitor-task-ref-serverlessdefault">serverless/#default</a> (<a href="#lambda-monitor-task-idx-ref-serverlessdefault">`index`</a>)
 
 Manages configuration files for monitoring project.
 
@@ -199,28 +199,28 @@ Manages configuration files for monitoring project.
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;serverless</code><br/>
-<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#lambda-monitor-target-ref-serverlessapiyml">api.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-serverlessdatayml">data.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+          <li><a href="#lambda-monitor-req-ref-serverless">serverless</a></li>
+          <li><a href="#lambda-monitor-req-ref-aws">aws</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-enablecloudtrail">enableCloudTrail</a></li>
+          <li><a href="#lambda-monitor-var-ref-enablecloudtrail">enableCloudTrail</a></li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-data">serverless/serverless-data</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-data">`index`</a>)
+##### :clipboard: <a name="lambda-monitor-task-ref-serverlessserverless-data">serverless/serverless-data</a> (<a href="#lambda-monitor-task-idx-ref-serverlessserverless-data">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">serverless/data.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#lambda-monitor-target-ref-serverlessdatayml">serverless/data.yml</a> using <a href="#lambda-monitor-strat-ref-overwrite">overwrite</a>._
 
 - Define data stack resource definition file.
 
@@ -235,22 +235,22 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">se
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;serverless</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-serverlessdatayml">data.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+          <li><a href="#lambda-monitor-req-ref-serverless">serverless</a></li>
+          <li><a href="#lambda-monitor-req-ref-aws">aws</a></li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-serverlessserverless-api">serverless/serverless-api</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-serverlessserverless-api">`index`</a>)
+##### :clipboard: <a name="lambda-monitor-task-ref-serverlessserverless-api">serverless/serverless-api</a> (<a href="#lambda-monitor-task-idx-ref-serverlessserverless-api">`index`</a>)
 
-_Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">serverless/api.yml</a> using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#lambda-monitor-target-ref-serverlessapiyml">serverless/api.yml</a> using <a href="#lambda-monitor-strat-ref-overwrite">overwrite</a>._
 
 - Define api stack resource definition file.
 
@@ -266,18 +266,18 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">ser
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;serverless</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">api.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-serverlessapiyml">api.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a></li>
-          <li><a href="#blackfluxrobo-config-plugin-req-ref-aws">aws</a></li>
+          <li><a href="#lambda-monitor-req-ref-serverless">serverless</a></li>
+          <li><a href="#lambda-monitor-req-ref-aws">aws</a></li>
         </ul>
       </td>
       <td align="left" valign="top">
         <ul>
-          <li><a href="#blackfluxrobo-config-plugin-var-ref-enablecloudtrail">enableCloudTrail</a></li>
+          <li><a href="#lambda-monitor-var-ref-enablecloudtrail">enableCloudTrail</a></li>
         </ul>
       </td>
     </tr>
@@ -288,27 +288,27 @@ _Updating <a href="#blackfluxrobo-config-plugin-target-ref-serverlessapiyml">ser
 
 ## Requires
 
-### <a name="blackfluxrobo-config-plugin-req-ref-javascript">javascript</a> ([`link`](https://en.wikipedia.org/wiki/JavaScript)) 
+### <a name="lambda-monitor-req-ref-javascript">javascript</a> ([`link`](https://en.wikipedia.org/wiki/JavaScript)) 
 
 *Programming Language.*
 
 JavaScript, often abbreviated as JS, is a high-level, interpreted programming language that conforms to the ECMAScript specification.
 It is characterized as dynamic, weakly typed, prototype-based and multi-paradigm.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-chai">chai</a> ([`link`](https://www.chaijs.com/)) 
+### <a name="lambda-monitor-req-ref-chai">chai</a> ([`link`](https://www.chaijs.com/)) 
 
 *JavaScript assertion library.*
 
 Chai is a BDD / TDD assertion library for node and the browser that can be paired with any javascript testing framework.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-serverless">serverless</a> ([`link`](https://serverless.com/)) 
+### <a name="lambda-monitor-req-ref-serverless">serverless</a> ([`link`](https://serverless.com/)) 
 
 *Serverless Framework.*
 
 The Serverless Framework is a free and open-source web framework that was 
 developed for building serverless applications.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-aws">aws</a> ([`link`](https://aws.amazon.com/)) 
+### <a name="lambda-monitor-req-ref-aws">aws</a> ([`link`](https://aws.amazon.com/)) 
 
 *Amazon Web Services.*
 
@@ -319,13 +319,13 @@ computing platforms to individuals, companies and governments, on a metered pay-
 
 ## Variables
 
-### <a name="blackfluxrobo-config-plugin-var-ref-awsregion">awsRegion</a>  : `string`
+### <a name="lambda-monitor-var-ref-awsregion">awsRegion</a>  : `string`
 
 *Aws data center region code gets deployed to.*
 
 List of available regions can be found [here](https://docs.aws.amazon.com/general/latest/gr/rande.html).
 
-### <a name="blackfluxrobo-config-plugin-var-ref-enablecloudtrail">enableCloudTrail</a>  : `string`
+### <a name="lambda-monitor-var-ref-enablecloudtrail">enableCloudTrail</a>  : `string`
 
 *Whether or not to enable CloudTrail.*
 
@@ -335,9 +335,9 @@ Should only be enabled if cloud trail logging is not already enabled on this aws
 
 ## Targets
 
-### <a name="blackfluxrobo-config-plugin-target-ref-testindexspecjs">test/index.spec.js</a>  
+### <a name="lambda-monitor-target-ref-testindexspecjs">test/index.spec.js</a>  
 
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+:small_red_triangle: <a href="#lambda-monitor-req-ref-javascript">javascript</a>
 
 :small_blue_diamond: `other`
 
@@ -345,9 +345,9 @@ Should only be enabled if cloud trail logging is not already enabled on this aws
 
 Contains basic testing of code functionality for monitoring.
 
-### <a name="blackfluxrobo-config-plugin-target-ref-srcindexjs">src/index.js</a>  
+### <a name="lambda-monitor-target-ref-srcindexjs">src/index.js</a>  
 
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+:small_red_triangle: <a href="#lambda-monitor-req-ref-javascript">javascript</a>
 
 :small_blue_diamond: `other`
 
@@ -355,7 +355,7 @@ Contains basic testing of code functionality for monitoring.
 
 Contains code functionality for monitoring.
 
-### <a name="blackfluxrobo-config-plugin-target-ref-howtomd">HOWTO.md</a>  
+### <a name="lambda-monitor-target-ref-howtomd">HOWTO.md</a>  
 
 :small_blue_diamond: `other`
 
@@ -363,9 +363,9 @@ Contains code functionality for monitoring.
 
 Contains basic instructions on how to set up monitoring project.
 
-### <a name="blackfluxrobo-config-plugin-target-ref-serverlessdatayml">serverless/data.yml</a>  
+### <a name="lambda-monitor-target-ref-serverlessdatayml">serverless/data.yml</a>  
 
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>, <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+:small_red_triangle: <a href="#lambda-monitor-req-ref-serverless">serverless</a>, <a href="#lambda-monitor-req-ref-javascript">javascript</a>
 
 :small_blue_diamond: `yml`
 
@@ -373,9 +373,9 @@ Contains basic instructions on how to set up monitoring project.
 
 Contains monitoring data stack resource definitions.
 
-### <a name="blackfluxrobo-config-plugin-target-ref-serverlessapiyml">serverless/api.yml</a>  
+### <a name="lambda-monitor-target-ref-serverlessapiyml">serverless/api.yml</a>  
 
-:small_red_triangle: <a href="#blackfluxrobo-config-plugin-req-ref-serverless">serverless</a>, <a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+:small_red_triangle: <a href="#lambda-monitor-req-ref-serverless">serverless</a>, <a href="#lambda-monitor-req-ref-javascript">javascript</a>
 
 :small_blue_diamond: `yml`
 
@@ -387,7 +387,7 @@ Contains monitoring api stack resource definitions.
 
 ## Strategies
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>  
+### <a name="lambda-monitor-strat-ref-overwrite">overwrite</a>  
 
 :small_blue_diamond: `any`
 
