@@ -1,0 +1,23 @@
+{
+  "handler": "subscribe",
+  "success": false,
+  "timeout": 30000,
+  "logs": {
+    "to.deep.equal()": [
+      "ERROR: Failure in custom code run inside of lambda-cfn-hook: UnrecognizedClientException: The security token included in the request is invalid."
+    ]
+  },
+  "event": {
+    "RequestType": "Create",
+    "ServiceToken": "arn:aws:lambda:us-west-2:.:.:.",
+    "ResponseURL": "https://cloudformation-custom-resource-response-uswest2.s3-us-west-2.amazonaws.com/arn",
+    "StackId": "arn:aws:cloudformation:us-west-2:...",
+    "RequestId": "d373acbe-b7fd-46f1-a645-95b3002ec39b",
+    "LogicalResourceId": "TriggerPostDeployLambdaResource",
+    "ResourceType": "Custom::LambdaDependency",
+    "ResourceProperties": {}
+  },
+  "context": {
+    "logStreamName": "log"
+  }
+}
