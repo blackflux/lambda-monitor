@@ -126,7 +126,10 @@ const parseMessage = (() => {
     if (messageParsed) {
       return {
         logLevel: (messageParsed.groups.logLevel || 'WARNING').toLowerCase(),
-        message: messageParsed.groups.message
+        message: messageParsed.groups.message.replace(
+          /^Task timed out after (\d+\.\d)\d seconds/,
+          'Task timed out after $1\u0030 seconds'
+        )
       };
     }
     return {
