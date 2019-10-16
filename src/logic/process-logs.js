@@ -121,14 +121,14 @@ const parseMessage = (() => {
     /$/
   ].map((r) => r.source).join(''), '');
 
-  return (message) => {
+  return (message, logGroup) => {
     const messageParsed = messageRegex.exec(message);
     if (messageParsed) {
       return {
         logLevel: (messageParsed.groups.logLevel || 'WARNING').toLowerCase(),
         message: messageParsed.groups.message.replace(
           /^Task timed out after (\d+\.\d)\d seconds/,
-          'Task timed out after $1\u0030 seconds'
+          `${logGroup.replace(/^\/aws\/lambda\//, '')}: Task timed out after $1\u0030 seconds`
         )
       };
     }
@@ -150,7 +150,7 @@ const getToLog = async (resultParsed) => {
       result.push(report);
       return;
     }
-    const { logLevel, message } = parseMessage(logEvent.message);
+    const { logLevel, message } = parseMessage(logEvent.message, resultParsed.logGroup);
     const processedLogEvent = { ...logEvent, message };
     const [year, month, day] = new Date(processedLogEvent.timestamp).toISOString().split('T')[0].split('-');
     await Promise.all([
