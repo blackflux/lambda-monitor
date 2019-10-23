@@ -1705,10 +1705,10 @@ deepmerge@4.1.1:
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.1.1.tgz#ee0866e4019fe62c1276b9062d4c4803d9aea14c"
   integrity sha512-+qO5WbNBKBaZez95TffdUDnGIo4+r5kmsX8aOb7PDHvXsTbghAmleuxjs6ytNaf5Eg4FGBXDS5vqO61TRi6BMg==
 
-deepmerge@4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.2.0.tgz#77a97af6746882cd1ed85d4b925be8cd4120b630"
-  integrity sha512-/pED+kD8V9n15L1lon8DXEiWLQMW4tTiegn1kIWIQ+DBudOkFitz1cfjWQiSeKMPBQOknT3LpueyAmMVJ1Ho2g==
+deepmerge@4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.2.1.tgz#018a3e5dfe82b95e35e36a9a29ba15ddb194e40f"
+  integrity sha512-32P7FIV6JKt0hPMFNlWFytzVGpppYHFKdnhFUEMXheWc8Lw4HnHEzJa5yxhaQedDAXv2SI6zD7+UbqnC5k9g9Q==
 
 default-require-extensions@^2.0.0:
   version "2.0.0"
@@ -6319,13 +6319,13 @@ robo-config@3.4.5:
     object-treeify "1.1.20"
     smart-fs "1.11.0"
 
-robo-config@3.4.6:
-  version "3.4.6"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.4.6.tgz#9e3945c6650299797bf0a6e9dfb6c08079da6385"
-  integrity sha512-caIhnGsckAMtg5W7InrwxWr2SEG5QrSYzyHRvSh7YyJ1v+PqBf3xvnOc/G+/s7ooYc3oUw+Jb+54C0sJBgZm/g==
+robo-config@3.4.7:
+  version "3.4.7"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.4.7.tgz#3ee3bfefe58b63465316e188d5f9c555838acce9"
+  integrity sha512-C1Fhb9TXER880rymL2i7GQAXAMDDnWWyGE5buG52jR9/fgL7FQ1mWyEbbD4DWtgj5c1+C8t3fR6+yWqSM/z01A==
   dependencies:
     app-root-path "2.2.1"
-    deepmerge "4.2.0"
+    deepmerge "4.2.1"
     joi-strict "1.1.7"
     lodash.clonedeep "4.5.0"
     lodash.difference "4.5.0"
