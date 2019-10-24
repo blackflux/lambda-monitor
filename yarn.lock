@@ -2720,18 +2720,6 @@ glob@7.1.3:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@7.1.4:
-  version "7.1.4"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.4.tgz#aa608a2f6c577ad357e1ae5a5c26d9a8d1969255"
-  integrity sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==
-  dependencies:
-    fs.realpath "^1.0.0"
-    inflight "^1.0.4"
-    inherits "2"
-    minimatch "^3.0.4"
-    once "^1.3.0"
-    path-is-absolute "^1.0.0"
-
 glob@7.1.5, glob@^7.0.0, glob@^7.0.3, glob@^7.1.1, glob@^7.1.3, glob@^7.1.4:
   version "7.1.5"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.5.tgz#6714c69bee20f3c3e64c4dd905553e532b40cdc0"
@@ -3783,13 +3771,13 @@ lambda-monitor-logger@2.2.2:
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.2.tgz#37c4858a63336a31b6a84c8bc8c27966569320ca"
   integrity sha512-W77R4crzBq/iMTQzBQbgZrJLgmAJLCe4QEXbXMwnF3iQtQEQ8XkvngedVXip0zjv0WRucJtJs0TADDqJMnsunQ==
 
-lambda-tdd@2.10.21:
-  version "2.10.21"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.21.tgz#abad45d542acd6ba4d694c17784d0e4cfe0f74e8"
-  integrity sha512-rFDVhI/lW2mNJScisK5/ZMb4FcdCYvOThTwRKbJRMEaHxWKu6+TnS6Imx45iGHm2VqmeJJ0N+GoJdDOyB9QlGQ==
+lambda-tdd@2.10.22:
+  version "2.10.22"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.22.tgz#3997ec5f0f9b4dc2bcf12ba1fd28aaa0ff5771fd"
+  integrity sha512-V0hwWdWxRYE/yMdAE/P2JR9bRm70bf0yVPwCCN3RQlAbMYhOtSQ5mu6A2GeAYxZ83ng+6YQocVh+nBqMBz34kQ==
   dependencies:
     app-root-path "2.2.1"
-    glob "7.1.4"
+    glob "7.1.5"
     joi-strict "1.1.7"
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
