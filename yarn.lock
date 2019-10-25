@@ -708,10 +708,10 @@ aws-sdk-wrap@3.5.10:
     object-hash "2.0.0"
     smart-fs "1.11.0"
 
-aws-sdk@2.555.0, aws-sdk@^2.4.0:
-  version "2.555.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.555.0.tgz#b3b6befd972c7057b86c62125c68760e17de3ca6"
-  integrity sha512-2zn2B3f7Gtv5q3DnR2vJBj9VQgqgu5s4u5x92yWsr3Sxoljp8L/j0SPdMa5YECMHNpCKEguSGIn8d0CxutGOnA==
+aws-sdk@2.556.0, aws-sdk@^2.4.0:
+  version "2.556.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.556.0.tgz#5c96bacf7942b530b20c94f3307e6650a97fd7be"
+  integrity sha512-qILMUNl/a7FYWU67Y24OGsXFhyDHM4qYdplMR2tps/g17pN9bEQ5ijxvGzW2T8VVyAsTanmn+dFyl/CH38pC5Q==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -4705,6 +4705,19 @@ node-tdd@2.5.16:
     joi-strict "1.1.7"
     lodash.get "4.4.2"
     nock "11.4.0"
+    smart-fs "1.11.0"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+
+node-tdd@2.5.17:
+  version "2.5.17"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.17.tgz#29426e05a5187916cc1a91fac20dc6d6b2942321"
+  integrity sha512-nULYh1U6R/82zoaxZMT+OUnwNpoqKah9FdqZEhXhu13yUqyy25fppbqqhRtE5Sy5CLN+x1lxe2h4MOhVC+jzwQ==
+  dependencies:
+    callsites "3.1.0"
+    joi-strict "1.1.7"
+    lodash.get "4.4.2"
+    nock "11.6.0"
     smart-fs "1.11.0"
     timekeeper "2.2.0"
     tmp "0.1.0"
