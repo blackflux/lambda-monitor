@@ -544,6 +544,11 @@ app-root-path@2.2.1:
   resolved "https://registry.yarnpkg.com/app-root-path/-/app-root-path-2.2.1.tgz#d0df4a682ee408273583d43f6f79e9892624bc9a"
   integrity sha512-91IFKeKk7FjfmezPKkwtaRvSpnUc4gDwPAjA1YZ9Gn0q0PPeW+vbeUsZuyDwjI7+QTHhcLen2v25fi/AmhvbJA==
 
+app-root-path@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/app-root-path/-/app-root-path-3.0.0.tgz#210b6f43873227e18a4b810a032283311555d5ad"
+  integrity sha512-qMcx+Gy2UZynHjOHOIXPNvpf+9cjvk3cWrBBK7zg4gH9+clobJRb9NGzcT7mQTcV/6Gm/1WelUtqxVXnNlrwcw==
+
 append-transform@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/append-transform/-/append-transform-1.0.0.tgz#046a52ae582a228bd72f58acfbe2967c678759ab"
@@ -715,10 +720,10 @@ aws-sdk-wrap@3.5.10:
     object-hash "2.0.0"
     smart-fs "1.11.0"
 
-aws-sdk@2.560.0, aws-sdk@^2.4.0:
-  version "2.560.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.560.0.tgz#602d9b5a9544429221e11a2b39fbf484b6ed28b1"
-  integrity sha512-OrePJS79p26JimjLKaIJrQPpDzknsClrB8uXv6NjVG/CseRi87XaNY5mJA5MhadZtaea11GxKhVd9NNRDYFgAg==
+aws-sdk@2.561.0, aws-sdk@^2.4.0:
+  version "2.561.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.561.0.tgz#d96fb509b902768eb5105b67742ea5485c6ffa3e"
+  integrity sha512-UXsjWDZFIIcfXULAEBeE42Eae1xHq4mkDfhPIw1VBlfsIzOVB2Bp+Y3+EvxH31OzO5SN0x03VracLlZFo4HElQ==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -4659,6 +4664,18 @@ nock@11.6.0:
     mkdirp "^0.5.0"
     propagate "^2.0.0"
 
+nock@11.7.0:
+  version "11.7.0"
+  resolved "https://registry.yarnpkg.com/nock/-/nock-11.7.0.tgz#5eaae8b8a55c0dfc014d05692c8cf3d31d61a342"
+  integrity sha512-7c1jhHew74C33OBeRYyQENT+YXQiejpwIrEjinh6dRurBae+Ei4QjeUaPlkptIF0ZacEiVCnw8dWaxqepkiihg==
+  dependencies:
+    chai "^4.1.2"
+    debug "^4.1.0"
+    json-stringify-safe "^5.0.1"
+    lodash "^4.17.13"
+    mkdirp "^0.5.0"
+    propagate "^2.0.0"
+
 node-emoji@^1.0.3, node-emoji@^1.4.1:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/node-emoji/-/node-emoji-1.10.0.tgz#8886abd25d9c7bb61802a658523d1f8d2a89b2da"
@@ -4735,6 +4752,19 @@ node-tdd@2.5.17:
     joi-strict "1.1.7"
     lodash.get "4.4.2"
     nock "11.6.0"
+    smart-fs "1.11.0"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+
+node-tdd@2.5.18:
+  version "2.5.18"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.18.tgz#b9d06830895c7346cdc3b16652477d1d7afa3e07"
+  integrity sha512-wGqh165nwO4yz2VaOTuaqcx7tfkogz9h0upThk0NlN8ogUa2QHf3VVdH/s20V5jFKQNc+FSvNpnW3X3oo1sKYQ==
+  dependencies:
+    callsites "3.1.0"
+    joi-strict "1.1.7"
+    lodash.get "4.4.2"
+    nock "11.7.0"
     smart-fs "1.11.0"
     timekeeper "2.2.0"
     tmp "0.1.0"
@@ -6334,6 +6364,22 @@ robo-config@3.4.8:
   integrity sha512-11bHWJZyAlwpvscY0wMf38y3FwftH08yoJ1E9fFkiw2NFGR61N1a1Csf6BjLtcMFmTvBKqrKF95GDYnOdO0n7g==
   dependencies:
     app-root-path "2.2.1"
+    deepmerge "4.2.2"
+    joi-strict "1.1.7"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.19"
+    object-scan "10.0.13"
+    object-treeify "1.1.20"
+    smart-fs "1.11.0"
+
+robo-config@3.4.9:
+  version "3.4.9"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.4.9.tgz#9753e1e1ec7902619d24b1889e68d066fed0e947"
+  integrity sha512-q2il26cfe3ioIBLAFkhMt9QDrygF1obqfRg/LJGwudd2vTpfJWT9ldIswhOpj1qb4cVqGfygn1bsVKfb0L0F3Q==
+  dependencies:
+    app-root-path "3.0.0"
     deepmerge "4.2.2"
     joi-strict "1.1.7"
     lodash.clonedeep "4.5.0"
