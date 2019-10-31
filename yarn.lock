@@ -3823,18 +3823,18 @@ lambda-monitor-logger@2.2.2:
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.2.tgz#37c4858a63336a31b6a84c8bc8c27966569320ca"
   integrity sha512-W77R4crzBq/iMTQzBQbgZrJLgmAJLCe4QEXbXMwnF3iQtQEQ8XkvngedVXip0zjv0WRucJtJs0TADDqJMnsunQ==
 
-lambda-tdd@2.10.23:
-  version "2.10.23"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.23.tgz#923f91c3e7372b0c23507f29e749b8448ac6371e"
-  integrity sha512-khsxBCQgqwZyw8oMA9PpfDuZ/yBFwB4ASlXcDIes9rLOfgMjMimORNS4dRihJetzYSzzgOe63skpE1MenUR0Bg==
+lambda-tdd@2.10.25:
+  version "2.10.25"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.25.tgz#b23775e70e004e9549136d9be26a0b240853e104"
+  integrity sha512-1H/6NtPfwNvUAtcTzFy6pwFqMvrLK7emEjF2LG73373vvT/tAJFf9bGnzFZjSYmoBdoyBd+LJuuUBOTrBS/JaA==
   dependencies:
-    app-root-path "2.2.1"
+    app-root-path "3.0.0"
     glob "7.1.5"
     joi-strict "1.1.7"
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
-    node-tdd "2.5.17"
+    node-tdd "2.5.18"
     smart-fs "1.11.0"
 
 lambda-wrapper@0.3.0:
@@ -4652,18 +4652,6 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-nock@11.6.0:
-  version "11.6.0"
-  resolved "https://registry.yarnpkg.com/nock/-/nock-11.6.0.tgz#481961e0cf78794f200ea71e25d948d668446717"
-  integrity sha512-9ocFR68CxS6nf2XtQNpdSh5n4QQSKl87DhXgLnHO/RD4CsGThFtu8/QG6myHTnrUHRE6JSKpiGjLJdRe2ZSlIA==
-  dependencies:
-    chai "^4.1.2"
-    debug "^4.1.0"
-    json-stringify-safe "^5.0.1"
-    lodash "^4.17.13"
-    mkdirp "^0.5.0"
-    propagate "^2.0.0"
-
 nock@11.7.0:
   version "11.7.0"
   resolved "https://registry.yarnpkg.com/nock/-/nock-11.7.0.tgz#5eaae8b8a55c0dfc014d05692c8cf3d31d61a342"
@@ -4742,19 +4730,6 @@ node-pre-gyp@^0.12.0:
     rimraf "^2.6.1"
     semver "^5.3.0"
     tar "^4"
-
-node-tdd@2.5.17:
-  version "2.5.17"
-  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.5.17.tgz#29426e05a5187916cc1a91fac20dc6d6b2942321"
-  integrity sha512-nULYh1U6R/82zoaxZMT+OUnwNpoqKah9FdqZEhXhu13yUqyy25fppbqqhRtE5Sy5CLN+x1lxe2h4MOhVC+jzwQ==
-  dependencies:
-    callsites "3.1.0"
-    joi-strict "1.1.7"
-    lodash.get "4.4.2"
-    nock "11.6.0"
-    smart-fs "1.11.0"
-    timekeeper "2.2.0"
-    tmp "0.1.0"
 
 node-tdd@2.5.18:
   version "2.5.18"
