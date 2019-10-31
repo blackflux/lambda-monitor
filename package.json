@@ -71,7 +71,7 @@
     "js-gardener": "2.0.111",
     "lambda-tdd": "2.10.23",
     "mocha": "6.2.2",
-    "nock": "11.6.0",
+    "nock": "11.7.0",
     "node-tdd": "2.5.17",
     "nyc": "14.1.1",
     "robo-config": "3.4.9",
