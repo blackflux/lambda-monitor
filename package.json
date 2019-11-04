@@ -50,7 +50,7 @@
     "lambda-monitor-logger": "2.2.2",
     "lodash.get": "4.4.2",
     "request": "2.88.0",
-    "request-promise": "4.2.4"
+    "request-promise": "4.2.5"
   },
   "devDependencies": {
     "@babel/cli": "7.6.4",
