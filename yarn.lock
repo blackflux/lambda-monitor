@@ -726,10 +726,10 @@ aws-sdk-wrap@3.5.10:
     object-hash "2.0.0"
     smart-fs "1.11.0"
 
-aws-sdk@2.564.0, aws-sdk@^2.4.0:
-  version "2.564.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.564.0.tgz#d5fef5220436306c1c2f48487a3d631280a3d944"
-  integrity sha512-X5MbcebjQ3iPNBvZ27WZyMEVCleBLqot2hqVz2M9XvMDR4B8qqPuteWrtbLu+DVjENvVD7Oj0BOIjrYEVWacFA==
+aws-sdk@2.567.0, aws-sdk@^2.4.0:
+  version "2.567.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.567.0.tgz#f5b96a2e461b3c6e760040cb5609b36cd0a36cb3"
+  integrity sha512-JGtO9QvOzOWmpgm/ErS82v6qHw2a4ObNa68eU1ivT+QtiqXPJOAFEBMj4dAu2KwLDr+XsljTRZd7b/7pZhXXNA==
   dependencies:
     buffer "^4.9.1"
     events "^1.1.1"
@@ -2750,18 +2750,6 @@ glob@7.1.3:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@7.1.5:
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.5.tgz#6714c69bee20f3c3e64c4dd905553e532b40cdc0"
-  integrity sha512-J9dlskqUXK1OeTOYBEn5s8aMukWMwWfs+rPTn/jn50Ux4MNXVhubL1wu/j2t+H4NVI+cXEcCaYellqaPVGXNqQ==
-  dependencies:
-    fs.realpath "^1.0.0"
-    inflight "^1.0.4"
-    inherits "2"
-    minimatch "^3.0.4"
-    once "^1.3.0"
-    path-is-absolute "^1.0.0"
-
 glob@7.1.6, glob@^7.0.0, glob@^7.0.3, glob@^7.1.1, glob@^7.1.3, glob@^7.1.4:
   version "7.1.6"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
@@ -3810,13 +3798,13 @@ lambda-monitor-logger@2.2.2:
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.2.tgz#37c4858a63336a31b6a84c8bc8c27966569320ca"
   integrity sha512-W77R4crzBq/iMTQzBQbgZrJLgmAJLCe4QEXbXMwnF3iQtQEQ8XkvngedVXip0zjv0WRucJtJs0TADDqJMnsunQ==
 
-lambda-tdd@2.10.25:
-  version "2.10.25"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.25.tgz#b23775e70e004e9549136d9be26a0b240853e104"
-  integrity sha512-1H/6NtPfwNvUAtcTzFy6pwFqMvrLK7emEjF2LG73373vvT/tAJFf9bGnzFZjSYmoBdoyBd+LJuuUBOTrBS/JaA==
+lambda-tdd@2.10.26:
+  version "2.10.26"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.26.tgz#987dde9ea308c294e59ba42d0b399c1ae9d6fcbd"
+  integrity sha512-m78vpsxYULtKPiLj78Up+UzkM5VZQVDzAjcCVQmbiX1GbC2BYNwlhK0WqI0oC3jIMpubeyFXO3ZADADsuEQLtw==
   dependencies:
     app-root-path "3.0.0"
-    glob "7.1.5"
+    glob "7.1.6"
     joi-strict "1.1.7"
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
