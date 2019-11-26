@@ -6380,6 +6380,22 @@ rimraf@2.6.3:
   dependencies:
     glob "^7.1.3"
 
+robo-config@3.4.10:
+  version "3.4.10"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.4.10.tgz#0d8848a0706b30b1ded78758ef9ab14c3af66a5b"
+  integrity sha512-MlPefwd6PUtfLBYEnMQlxq9N29EUuEw/pMQs3cULnWmmpQ3yBJyLdpU0uq99vVgUjo1kSfpmzawEwBLKpaD+mg==
+  dependencies:
+    app-root-path "3.0.0"
+    deepmerge "4.2.2"
+    joi-strict "1.1.8"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.19"
+    object-scan "10.0.13"
+    object-treeify "1.1.20"
+    smart-fs "1.11.0"
+
 robo-config@3.4.9:
   version "3.4.9"
   resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.4.9.tgz#9753e1e1ec7902619d24b1889e68d066fed0e947"
