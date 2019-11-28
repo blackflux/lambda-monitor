@@ -1,4 +1,4 @@
-FROM lambci/lambda:build-nodejs10.x
+FROM lambci/lambda:build-nodejs12.x
 
 WORKDIR /user
 
@@ -10,7 +10,7 @@ ENV HOME /user
 RUN touch ~/.bashrc && \
   curl -o- -L https://yarnpkg.com/install.sh | bash && \
   source ~/.bashrc && \
-  yarn global add serverless@1.51.0
+  yarn global add serverless@1.58.0
 
 RUN touch ~/.bashrc && \
   echo '# yarn-upgrade' >> ~/.bashrc && \
