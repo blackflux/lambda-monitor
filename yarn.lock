@@ -121,10 +121,10 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/register@7.7.0":
-  version "7.7.0"
-  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.7.0.tgz#4e23ecf840296ef79c605baaa5c89e1a2426314b"
-  integrity sha512-HV3GJzTvSoyOMWGYn2TAh6uL6g+gqKTgEZ99Q3+X9UURT1VPT/WcU46R61XftIc5rXytcOHZ4Z0doDlsjPomIg==
+"@babel/register@7.7.4":
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.7.4.tgz#45a4956471a9df3b012b747f5781cc084ee8f128"
+  integrity sha512-/fmONZqL6ZMl9KJUYajetCrID6m0xmL4odX7v+Xvoxcv0DdbP/oO0TWIeLUCHqczQ6L6njDMqmqHFy2cp3FFsA==
   dependencies:
     find-cache-dir "^2.0.0"
     lodash "^4.17.13"
@@ -172,17 +172,17 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@blackflux/eslint-plugin-rules@1.3.15":
-  version "1.3.15"
-  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.3.15.tgz#3c70e85f3a16139b475fe3dd28def52f29780b36"
-  integrity sha512-L8+iF+hwIneYGyrLOS95NqJ1TaaYtMxY4zyiO0o5tsLoXCPNUDNZK3ut0IghmLuYgYShzoUZ9RH5JZghLw4IFg==
+"@blackflux/eslint-plugin-rules@1.3.16":
+  version "1.3.16"
+  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.3.16.tgz#51806086b35c0e21368d31a818c59c5ec72f3ecb"
+  integrity sha512-X7EqucFoi/Ig7gE9FN1NyxG0BrNuohPO5DM1skBy3ORuDb7+yhhFC+yoMY+gWAbzaDo6ODrRPasYRLTm9OSXWg==
   dependencies:
     smart-fs "1.11.0"
 
-"@blackflux/robo-config-plugin@2.6.18":
-  version "2.6.18"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-2.6.18.tgz#75d4d78995772ee730a86c0362cf71dc41d8c534"
-  integrity sha512-uHvZJ/YHPuOc0Wip6BrIgrWIHhFGL9PJTGRGNXicotj3ayKNmer1J4S5kcgf9wqNzjEJ6X81RHskJsW67qqS/A==
+"@blackflux/robo-config-plugin@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-3.0.0.tgz#06fc11bf6bcf4ed5b86c5e6bab01b02e52496042"
+  integrity sha512-8Oy1KWY+EE5Ix03oELxxbBSR+U6hTKkaCPil5mdOygIA3mo7yaa08MABwZM0PI1xocb7Di7rCRZvyViMcHTD/Q==
 
 "@hapi/address@^2.1.2":
   version "2.1.2"
@@ -2123,10 +2123,10 @@ eslint-plugin-markdown@1.0.1:
     remark-parse "^5.0.0"
     unified "^6.1.2"
 
-eslint-plugin-mocha@6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-mocha/-/eslint-plugin-mocha-6.2.1.tgz#f2ae6d82511291949e440a34b57df773cb4b5ede"
-  integrity sha512-o3Ibhpczi5MjUVpnlnrpC/+oJYGoHKB5m4bQdRnaAOeFCN3HRkqBisQ2/h0hEuCR4lPxyHP1Qzyjpna8MsOdlA==
+eslint-plugin-mocha@6.2.2:
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-mocha/-/eslint-plugin-mocha-6.2.2.tgz#6ef4b78bd12d744beb08a06e8209de330985100d"
+  integrity sha512-oNhPzfkT6Q6CJ0HMVJ2KLxEWG97VWGTmuHOoRcDLE0U88ugUyFNV9wrT2XIt5cGtqc5W9k38m4xTN34L09KhBA==
   dependencies:
     ramda "^0.26.1"
 
@@ -3714,15 +3714,15 @@ joi-strict@1.1.8:
   dependencies:
     "@hapi/joi" "16.1.7"
 
-js-gardener@2.0.114:
-  version "2.0.114"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.114.tgz#d5bee26a4840794ddc3455cc41af7886976ad3fd"
-  integrity sha512-fgBwEepiJgwT5wR1B2llsvhWeeCiPaY4/o5oLYoJ+pOjgOdy2hi5V9xaRYimzg2yDHSdy1Zu1nFWJBdlZzN7xg==
+js-gardener@2.0.115:
+  version "2.0.115"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.115.tgz#58acf55135daf02fc7649a3be8f3744e0afd6f44"
+  integrity sha512-N0x1hp+IiDydwQsv09dNUHA+Bz6DlCvIpf/igMOM9Ia2dmPfW14Q5eVxUa4getDKbmi+/R5FMVNAqiBbyWGpnQ==
   dependencies:
     chalk "3.0.0"
     fancy-log "1.3.3"
     glob "7.1.6"
-    joi-strict "1.1.7"
+    joi-strict "1.1.8"
     js-yaml "3.13.1"
     lodash.difference "4.5.0"
     lodash.get "4.4.2"
@@ -3878,19 +3878,19 @@ lambda-monitor-logger@2.2.3:
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.3.tgz#f7d24894ec6b71af9875d313c751454ccf68beda"
   integrity sha512-dbicLuGzZyiGthP/L/ubuhq2WGz9GegGrI4KPuUWy3AlAH4XIPtKwCD1lhIjDxq9Ce4dk4BQ7IUUlZghyqlCdw==
 
-lambda-tdd@2.10.26:
-  version "2.10.26"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.10.26.tgz#987dde9ea308c294e59ba42d0b399c1ae9d6fcbd"
-  integrity sha512-m78vpsxYULtKPiLj78Up+UzkM5VZQVDzAjcCVQmbiX1GbC2BYNwlhK0WqI0oC3jIMpubeyFXO3ZADADsuEQLtw==
+lambda-tdd@2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.0.tgz#21a9db6b0ce4594073b1ebd2fc60fe9ba8c9aba7"
+  integrity sha512-vUA5wSdpAyRinpSDdIdTVe3ZEWxdv8BUXLmW+UB3Jj7PmVKBFt3eyUGLqonXFJR/vmyhMIElrcOb7ucx0EekSw==
   dependencies:
     app-root-path "3.0.0"
     glob "7.1.6"
-    joi-strict "1.1.7"
+    joi-strict "1.1.8"
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
     node-tdd "2.5.18"
-    smart-fs "1.11.0"
+    smart-fs "1.11.1"
 
 lambda-wrapper@0.3.0:
   version "0.3.0"
