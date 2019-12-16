@@ -5332,6 +5332,11 @@ object-deep-contain@1.0.20:
   resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.20.tgz#4c39098c625eea68d88309c0e0d247290a9c8500"
   integrity sha512-zP9EAVvglP1DGTzjUYNITTsb+/VPYSc3TG+d/gaQPLRnm5usq2TV575GLv2VWbcGONcYABH/+iBj+2bAImtAiA==
 
+object-deep-contain@1.0.21:
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.21.tgz#114d76af13838f2754a03c7957e981b3c31e2778"
+  integrity sha512-ZB08b47u2FKNDFfpY7yj0rvUfxGxMXNqrB9+zqqsmrmWzYDIM5PsJrSBY6yZKBghsQVF82VggMX2QkfhD0zZ+Q==
+
 object-hash@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-2.0.1.tgz#cef18a0c940cc60aa27965ecf49b782cbf101d96"
@@ -6563,6 +6568,22 @@ robo-config@3.4.12:
     object-scan "10.0.14"
     object-treeify "1.1.21"
     smart-fs "1.11.2"
+
+robo-config@3.4.15:
+  version "3.4.15"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.4.15.tgz#50b538156e37ac26c2c5f1f313d4222b759ce398"
+  integrity sha512-WU+KhFEMWntZDKdlVuSsNMXAYK+opZy+fjUP8dxWJ+qMWaQieKANm9mKJeuDuxUZcGagDUCiTYPyxF24DI5VPw==
+  dependencies:
+    app-root-path "3.0.0"
+    deepmerge "4.2.2"
+    joi-strict "1.1.10"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.21"
+    object-scan "10.0.14"
+    object-treeify "1.1.21"
+    smart-fs "1.11.3"
 
 run-async@^0.1.0:
   version "0.1.0"
