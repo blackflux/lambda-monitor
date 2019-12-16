@@ -3759,6 +3759,13 @@ jmespath@0.15.0:
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
   integrity sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=
 
+joi-strict@1.1.10:
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.1.10.tgz#8b9d68f5955f036df7730948fa0047d7216e8f0b"
+  integrity sha512-udjdcfGMsB3GIFUU/OeylfXc1I700NfaH1Gqf12izFQ/BMYrmaes7E9qQcsmjLoehm9LRjrv+2DDOYLISQp5jQ==
+  dependencies:
+    "@hapi/joi" "16.1.8"
+
 joi-strict@1.1.9:
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.1.9.tgz#95087451a65040bc6d0cd4c1e4e10b433abb2044"
@@ -3903,12 +3910,12 @@ lambda-async@1.0.3:
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.3.tgz#25c93aaaf9ea2937393d0f23fb437d634f9805d1"
   integrity sha512-X6MANR9eOr5fFzW5nmOECAGPvEHAGlOA5i9wJb+AdoHVgb/eLRb4upumY5CvR/zz+XJNSbsK4JvqyDGRYorQFw==
 
-lambda-cfn-hook@1.2.9:
-  version "1.2.9"
-  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.9.tgz#e9265e1298637e94c5a8e70138c7efc95dc9d46c"
-  integrity sha512-j/1PjaaLpd+ACvUQ6vsNRYILHfSLpWAH2yi/bsHkN3GOKqbXWjlMluRQiLLS/35ShoFe8IuFUbcKcdfX+uRbMA==
+lambda-cfn-hook@1.2.11:
+  version "1.2.11"
+  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.11.tgz#27ed938ad1b7a47252a27c000cf4ad1e173c20dc"
+  integrity sha512-gR6BKzy1kOqT5nauFWtpCKrqk3qV6E7xaXQn9H1kwq5mXejNmMfxNz0uBhvYfzofBH/Cg38QtVatcWa4/JU3NQ==
   dependencies:
-    joi-strict "1.1.9"
+    joi-strict "1.1.10"
     lambda-async "1.0.3"
     lambda-monitor-logger "2.2.3"
     lodash.get "4.4.2"
