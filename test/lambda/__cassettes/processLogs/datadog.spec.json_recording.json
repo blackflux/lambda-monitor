@@ -11,7 +11,44 @@
     "scope": "https://api.datadoghq.com:443",
     "method": "POST",
     "path": "/api/v1/distribution_points?api_key=INVALID_DATADOG_API_KEY",
-    "body": "{\"series\":[{\"metric\":\"aws.lambda_monitor.lambda.duration\",\"points\":[[1511405879665,[1001]]],\"type\":\"distribution\",\"tags\":[\"logGroupName:/aws/lambda/peg-solitiare-dev-overview\",\"account:783629116497\",\"environment:local-dev\"]},{\"metric\":\"aws.lambda_monitor.lambda.maxmemory\",\"points\":[[1511405879665,[44]]],\"type\":\"distribution\",\"tags\":[\"logGroupName:/aws/lambda/peg-solitiare-dev-overview\",\"account:783629116497\",\"environment:local-dev\"]}]}",
+    "body": {
+      "series": [
+        {
+          "metric": "aws.lambda_monitor.lambda.duration",
+          "points": [
+            [
+              1511405879665,
+              [
+                1001
+              ]
+            ]
+          ],
+          "type": "distribution",
+          "tags": [
+            "logGroupName:/aws/lambda/peg-solitiare-dev-overview",
+            "account:783629116497",
+            "environment:local-dev"
+          ]
+        },
+        {
+          "metric": "aws.lambda_monitor.lambda.maxmemory",
+          "points": [
+            [
+              1511405879665,
+              [
+                44
+              ]
+            ]
+          ],
+          "type": "distribution",
+          "tags": [
+            "logGroupName:/aws/lambda/peg-solitiare-dev-overview",
+            "account:783629116497",
+            "environment:local-dev"
+          ]
+        }
+      ]
+    },
     "status": 200,
     "response": ""
   }
