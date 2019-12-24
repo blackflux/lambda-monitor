@@ -1,46 +1,38 @@
-const tls = require('tls');
-
-const host = 'intake.logs.datadoghq.com';
-const port = 10516;
+const request = require('request-promise');
 
 module.exports.log = (context, environment, logs) => {
   if (process.env.DATADOG_API_KEY === undefined || logs.length === 0) {
     return Promise.resolve();
   }
+  const series = [];
 
-  return new Promise((resolve, reject) => {
-    // Reference: http://tiny.cc/hn0fpy
-    const socket = new tls.TLSSocket();
-    socket
-      .connect(port, host, () => {
-        const data = logs
-          .map((log) => ({
-            message: log.message,
-            ddsource: 'lambda',
-            ddsourcecategory: 'aws',
-            aws: {
-              // about submitting function
-              function_name: context.function_name,
-              function_version: context.function_version,
-              invoked_function_arn: context.invoked_function_arn,
-              memory_limit_in_mb: context.memory_limit_in_mb,
-              awslogs: {
-                // about log submitted
-                logGroup: log.logGroupName,
-                logStream: log.logStreamName,
-                owner: log.owner
-              }
-            },
-            // log details
-            timestamp: log.timestamp,
-            context: log
-          }))
-          .map((log) => `${process.env.DATADOG_API_KEY} ${JSON.stringify(log)}\n`)
-          .join('')
-          .toString('utf8');
-        socket.write(data, 'utf8', () => socket.destroy());
-      })
-      .on('error', reject)
-      .on('close', resolve);
+  logs.forEach((log) => {
+    ['duration', 'maxMemory', 'initDuration']
+      .filter((key) => ![null, undefined].includes(log[key]))
+      .forEach((key) => {
+        series.push({
+          metric: `aws.lambda_monitor.lambda.${key.toLowerCase()}`,
+          points: [[Date.parse(log.timestamp), [Math.round(log[key])]]],
+          type: 'distribution',
+          tags: [
+            `logGroupName:${log.logGroupName}`,
+            `account:${log.owner}`,
+            `environment:${environment}`
+          ]
+        });
+      });
+  });
+
+  return request({
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json'
+    },
+    uri: 'https://api.datadoghq.com/api/v1/distribution_points',
+    qs: {
+      api_key: process.env.DATADOG_API_KEY
+    },
+    json: true,
+    body: { series }
   });
 };
