@@ -75,7 +75,7 @@
     "node-tdd": "2.5.22",
     "nyc": "14.1.1",
     "robo-config": "3.4.17",
-    "semantic-release": "15.13.31"
+    "semantic-release": "15.14.0"
   },
   "licenses": [
     {
