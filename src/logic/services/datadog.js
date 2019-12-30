@@ -8,8 +8,8 @@ module.exports.log = (context, environment, logs) => {
 
   logs.forEach((log) => {
     Object.entries({
-      duration: log.duration,
       init_duration: log.initDuration,
+      execution_duration: log.duration,
       memory_percentage: (log.maxMemory * 100) / log.memory
     })
       .filter(([key, value]) => ![null, undefined, NaN, Infinity].includes(value))

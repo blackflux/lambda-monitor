@@ -14,7 +14,7 @@
     "body": {
       "series": [
         {
-          "metric": "aws.lambda_monitor.lambda.duration",
+          "metric": "aws.lambda_monitor.lambda.execution_duration",
           "points": [
             [
               1511405879665,
