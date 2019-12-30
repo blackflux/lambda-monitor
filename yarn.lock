@@ -775,17 +775,17 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk-wrap@3.6.8:
-  version "3.6.8"
-  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-3.6.8.tgz#26655c832814474b2b5b99d62c6ed2557a4e3807"
-  integrity sha512-f8saTdR/fJAPOpqU0PG80z6wq0LD6poGrAstcidUdMT6tut7eF5gaDKvg9594sUEJommlPxwecXMyPzpPFccxw==
+aws-sdk-wrap@3.6.9:
+  version "3.6.9"
+  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-3.6.9.tgz#f0004019ee1ab0e0e0687cf0b1edacc7a5f23c27"
+  integrity sha512-gpORV6yPBMUEEg587QStMQU2f2xq62t/buLKkD/G9gs1+A0eluwhCY0GkAWTarNIt22WIOnwNH8i+N4RIsXJvg==
   dependencies:
     joi-strict "1.1.10"
     lambda-async "1.0.4"
     lodash.chunk "4.2.0"
     lodash.get "4.4.2"
     object-hash "2.0.1"
-    smart-fs "1.11.4"
+    smart-fs "1.11.5"
 
 aws-sdk@2.596.0, aws-sdk@^2.4.0:
   version "2.596.0"
@@ -3762,10 +3762,10 @@ joi-strict@1.1.10:
   dependencies:
     "@hapi/joi" "16.1.8"
 
-js-gardener@2.0.123:
-  version "2.0.123"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.123.tgz#7504d7f0cde2f4130aab29ff09e65edd5e087f0c"
-  integrity sha512-q7w60EVY77lwX3xZ8tWCr6ko7UDwyPBOdi/AXWAKLXHZuAXghHzHUaXY1Hxe/vzdZFXMfkE5Q/UifAZGv9Sn2Q==
+js-gardener@2.0.125:
+  version "2.0.125"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.125.tgz#589571c1f41215a4c995c7125f079841c960b929"
+  integrity sha512-zhbrmTOOXviPVH+piCw1oxYj6ro+ueLr5AWhH1RlfrmviA3iAnxR2byX7uvmpRg7iNkRqOOPMk+MmyWTY7XmtQ==
   dependencies:
     chalk "3.0.0"
     fancy-log "1.3.3"
@@ -3776,7 +3776,7 @@ js-gardener@2.0.123:
     lodash.get "4.4.2"
     mocha "6.2.2"
     npm-check "5.9.0"
-    robo-config "3.4.17"
+    robo-config "3.4.18"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
@@ -3898,6 +3898,11 @@ lambda-async@1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.4.tgz#d5c618ce34561ae2b9c67a6e32fcbd963e97a2d4"
   integrity sha512-F/R+ynEMkaXb8saJnFRhrs/70uR0ZfCQSGIEnQQ8spXWhRb7x3s+9C8Zpnx335DEl5O4q0fPjv+31PFjBKNfQg==
+
+lambda-async@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.5.tgz#bebd1c92e98d15bfd6572dea27b1115efe7ec1a3"
+  integrity sha512-K1ixfmh4MoMIM/M4RriWp8FA2ccwMmMJs6WDTGmTd5ekTsLzksPrNmpOnXfxb94zInPOPwLvJ5HeciisfHbz9Q==
 
 lambda-cfn-hook@1.2.13:
   version "1.2.13"
@@ -6456,22 +6461,6 @@ rimraf@^3.0.0:
   integrity sha512-NDGVxTsjqfunkds7CqsOiEnxln4Bo7Nddl3XhS4pXg5OzwkLqJ971ZVAAnB+DDLnF76N+VnDEiBHaVV8I06SUg==
   dependencies:
     glob "^7.1.3"
-
-robo-config@3.4.17:
-  version "3.4.17"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.4.17.tgz#168a43e640191bd03fe26b1eb0f69820e668e8e8"
-  integrity sha512-mtFXa9RQMCSHKKoU+6HjzFuIBhFhPCW5EPsuGOBcIx7qfuvqnxbwYuDY6xBI3dPbj1wRtBa1zqT7orjqORYZoQ==
-  dependencies:
-    app-root-path "3.0.0"
-    deepmerge "4.2.2"
-    joi-strict "1.1.10"
-    lodash.clonedeep "4.5.0"
-    lodash.difference "4.5.0"
-    lodash.get "4.4.2"
-    object-deep-contain "1.0.21"
-    object-scan "10.0.15"
-    object-treeify "1.1.22"
-    smart-fs "1.11.4"
 
 robo-config@3.4.18:
   version "3.4.18"
