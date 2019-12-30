@@ -7,12 +7,16 @@ module.exports.log = (context, environment, logs) => {
   const series = [];
 
   logs.forEach((log) => {
-    ['duration', 'maxMemory', 'initDuration']
-      .filter((key) => ![null, undefined].includes(log[key]))
-      .forEach((key) => {
+    Object.entries({
+      duration: log.duration,
+      init_duration: log.initDuration,
+      memory_percentage: (log.maxMemory * 100) / log.memory
+    })
+      .filter(([key, value]) => ![null, undefined].includes(value))
+      .forEach(([key, value]) => {
         series.push({
           metric: `aws.lambda_monitor.lambda.${key.toLowerCase()}`,
-          points: [[Date.parse(log.timestamp), [Math.round(log[key])]]],
+          points: [[Date.parse(log.timestamp), [value]]],
           type: 'distribution',
           tags: [
             `logGroupName:${log.logGroupName}`,
