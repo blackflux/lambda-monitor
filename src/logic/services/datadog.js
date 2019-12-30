@@ -12,7 +12,7 @@ module.exports.log = (context, environment, logs) => {
       init_duration: log.initDuration,
       memory_percentage: (log.maxMemory * 100) / log.memory
     })
-      .filter(([key, value]) => ![null, undefined, NaN].includes(value))
+      .filter(([key, value]) => ![null, undefined, NaN, Infinity].includes(value))
       .forEach(([key, value]) => {
         series.push({
           metric: `aws.lambda_monitor.lambda.${key.toLowerCase()}`,
