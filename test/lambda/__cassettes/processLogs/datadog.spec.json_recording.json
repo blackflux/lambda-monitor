@@ -19,7 +19,7 @@
             [
               1511405879665,
               [
-                1001
+                1001.14
               ]
             ]
           ],
@@ -31,12 +31,12 @@
           ]
         },
         {
-          "metric": "aws.lambda_monitor.lambda.maxmemory",
+          "metric": "aws.lambda_monitor.lambda.memory_percentage",
           "points": [
             [
               1511405879665,
               [
-                44
+                17.1875
               ]
             ]
           ],
