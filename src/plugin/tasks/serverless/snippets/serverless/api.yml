@@ -50,6 +50,7 @@ functions:
 
   subscribe:
     timeout: 300
+    memorySize: 256
     handler: lib/index.subscribe
     description: Subscribe Processor to Lambda CloudWatch Streams
     events:
@@ -68,6 +69,7 @@ functions:
 
   empty-bucket:
     timeout: 900
+    memorySize: 256
     handler: lib/index.emptyBucket
     description: Empty s3 bucket
 
