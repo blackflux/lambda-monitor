@@ -67,10 +67,12 @@ functions:
                 - logs.amazonaws.com
               eventName:
                 - CreateLogGroup
+    memorySize: 256
   empty-bucket:
     timeout: 900
     handler: lib/index.emptyBucket
     description: Empty s3 bucket
+    memorySize: 256
 resources:
   Resources:
     LambdaInvokePermission:
