@@ -775,17 +775,17 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk-wrap@3.6.9:
-  version "3.6.9"
-  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-3.6.9.tgz#f0004019ee1ab0e0e0687cf0b1edacc7a5f23c27"
-  integrity sha512-gpORV6yPBMUEEg587QStMQU2f2xq62t/buLKkD/G9gs1+A0eluwhCY0GkAWTarNIt22WIOnwNH8i+N4RIsXJvg==
+aws-sdk-wrap@3.6.11:
+  version "3.6.11"
+  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-3.6.11.tgz#0989782c50ba9100d7d5d0320b04b4c961ad1388"
+  integrity sha512-QiFA+Cjmaf/dki30CX24GR94HXnkKlHcR+W9D2e4LJPiqozF8FMhhMPQkTMsjixHsj2CgA1jhOeX4R6DK0N+gg==
   dependencies:
-    joi-strict "1.1.10"
+    joi-strict "1.1.11"
     lambda-async "1.0.4"
     lodash.chunk "4.2.0"
     lodash.get "4.4.2"
     object-hash "2.0.1"
-    smart-fs "1.11.5"
+    smart-fs "1.11.7"
 
 aws-sdk@2.596.0, aws-sdk@^2.4.0:
   version "2.596.0"
@@ -3755,13 +3755,6 @@ jmespath@0.15.0:
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
   integrity sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=
 
-joi-strict@1.1.10:
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.1.10.tgz#8b9d68f5955f036df7730948fa0047d7216e8f0b"
-  integrity sha512-udjdcfGMsB3GIFUU/OeylfXc1I700NfaH1Gqf12izFQ/BMYrmaes7E9qQcsmjLoehm9LRjrv+2DDOYLISQp5jQ==
-  dependencies:
-    "@hapi/joi" "16.1.8"
-
 joi-strict@1.1.11:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.1.11.tgz#4a08c14772f10f1ef06ec1a9dbabc1b8aedc5753"
@@ -5216,11 +5209,6 @@ oauth-sign@~0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
   integrity sha512-fexhUFFPTGV8ybAtSIGbV6gOkSv8UtRbDBnAyLQw4QPKkgNlsH2ByPGtMUqdWkos6YCRmAqViwgZrJc/mRDzZQ==
-
-object-align@1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/object-align/-/object-align-1.0.10.tgz#88acc804a7a8d168f0752263fff1b2503cb660d9"
-  integrity sha512-WiZLaIy3m2zsFk8yFNZCWo66bkdLRbgTBLa4MK0W/wdk6vbYia6+xIZ8QD9j98fvMhRf31QunNQUfILD6wn6HA==
 
 object-align@1.0.11:
   version "1.0.11"
@@ -6684,20 +6672,6 @@ smart-buffer@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-4.1.0.tgz#91605c25d91652f4661ea69ccf45f1b331ca21ba"
   integrity sha512-iVICrxOzCynf/SNaBQCw34eM9jROU/s5rzIhpOvzhzuYHfJR/DhZfDkXiZSgKXfgv26HT3Yni3AV/DGw0cGnnw==
-
-smart-fs@1.11.5:
-  version "1.11.5"
-  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.11.5.tgz#01c0f7a073c9937266ae51045870c9878eb1b4b6"
-  integrity sha512-lcBoa8tclM4ySLOR3wZ/IjDptw5AQWRzNuBtTl8QPmxCSsBo6jz/AtepopBYKWCjtMBXOZc/F/ksxPJQP89beA==
-  dependencies:
-    fs-extra "8.1.0"
-    js-yaml "3.13.1"
-    json-stringify-pretty-compact "2.0.0"
-    lodash.clonedeep "4.5.0"
-    lodash.isequal "4.5.0"
-    object-align "1.0.10"
-    xml-js "1.6.11"
-    yaml-boost "1.9.19"
 
 smart-fs@1.11.7:
   version "1.11.7"
