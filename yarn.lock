@@ -3921,6 +3921,11 @@ lambda-monitor-logger@2.2.4:
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.4.tgz#9dc189398fa3f0d99612a1f0b15ca0d4d925ce6a"
   integrity sha512-5SihsBZ/q/V37xUTnnwQDn/LgMIMJ1smlo56UaIz6QoO73jHpMWcvUI1DXQOleqReKNmcyT6SivEq+V8nvGlyw==
 
+lambda-monitor-logger@2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.5.tgz#35784c40e4c77b0265e6755eee4a8df14621a461"
+  integrity sha512-0EaCCTru2wUGoWOICHlLzairo9ZUS0ZHikT9OvwT5fdywjiGGlGGyLoWsKOhsqLzd7y/9PMsOwtTbYE0BiQIQw==
+
 lambda-tdd@2.11.11:
   version "2.11.11"
   resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.11.tgz#a852894cdc1d3b7c0b18a5259003b063459e3a00"
