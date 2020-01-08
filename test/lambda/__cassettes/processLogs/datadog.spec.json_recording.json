@@ -60,6 +60,40 @@
             "account:783629116497",
             "environment:local-dev"
           ]
+        },
+        {
+          "metric": "aws.lambda_monitor.lambda.duration_percentage",
+          "points": [
+            [
+              1511405879665,
+              [
+                5.0057
+              ]
+            ]
+          ],
+          "type": "distribution",
+          "tags": [
+            "logGroupName:/aws/lambda/peg-solitiare-dev-overview",
+            "account:783629116497",
+            "environment:local-dev"
+          ]
+        },
+        {
+          "metric": "aws.lambda_monitor.lambda.code_size",
+          "points": [
+            [
+              1511405879665,
+              [
+                16163282
+              ]
+            ]
+          ],
+          "type": "distribution",
+          "tags": [
+            "logGroupName:/aws/lambda/peg-solitiare-dev-overview",
+            "account:783629116497",
+            "environment:local-dev"
+          ]
         }
       ]
     },
