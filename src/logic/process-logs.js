@@ -12,7 +12,7 @@ const loggly = require('./services/loggly');
 const datadog = require('./services/datadog');
 
 const lambda = Lambda();
-const lru = new LRU({ maxAge: 5 * 60 * 1000 });
+const lru = new LRU({ maxAge: 60 * 60 * 1000 });
 
 const logLevels = ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'];
 
@@ -96,7 +96,10 @@ const extractReport = (() => {
       duration, billedDuration, maxMemory, requestId, memory, initDuration, traceId, segmentId, sampled
     } = requestLog.groups;
     const fnName = resultParsed.logGroup.replace(/^\/aws\/lambda\//, '');
-    const info = await lru.memoize(fnName, () => lambda.getFunctionConfiguration(fnName));
+    const info = await lru.memoize(
+      `${resultParsed.logStream}-${fnName}`,
+      () => lambda.getFunctionConfiguration(fnName)
+    );
     return {
       message: logEvent.message,
       logGroupName: resultParsed.logGroup,
