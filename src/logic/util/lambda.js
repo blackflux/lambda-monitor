@@ -1,3 +1,4 @@
+const get = require('lodash.get');
 const Aws = require('aws-sdk-wrap');
 
 module.exports = (options) => {
@@ -49,9 +50,15 @@ module.exports = (options) => {
       logGroupName: logGroupName(producer)
     });
 
+  const getFunctionConfiguration = async (name) => get(await aws
+    .call('Lambda:getFunction', {
+      FunctionName: name
+    }), 'Configuration');
+
   return {
     getAllFunctions,
     appendLogSubscriptionInfo,
-    subscribeCloudWatchLogGroup
+    subscribeCloudWatchLogGroup,
+    getFunctionConfiguration
   };
 };

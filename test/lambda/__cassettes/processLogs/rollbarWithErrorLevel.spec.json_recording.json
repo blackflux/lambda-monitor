@@ -1,5 +1,19 @@
 [
   {
+    "scope": "https://lambda.us-east-1.amazonaws.com:443",
+    "method": "GET",
+    "path": "/2015-03-31/functions/peg-solitiare-dev-overview",
+    "body": "",
+    "status": 200,
+    "response": {
+      "Configuration": {
+        "Timeout": 20,
+        "CodeSize": 16163282
+      }
+    },
+    "responseIsBinary": false
+  },
+  {
     "scope": "https://log-stream-bucket-name.s3.amazonaws.com:443",
     "method": "PUT",
     "path": "/aws/lambda/peg-solitiare-dev-overview/2017/11/23/error-33705477413970201536500575666792700703924347154117689346.json.gz",
