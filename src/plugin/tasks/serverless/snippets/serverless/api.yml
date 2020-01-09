@@ -16,6 +16,17 @@ provider:
         - "logs:PutSubscriptionFilter"
       Resource:
         - "*"
+    - Effect: Allow
+      Action:
+        - 'lambda:GetFunction'
+      Resource:
+        - 'Fn::Join':
+            - ':'
+            - - 'arn:aws:lambda'
+              - Ref: 'AWS::Region'
+              - Ref: 'AWS::AccountId'
+              - function
+              - '*'
     - Effect: "Allow"
       Action:
         - "s3:DeleteObject"
