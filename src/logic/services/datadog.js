@@ -11,7 +11,7 @@ module.exports.log = (context, environment, logs) => {
       init_duration: log.initDuration,
       execution_duration: log.duration,
       memory_percentage: (log.maxMemory * 100) / log.memory,
-      duration_percentage: ((log.initDuration + log.duration) * 100) / (log.timeout * 1000),
+      execution_duration_percentage: (log.duration * 100) / (log.timeout * 1000),
       code_size: log.codeSize
     })
       .filter(([key, value]) => ![null, undefined, NaN, Infinity].includes(value))
