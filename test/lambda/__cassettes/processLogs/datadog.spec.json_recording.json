@@ -62,7 +62,7 @@
           ]
         },
         {
-          "metric": "aws.lambda_monitor.lambda.duration_percentage",
+          "metric": "aws.lambda_monitor.lambda.execution_duration_percentage",
           "points": [
             [
               1511405879665,
