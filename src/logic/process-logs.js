@@ -2,12 +2,17 @@ const assert = require('assert');
 const zlib = require('zlib');
 const crypto = require('crypto');
 const request = require('request-promise');
+const LRU = require('lru-cache-ext');
 const s3 = require('./util/s3');
+const Lambda = require('./util/lambda');
 const timeoutPromise = require('./util/timeout-promise');
 const promiseComplete = require('./util/promise-complete');
 const logz = require('./services/logz');
 const loggly = require('./services/loggly');
 const datadog = require('./services/datadog');
+
+const lambda = Lambda();
+const lru = new LRU({ maxAge: 60 * 60 * 1000 });
 
 const logLevels = ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'];
 
@@ -82,7 +87,7 @@ const extractReport = (() => {
     /(?:XRAY TraceId: (?<traceId>\d+-[0-9a-f]{8}-[0-9a-f]{24})\tSegmentId: (?<segmentId>[0-9a-f]{16})\tSampled: (?<sampled>true|false)\t\n)?/,
     /$/
   ].map((r) => r.source).join(''), '');
-  return (resultParsed, logEvent) => {
+  return async (resultParsed, logEvent) => {
     const requestLog = reportRegex.exec(logEvent.message);
     if (!requestLog) {
       return null;
@@ -90,6 +95,11 @@ const extractReport = (() => {
     const {
       duration, billedDuration, maxMemory, requestId, memory, initDuration, traceId, segmentId, sampled
     } = requestLog.groups;
+    const fnName = resultParsed.logGroup.replace(/^\/aws\/lambda\//, '');
+    const info = await lru.memoize(
+      `${resultParsed.logStream}-${fnName}`,
+      () => lambda.getFunctionConfiguration(fnName)
+    );
     return {
       message: logEvent.message,
       logGroupName: resultParsed.logGroup,
@@ -98,6 +108,8 @@ const extractReport = (() => {
       timestamp: new Date(logEvent.timestamp).toISOString(),
       requestId,
       duration: parseFloat(duration),
+      timeout: info.Timeout,
+      codeSize: info.CodeSize,
       billedDuration: parseInt(billedDuration, 10),
       maxMemory: parseInt(maxMemory, 10),
       memory: parseInt(memory, 10),
@@ -145,7 +157,7 @@ const getToLog = async (resultParsed) => {
     if (isRequestStartOrEnd(logEvent.message)) {
       return;
     }
-    const report = extractReport(resultParsed, logEvent);
+    const report = await extractReport(resultParsed, logEvent);
     if (report !== null) {
       result.push(report);
       return;

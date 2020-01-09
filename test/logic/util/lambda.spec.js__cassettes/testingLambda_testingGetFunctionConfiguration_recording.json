@@ -1,0 +1,72 @@
+[
+  {
+    "scope": "https://lambda.us-east-1.amazonaws.com:443",
+    "method": "GET",
+    "path": "/2015-03-31/functions/lambda-function-name",
+    "body": "",
+    "status": 200,
+    "response": {
+      "Configuration": {
+        "Description": "",
+        "TracingConfig": {
+          "Mode": "PassThrough"
+        },
+        "VpcConfig": {
+          "VpcId": "",
+          "SecurityGroupIds": [],
+          "SubnetIds": []
+        },
+        "RevisionId": "f9272735-ba5f-4b3c-a0a9-9e403f056edd",
+        "LastModified": "2020-01-07T20:54:17.155+0000",
+        "FunctionName": "lambda-function-name",
+        "Runtime": "nodejs12.x",
+        "Version": "$LATEST",
+        "LastUpdateStatus": "Successful",
+        "Layers": null,
+        "FunctionArn": "arn:aws:lambda:us-east-1:292425509451:function:lambda-function-name",
+        "KMSKeyArn": null,
+        "MemorySize": 256,
+        "LastUpdateStatusReason": null,
+        "DeadLetterConfig": null,
+        "Timeout": 20,
+        "Handler": "lib/handler.handlerName",
+        "CodeSha256": "vyJXdTAeREvZNLg9p4htCbPgr7BwTxayo/x9Fmqk/1k=",
+        "Role": "arn:aws:iam::292425509451:role/stack-name-us-east-1-lambdaRole",
+        "MasterArn": null,
+        "CodeSize": 16163282,
+        "State": "Active",
+        "StateReason": null,
+        "Environment": {
+          "Variables": {},
+          "Error": null
+        },
+        "StateReasonCode": null,
+        "LastUpdateStatusReasonCode": null
+      },
+      "Concurrency": null,
+      "Code": {
+        "RepositoryType": "S3",
+        "Location": "https://awslambda-us-east-1-tasks.s3.us-east-1.amazonaws.com/snapshots/292425509451/lambda-function-name-9f6a04a5-70d8-4a2d-9efc-947e7236a516?..."
+      },
+      "Tags": {
+        "aws:cloudformation:stack-name": "stack-name",
+        "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:292425509451:stack/stack-name/bf1bff40-392f-11e9-b665-0206b4669a7e",
+        "STAGE": "dev",
+        "aws:cloudformation:logical-id": "handlerNameLambdaFunction"
+      }
+    },
+    "rawHeaders": [
+      "Date",
+      "Wed, 08 Jan 2020 23:03:10 GMT",
+      "Content-Type",
+      "application/json",
+      "Content-Length",
+      "3534",
+      "Connection",
+      "keep-alive",
+      "x-amzn-RequestId",
+      "8a2e7bff-cb42-4fce-97f4-53fc87ea2cf4"
+    ],
+    "responseIsBinary": false
+  }
+]

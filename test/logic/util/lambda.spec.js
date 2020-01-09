@@ -33,4 +33,10 @@ describe('Testing Lambda', { useNock: true }, () => {
     const result = await lambda.getAllFunctions();
     expect(result.length).to.equal(2);
   });
+
+  it('Testing getFunctionConfiguration', async () => {
+    const result = await lambda.getFunctionConfiguration('lambda-function-name');
+    expect(result.Timeout).to.equal(20);
+    expect(result.CodeSize).to.equal(16163282);
+  });
 });

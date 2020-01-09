@@ -1,5 +1,19 @@
 [
   {
+    "scope": "https://lambda.us-east-1.amazonaws.com:443",
+    "method": "GET",
+    "path": "/2015-03-31/functions/peg-solitiare-dev-overview",
+    "body": "",
+    "status": 200,
+    "response": {
+      "Configuration": {
+        "Timeout": 20,
+        "CodeSize": 16163282
+      }
+    },
+    "responseIsBinary": false
+  },
+  {
     "scope": "https://log-stream-bucket-name.s3.amazonaws.com:443",
     "method": "PUT",
     "path": "/aws/lambda/peg-solitiare-dev-overview/2017/11/23/warning-33705477413970201536500575666792700703924347154117689346.json.gz",
@@ -19,6 +33,8 @@
       "@timestamp": "2017-11-23T02:57:59.665Z",
       "requestId": "eb7b36bc-f31c-41a9-9e7e-23d6a80fbf63",
       "duration": 5615.28,
+      "timeout": 20,
+      "codeSize": 16163282,
       "billedDuration": 5700,
       "maxMemory": 119,
       "memory": 128,
