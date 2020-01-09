@@ -3956,10 +3956,10 @@ lambda-monitor-logger@2.2.5:
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.5.tgz#35784c40e4c77b0265e6755eee4a8df14621a461"
   integrity sha512-0EaCCTru2wUGoWOICHlLzairo9ZUS0ZHikT9OvwT5fdywjiGGlGGyLoWsKOhsqLzd7y/9PMsOwtTbYE0BiQIQw==
 
-lambda-tdd@2.11.13:
-  version "2.11.13"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.13.tgz#7e9f1573e5d80c3ce1f5b4a0db4a500f9827ed04"
-  integrity sha512-V64OlC0SXCUbTn+3qYTz3A4VUhyfbyOlqeAdjp8t2/ekjP27VTrn9BQvp6Tei5RXnN4GVx4CmVEz1JQbD0eHng==
+lambda-tdd@2.11.14:
+  version "2.11.14"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.14.tgz#a983fa54d4692c66fa6ce2f4c78e72548a5ed06f"
+  integrity sha512-uYbWSo/66e5dycVebnxgOjlntSRv+S8iGn7qu0yVaOF+Pzgndqkvlf2m54cfv9L4X17/dkAdEahV2UIu50MANg==
   dependencies:
     app-root-path "3.0.0"
     glob "7.1.6"
@@ -3967,7 +3967,7 @@ lambda-tdd@2.11.13:
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
-    node-tdd "2.6.1"
+    node-tdd "2.6.2"
     smart-fs "1.11.8"
 
 lambda-wrapper@0.3.0:
@@ -4800,17 +4800,6 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-nock@11.7.1:
-  version "11.7.1"
-  resolved "https://registry.yarnpkg.com/nock/-/nock-11.7.1.tgz#761971f24093e291af6e1f0af5b6eb048b94b1c1"
-  integrity sha512-fW+dlMyquAEvgtmGoRHftKrNnJ7yZcbINQDTW7OKRoTYa+11GA0u0UokWHuvCyZrG5TXkplnEv2jmj6R3vvImg==
-  dependencies:
-    debug "^4.1.0"
-    json-stringify-safe "^5.0.1"
-    lodash "^4.17.13"
-    mkdirp "^0.5.0"
-    propagate "^2.0.0"
-
 nock@11.7.2:
   version "11.7.2"
   resolved "https://registry.yarnpkg.com/nock/-/nock-11.7.2.tgz#4cee4fa838dc3635c074c5b3436bcdec7f7ee213"
@@ -4879,21 +4868,6 @@ node-preload@^0.2.0:
   integrity sha512-RM5oyBy45cLEoHqCeh+MNuFAxO0vTFBLskvQbOKnEE7YTTSN4tbN8QWDIPQ6L+WvKsB/qLEGpYe2ZZ9d4W9OIQ==
   dependencies:
     process-on-spawn "^1.0.0"
-
-node-tdd@2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.6.1.tgz#0d377d1787bd4f42f79ab5e0ddb4711fc64d91e4"
-  integrity sha512-tQSu6SyioiwbCXTUnOgDhsA0XQ7j6TPJRTk45NAj6yECUMefaVT4/7lMJccZ1RL/UDSHbn+yXHX2kwgOZikHMA==
-  dependencies:
-    callsites "3.1.0"
-    joi-strict "1.1.11"
-    lodash.get "4.4.2"
-    lodash.isequal "4.5.0"
-    minimist "1.2.0"
-    nock "11.7.1"
-    smart-fs "1.11.8"
-    timekeeper "2.2.0"
-    tmp "0.1.0"
 
 node-tdd@2.6.2:
   version "2.6.2"
