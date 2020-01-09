@@ -49,6 +49,7 @@
     "lambda-cfn-hook": "1.2.16",
     "lambda-monitor-logger": "2.2.5",
     "lodash.get": "4.4.2",
+    "lru-cache": "5.1.1",
     "lru-cache-ext": "1.1.10",
     "request": "2.88.0",
     "request-promise": "4.2.5"
