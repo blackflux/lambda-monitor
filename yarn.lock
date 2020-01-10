@@ -5301,11 +5301,6 @@ object-copy@^0.1.0:
     define-property "^0.2.5"
     kind-of "^3.0.3"
 
-object-deep-contain@1.0.21:
-  version "1.0.21"
-  resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.21.tgz#114d76af13838f2754a03c7957e981b3c31e2778"
-  integrity sha512-ZB08b47u2FKNDFfpY7yj0rvUfxGxMXNqrB9+zqqsmrmWzYDIM5PsJrSBY6yZKBghsQVF82VggMX2QkfhD0zZ+Q==
-
 object-deep-contain@1.0.22:
   version "1.0.22"
   resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.22.tgz#bee7a05eb1177486169d3bdf1f0b99da5c2b8d4e"
@@ -5326,20 +5321,10 @@ object-keys@^1.0.11, object-keys@^1.0.12, object-keys@^1.1.1:
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.1.tgz#1c47f272df277f3b1daf061677d9c82e2322c60e"
   integrity sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==
 
-object-scan@10.0.15:
-  version "10.0.15"
-  resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-10.0.15.tgz#c0b4481081317be281d5b2c10e308de0af9cd5f6"
-  integrity sha512-zPu1SctWM6qGf09mwLffRNpgmKZ7kjPGWwNuqYMooXS00Iu3eQiA8833MlNSkp/f6TJhjcBfZCrTO+XZ2yBIWg==
-
 object-scan@10.0.16:
   version "10.0.16"
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-10.0.16.tgz#b0f9c5de3afd2bc17144ef540ab8c23e79e7b778"
   integrity sha512-uvm6lSG0BEc1cAfRx+v+htxwJ3Wlebw6vzxU3srt4M3MA9LuzAAHuIgk1utwYtlTN73p3wa2t22k9KhWnqIZXQ==
-
-object-treeify@1.1.22:
-  version "1.1.22"
-  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.22.tgz#22177746259a6004b09871be95a38de9d7c3ce0b"
-  integrity sha512-RNP1vMECiA9j5rd+GNtdph3cKBP9qEtCXrNtRccbtoC37PRHJNV1Mj8rJ5YqGRuzXB2HoWfrKn46Z89CtJNekw==
 
 object-treeify@1.1.23:
   version "1.1.23"
@@ -6543,22 +6528,6 @@ rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
-robo-config@3.4.20:
-  version "3.4.20"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.4.20.tgz#3f1990c4a06779631266278903c897d746ce9961"
-  integrity sha512-rcs+lbjkDuHyFce578c2TqY6MVK0qSNclbphaNtSJi7Mrm0d8xgy8xQSLxkl7PvF0CgqErI5fMIWUV1gBpKP/g==
-  dependencies:
-    app-root-path "3.0.0"
-    deepmerge "4.2.2"
-    joi-strict "1.1.11"
-    lodash.clonedeep "4.5.0"
-    lodash.difference "4.5.0"
-    lodash.get "4.4.2"
-    object-deep-contain "1.0.21"
-    object-scan "10.0.15"
-    object-treeify "1.1.22"
-    smart-fs "1.11.7"
-
 robo-config@3.4.22:
   version "3.4.22"
   resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.4.22.tgz#bf636bdf6769da3f709608a83e8ca37e45651bb9"
@@ -6796,20 +6765,6 @@ smart-buffer@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-4.1.0.tgz#91605c25d91652f4661ea69ccf45f1b331ca21ba"
   integrity sha512-iVICrxOzCynf/SNaBQCw34eM9jROU/s5rzIhpOvzhzuYHfJR/DhZfDkXiZSgKXfgv26HT3Yni3AV/DGw0cGnnw==
-
-smart-fs@1.11.7:
-  version "1.11.7"
-  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.11.7.tgz#6f917c2e4b354ba0920e39fc4c48cb1019c14d91"
-  integrity sha512-WLSNToKZGpwVMLpnqs8dd+7fpUMhwOD7xafFBaUapH8o8dydnGtx8ZIywZfGW13Wl6KB7I+ysILTJX5VcRZheg==
-  dependencies:
-    fs-extra "8.1.0"
-    js-yaml "3.13.1"
-    json-stringify-pretty-compact "2.0.0"
-    lodash.clonedeep "4.5.0"
-    lodash.isequal "4.5.0"
-    object-align "1.0.11"
-    xml-js "1.6.11"
-    yaml-boost "1.9.19"
 
 smart-fs@1.11.8:
   version "1.11.8"
@@ -8020,16 +7975,6 @@ yallist@^3.0.0, yallist@^3.0.2, yallist@^3.0.3:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.1.1.tgz#dbb7daf9bfd8bac9ab45ebf602b8cbad0d5d08fd"
   integrity sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==
-
-yaml-boost@1.9.19:
-  version "1.9.19"
-  resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-1.9.19.tgz#cf5b303c2237d4fc340c59213ef378764aa12383"
-  integrity sha512-+RNGBTYyqAEIVJlR+FsZuzLPfYmWXRxFvi5wNV7Z+OCCGoSLLP/m8+FIdroRXIzRkzksq/fQPf7efyjXoM+Pjw==
-  dependencies:
-    js-yaml "3.13.1"
-    lodash.get "4.4.2"
-    lodash.mergewith "4.6.2"
-    lodash.set "4.3.2"
 
 yaml-boost@1.9.20:
   version "1.9.20"
