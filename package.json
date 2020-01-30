@@ -55,7 +55,7 @@
     "request-promise": "4.2.5"
   },
   "devDependencies": {
-    "@babel/cli": "7.8.3",
+    "@babel/cli": "7.8.4",
     "@babel/core": "7.8.3",
     "@babel/plugin-proposal-object-rest-spread": "7.8.3",
     "@babel/register": "7.8.3",
