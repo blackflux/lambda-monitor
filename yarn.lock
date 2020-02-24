@@ -3812,6 +3812,13 @@ joi-strict@1.1.11:
   dependencies:
     "@hapi/joi" "16.1.8"
 
+joi-strict@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.2.0.tgz#45801a951603e4e80377cb4b703d69c8b92d5026"
+  integrity sha512-Dwk/uPoRGz2fQuf1fgyq8v9H/H/EqdOt3/e5FpVKXVfbt7aTJOQs8danj+EqKwxRnHtmW9hNNnz0jpym1oEiuA==
+  dependencies:
+    "@hapi/joi" "16.1.8"
+
 js-gardener@2.0.133:
   version "2.0.133"
   resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.133.tgz#58373cbc4016a6719349c57c978d21b02bb496c1"
@@ -3966,14 +3973,14 @@ lambda-monitor-logger@2.2.5:
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.5.tgz#35784c40e4c77b0265e6755eee4a8df14621a461"
   integrity sha512-0EaCCTru2wUGoWOICHlLzairo9ZUS0ZHikT9OvwT5fdywjiGGlGGyLoWsKOhsqLzd7y/9PMsOwtTbYE0BiQIQw==
 
-lambda-tdd@2.11.20:
-  version "2.11.20"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.20.tgz#6711324c6f244ead49f37d7106c0ed24361cee5f"
-  integrity sha512-0/ZqJ41N/QROJTNFw83sg89ilXQvRboyZbnFLBV+/NdJXFfriLkdltWhTIWpfU7emVj7EiIFPq1QbN5hnjw48A==
+lambda-tdd@2.11.21:
+  version "2.11.21"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.21.tgz#6f0ef7076383c9546a7108af03c99291c4b84c94"
+  integrity sha512-nVzRm64FaCWpyn7lJTeVZdYTSlV2UOppR9GuAObOZ7A98CLNzKqVljvcPh2RmOFwR7HhEN52BXLvuD3vNOsIiw==
   dependencies:
     app-root-path "3.0.0"
     glob "7.1.6"
-    joi-strict "1.1.11"
+    joi-strict "1.2.0"
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
