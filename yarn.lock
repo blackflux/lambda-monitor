@@ -3973,10 +3973,10 @@ lambda-monitor-logger@2.2.5:
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.5.tgz#35784c40e4c77b0265e6755eee4a8df14621a461"
   integrity sha512-0EaCCTru2wUGoWOICHlLzairo9ZUS0ZHikT9OvwT5fdywjiGGlGGyLoWsKOhsqLzd7y/9PMsOwtTbYE0BiQIQw==
 
-lambda-tdd@2.11.21:
-  version "2.11.21"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.21.tgz#6f0ef7076383c9546a7108af03c99291c4b84c94"
-  integrity sha512-nVzRm64FaCWpyn7lJTeVZdYTSlV2UOppR9GuAObOZ7A98CLNzKqVljvcPh2RmOFwR7HhEN52BXLvuD3vNOsIiw==
+lambda-tdd@2.11.22:
+  version "2.11.22"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.22.tgz#19fa7ac10df0fe6f3d3a51c34b7041fcfdcbbf00"
+  integrity sha512-3nGo7qVxP5wlLoWRfvi+PbhidFwizO8HjexD2/foPkiysS8ZgcmC4nvwD/GsMBWYTkrJ2P8/UhkY2ULVFPOeJQ==
   dependencies:
     app-root-path "3.0.0"
     glob "7.1.6"
@@ -3984,7 +3984,7 @@ lambda-tdd@2.11.21:
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
-    node-tdd "2.9.2"
+    node-tdd "2.9.3"
     smart-fs "1.11.8"
 
 lambda-wrapper@0.3.0:
@@ -4905,6 +4905,22 @@ node-tdd@2.9.2:
     timekeeper "2.2.0"
     tmp "0.1.0"
     uuid "3.4.0"
+    xml2js "0.4.23"
+
+node-tdd@2.9.3:
+  version "2.9.3"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.9.3.tgz#8e977f96500a037b4c5696d9743c4dad7cd5363c"
+  integrity sha512-YNFcpVyigPbTo5tVlcgXY9n3mgJU/YgnJo31y7qtRg7euR1e+rUAe94/scKma1HowZSgSjCLhlLkULupS+MIcQ==
+  dependencies:
+    callsites "3.1.0"
+    joi-strict "1.2.0"
+    lodash.get "4.4.2"
+    minimist "1.2.0"
+    nock "12.0.1"
+    smart-fs "1.11.8"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+    uuid "7.0.0"
     xml2js "0.4.23"
 
 nopt@^4.0.1, nopt@~4.0.1:
@@ -7700,6 +7716,11 @@ uuid@3.4.0, uuid@^3.3.2, uuid@^3.3.3:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+uuid@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.0.tgz#1833d4b9ce50b732bfaa271f9cb74e974d303c79"
+  integrity sha512-LNUrNsXdI/fUsypJbWM8Jt4DgQdFAZh41p9C7WE9Cn+CULOEkoG2lgQyH68v3wnIy5K3fN4jdSt270K6IFA3MQ==
 
 v8-compile-cache@^2.0.3:
   version "2.1.0"
