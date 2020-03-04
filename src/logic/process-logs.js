@@ -8,20 +8,10 @@ const logz = require('./services/logz');
 const loggly = require('./services/loggly');
 const datadog = require('./services/datadog');
 const rollbar = require('./util/rollbar');
+const parser = require('./util/parser');
 
 const lambda = Lambda();
 const lru = new LRU({ maxAge: 60 * 60 * 1000 });
-
-const isRequestStartOrEnd = (() => {
-  const requestStartRegex = new RegExp([
-    /^START RequestId: [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} /,
-    /Version: (\$LATEST|\d+)\n$/
-  ].map((r) => r.source).join(''), '');
-  const requestEndRegex = new RegExp([
-    /^END RequestId: [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\n$/
-  ].map((r) => r.source).join(''), '');
-  return (message) => message.match(requestEndRegex) || message.match(requestStartRegex);
-})();
 
 const extractReport = (() => {
   const reportRegex = new RegExp([
@@ -105,7 +95,7 @@ const parseMessage = (() => {
 const getToLog = async (resultParsed) => {
   const result = [];
   await Promise.all(resultParsed.logEvents.map(async (logEvent) => {
-    if (isRequestStartOrEnd(logEvent.message)) {
+    if (parser.isRequestStartOrEnd(logEvent.message)) {
       return;
     }
     const report = await extractReport(resultParsed, logEvent);
