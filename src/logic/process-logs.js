@@ -17,39 +17,40 @@ const processLogs = async (event, context) => {
     .filter((logEvent) => !parser.isRequestStartOrEnd(logEvent.message))
     .map((logEvent) => [logEvent, parser.extractRequestMeta(logEvent.message)]);
 
-  await Promise.all(logEvents
-    .filter(([logEvent, requestMeta]) => requestMeta === null)
-    .map(([logEvent]) => {
-      const { logLevel, message } = parser.extractLogMessage(logEvent.message, data.logGroup);
-      const processedLogEvent = { ...logEvent, message };
-      const [year, month, day] = new Date(processedLogEvent.timestamp).toISOString().split('T')[0].split('-');
-      return Promise.all([
-        s3.putGzipObject(
-          process.env.LOG_STREAM_BUCKET_NAME,
-          `${data.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
-          JSON.stringify(processedLogEvent)
-        ),
-        rollbar.submit({
-          logGroup: data.logGroup,
-          logStream: data.logStream,
-          level: logLevel,
-          message: processedLogEvent.message,
-          timestamp: Math.floor(processedLogEvent.timestamp / 1000)
-        })
-      ]);
-    }));
-
-  await Promise.all(logEvents
-    .filter(([logEvent, requestMeta]) => requestMeta !== null)
-    .map(([logEvent, requestMeta]) => parser.generateExecutionReport(data, logEvent, requestMeta)))
-    .then((toLog) => {
-      const timeout = Math.floor((context.getRemainingTimeInMillis() - 5000.0) / 1000.0) * 1000;
-      return promiseComplete([
-        timeoutPromise(logz.log(context, process.env.ENVIRONMENT, toLog), timeout, 'logz'),
-        timeoutPromise(loggly.log(context, process.env.ENVIRONMENT, toLog), timeout, 'loggly'),
-        timeoutPromise(datadog.log(context, process.env.ENVIRONMENT, toLog), timeout, 'datadog')
-      ]);
-    });
+  await Promise.all([
+    ...logEvents
+      .filter(([logEvent, requestMeta]) => requestMeta === null)
+      .map(([logEvent]) => {
+        const { logLevel, message } = parser.extractLogMessage(logEvent.message, data.logGroup);
+        const processedLogEvent = { ...logEvent, message };
+        const [year, month, day] = new Date(processedLogEvent.timestamp).toISOString().split('T')[0].split('-');
+        return Promise.all([
+          s3.putGzipObject(
+            process.env.LOG_STREAM_BUCKET_NAME,
+            `${data.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
+            JSON.stringify(processedLogEvent)
+          ),
+          rollbar.submit({
+            logGroup: data.logGroup,
+            logStream: data.logStream,
+            level: logLevel,
+            message: processedLogEvent.message,
+            timestamp: Math.floor(processedLogEvent.timestamp / 1000)
+          })
+        ]);
+      }),
+    Promise.all(logEvents
+      .filter(([logEvent, requestMeta]) => requestMeta !== null)
+      .map(([logEvent, requestMeta]) => parser.generateExecutionReport(data, logEvent, requestMeta)))
+      .then((toLog) => {
+        const timeout = Math.floor((context.getRemainingTimeInMillis() - 5000.0) / 1000.0) * 1000;
+        return promiseComplete([
+          timeoutPromise(logz.log(context, process.env.ENVIRONMENT, toLog), timeout, 'logz'),
+          timeoutPromise(loggly.log(context, process.env.ENVIRONMENT, toLog), timeout, 'loggly'),
+          timeoutPromise(datadog.log(context, process.env.ENVIRONMENT, toLog), timeout, 'datadog')
+        ]);
+      })
+  ]);
   return data;
 };
 
