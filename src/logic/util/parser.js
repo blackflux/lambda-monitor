@@ -67,6 +67,7 @@ module.exports.extractLogMessage = (() => {
     /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}[\s\t]/,
     /(?:(?:ERROR|INFO)[\s\t])?/,
     /(?:(?<logLevel>DEBUG|INFO|WARNING|ERROR|CRITICAL): )?/,
+    /(?:(?<target>DATADOG): )?/,
     /(?<message>[\s\S]*)/,
     /$/
   ].map((r) => r.source).join(''), '');
@@ -75,6 +76,7 @@ module.exports.extractLogMessage = (() => {
     const messageParsed = messageRegex.exec(message);
     if (messageParsed) {
       return {
+        target: (messageParsed.groups.target || 'ROLLBAR').toLowerCase(),
         logLevel: (messageParsed.groups.logLevel || 'WARNING').toLowerCase(),
         message: messageParsed.groups.message.replace(
           /^Task timed out after (\d+\.\d)\d seconds/,
@@ -83,6 +85,7 @@ module.exports.extractLogMessage = (() => {
       };
     }
     return {
+      target: 'ROLLBAR'.toLowerCase(),
       logLevel: 'WARNING'.toLowerCase(),
       message
     };

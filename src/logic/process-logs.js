@@ -2,10 +2,10 @@ const zlib = require('zlib');
 const s3 = require('./util/s3');
 const timeoutPromise = require('./util/timeout-promise');
 const promiseComplete = require('./util/promise-complete');
-const logz = require('./services/logz');
-const loggly = require('./services/loggly');
-const datadog = require('./services/datadog');
-const rollbar = require('./util/rollbar');
+const logz = require('./logger/metric/logz');
+const loggly = require('./logger/metric/loggly');
+const datadog = require('./logger/metric/datadog');
+const rollbar = require('./logger/message/rollbar');
 const parser = require('./util/parser');
 
 const processLogs = async (event, context) => {
