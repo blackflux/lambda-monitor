@@ -1,10 +1,10 @@
-const request = require('request-promise');
+const Datadog = require('datadog-light');
 
 module.exports.log = (context, environment, logs) => {
   if (process.env.DATADOG_API_KEY === undefined || logs.length === 0) {
     return Promise.resolve();
   }
-  const series = [];
+  const distributionMetric = Datadog(process.env.DATADOG_API_KEY).DistributionMetric;
 
   logs.forEach((log) => {
     Object.entries({
@@ -16,29 +16,19 @@ module.exports.log = (context, environment, logs) => {
     })
       .filter(([key, value]) => ![null, undefined, NaN, Infinity].includes(value))
       .forEach(([key, value]) => {
-        series.push({
-          metric: `aws.lambda_monitor.lambda.${key.toLowerCase()}`,
-          points: [[Date.parse(log.timestamp), [value]]],
-          type: 'distribution',
-          tags: [
-            `logGroupName:${log.logGroupName}`,
-            `account:${log.owner}`,
-            `environment:${environment}`
-          ]
-        });
+        distributionMetric.enqueue(
+          `aws.lambda_monitor.lambda.${key.toLowerCase()}`,
+          { [Date.parse(log.timestamp)]: value },
+          {
+            tags: [
+              `logGroupName:${log.logGroupName}`,
+              `account:${log.owner}`,
+              `environment:${environment}`
+            ]
+          }
+        );
       });
   });
 
-  return request({
-    method: 'POST',
-    headers: {
-      'Content-type': 'application/json'
-    },
-    uri: 'https://api.datadoghq.com/api/v1/distribution_points',
-    qs: {
-      api_key: process.env.DATADOG_API_KEY
-    },
-    json: true,
-    body: { series }
-  });
+  return distributionMetric.flush();
 };
