@@ -1,0 +1,119 @@
+[
+  {
+    "scope": "https://lambda.us-east-1.amazonaws.com:443",
+    "method": "GET",
+    "path": "/2015-03-31/functions/peg-solitiare-dev-overview",
+    "body": "",
+    "status": 200,
+    "response": {
+      "Configuration": {
+        "Timeout": 20,
+        "CodeSize": 16163282
+      }
+    },
+    "responseIsBinary": false
+  },
+  {
+    "scope": "https://api.datadoghq.com:443",
+    "method": "POST",
+    "path": "/api/v1/distribution_points?api_key=INVALID_DATADOG_API_KEY",
+    "body": {
+      "series": [
+        {
+          "metric": "metric.name",
+          "points": [
+            [
+              1583284374000,
+              [
+                1
+              ]
+            ]
+          ],
+          "type": "distribution",
+          "tags": []
+        }
+      ]
+    },
+    "status": 200,
+    "response": ""
+  },
+  {
+    "scope": "https://api.datadoghq.com:443",
+    "method": "POST",
+    "path": "/api/v1/distribution_points?api_key=INVALID_DATADOG_API_KEY",
+    "body": {
+      "series": [
+        {
+          "metric": "aws.lambda_monitor.lambda.execution_duration",
+          "points": [
+            [
+              1511405879665,
+              [
+                1001.14
+              ]
+            ]
+          ],
+          "type": "distribution",
+          "tags": [
+            "logGroupName:/aws/lambda/peg-solitiare-dev-overview",
+            "account:783629116497",
+            "environment:local-dev"
+          ]
+        },
+        {
+          "metric": "aws.lambda_monitor.lambda.memory_percentage",
+          "points": [
+            [
+              1511405879665,
+              [
+                17.1875
+              ]
+            ]
+          ],
+          "type": "distribution",
+          "tags": [
+            "logGroupName:/aws/lambda/peg-solitiare-dev-overview",
+            "account:783629116497",
+            "environment:local-dev"
+          ]
+        },
+        {
+          "metric": "aws.lambda_monitor.lambda.execution_duration_percentage",
+          "points": [
+            [
+              1511405879665,
+              [
+                5.0057
+              ]
+            ]
+          ],
+          "type": "distribution",
+          "tags": [
+            "logGroupName:/aws/lambda/peg-solitiare-dev-overview",
+            "account:783629116497",
+            "environment:local-dev"
+          ]
+        },
+        {
+          "metric": "aws.lambda_monitor.lambda.code_size",
+          "points": [
+            [
+              1511405879665,
+              [
+                16163282
+              ]
+            ]
+          ],
+          "type": "distribution",
+          "tags": [
+            "logGroupName:/aws/lambda/peg-solitiare-dev-overview",
+            "account:783629116497",
+            "environment:local-dev"
+          ]
+        }
+      ]
+    },
+    "status": 200,
+    "response": ""
+  }
+]

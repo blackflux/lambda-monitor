@@ -11,5 +11,5 @@ const metricLogger = fs
 module.exports = (context, environment, logs) => {
   const timeout = Math.floor((context.getRemainingTimeInMillis() - 5000.0) / 1000.0) * 1000;
   return promiseComplete(metricLogger
-    .map(([name, logger]) => timeoutPromise(logger.log(context, environment, logs), timeout, name)));
+    .map(([name, logger]) => timeoutPromise(logger(context, environment, logs), timeout, name)));
 };
