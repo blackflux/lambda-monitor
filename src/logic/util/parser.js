@@ -15,55 +15,50 @@ module.exports.isRequestStartOrEnd = (() => {
   return (message) => message.match(requestEndRegex) || message.match(requestStartRegex);
 })();
 
-module.exports.extractExecutionReport = (() => {
-  const reportRegex = new RegExp([
-    /^/,
-    /REPORT RequestId: (?<requestId>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\t/,
-    /Duration: (?<duration>\d+.\d+) ms\t/,
-    /Billed Duration: (?<billedDuration>\d+) ms\t/,
-    /Memory Size: (?<memory>\d+) MB\t/,
-    /Max Memory Used: (?<maxMemory>\d+) MB\t/,
-    /(?:Init Duration: (?<initDuration>\d+.\d+) ms\t)?/,
-    /\n/,
-    // https://docs.aws.amazon.com/xray/latest/devguide/xray-api-sendingdata.html
-    // eslint-disable-next-line max-len
-    /(?:XRAY TraceId: (?<traceId>\d+-[0-9a-f]{8}-[0-9a-f]{24})\tSegmentId: (?<segmentId>[0-9a-f]{16})\tSampled: (?<sampled>true|false)\t\n)?/,
-    /$/
-  ].map((r) => r.source).join(''), '');
-  return async (resultParsed, logEvent) => {
-    const requestLog = reportRegex.exec(logEvent.message);
-    if (!requestLog) {
-      return null;
-    }
-    const {
-      duration, billedDuration, maxMemory, requestId, memory, initDuration, traceId, segmentId, sampled
-    } = requestLog.groups;
-    const fnName = resultParsed.logGroup.replace(/^\/aws\/lambda\//, '');
-    const info = await lru.memoize(
-      `${resultParsed.logStream}-${fnName}`,
-      () => lambda.getFunctionConfiguration(fnName)
-    );
-    return {
-      message: logEvent.message,
-      logGroupName: resultParsed.logGroup,
-      logStreamName: resultParsed.logStream,
-      owner: resultParsed.owner,
-      timestamp: new Date(logEvent.timestamp).toISOString(),
-      requestId,
-      duration: parseFloat(duration),
-      timeout: info.Timeout,
-      codeSize: info.CodeSize,
-      billedDuration: parseInt(billedDuration, 10),
-      maxMemory: parseInt(maxMemory, 10),
-      memory: parseInt(memory, 10),
-      initDuration: initDuration === undefined ? null : parseFloat(initDuration),
-      traceId: traceId === undefined ? null : traceId,
-      segmentId: segmentId === undefined ? null : segmentId,
-      sampled: sampled === undefined ? null : sampled,
-      env: process.env.ENVIRONMENT
-    };
+module.exports.extractRequestMeta = (message) => new RegExp([
+  /^/,
+  /REPORT RequestId: (?<requestId>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\t/,
+  /Duration: (?<duration>\d+.\d+) ms\t/,
+  /Billed Duration: (?<billedDuration>\d+) ms\t/,
+  /Memory Size: (?<memory>\d+) MB\t/,
+  /Max Memory Used: (?<maxMemory>\d+) MB\t/,
+  /(?:Init Duration: (?<initDuration>\d+.\d+) ms\t)?/,
+  /\n/,
+  // https://docs.aws.amazon.com/xray/latest/devguide/xray-api-sendingdata.html
+  // eslint-disable-next-line max-len
+  /(?:XRAY TraceId: (?<traceId>\d+-[0-9a-f]{8}-[0-9a-f]{24})\tSegmentId: (?<segmentId>[0-9a-f]{16})\tSampled: (?<sampled>true|false)\t\n)?/,
+  /$/
+].map((r) => r.source).join(''), '').exec(message);
+
+module.exports.generateExecutionReport = async (logEntry, logEvent, requestMeta) => {
+  const {
+    duration, billedDuration, maxMemory, requestId, memory, initDuration, traceId, segmentId, sampled
+  } = requestMeta.groups;
+  const fnName = logEntry.logGroup.replace(/^\/aws\/lambda\//, '');
+  const info = await lru.memoize(
+    `${logEntry.logStream}-${fnName}`,
+    () => lambda.getFunctionConfiguration(fnName)
+  );
+  return {
+    message: logEvent.message,
+    logGroupName: logEntry.logGroup,
+    logStreamName: logEntry.logStream,
+    owner: logEntry.owner,
+    timestamp: new Date(logEvent.timestamp).toISOString(),
+    requestId,
+    duration: parseFloat(duration),
+    timeout: info.Timeout,
+    codeSize: info.CodeSize,
+    billedDuration: parseInt(billedDuration, 10),
+    maxMemory: parseInt(maxMemory, 10),
+    memory: parseInt(memory, 10),
+    initDuration: initDuration === undefined ? null : parseFloat(initDuration),
+    traceId: traceId === undefined ? null : traceId,
+    segmentId: segmentId === undefined ? null : segmentId,
+    sampled: sampled === undefined ? null : sampled,
+    env: process.env.ENVIRONMENT
   };
-})();
+};
 
 module.exports.extractLogMessage = (() => {
   const messageRegex = new RegExp([
