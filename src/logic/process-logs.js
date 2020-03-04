@@ -1,10 +1,6 @@
 const zlib = require('zlib');
 const s3 = require('./util/s3');
-const timeoutPromise = require('./util/timeout-promise');
-const promiseComplete = require('./util/promise-complete');
-const logz = require('./logger/metric/logz');
-const loggly = require('./logger/metric/loggly');
-const datadog = require('./logger/metric/datadog');
+const metricLogger = require('./logger/metric');
 const rollbar = require('./logger/message/rollbar');
 const parser = require('./util/parser');
 
@@ -42,14 +38,7 @@ const processLogs = async (event, context) => {
     Promise.all(logEvents
       .filter(([logEvent, requestMeta]) => requestMeta !== null)
       .map(([logEvent, requestMeta]) => parser.generateExecutionReport(data, logEvent, requestMeta)))
-      .then((toLog) => {
-        const timeout = Math.floor((context.getRemainingTimeInMillis() - 5000.0) / 1000.0) * 1000;
-        return promiseComplete([
-          timeoutPromise(logz.log(context, process.env.ENVIRONMENT, toLog), timeout, 'logz'),
-          timeoutPromise(loggly.log(context, process.env.ENVIRONMENT, toLog), timeout, 'loggly'),
-          timeoutPromise(datadog.log(context, process.env.ENVIRONMENT, toLog), timeout, 'datadog')
-        ]);
-      })
+      .then((toLog) => metricLogger(context, process.env.ENVIRONMENT, toLog))
   ]);
   return data;
 };
