@@ -1,7 +1,7 @@
 const zlib = require('zlib');
 const s3 = require('./util/s3');
 const metricLogger = require('./logger/metric');
-const rollbar = require('./logger/message/rollbar');
+const messageLogger = require('./logger/message');
 const parser = require('./util/parser');
 
 const processLogs = async (event, context) => {
@@ -17,7 +17,10 @@ const processLogs = async (event, context) => {
     ...logEvents
       .filter(([logEvent, requestMeta]) => requestMeta === null)
       .map(([logEvent]) => {
-        const { logLevel, message } = parser.extractLogMessage(logEvent.message, data.logGroup);
+        const { target, logLevel, message } = parser.extractLogMessage(logEvent.message, data.logGroup);
+        if (target !== 'rollbar') {
+          return messageLogger(target, message);
+        }
         const processedLogEvent = { ...logEvent, message };
         const [year, month, day] = new Date(processedLogEvent.timestamp).toISOString().split('T')[0].split('-');
         return Promise.all([
@@ -26,7 +29,7 @@ const processLogs = async (event, context) => {
             `${data.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
             JSON.stringify(processedLogEvent)
           ),
-          rollbar.submit({
+          messageLogger(target, {
             logGroup: data.logGroup,
             logStream: data.logStream,
             level: logLevel,
