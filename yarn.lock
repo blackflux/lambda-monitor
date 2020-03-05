@@ -3966,10 +3966,10 @@ lambda-monitor-logger@2.3.0:
   dependencies:
     joi-strict "1.2.0"
 
-lambda-tdd@2.11.23:
-  version "2.11.23"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.23.tgz#3e4b8a2280d64c101fa83af74c907644b6f2957b"
-  integrity sha512-T2mq4IfXmZEGweKWOCLiKYB7dkx3ZhVnwx1CMjk+OA/URVNxQxOvDFQA38nUrzDPPQl9wsEuiRzGpu3ToQIGuw==
+lambda-tdd@2.11.24:
+  version "2.11.24"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.24.tgz#7b41fc45d49a7a9bd0b61b5a0554894c0d98437e"
+  integrity sha512-0RnMdLPYy2VyNsH0rceP9K6IH/eKc1/oiLoHu4aat+5sn4vwcpKGcSk+mJ1RnvxXNuvijQ1ThIecHvdFjcj9xg==
   dependencies:
     app-root-path "3.0.0"
     glob "7.1.6"
@@ -3977,7 +3977,7 @@ lambda-tdd@2.11.23:
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
-    node-tdd "2.9.4"
+    node-tdd "2.9.5"
     smart-fs "1.11.8"
 
 lambda-wrapper@0.3.0:
@@ -4909,6 +4909,22 @@ node-tdd@2.9.4:
     timekeeper "2.2.0"
     tmp "0.1.0"
     uuid "7.0.1"
+    xml2js "0.4.23"
+
+node-tdd@2.9.5:
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.9.5.tgz#e714efd59ccb9316fc870478a0f9acdf08205ea9"
+  integrity sha512-9L7D1dmK40fJdrOar3AyH0FOKkr/BQ26E2+E8rhMy4Y7hiVFtIvjX54zCnyKvVoVC+9FHsJ8hkWbyljbciZlWQ==
+  dependencies:
+    callsites "3.1.0"
+    joi-strict "1.2.0"
+    lodash.get "4.4.2"
+    minimist "1.2.0"
+    nock "12.0.2"
+    smart-fs "1.11.8"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+    uuid "7.0.2"
     xml2js "0.4.23"
 
 nopt@^4.0.1, nopt@~4.0.1:
@@ -7718,6 +7734,11 @@ uuid@7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.1.tgz#95ed6ff3d8c881cbf85f0f05cc3915ef994818ef"
   integrity sha512-yqjRXZzSJm9Dbl84H2VDHpM3zMjzSJQ+hn6C4zqd5ilW+7P4ZmLEEqwho9LjP+tGuZlF4xrHQXT0h9QZUS/pWA==
+
+uuid@7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.2.tgz#7ff5c203467e91f5e0d85cfcbaaf7d2ebbca9be6"
+  integrity sha512-vy9V/+pKG+5ZTYKf+VcphF5Oc6EFiu3W8Nv3P3zIh0EqVI80ZxOzuPfe9EHjkFNvf8+xuTHVeei4Drydlx4zjw==
 
 uuid@^3.3.2, uuid@^3.3.3:
   version "3.4.0"
