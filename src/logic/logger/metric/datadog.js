@@ -1,6 +1,6 @@
 const Datadog = require('datadog-light');
 
-module.exports.log = (context, environment, logs) => {
+module.exports = (context, environment, logs) => {
   if (process.env.DATADOG_API_KEY === undefined || logs.length === 0) {
     return Promise.resolve();
   }

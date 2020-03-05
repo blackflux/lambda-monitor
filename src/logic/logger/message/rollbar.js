@@ -4,7 +4,7 @@ const request = require('request-promise-native');
 
 const logLevels = ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'];
 
-module.exports.submit = async ({
+module.exports = async ({
   logGroup,
   logStream,
   level,

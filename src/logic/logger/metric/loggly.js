@@ -1,6 +1,6 @@
 const request = require('request-promise-native');
 
-module.exports.log = (context, environment, logs) => {
+module.exports = (context, environment, logs) => {
   if (process.env.LOGGLY_TOKEN === undefined || logs.length === 0) {
     return Promise.resolve();
   }
