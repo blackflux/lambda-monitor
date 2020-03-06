@@ -3942,22 +3942,17 @@ lambda-async@1.0.5:
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.5.tgz#bebd1c92e98d15bfd6572dea27b1115efe7ec1a3"
   integrity sha512-K1ixfmh4MoMIM/M4RriWp8FA2ccwMmMJs6WDTGmTd5ekTsLzksPrNmpOnXfxb94zInPOPwLvJ5HeciisfHbz9Q==
 
-lambda-cfn-hook@1.2.18:
-  version "1.2.18"
-  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.18.tgz#bab6098da1084e02b1059325d9b6a24f49a12754"
-  integrity sha512-xeCCkRABZZtC1e9kTT4IfqWvC6MxlIrSjSfDo4JdmBebr+LnJ0uWsih4+1UUtKGlulpa1gyuHoBfTDy/nPGMxg==
+lambda-cfn-hook@1.2.19:
+  version "1.2.19"
+  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.19.tgz#1c3a940c6c8b8e5422a1dd472017a48a2e0aa21a"
+  integrity sha512-9l5cFHsfrtK/sJvsOxUAYVrx3WsBR+Juwyf/ypGFxK9gW8/hnfUkeEehVq0sBrLRFY9NX2WA+YefgzXoxVy2Cw==
   dependencies:
     joi-strict "1.2.0"
     lambda-async "1.0.5"
-    lambda-monitor-logger "2.2.5"
+    lambda-monitor-logger "2.3.0"
     lodash.get "4.4.2"
     request "2.88.2"
     request-promise "4.2.5"
-
-lambda-monitor-logger@2.2.5:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.2.5.tgz#35784c40e4c77b0265e6755eee4a8df14621a461"
-  integrity sha512-0EaCCTru2wUGoWOICHlLzairo9ZUS0ZHikT9OvwT5fdywjiGGlGGyLoWsKOhsqLzd7y/9PMsOwtTbYE0BiQIQw==
 
 lambda-monitor-logger@2.3.0:
   version "2.3.0"
