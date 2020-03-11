@@ -3961,10 +3961,10 @@ lambda-monitor-logger@2.3.0:
   dependencies:
     joi-strict "1.2.0"
 
-lambda-tdd@2.11.25:
-  version "2.11.25"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.25.tgz#0b942cc16348271795d73c47d38f95eff9f0907d"
-  integrity sha512-vCFGwLOG2r+t25vQzpokbBZZEDEPRWNVROIlep3U5BXc2iaMNAf0rKU8yPhMLlZrnNv3VTyKulIcOXmNxbpbAw==
+lambda-tdd@2.11.26:
+  version "2.11.26"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.26.tgz#df2f896f6396bda8673a03ef0b01ca38e6f019e2"
+  integrity sha512-pvbOb+gCDPeSdYdp9+XBTBCRPg7S0bhoJd+p6BlO/dnjiygh7YhUAkgqaU0wUwDsoBM5vHz3gPCL8iniOdLQ1Q==
   dependencies:
     app-root-path "3.0.0"
     glob "7.1.6"
@@ -3972,7 +3972,7 @@ lambda-tdd@2.11.25:
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
-    node-tdd "2.9.6"
+    node-tdd "2.9.7"
     smart-fs "1.11.8"
 
 lambda-wrapper@0.3.0:
@@ -4629,11 +4629,6 @@ minimist@0.0.8:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
   integrity sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
 
-minimist@1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.2.tgz#b00a00230a1108c48c169e69a291aafda3aacd63"
-  integrity sha512-rIqbOrKb8GJmx/5bc2M0QchhUouMXSpd1RTclXsB41JdL+VtnojfaJR+h7F9k18/4kHUsBFgk80Uk+q569vjPA==
-
 minimist@1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.3.tgz#3db5c0765545ab8637be71f333a104a965a9ca3f"
@@ -4883,22 +4878,6 @@ node-sass-tilde-importer@^1.0.2:
   integrity sha512-Swcmr38Y7uB78itQeBm3mThjxBy9/Ah/ykPIaURY/L6Nec9AyRoL/jJ7ECfMR+oZeCTVQNxVMu/aHU+TLRVbdg==
   dependencies:
     find-parent-dir "^0.3.0"
-
-node-tdd@2.9.6:
-  version "2.9.6"
-  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.9.6.tgz#99c23441020e1675ee7fe406ff31b7ca0d58f7db"
-  integrity sha512-P08AW9haROJj8YjvLoR7d8e8QWKHxgV6Y5OrGDhX01080tDSIw8puUe8+AeZ0Xg3OtvUSGHxiAbZfxtaQ7/cjg==
-  dependencies:
-    callsites "3.1.0"
-    joi-strict "1.2.0"
-    lodash.get "4.4.2"
-    minimist "1.2.2"
-    nock "12.0.2"
-    smart-fs "1.11.8"
-    timekeeper "2.2.0"
-    tmp "0.1.0"
-    uuid "7.0.2"
-    xml2js "0.4.23"
 
 node-tdd@2.9.7:
   version "2.9.7"
