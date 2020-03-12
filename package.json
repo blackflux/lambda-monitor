@@ -74,7 +74,7 @@
     "eslint-plugin-mocha": "6.3.0",
     "js-gardener": "2.0.137",
     "lambda-tdd": "2.11.26",
-    "minimist": "1.2.4",
+    "minimist": "1.2.5",
     "mocha": "7.1.0",
     "nock": "12.0.2",
     "node-tdd": "2.9.8",
