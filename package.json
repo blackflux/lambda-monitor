@@ -44,7 +44,7 @@
   "homepage": "https://github.com/blackflux/lambda-monitor#readme",
   "dependencies": {
     "aws-sdk": "2.639.0",
-    "aws-sdk-wrap": "4.0.0",
+    "aws-sdk-wrap": "4.0.2",
     "datadog-light": "2.0.1",
     "lambda-async": "1.0.5",
     "lambda-cfn-hook": "1.2.19",
@@ -54,7 +54,7 @@
     "lru-cache-ext": "1.1.10",
     "request": "2.88.2",
     "request-promise-native": "1.0.8",
-    "smart-fs": "1.11.8"
+    "smart-fs": "1.11.9"
   },
   "devDependencies": {
     "@babel/cli": "7.8.4",
@@ -69,11 +69,11 @@
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.1.0",
     "eslint-plugin-import": "2.20.1",
-    "eslint-plugin-json": "2.1.0",
+    "eslint-plugin-json": "2.1.1",
     "eslint-plugin-markdown": "1.0.2",
     "eslint-plugin-mocha": "6.3.0",
-    "js-gardener": "2.0.137",
-    "lambda-tdd": "2.11.26",
+    "js-gardener": "2.0.138",
+    "lambda-tdd": "2.11.28",
     "minimist": "1.2.5",
     "mocha": "7.1.0",
     "nock": "12.0.2",

@@ -804,10 +804,10 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk-wrap@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-4.0.0.tgz#f3bb6d586a6de4b9d5c4d860254a59de74175815"
-  integrity sha512-kjlr8nXOvyD2QisMY0Geuk9thZlgb1cNIE+zBxT7mItr47KWpvZBvmuCNV1tsd2Gk4yJY5ELAtaQjg5vgSoxPw==
+aws-sdk-wrap@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-4.0.2.tgz#21c5241d9556e47fbf147b4b7ecd80f0a372c7af"
+  integrity sha512-KzgSxjkKl7Y4571r7VKwIXntWLP+ZvPGu9ayq/MqnVfnNYBCaH1jMETp4vNjGcuERFgm9EAsAMNKNs41rZu+qw==
   dependencies:
     joi-strict "1.2.0"
     lambda-async "1.0.5"
@@ -2147,13 +2147,13 @@ eslint-plugin-import@2.20.1:
     read-pkg-up "^2.0.0"
     resolve "^1.12.0"
 
-eslint-plugin-json@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-json/-/eslint-plugin-json-2.1.0.tgz#2829174f58148e229227c479c402f2875be04935"
-  integrity sha512-Qxy3JQVRb/Qh1RdJsg+LXhMLPGp8rTiEktpgKZPMOwJTTXe56zLCrazfdPZIDctETVbR/YFk0y1dSsVcKXu6Jg==
+eslint-plugin-json@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-json/-/eslint-plugin-json-2.1.1.tgz#7b9c4da2121f6f48d44efceb9a99ac0d4d12b299"
+  integrity sha512-Ktsab8ij33V2KFLhh4alC1FYztdmbV32DeMZYYUCZm4kKLW1s4DrleKKgtbAHSJsmshCK5QGOZtfyc2r3jCRsg==
   dependencies:
     lodash "^4.17.15"
-    vscode-json-languageservice "^3.4.12"
+    vscode-json-languageservice "^3.5.1"
 
 eslint-plugin-markdown@1.0.2:
   version "1.0.2"
@@ -3805,10 +3805,10 @@ joi-strict@1.2.0:
   dependencies:
     "@hapi/joi" "16.1.8"
 
-js-gardener@2.0.137:
-  version "2.0.137"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.137.tgz#f5b9103e57db89c2002f64f19a988bc1fb75872b"
-  integrity sha512-9YHN3NGojbs1KJmhr7oOkHGrXk5mHVbthzIRgCauynxB5O65p7NIleYSo+LHHOchiNNDq6ygjo3B9uvuUD0hNA==
+js-gardener@2.0.138:
+  version "2.0.138"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.138.tgz#0808691e21431edf8f455ef902e2e528175af102"
+  integrity sha512-y7R6W9Wo04FiCdSHOuZ//6iftbwNKKDfMZyxhAcGSiZe2dEpcWq9ZymZR3b0ZFNNnAkVbgP1yKn9AAfRIyRJPQ==
   dependencies:
     chalk "3.0.0"
     fancy-log "1.3.3"
@@ -3961,10 +3961,10 @@ lambda-monitor-logger@2.3.0:
   dependencies:
     joi-strict "1.2.0"
 
-lambda-tdd@2.11.26:
-  version "2.11.26"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.26.tgz#df2f896f6396bda8673a03ef0b01ca38e6f019e2"
-  integrity sha512-pvbOb+gCDPeSdYdp9+XBTBCRPg7S0bhoJd+p6BlO/dnjiygh7YhUAkgqaU0wUwDsoBM5vHz3gPCL8iniOdLQ1Q==
+lambda-tdd@2.11.28:
+  version "2.11.28"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.28.tgz#6fbd344f47573fc9676e83dd7f840a110e5fd30c"
+  integrity sha512-+SuM2DpVYTr+EtmlQ4ec0MTk86fHOA91Awu9w7oVx2MqqfjF/f6lP0p2dDQGIkUBqT7362C50nJbZpM6a+pgVA==
   dependencies:
     app-root-path "3.0.0"
     glob "7.1.6"
@@ -3972,7 +3972,7 @@ lambda-tdd@2.11.26:
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
-    node-tdd "2.9.7"
+    node-tdd "2.9.9"
     smart-fs "1.11.8"
 
 lambda-wrapper@0.3.0:
@@ -4629,11 +4629,6 @@ minimist@0.0.8:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
   integrity sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
 
-minimist@1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.3.tgz#3db5c0765545ab8637be71f333a104a965a9ca3f"
-  integrity sha512-+bMdgqjMN/Z77a6NlY/I3U5LlRDbnmaAk6lDveAPKwSpcPM4tKAuYsvYF8xjhOPXhOYGe/73vVLVez5PW+jqhw==
-
 minimist@1.2.5, minimist@^1.1.3, minimist@^1.2.0:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
@@ -4878,22 +4873,6 @@ node-sass-tilde-importer@^1.0.2:
   integrity sha512-Swcmr38Y7uB78itQeBm3mThjxBy9/Ah/ykPIaURY/L6Nec9AyRoL/jJ7ECfMR+oZeCTVQNxVMu/aHU+TLRVbdg==
   dependencies:
     find-parent-dir "^0.3.0"
-
-node-tdd@2.9.7:
-  version "2.9.7"
-  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.9.7.tgz#10589a4e82c5f19c1f884e953efae9c6eaed1de9"
-  integrity sha512-IUZXCt+OZ882aSrRiTdCToCiYDc1hVCs0nZKhMT1x7Nz7DWJ8y6E3NRBHnZBDGE2eV8amN3MJ0GxKwHL8Kj0+g==
-  dependencies:
-    callsites "3.1.0"
-    joi-strict "1.2.0"
-    lodash.get "4.4.2"
-    minimist "1.2.3"
-    nock "12.0.2"
-    smart-fs "1.11.8"
-    timekeeper "2.2.0"
-    tmp "0.1.0"
-    uuid "7.0.2"
-    xml2js "0.4.23"
 
 node-tdd@2.9.9:
   version "2.9.9"
@@ -6788,6 +6767,20 @@ smart-fs@1.11.8:
     xml-js "1.6.11"
     yaml-boost "1.9.20"
 
+smart-fs@1.11.9:
+  version "1.11.9"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.11.9.tgz#5a685e47c79edfb9cee69424da0b16ba89752a22"
+  integrity sha512-2JJZSz6TjPoLfuT+Ko56+lUTpIlrXz9GbdQBjw7mNUJ+/v/FBRFyMGANijQeJ+ZtpyW/zcBrkxnQNvDo+cuvaQ==
+  dependencies:
+    fs-extra "8.1.0"
+    js-yaml "3.13.1"
+    json-stringify-pretty-compact "2.0.0"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    object-align "1.0.11"
+    xml-js "1.6.11"
+    yaml-boost "1.9.20"
+
 snapdragon-node@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/snapdragon-node/-/snapdragon-node-2.1.1.tgz#6c175f86ff14bdb0724563e8f3c1b021a286853b"
@@ -7775,7 +7768,7 @@ vfile@^2.0.0:
     unist-util-stringify-position "^1.0.0"
     vfile-message "^1.0.0"
 
-vscode-json-languageservice@^3.4.12:
+vscode-json-languageservice@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/vscode-json-languageservice/-/vscode-json-languageservice-3.5.1.tgz#75779d466107cbc8c4cc9828df100df71c1870f8"
   integrity sha512-F8jPqcAC1mbQOMKvGYS4dGEw9JCZxVEi7tc5ASZLfcfwKq2URZKB4fOtdy1GEsTLsrW11tVrBjEPntpXzqp/NA==
