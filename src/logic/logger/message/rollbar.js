@@ -1,10 +1,10 @@
 const assert = require('assert');
 const crypto = require('crypto');
-const request = require('request-promise-native');
+const request = require('../singleton/request');
 
 const logLevels = ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'];
 
-module.exports = async ({
+module.exports = ({
   logGroup,
   logStream,
   level,
@@ -20,7 +20,7 @@ module.exports = async ({
     return;
   }
   assert(typeof message === 'string');
-  await request({
+  request.enqueue({
     method: 'POST',
     url: 'https://api.rollbar.com/api/1/item/',
     headers: {

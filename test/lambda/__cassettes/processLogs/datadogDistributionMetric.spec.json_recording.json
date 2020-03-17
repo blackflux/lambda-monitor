@@ -31,18 +31,7 @@
           ],
           "type": "distribution",
           "tags": []
-        }
-      ]
-    },
-    "status": 200,
-    "response": ""
-  },
-  {
-    "scope": "https://api.datadoghq.com:443",
-    "method": "POST",
-    "path": "/api/v1/distribution_points?api_key=INVALID_DATADOG_API_KEY",
-    "body": {
-      "series": [
+        },
         {
           "metric": "aws.lambda_monitor.lambda.execution_duration",
           "points": [

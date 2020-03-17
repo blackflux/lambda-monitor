@@ -2,6 +2,7 @@ const zlib = require('zlib');
 const s3 = require('./util/s3');
 const metricLogger = require('./logger/metric');
 const messageLogger = require('./logger/message');
+const singletonLogger = require('./logger/singleton');
 const parser = require('./util/parser');
 
 const processLogs = async (event, context) => {
@@ -24,6 +25,7 @@ const processLogs = async (event, context) => {
         const processedLogEvent = { ...logEvent, message };
         const [year, month, day] = new Date(processedLogEvent.timestamp).toISOString().split('T')[0].split('-');
         return Promise.all([
+          // todo: move into logger ?
           s3.putGzipObject(
             process.env.LOG_STREAM_BUCKET_NAME,
             `${data.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
@@ -43,6 +45,7 @@ const processLogs = async (event, context) => {
       .map(([logEvent, requestMeta]) => parser.generateExecutionReport(data, logEvent, requestMeta)))
       .then((toLog) => metricLogger(context, process.env.ENVIRONMENT, toLog))
   ]);
+  await singletonLogger.flushAll();
   return data;
 };
 

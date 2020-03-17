@@ -1,11 +1,6 @@
-const Datadog = require('datadog-light');
+const datadogDistributionMetric = require('../singleton/datadog-distribution-metric');
 
 module.exports = (context, environment, logs) => {
-  if (process.env.DATADOG_API_KEY === undefined || logs.length === 0) {
-    return Promise.resolve();
-  }
-  const distributionMetric = Datadog(process.env.DATADOG_API_KEY).DistributionMetric;
-
   logs.forEach((log) => {
     Object.entries({
       init_duration: log.initDuration,
@@ -16,7 +11,7 @@ module.exports = (context, environment, logs) => {
     })
       .filter(([key, value]) => ![null, undefined, NaN, Infinity].includes(value))
       .forEach(([key, value]) => {
-        distributionMetric.enqueue(
+        datadogDistributionMetric.enqueue(
           `aws.lambda_monitor.lambda.${key.toLowerCase()}`,
           { [Date.parse(log.timestamp)]: value },
           {
@@ -29,6 +24,4 @@ module.exports = (context, environment, logs) => {
         );
       });
   });
-
-  return distributionMetric.flush();
 };
