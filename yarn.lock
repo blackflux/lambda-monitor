@@ -4856,6 +4856,16 @@ nock@12.0.2:
     lodash "^4.17.13"
     propagate "^2.0.0"
 
+nock@12.0.3:
+  version "12.0.3"
+  resolved "https://registry.yarnpkg.com/nock/-/nock-12.0.3.tgz#83f25076dbc4c9aa82b5cdf54c9604c7a778d1c9"
+  integrity sha512-QNb/j8kbFnKCiyqi9C5DD0jH/FubFGj5rt9NQFONXwQm3IPB0CULECg/eS3AU1KgZb/6SwUa4/DTRKhVxkGABw==
+  dependencies:
+    debug "^4.1.0"
+    json-stringify-safe "^5.0.1"
+    lodash "^4.17.13"
+    propagate "^2.0.0"
+
 node-emoji@^1.0.3, node-emoji@^1.10.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/node-emoji/-/node-emoji-1.10.0.tgz#8886abd25d9c7bb61802a658523d1f8d2a89b2da"
@@ -4920,6 +4930,22 @@ node-sass-tilde-importer@^1.0.2:
   integrity sha512-Swcmr38Y7uB78itQeBm3mThjxBy9/Ah/ykPIaURY/L6Nec9AyRoL/jJ7ECfMR+oZeCTVQNxVMu/aHU+TLRVbdg==
   dependencies:
     find-parent-dir "^0.3.0"
+
+node-tdd@2.9.11:
+  version "2.9.11"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.9.11.tgz#2c58cf145d969714e5420385e7c26be638c33c87"
+  integrity sha512-yzKh/nlgoqrawgBJyr08J2+0XNl6gzcgOslGWN69Tcoqp8kk46GNdSUL5EIpgCIMeJg20LAoIxzOGF6wUrLqNA==
+  dependencies:
+    callsites "3.1.0"
+    joi-strict "1.2.1"
+    lodash.get "4.4.2"
+    minimist "1.2.5"
+    nock "12.0.2"
+    smart-fs "1.11.9"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+    uuid "7.0.2"
+    xml2js "0.4.23"
 
 node-tdd@2.9.9:
   version "2.9.9"
