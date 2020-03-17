@@ -6,5 +6,7 @@ const metricLogger = fs
   .map((f) => [f.slice(0, -3), fs.smartRead(path.join(__dirname, 'metric', f))]);
 
 module.exports = (context, environment, logs) => {
-  return metricLogger.map(([name, logger]) => logger(context, environment, logs));
+  metricLogger.forEach(([name, logger]) => {
+    logger(context, environment, logs);
+  });
 };

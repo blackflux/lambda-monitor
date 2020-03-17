@@ -9,5 +9,4 @@ const messageLogger = fs
 
 module.exports = (type, ...args) => {
   messageLogger[type](...args);
-  return Promise.resolve();
 };

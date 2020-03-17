@@ -20,25 +20,23 @@ const processLogs = async (event, context) => {
       .map(([logEvent]) => {
         const { target, logLevel, message } = parser.extractLogMessage(logEvent.message, data.logGroup);
         if (target !== 'rollbar') {
-          return messageLogger(target, message);
+          messageLogger(target, message);
+          return Promise.resolve();
         }
         const processedLogEvent = { ...logEvent, message };
         const [year, month, day] = new Date(processedLogEvent.timestamp).toISOString().split('T')[0].split('-');
-        return Promise.all([
-          // todo: move into logger ?
-          s3.putGzipObject(
-            process.env.LOG_STREAM_BUCKET_NAME,
-            `${data.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
-            JSON.stringify(processedLogEvent)
-          ),
-          messageLogger(target, {
-            logGroup: data.logGroup,
-            logStream: data.logStream,
-            level: logLevel,
-            message: processedLogEvent.message,
-            timestamp: Math.floor(processedLogEvent.timestamp / 1000)
-          })
-        ]);
+        messageLogger(target, {
+          logGroup: data.logGroup,
+          logStream: data.logStream,
+          level: logLevel,
+          message: processedLogEvent.message,
+          timestamp: Math.floor(processedLogEvent.timestamp / 1000)
+        });
+        return s3.putGzipObject(
+          process.env.LOG_STREAM_BUCKET_NAME,
+          `${data.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
+          JSON.stringify(processedLogEvent)
+        );
       }),
     Promise.all(logEvents
       .filter(([logEvent, requestMeta]) => requestMeta !== null)
