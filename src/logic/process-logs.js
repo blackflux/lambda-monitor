@@ -16,10 +16,10 @@ const processLogs = async (event, context) => {
   const messageLogs = logEvents.filter(([logEvent, requestMeta]) => requestMeta === null);
   messageLogs
     .map(([logEvent]) => {
-      const { target, logLevel, message } = parser.extractLogMessage(logEvent.message, data.logGroup);
-      return [{ ...logEvent, message }, logLevel, target];
+      const { targets, logLevel, message } = parser.extractLogMessage(logEvent.message, data.logGroup);
+      return [{ ...logEvent, message }, logLevel, targets];
     })
-    .forEach(([logEvent, logLevel, target]) => {
+    .forEach(([logEvent, logLevel, targets]) => {
       const args = {
         logEvent,
         logGroup: data.logGroup,
@@ -28,10 +28,9 @@ const processLogs = async (event, context) => {
         message: logEvent.message,
         timestamp: Math.floor(logEvent.timestamp / 1000)
       };
-      messageLogger(target, args);
-      if (target === 'rollbar') {
-        messageLogger('s3', args);
-      }
+      targets.forEach((target) => {
+        messageLogger(target, args);
+      });
     });
 
   const metricLogs = await Promise.all(logEvents
