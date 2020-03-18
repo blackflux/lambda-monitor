@@ -6,9 +6,14 @@ module.exports = (() => {
     : Datadog(process.env.DATADOG_API_KEY);
 
   return {
-    enqueue: (...args) => {
+    enqueue: (metric, datapoints, opts = {}) => {
       if (datadog !== null) {
-        datadog.DistributionMetric.enqueue(...args);
+        if (opts.tags === undefined) {
+          // eslint-disable-next-line no-param-reassign
+          opts.tags = [];
+        }
+        opts.tags.push(`environment:${process.env.ENVIRONMENT}`);
+        datadog.DistributionMetric.enqueue(metric, datapoints, opts);
       }
     },
     flush: () => {

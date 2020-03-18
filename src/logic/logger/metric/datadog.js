@@ -17,8 +17,7 @@ module.exports = (context, environment, logs) => {
           {
             tags: [
               `logGroupName:${log.logGroupName}`,
-              `account:${log.owner}`,
-              `environment:${environment}`
+              `account:${log.owner}`
             ]
           }
         );
