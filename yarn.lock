@@ -4974,6 +4974,22 @@ node-tdd@2.10.0:
     uuid "7.0.2"
     xml2js "0.4.23"
 
+node-tdd@2.10.1:
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.10.1.tgz#19940da016f1ddc745098960b1950b298ccd3871"
+  integrity sha512-32iEVH/LwVRoXKBIhIwsvud84VjVkEMvND0d8lP26u0MyV4LsMq+nzQXVeb+VXL/7gby2x9HYgo03BeZNYn3nQ==
+  dependencies:
+    callsites "3.1.0"
+    joi-strict "1.2.1"
+    lodash.get "4.4.2"
+    minimist "1.2.5"
+    nock "12.0.3"
+    smart-fs "1.11.10"
+    timekeeper "2.2.0"
+    tmp "0.1.0"
+    uuid "7.0.2"
+    xml2js "0.4.23"
+
 nopt@^4.0.1, nopt@~4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-4.0.1.tgz#d0d4685afd5415193c8c7505602d0d17cd64474d"
@@ -6853,6 +6869,20 @@ smart-buffer@^4.1.0:
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-4.1.0.tgz#91605c25d91652f4661ea69ccf45f1b331ca21ba"
   integrity sha512-iVICrxOzCynf/SNaBQCw34eM9jROU/s5rzIhpOvzhzuYHfJR/DhZfDkXiZSgKXfgv26HT3Yni3AV/DGw0cGnnw==
 
+smart-fs@1.11.10:
+  version "1.11.10"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.11.10.tgz#4a6c58a98e0c4a184705929556296cf19548158e"
+  integrity sha512-x848XvuVMoeoDp/KPK7kapHEJjH3bPHPErLOefJZQQvkOzZot8Z4/CnShj8mR/N1V0zb6mgpIPwbwfNe8zTvUA==
+  dependencies:
+    fs-extra "8.1.0"
+    js-yaml "3.13.1"
+    json-stringify-pretty-compact "2.0.0"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    object-align "1.0.11"
+    xml-js "1.6.11"
+    yaml-boost "1.9.21"
+
 smart-fs@1.11.8:
   version "1.11.8"
   resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.11.8.tgz#c3c268da7794018a5f81488bc63d281c3e2d1dd9"
@@ -8113,6 +8143,16 @@ yaml-boost@1.9.20:
   version "1.9.20"
   resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-1.9.20.tgz#51fa0d0b7686907050da711ced00ba186e070900"
   integrity sha512-saLEL+ngKoy60TGy30QhWbaHaVee+f3Nk7tvRnJXf39Y+N72KOSyYEK/U0hMjULUkxagN4opVt3Ib8/+xmJr6g==
+  dependencies:
+    js-yaml "3.13.1"
+    lodash.get "4.4.2"
+    lodash.mergewith "4.6.2"
+    lodash.set "4.3.2"
+
+yaml-boost@1.9.21:
+  version "1.9.21"
+  resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-1.9.21.tgz#2b9b07972e9d25c4a889582f75a9c88e23869dd2"
+  integrity sha512-gYpJMWhXZjnkR8vdRukqCe6h+hwX9t4Pa2amNKWXEt/sXRTztZ3nH6SwR8pI9Dbae03TM79sClCDXw/tiYULgA==
   dependencies:
     js-yaml "3.13.1"
     lodash.get "4.4.2"
