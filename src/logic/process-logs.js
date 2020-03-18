@@ -1,5 +1,4 @@
 const zlib = require('zlib');
-const s3 = require('./util/s3');
 const metricLogger = require('./logger/metric');
 const messageLogger = require('./logger/message');
 const singletonLogger = require('./logger/singleton');
@@ -32,11 +31,13 @@ const processLogs = async (event, context) => {
           message: processedLogEvent.message,
           timestamp: Math.floor(processedLogEvent.timestamp / 1000)
         });
-        return s3.putGzipObject(
+        messageLogger(
+          's3',
           process.env.LOG_STREAM_BUCKET_NAME,
           `${data.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
           JSON.stringify(processedLogEvent)
         );
+        return Promise.resolve();
       }),
     Promise.all(logEvents
       .filter(([logEvent, requestMeta]) => requestMeta !== null)
