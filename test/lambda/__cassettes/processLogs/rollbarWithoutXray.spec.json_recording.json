@@ -1,13 +1,5 @@
 [
   {
-    "scope": "https://log-stream-bucket-name.s3.amazonaws.com:443",
-    "method": "PUT",
-    "path": "/aws/lambda/peg-solitiare-dev-overview/2017/11/23/warning-33705477413970201536500575666792700703924347154117689346.json.gz",
-    "body": "1f8b080000000000020315cc3b0ec2300c00d0ab44995b6437b1ddf41c8c5d2262aa08fa5113ca80b83b657dc3fbd89cec609d13202fe2d105810e901c13000931b3844e00045ce8bcf382e41185fbe03cdbc6d63c6ba971deec8084e8817a09ccd4d8d34b9cf4ec379ddab23e73cd71d736e9d1ae87ee47d6f760aeb13ccc3f49667d5513ef557783170053f4b62ea98ccbb8d8ef0f528871a8a9000000",
-    "status": 200,
-    "response": ""
-  },
-  {
     "scope": "https://lambda.us-east-1.amazonaws.com:443",
     "method": "GET",
     "path": "/2015-03-31/functions/peg-solitiare-dev-overview",
@@ -20,6 +12,14 @@
       }
     },
     "responseIsBinary": false
+  },
+  {
+    "scope": "https://log-stream-bucket-name.s3.amazonaws.com:443",
+    "method": "PUT",
+    "path": "/aws/lambda/peg-solitiare-dev-overview/2017/11/23/warning-33705477413970201536500575666792700703924347154117689346.json.gz",
+    "body": "1f8b080000000000020315cc3b0ec2300c00d0ab44995b6437b1ddf41c8c5d2262aa08fa5113ca80b83b657dc3fbd89cec609d13202fe2d105810e901c13000931b3844e00045ce8bcf382e41185fbe03cdbc6d63c6ba971deec8084e8817a09ccd4d8d34b9cf4ec379ddab23e73cd71d736e9d1ae87ee47d6f760aeb13ccc3f49667d5513ef557783170053f4b62ea98ccbb8d8ef0f528871a8a9000000",
+    "status": 200,
+    "response": ""
   },
   {
     "scope": "https://api.rollbar.com:443",

@@ -1,7 +1,7 @@
 const zlib = require('zlib');
-const s3 = require('./util/s3');
 const metricLogger = require('./logger/metric');
 const messageLogger = require('./logger/message');
+const singletonLogger = require('./logger/singleton');
 const parser = require('./util/parser');
 
 const processLogs = async (event, context) => {
@@ -13,36 +13,32 @@ const processLogs = async (event, context) => {
     .filter((logEvent) => !parser.isRequestStartOrEnd(logEvent.message))
     .map((logEvent) => [logEvent, parser.extractRequestMeta(logEvent.message)]);
 
-  await Promise.all([
-    ...logEvents
-      .filter(([logEvent, requestMeta]) => requestMeta === null)
-      .map(([logEvent]) => {
-        const { target, logLevel, message } = parser.extractLogMessage(logEvent.message, data.logGroup);
-        if (target !== 'rollbar') {
-          return messageLogger(target, message);
-        }
-        const processedLogEvent = { ...logEvent, message };
-        const [year, month, day] = new Date(processedLogEvent.timestamp).toISOString().split('T')[0].split('-');
-        return Promise.all([
-          s3.putGzipObject(
-            process.env.LOG_STREAM_BUCKET_NAME,
-            `${data.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
-            JSON.stringify(processedLogEvent)
-          ),
-          messageLogger(target, {
-            logGroup: data.logGroup,
-            logStream: data.logStream,
-            level: logLevel,
-            message: processedLogEvent.message,
-            timestamp: Math.floor(processedLogEvent.timestamp / 1000)
-          })
-        ]);
-      }),
-    Promise.all(logEvents
-      .filter(([logEvent, requestMeta]) => requestMeta !== null)
-      .map(([logEvent, requestMeta]) => parser.generateExecutionReport(data, logEvent, requestMeta)))
-      .then((toLog) => metricLogger(context, process.env.ENVIRONMENT, toLog))
-  ]);
+  const messageLogs = logEvents.filter(([logEvent, requestMeta]) => requestMeta === null);
+  messageLogs
+    .map(([logEvent]) => {
+      const { targets, logLevel, message } = parser.extractLogMessage(logEvent.message, data.logGroup);
+      return [{ ...logEvent, message }, logLevel, targets];
+    })
+    .forEach(([logEvent, logLevel, targets]) => {
+      const args = {
+        logEvent,
+        logGroup: data.logGroup,
+        logStream: data.logStream,
+        level: logLevel,
+        message: logEvent.message,
+        timestamp: Math.floor(logEvent.timestamp / 1000)
+      };
+      targets.forEach((target) => {
+        messageLogger(target, args);
+      });
+    });
+
+  const metricLogs = await Promise.all(logEvents
+    .filter(([logEvent, requestMeta]) => requestMeta !== null)
+    .map(([logEvent, requestMeta]) => parser.generateExecutionReport(data, logEvent, requestMeta)));
+  metricLogger(context, process.env.ENVIRONMENT, metricLogs);
+
+  await singletonLogger.flushAll(context);
   return data;
 };
 
