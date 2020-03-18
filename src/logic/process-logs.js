@@ -36,7 +36,7 @@ const processLogs = async (event, context) => {
   const metricLogs = await Promise.all(logEvents
     .filter(([logEvent, requestMeta]) => requestMeta !== null)
     .map(([logEvent, requestMeta]) => parser.generateExecutionReport(data, logEvent, requestMeta)));
-  metricLogger(context, process.env.ENVIRONMENT, metricLogs);
+  metricLogger(context, metricLogs);
 
   await singletonLogger.flushAll(context);
   return data;
