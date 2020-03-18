@@ -14,26 +14,25 @@ const processLogs = async (event, context) => {
     .map((logEvent) => [logEvent, parser.extractRequestMeta(logEvent.message)]);
 
   const messageLogs = logEvents.filter(([logEvent, requestMeta]) => requestMeta === null);
-  messageLogs.forEach(([logEvent]) => {
-    const { target, logLevel, message } = parser.extractLogMessage(logEvent.message, data.logGroup);
-    const processedLogEvent = { ...logEvent, message };
-    messageLogger(target, {
-      logGroup: data.logGroup,
-      logStream: data.logStream,
-      level: logLevel,
-      message: processedLogEvent.message,
-      timestamp: Math.floor(processedLogEvent.timestamp / 1000)
+  messageLogs
+    .map(([logEvent]) => {
+      const { target, logLevel, message } = parser.extractLogMessage(logEvent.message, data.logGroup);
+      return [{ ...logEvent, message }, logLevel, target];
+    })
+    .forEach(([logEvent, logLevel, target]) => {
+      const args = {
+        logEvent,
+        logGroup: data.logGroup,
+        logStream: data.logStream,
+        level: logLevel,
+        message: logEvent.message,
+        timestamp: Math.floor(logEvent.timestamp / 1000)
+      };
+      messageLogger(target, args);
+      if (target === 'rollbar') {
+        messageLogger('s3', args);
+      }
     });
-    if (target === 'rollbar') {
-      const [year, month, day] = new Date(processedLogEvent.timestamp).toISOString().split('T')[0].split('-');
-      messageLogger(
-        's3',
-        process.env.LOG_STREAM_BUCKET_NAME,
-        `${data.logGroup.slice(1)}/${year}/${month}/${day}/${logLevel}-${logEvent.id}.json.gz`,
-        JSON.stringify(processedLogEvent)
-      );
-    }
-  });
 
   const metricLogs = await Promise.all(logEvents
     .filter(([logEvent, requestMeta]) => requestMeta !== null)
