@@ -1,7 +1,7 @@
 const get = require('lodash.get');
 const datadogDistributionMetric = require('../singleton/datadog-distribution-metric');
 
-module.exports = (message) => {
+module.exports = ({ message }) => {
   let parsedMessage = {};
   try {
     parsedMessage = JSON.parse(message);
