@@ -1,6 +1,6 @@
 const datadogDistributionMetric = require('../singleton/datadog-distribution-metric');
 
-module.exports = (context, environment, logs) => {
+module.exports = (context, logs) => {
   logs.forEach((log) => {
     Object.entries({
       init_duration: log.initDuration,
