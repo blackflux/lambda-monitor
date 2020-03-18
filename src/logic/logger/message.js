@@ -7,4 +7,6 @@ const messageLogger = fs
     [f.slice(0, -3)]: fs.smartRead(path.join(__dirname, 'message', f))
   }), {});
 
-module.exports = (type, ...args) => messageLogger[type](...args);
+module.exports = (type, ...args) => {
+  messageLogger[type](...args);
+};

@@ -1,10 +1,10 @@
-const request = require('request-promise-native');
+const request = require('../singleton/request');
 
-module.exports = (context, environment, logs) => {
+module.exports = (context, logs) => {
   if (process.env.LOGZ_TOKEN === undefined || logs.length === 0) {
-    return Promise.resolve();
+    return;
   }
-  return request({
+  request.enqueue({
     method: 'POST',
     uri: 'https://listener.logz.io:8071',
     qs: {

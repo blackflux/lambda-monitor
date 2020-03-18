@@ -73,21 +73,25 @@ module.exports.extractLogMessage = (() => {
   ].map((r) => r.source).join(''), '');
 
   return (message, logGroup) => {
+    const result = {
+      targets: ['ROLLBAR'.toLowerCase()],
+      logLevel: 'WARNING'.toLowerCase(),
+      message
+    };
     const messageParsed = messageRegex.exec(message);
     if (messageParsed) {
-      return {
-        target: (messageParsed.groups.target || 'ROLLBAR').toLowerCase(),
+      Object.assign(result, {
+        targets: [(messageParsed.groups.target || 'ROLLBAR').toLowerCase()],
         logLevel: (messageParsed.groups.logLevel || 'WARNING').toLowerCase(),
         message: messageParsed.groups.message.replace(
           /^Task timed out after (\d+\.\d)\d seconds/,
           `${logGroup.replace(/^\/aws\/lambda\//, '')}: Task timed out after $1\u0030 seconds`
         )
-      };
+      });
     }
-    return {
-      target: 'ROLLBAR'.toLowerCase(),
-      logLevel: 'WARNING'.toLowerCase(),
-      message
-    };
+    if (result.targets.includes('rollbar') && !result.targets.includes('s3')) {
+      result.targets.push('s3');
+    }
+    return result;
   };
 })();
