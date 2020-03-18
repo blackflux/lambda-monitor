@@ -38,7 +38,7 @@ const processLogs = async (event, context) => {
     .map(([logEvent, requestMeta]) => parser.generateExecutionReport(data, logEvent, requestMeta)));
   metricLogger(context, process.env.ENVIRONMENT, metricLogs);
 
-  await singletonLogger.flushAll();
+  await singletonLogger.flushAll(context);
   return data;
 };
 
