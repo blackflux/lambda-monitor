@@ -79,7 +79,7 @@
     "nock": "12.0.3",
     "node-tdd": "2.10.3",
     "nyc": "15.0.0",
-    "robo-config": "3.4.30",
+    "robo-config": "3.4.32",
     "semantic-release": "17.0.4"
   },
   "licenses": [
