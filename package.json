@@ -54,7 +54,7 @@
     "lru-cache-ext": "1.1.10",
     "request": "2.88.2",
     "request-promise-native": "1.0.8",
-    "smart-fs": "1.11.9"
+    "smart-fs": "1.11.11"
   },
   "devDependencies": {
     "@babel/cli": "7.8.4",
