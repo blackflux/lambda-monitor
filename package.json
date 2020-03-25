@@ -44,7 +44,7 @@
   "homepage": "https://github.com/blackflux/lambda-monitor#readme",
   "dependencies": {
     "aws-sdk": "2.645.0",
-    "aws-sdk-wrap": "4.0.2",
+    "aws-sdk-wrap": "4.0.6",
     "datadog-light": "2.0.2",
     "lambda-async": "1.0.5",
     "lambda-cfn-hook": "1.2.21",
