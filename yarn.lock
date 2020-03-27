@@ -6600,6 +6600,22 @@ robo-config@3.4.33:
     object-treeify "1.1.24"
     smart-fs "1.11.11"
 
+robo-config@3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.5.0.tgz#6a8db7e1c0c6826a3e1a9a045bb0cb05aba1337a"
+  integrity sha512-uzj0pUa3T9k4vJmkZ5xiMUmiD9Ve+CaVsCVHnh3g+GmLdQNz9LGYoEJ6DvuEZ5Cv3fisZy49i/4iuPY1URoZfg==
+  dependencies:
+    app-root-path "3.0.0"
+    deepmerge "4.2.2"
+    joi-strict "1.2.1"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.23"
+    object-scan "11.0.2"
+    object-treeify "1.1.24"
+    smart-fs "1.11.11"
+
 run-async@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-0.1.0.tgz#c8ad4a5e110661e402a7d21b530e009f25f8e389"
