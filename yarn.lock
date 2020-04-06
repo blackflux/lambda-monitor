@@ -881,10 +881,10 @@ aws-sdk-wrap@4.1.2:
     object-hash "2.0.3"
     smart-fs "1.11.11"
 
-aws-sdk@2.653.0, aws-sdk@^2.4.0:
-  version "2.653.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.653.0.tgz#53fa0b8cd5c05fb2244df262f2a01de526376543"
-  integrity sha512-vtpHfoAKoudNa5kknUgQeXzdnmkI63hqKYHuk5u7mx0HelP8iybTxmKfKENlOvkfKtBdCEbcmJRa3DxZUbQPHQ==
+aws-sdk@2.654.0, aws-sdk@^2.4.0:
+  version "2.654.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.654.0.tgz#71fd99a2699d802f92e924bd40fde22a8a401e25"
+  integrity sha512-RAx/SJ74zAqBW1wyRxiHNflmrv50i35pu8kPxfMIJ418TJzIMt+LKgn55rTJgyUdUzKi+MC9XMY4n7IDtwj3HA==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -5388,6 +5388,11 @@ object-scan@11.0.3:
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-11.0.3.tgz#0791cd82bdfc53604d9fa261ac78b4645420eb64"
   integrity sha512-uH4fBhTgE6WGiDCIJMsB8Kc/vXhQOKqFGKI2qPytu+0amlFxldb7LohP0fqRLqhOW33ziVY1qBqhvYNeFp/nHw==
 
+object-scan@11.1.1:
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-11.1.1.tgz#65527b182719e94f83529c5105be4fbeca0b4565"
+  integrity sha512-e9h3Iaq2aVJjkqBUbRN+l/pfBfiGspaJGAWp7TJW2WgJkUwORe2P3/0ZHwDiMtOHW5QdhDNKpYtWsBjdOVhpJQ==
+
 object-treeify@1.1.24:
   version "1.1.24"
   resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.24.tgz#ff3be5a93635d0f79af5e8a06d08c9bd3600e1a6"
@@ -6603,6 +6608,22 @@ robo-config@3.5.1:
     lodash.get "4.4.2"
     object-deep-contain "1.0.23"
     object-scan "11.0.3"
+    object-treeify "1.1.24"
+    smart-fs "1.11.11"
+
+robo-config@3.5.2:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.5.2.tgz#968a0760dbe50602ec2c05a24c93a8afad77a55b"
+  integrity sha512-NPPzVFLH0bL1G23DkVZdO8Z9LfDaKZihCX7JWuO1onOags2tcC+mz7XfP4OGLowFp3n92dQmABrltSiXSmqYaA==
+  dependencies:
+    app-root-path "3.0.0"
+    deepmerge "4.2.2"
+    joi-strict "1.2.1"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.23"
+    object-scan "11.1.1"
     object-treeify "1.1.24"
     smart-fs "1.11.11"
 
