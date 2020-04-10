@@ -48,7 +48,7 @@
     "datadog-light": "2.0.2",
     "lambda-async": "1.0.5",
     "lambda-cfn-hook": "1.2.21",
-    "lambda-monitor-logger": "2.3.1",
+    "lambda-monitor-logger": "2.3.2",
     "lodash.get": "4.4.2",
     "lru-cache": "5.1.1",
     "lru-cache-ext": "1.1.10",
