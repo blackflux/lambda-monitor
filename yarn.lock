@@ -4076,14 +4076,14 @@ lambda-monitor-logger@2.3.2:
   dependencies:
     joi-strict "1.2.2"
 
-lambda-tdd@2.11.36:
-  version "2.11.36"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.36.tgz#6e795f9c2ec8df1664c2d2d1a110e172549acdd0"
-  integrity sha512-4wosavMg0fACi7JVsGFJiYhaElDr1B/t5zQA1exrUG+1Fs8gWTeaY8fgMHZ9sYpg1zdHuhylC+kpV2jb6fJw1w==
+lambda-tdd@2.11.37:
+  version "2.11.37"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.11.37.tgz#d5223ace38de7dc66386820d81bd910950a8a774"
+  integrity sha512-QwsTuCtZv1nwWtxu+R+2BB/Gk28Lib8rwwYXbAEBLcNe4mbR1r7DAYM3XAMGCRf6gbIIYD24u1o5Wb93ve16xA==
   dependencies:
     app-root-path "3.0.0"
     glob "7.1.6"
-    joi-strict "1.2.1"
+    joi-strict "1.2.2"
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
