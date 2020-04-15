@@ -878,12 +878,12 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk-wrap@4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-4.1.2.tgz#f421f1c3f6883fbb2286b38fb7b8e49b6fbe65a8"
-  integrity sha512-tVuRh0ezMfG8OlmRmFGQnpdUY7xH891H5SgiIGtczQA4RT1lZIvFvAlnt1HD4AhjT8SC2PJ4t2D7zYl4DxdbhQ==
+aws-sdk-wrap@4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-4.1.3.tgz#eb83437f78e3fafe040855809fe9f20c86b8e62c"
+  integrity sha512-+5GTRW7LtquzVisv+tds81SmmOPc/j5PKgnEhPeiMrvYnj1/1r8hHKYYzGHG2phoLCyD3ZZf6otOXE8QSaVhOw==
   dependencies:
-    joi-strict "1.2.1"
+    joi-strict "1.2.2"
     lambda-async "1.0.5"
     lodash.chunk "4.2.0"
     lodash.get "4.4.2"
@@ -1796,12 +1796,12 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-datadog-light@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/datadog-light/-/datadog-light-2.0.2.tgz#744fe5a64a95fe145c95d0c312e1b44476fdda45"
-  integrity sha512-yGP7gb7Uyh8wjsu04Ysl3SuAa+Vajr0LWB9V7d8uTMeIVKKRdT/G3e/4lVII18cnjq4AejMQ1H3gIXUzva+Flg==
+datadog-light@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/datadog-light/-/datadog-light-2.0.3.tgz#a21e044c155af7d93852f98a71695503235e21f1"
+  integrity sha512-Dzpw1Wcodt3h/+JAKM22Zpq/46VDZk1Y8Yg7vA/hsho7tXEhq/w3s5tAeMcztfUhuwanPyZvZAxsD+6S1n+pyw==
   dependencies:
-    joi-strict "1.2.1"
+    joi-strict "1.2.2"
     lodash.get "4.4.2"
 
 dateformat@^3.0.0:
@@ -3904,21 +3904,21 @@ joi-strict@1.2.2:
   dependencies:
     "@hapi/joi" "17.1.1"
 
-js-gardener@2.0.150:
-  version "2.0.150"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.150.tgz#a8d827d37ded82020ba70465941785da5ce9eaa4"
-  integrity sha512-M9X6Qhsf1exK/hp3i63yNaCugdU6c3b6h/W3/UvLq3dK/Lws7DRi0wxu9Q0gEj+OzJrEV6IBTNAW13gBj2OChg==
+js-gardener@2.0.152:
+  version "2.0.152"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.152.tgz#b9b9408d7972106e8fce98a5244bb4e3400d91bb"
+  integrity sha512-wnKoAPI204dAsx95AgrU6DXO91xrmo/ShQnsQMWJHiqOuIdVRRjOoDbT2ASYMJ+TWpf9Bx48ZnO+6OyPBBVSoA==
   dependencies:
     chalk "4.0.0"
     fancy-log "1.3.3"
     glob "7.1.6"
-    joi-strict "1.2.1"
+    joi-strict "1.2.2"
     js-yaml "3.13.1"
     lodash.difference "4.5.0"
     lodash.get "4.4.2"
     mocha "7.1.1"
     npm-check "5.9.2"
-    robo-config "3.5.3"
+    robo-config "3.5.4"
 
 js-tokens@^3.0.0:
   version "3.0.2"
@@ -4050,24 +4050,17 @@ lambda-async@1.0.5:
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.5.tgz#bebd1c92e98d15bfd6572dea27b1115efe7ec1a3"
   integrity sha512-K1ixfmh4MoMIM/M4RriWp8FA2ccwMmMJs6WDTGmTd5ekTsLzksPrNmpOnXfxb94zInPOPwLvJ5HeciisfHbz9Q==
 
-lambda-cfn-hook@1.2.21:
-  version "1.2.21"
-  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.21.tgz#e9b5fecd3441004a062e2d0260f373940b9d9a68"
-  integrity sha512-nZHpiA7zBGD1SMAL1LNmX/InepOPZX+NQ6qifYleQO7DBmmIzRV0MkOyOA5+CjOjVsPnYvleRfDpYRJOMFhs3Q==
+lambda-cfn-hook@1.2.23:
+  version "1.2.23"
+  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.23.tgz#93b656b0523f033a6424b86088bcf4913f0d2fa6"
+  integrity sha512-+ODPUzwXqOoWWlKH+IfxkBqSg3H4tKKcUmLUTkHLLNSNzQjI8C5RJhjmBcR+frPeQcRs5VL9EEawsefmy76m8A==
   dependencies:
-    joi-strict "1.2.1"
+    joi-strict "1.2.2"
     lambda-async "1.0.5"
-    lambda-monitor-logger "2.3.1"
+    lambda-monitor-logger "2.3.2"
     lodash.get "4.4.2"
     request "2.88.2"
     request-promise "4.2.5"
-
-lambda-monitor-logger@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.3.1.tgz#b898e3e5b8bcd6cda5d7acd668dccd6a406acafe"
-  integrity sha512-Cf02EBcQMIymO8vd3m2joKna14mR+ml+DGrR1iFpWaD3uD8DrXzvunY/sFCQMIz3JJnN70Z+yLP4CM9QNg//2w==
-  dependencies:
-    joi-strict "1.2.1"
 
 lambda-monitor-logger@2.3.2:
   version "2.3.2"
@@ -6613,14 +6606,14 @@ rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
-robo-config@3.5.3:
-  version "3.5.3"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.5.3.tgz#7f84b2dd6a8d6eac2fac8df6eccac3040a572acb"
-  integrity sha512-5PxudOvK1Rlcl0EhwoMBn7TpTMlrL6ySB3oBCwOqJE99F4wvyUH4Ajw1/ky//2ApExJPkyJagDbL4cV+xTFsJQ==
+robo-config@3.5.4:
+  version "3.5.4"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.5.4.tgz#16e79966b20109c6880c530b4a2ab0d8c2f767aa"
+  integrity sha512-j8WPG7vJJz/BcjhP4NenWD+m0RUbYFE98bS8NKl29elHu5sovc3NHQSs0CTMl0cEQ/VCsJtPGEsp68RVR8UVNw==
   dependencies:
     app-root-path "3.0.0"
     deepmerge "4.2.2"
-    joi-strict "1.2.1"
+    joi-strict "1.2.2"
     lodash.clonedeep "4.5.0"
     lodash.difference "4.5.0"
     lodash.get "4.4.2"
