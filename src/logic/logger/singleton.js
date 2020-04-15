@@ -1,8 +1,6 @@
 const path = require('path');
 const fs = require('smart-fs');
-
-const timeoutPromise = require('../util/timeout-promise');
-const promiseComplete = require('../util/promise-complete');
+const { Pool } = require('promise-pool-ext');
 
 const singletons = fs
   .walkDir(path.join(__dirname, 'singleton'))
@@ -10,8 +8,15 @@ const singletons = fs
     [f.slice(0, -3)]: fs.smartRead(path.join(__dirname, 'singleton', f))
   }), {});
 
-module.exports.flushAll = (context) => {
-  const timeout = Math.floor((context.getRemainingTimeInMillis() - 5000.0) / 1000.0) * 1000;
-  return promiseComplete(Object.entries(singletons)
-    .map(([name, s]) => timeoutPromise(s.flush(), timeout, name)));
+module.exports.flushAll = async (context) => {
+  const pool = Pool({
+    concurrency: 10,
+    timeout: Math.floor((context.getRemainingTimeInMillis() - 5000.0) / 1000.0) * 1000
+  });
+  try {
+    await pool(Object.values(singletons).map((s) => () => s.flush()));
+    return true;
+  } catch (errors) {
+    throw errors.find((e) => e instanceof Error);
+  }
 };
