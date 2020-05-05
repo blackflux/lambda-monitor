@@ -67,7 +67,7 @@ module.exports.extractLogMessage = (() => {
     /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}[\s\t]/,
     /(?:(?:ERROR|INFO)[\s\t])?/,
     /(?:(?<logLevel>DEBUG|INFO|WARNING|ERROR|CRITICAL): )?/,
-    /(?:(?<target>DATADOG): )?/,
+    /(?:(?<target>DATADOG|S3): )?/,
     /(?<message>[\s\S]*)/,
     /$/
   ].map((r) => r.source).join(''), '');
