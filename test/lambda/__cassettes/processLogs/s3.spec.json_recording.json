@@ -2,7 +2,7 @@
   {
     "scope": "https://log-bucket-name.s3.amazonaws.com:443",
     "method": "PUT",
-    "path": "/path/to/data.json.gz",
+    "path": "/aws/lambda/peg-solitiare-dev-overview/path/to/data.json.gz",
     "body": "1f8b0800000000000203ab56ca4ead54b2522a4bcc294d55aa0500bf9c183f0f000000",
     "status": 200,
     "response": ""
