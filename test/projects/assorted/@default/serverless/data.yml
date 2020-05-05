@@ -54,3 +54,14 @@
         LogStreamS3BucketArn:
           Value:
             Fn::GetAtt: [ LogStreamS3Bucket , Arn ]
+  - resources:
+      Resources:
+        LogS3Bucket:
+          Type: 'AWS::S3::Bucket'
+      Outputs:
+        LogS3BucketName:
+          Value:
+            Ref: LogS3Bucket
+        LogS3BucketArn:
+          Value:
+            Fn::GetAtt: [ LogS3Bucket , Arn ]
