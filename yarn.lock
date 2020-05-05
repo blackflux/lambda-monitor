@@ -4062,10 +4062,10 @@ lambda-monitor-logger@2.3.2:
   dependencies:
     joi-strict "1.2.2"
 
-lambda-monitor-logger@2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.3.3.tgz#24e1e468ca9e20477362aa48ac17120106da1412"
-  integrity sha512-VoejmTY90E7OUoh6uJPFAsfeKGUbUc5JVGJU31lEoMJoMlCRSo+A+23cicUD9Qvt/aEbQ9KigEtRv98GeYvEgw==
+lambda-monitor-logger@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.4.0.tgz#c8666d5848b141091ec116a0e1cf037d1dc6b818"
+  integrity sha512-5oB/H63ZMxq5LfBEOgHxKfRBLE+jj3RZI30WzhujOei/o0aoR88QpSR6aPkcDV68Dn0M0hIkhtsro6aXaUKwCA==
   dependencies:
     joi-strict "1.2.2"
 
