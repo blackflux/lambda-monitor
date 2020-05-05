@@ -7,6 +7,7 @@ provider:
     ROLLBAR_ACCESS_TOKEN: '${ssm:ROLLBAR_ACCESS_TOKEN}'
     ROLLBAR_REPORT_LEVEL: '${ssm:ROLLBAR_REPORT_LEVEL}'
     LOG_STREAM_BUCKET_NAME: '${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}'
+    LOG_BUCKET_NAME: '${cf:${opt:service}-data-${self:provider.stage}.LogS3BucketName}'
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -47,12 +48,16 @@ provider:
       Resource:
         - >-
           arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}/*
+        - >-
+          arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogS3BucketName}/*
     - Effect: Allow
       Action:
         - 's3:ListBucket'
       Resource:
         - >-
           arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}
+        - >-
+          arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogS3BucketName}
 functions:
   process-logs:
     timeout: 30

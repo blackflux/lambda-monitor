@@ -67,7 +67,7 @@ module.exports.extractLogMessage = (() => {
     /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}[\s\t]/,
     /(?:(?:ERROR|INFO)[\s\t])?/,
     /(?:(?<logLevel>DEBUG|INFO|WARNING|ERROR|CRITICAL): )?/,
-    /(?:(?<target>DATADOG): )?/,
+    /(?:(?<target>DATADOG|S3): )?/,
     /(?<message>[\s\S]*)/,
     /$/
   ].map((r) => r.source).join(''), '');
@@ -89,8 +89,8 @@ module.exports.extractLogMessage = (() => {
         )
       });
     }
-    if (result.targets.includes('rollbar') && !result.targets.includes('s3')) {
-      result.targets.push('s3');
+    if (result.targets.includes('rollbar') && !result.targets.includes('s3-log')) {
+      result.targets.push('s3-log');
     }
     return result;
   };

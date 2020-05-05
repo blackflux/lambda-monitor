@@ -1,14 +1,16 @@
 const s3PutGzipObject = require('../singleton/s3-put-gzip-object');
 
-module.exports = ({
-  logGroup,
-  logEvent,
-  level
-}) => {
-  const [year, month, day] = new Date(logEvent.timestamp).toISOString().split('T')[0].split('-');
-  s3PutGzipObject.enqueue(
-    process.env.LOG_STREAM_BUCKET_NAME,
-    `${logGroup.slice(1)}/${year}/${month}/${day}/${level}-${logEvent.id}.json.gz`,
-    JSON.stringify(logEvent)
-  );
+module.exports = ({ logGroup, message }) => {
+  let messageParsed;
+  try {
+    messageParsed = JSON.parse(message);
+    const { key, data } = messageParsed;
+    s3PutGzipObject.enqueue(
+      process.env.LOG_BUCKET_NAME,
+      `${logGroup.slice(1)}/${key}`,
+      JSON.stringify(data)
+    );
+  } catch (e) {
+    /* ignored */
+  }
 };
