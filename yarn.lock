@@ -4074,10 +4074,10 @@ lambda-monitor-logger@2.4.0:
   dependencies:
     joi-strict "1.2.2"
 
-lambda-tdd@2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.12.0.tgz#81d9163261d59c592270a63cd4abd8d226609323"
-  integrity sha512-vE/ZcYdTKGASCJs0Oc+MQIW+y0t43vmRCHrzJVOhNXWVhFhtyon7YEsXDizZNMXccZJ+6ItvhURBL84tfXHnnA==
+lambda-tdd@2.12.1:
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.12.1.tgz#2372f2ef49ef6a72e18d7edb8ef1965b062ec1e7"
+  integrity sha512-SaBmeKIPDGRF3AJg5Qxti5Atpt31dHM2QXHK6GhlWP6T21MDk4E1JoqXcAB7W4U56/M8hsmw6lZD5YI4SvNRzw==
   dependencies:
     app-root-path "3.0.0"
     glob "7.1.6"
@@ -4085,7 +4085,7 @@ lambda-tdd@2.12.0:
     js-yaml "3.13.1"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
-    node-tdd "2.11.0"
+    node-tdd "2.11.2"
     smart-fs "1.11.11"
 
 lambda-wrapper@0.3.0:
@@ -4988,22 +4988,6 @@ node-sass-tilde-importer@^1.0.2:
   integrity sha512-Swcmr38Y7uB78itQeBm3mThjxBy9/Ah/ykPIaURY/L6Nec9AyRoL/jJ7ECfMR+oZeCTVQNxVMu/aHU+TLRVbdg==
   dependencies:
     find-parent-dir "^0.3.0"
-
-node-tdd@2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.11.0.tgz#e134e6b7d5c0c15af117d84dafd642970748e805"
-  integrity sha512-6hLXgNl74MKVSOPraQRr6c7wzdX1r63K16eiCHLYLlYBuak4Hd678eWtYOmexLno+cgy6ztL5zpzn+lseiamtg==
-  dependencies:
-    callsites "3.1.0"
-    joi-strict "1.2.2"
-    lodash.get "4.4.2"
-    minimist "1.2.5"
-    nock "12.0.3"
-    smart-fs "1.11.11"
-    timekeeper "2.2.0"
-    tmp "0.2.1"
-    uuid "8.0.0"
-    xml2js "0.4.23"
 
 node-tdd@2.11.2:
   version "2.11.2"
@@ -7806,11 +7790,6 @@ uuid@3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
-
-uuid@8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.0.0.tgz#bc6ccf91b5ff0ac07bbcdbf1c7c4e150db4dbb6c"
-  integrity sha512-jOXGuXZAWdsTH7eZLtyXMqUb9EcWMGZNbL9YcGBJl4MH4nrxHmZJhEHvyLFrkxo+28uLb/NYRcStH48fnD0Vzw==
 
 uuid@8.1.0:
   version "8.1.0"
