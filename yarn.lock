@@ -4127,24 +4127,17 @@ lambda-async@1.0.5:
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.5.tgz#bebd1c92e98d15bfd6572dea27b1115efe7ec1a3"
   integrity sha512-K1ixfmh4MoMIM/M4RriWp8FA2ccwMmMJs6WDTGmTd5ekTsLzksPrNmpOnXfxb94zInPOPwLvJ5HeciisfHbz9Q==
 
-lambda-cfn-hook@1.2.23:
-  version "1.2.23"
-  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.23.tgz#93b656b0523f033a6424b86088bcf4913f0d2fa6"
-  integrity sha512-+ODPUzwXqOoWWlKH+IfxkBqSg3H4tKKcUmLUTkHLLNSNzQjI8C5RJhjmBcR+frPeQcRs5VL9EEawsefmy76m8A==
+lambda-cfn-hook@1.2.24:
+  version "1.2.24"
+  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.24.tgz#bd4c3a836a935ff833ec3ba6f215097b39653fee"
+  integrity sha512-rylJ+79PNV0AmTPtixx1aRQnIxI5jW+tBvMSedY+DBHCiFthKWOKYRvEgLaE/sLIEUd3gkMyRAvNQLa39Iv3OA==
   dependencies:
     joi-strict "1.2.2"
     lambda-async "1.0.5"
-    lambda-monitor-logger "2.3.2"
+    lambda-monitor-logger "2.4.0"
     lodash.get "4.4.2"
     request "2.88.2"
     request-promise "4.2.5"
-
-lambda-monitor-logger@2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.3.2.tgz#6e9f7bac866c94f23580b81f015b72e3817bbe37"
-  integrity sha512-0qd+2MBNPFRJe+niQ4dNQJK4yqCkL23iGsjmbJmN57MKrO2Pi0Cgr2MO4ywwlWNv5qZNFzVj8ML1XP0vlD3wKQ==
-  dependencies:
-    joi-strict "1.2.2"
 
 lambda-monitor-logger@2.4.0:
   version "2.4.0"
@@ -4153,15 +4146,15 @@ lambda-monitor-logger@2.4.0:
   dependencies:
     joi-strict "1.2.2"
 
-lambda-tdd@2.12.1:
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.12.1.tgz#2372f2ef49ef6a72e18d7edb8ef1965b062ec1e7"
-  integrity sha512-SaBmeKIPDGRF3AJg5Qxti5Atpt31dHM2QXHK6GhlWP6T21MDk4E1JoqXcAB7W4U56/M8hsmw6lZD5YI4SvNRzw==
+lambda-tdd@2.12.2:
+  version "2.12.2"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.12.2.tgz#064aa5347052db5d4ba0dbc5d5b5742afee90d9f"
+  integrity sha512-EeEqYF+vcj7EvpEYI608XStS74878Y/0M1D6AOGGp0ystp+Hmn5JDSpPz8NCIdjd/R/Zk6LyrbSL43N7f+FnnA==
   dependencies:
     app-root-path "3.0.0"
     glob "7.1.6"
     joi-strict "1.2.2"
-    js-yaml "3.13.1"
+    js-yaml "3.14.0"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
     node-tdd "2.11.2"
@@ -6919,6 +6912,20 @@ smart-fs@1.11.11:
   dependencies:
     fs-extra "9.0.0"
     js-yaml "3.13.1"
+    json-stringify-pretty-compact "2.0.0"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    object-align "1.0.11"
+    xml-js "1.6.11"
+    yaml-boost "1.9.21"
+
+smart-fs@1.11.12:
+  version "1.11.12"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.11.12.tgz#37e8a98105d4e5658d860d5d3a4e0e55cb8e287d"
+  integrity sha512-X16ngr7R45LGE3IpzCPsLAt8PGd3lHtTSYrCG/oq19Xj/nItFVP0gda2zQe6p3H0sMctGNq92w8mH/aLWFdARw==
+  dependencies:
+    fs-extra "9.0.0"
+    js-yaml "3.14.0"
     json-stringify-pretty-compact "2.0.0"
     lodash.clonedeep "4.5.0"
     lodash.isequal "4.5.0"
