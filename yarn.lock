@@ -6606,10 +6606,10 @@ robo-config@3.7.2:
     object-treeify "1.1.24"
     smart-fs "1.11.11"
 
-robo-config@3.7.4:
-  version "3.7.4"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.7.4.tgz#dfd8494aff323495beb1a6e296b13eae6cadc9a8"
-  integrity sha512-8M78FqABxjpObix6fyWmnGpIb8GUicRGWeCQRZ2ghpsA08fTiYHZqyFAY9tR9xjr7cOgaY2pYm8Hhu1wErYtMw==
+robo-config@3.7.5:
+  version "3.7.5"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.7.5.tgz#6991278f28d555c30e1a64f2d2119ccebf802981"
+  integrity sha512-6ktvQ95EncrzHvVMTHke6k5MLykzTR+NJMWDeXV/RmkfXYK23VY9eO+wm6gq9TDeuJzc4Ga20DQJnccWZq8WlA==
   dependencies:
     app-root-path "3.0.0"
     deepmerge "4.2.2"
