@@ -5389,6 +5389,11 @@ object-deep-contain@1.0.23:
   resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.23.tgz#5e0e76634cc8b5d0291395dcdb897d2c37290dbc"
   integrity sha512-y//xnySc0wul+bKzjbuMMkV31sX3AqXq83CzxoY3GvxoEYaRWRwOddGr2n704w0wCmSIcvlAZZbUnL5MJbsF6A==
 
+object-deep-contain@1.0.24:
+  version "1.0.24"
+  resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.24.tgz#6d1088f00545eca1dd160100d3e7ba7ca94aaf73"
+  integrity sha512-49NP9G7PKdkQnh44yhQQsZqYIXgg4qpwS8ZxOW5tyVEPwR/FSoCT9UyeMZgddzvFsN0nSIMe8gq6HV6DxspHng==
+
 object-hash@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-2.0.3.tgz#d12db044e03cd2ca3d77c0570d87225b02e1e6ea"
@@ -5408,6 +5413,11 @@ object-scan@13.0.2:
   version "13.0.2"
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-13.0.2.tgz#6c77818699d09d8b4e3192c94960e72ba2315260"
   integrity sha512-fzvo5Jr+zzCcIdauqNhBjYboM7bAV6bUBp3dviqoyhwDVhfNxFy4hlcvqsdIcsLyeoSqTamRXUcVVoSzvhTPFw==
+
+object-scan@13.0.3:
+  version "13.0.3"
+  resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-13.0.3.tgz#2e8b19ffa6b527407fcd897946af26fd54861f8f"
+  integrity sha512-Y/c67L3mFd0zDerQuzv3jEAqQzQXsnPwesr772PKo2LbcQ/liwk+XYvja8neUvOpYMPXbWzhYtN3gi1YYQ87mA==
 
 object-treeify@1.1.24:
   version "1.1.24"
@@ -6596,6 +6606,22 @@ robo-config@3.7.2:
     object-treeify "1.1.24"
     smart-fs "1.11.11"
 
+robo-config@3.7.4:
+  version "3.7.4"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.7.4.tgz#dfd8494aff323495beb1a6e296b13eae6cadc9a8"
+  integrity sha512-8M78FqABxjpObix6fyWmnGpIb8GUicRGWeCQRZ2ghpsA08fTiYHZqyFAY9tR9xjr7cOgaY2pYm8Hhu1wErYtMw==
+  dependencies:
+    app-root-path "3.0.0"
+    deepmerge "4.2.2"
+    joi-strict "1.2.2"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.24"
+    object-scan "13.0.3"
+    object-treeify "1.1.24"
+    smart-fs "1.11.12"
+
 run-async@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-0.1.0.tgz#c8ad4a5e110661e402a7d21b530e009f25f8e389"
@@ -6833,6 +6859,20 @@ smart-fs@1.11.11:
   dependencies:
     fs-extra "9.0.0"
     js-yaml "3.13.1"
+    json-stringify-pretty-compact "2.0.0"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    object-align "1.0.11"
+    xml-js "1.6.11"
+    yaml-boost "1.9.21"
+
+smart-fs@1.11.12:
+  version "1.11.12"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.11.12.tgz#37e8a98105d4e5658d860d5d3a4e0e55cb8e287d"
+  integrity sha512-X16ngr7R45LGE3IpzCPsLAt8PGd3lHtTSYrCG/oq19Xj/nItFVP0gda2zQe6p3H0sMctGNq92w8mH/aLWFdARw==
+  dependencies:
+    fs-extra "9.0.0"
+    js-yaml "3.14.0"
     json-stringify-pretty-compact "2.0.0"
     lodash.clonedeep "4.5.0"
     lodash.isequal "4.5.0"
