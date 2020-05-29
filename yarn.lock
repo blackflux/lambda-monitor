@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@babel/cli@7.10.0":
-  version "7.10.0"
-  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.10.0.tgz#44bfd08feb6f9e4791bf69c62e3b35196269b0e3"
-  integrity sha512-AziyYI4DpD4NmAcBD2xnH8CcIgdRrCGlW7wVL9Ysk736PCSNn2ZZedAUMu5rx/SfMT7Yv+3UReHcWKeQ3wNd/Q==
+"@babel/cli@7.10.1":
+  version "7.10.1"
+  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.10.1.tgz#b6e5cd43a17b8f639442ab027976408ebe6d79a0"
+  integrity sha512-cVB+dXeGhMOqViIaZs3A9OUAe4pKw4SBNdMw6yHJMYR7s4TB+Cei7ThquV/84O19PdIFWuwe03vxxES0BHUm5g==
   dependencies:
     commander "^4.0.1"
     convert-source-map "^1.1.0"
@@ -240,10 +240,10 @@
   dependencies:
     smart-fs "1.11.12"
 
-"@blackflux/robo-config-plugin@3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-3.4.0.tgz#4d318a06644ff78952230da8f8bb861df6e43e06"
-  integrity sha512-Ft872phAkqrTqPCi7kfipmkSben+fC0LckymgGqgaIqMvd521A+gzQxudCN6e3BUGUe82KwncFrvU6CX25I2qw==
+"@blackflux/robo-config-plugin@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-3.4.1.tgz#cde3aac42ab8d136399d3012ca84e8cace568828"
+  integrity sha512-sFtgr132PzdwFUJyd1zuPMeOu7gyvedXmJiqEJRkU2cXJ3MmJb8w2evJwn24u+305qeia9xANTkz1f0COluAKA==
 
 "@hapi/address@^4.0.1":
   version "4.0.1"
@@ -889,10 +889,10 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk-wrap@4.4.5:
-  version "4.4.5"
-  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-4.4.5.tgz#fb5aaa6a4302bb285b4483067157b7f768c8a51d"
-  integrity sha512-tC7xhySvxHAMfSLw3EAEFfDmWU0W8DUBxHp6y6bk12o2dWcnA9roTbS7aw2N2IGP7utPH9tMNB6FcUacB++hjA==
+aws-sdk-wrap@4.4.7:
+  version "4.4.7"
+  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-4.4.7.tgz#c2de74918444af5c887fec080c38e8580691c069"
+  integrity sha512-NzPvu0gRiJmXj/hKxRmBfmcultCQQTd2/UoQ+n7Wow2m4Gs1Mq5OoipXEIEzPc421opGYmNcXJJqAGWyQQuAoA==
   dependencies:
     joi-strict "1.2.2"
     lambda-async "1.0.5"
@@ -901,12 +901,12 @@ aws-sdk-wrap@4.4.5:
     lru-cache-ext "1.1.11"
     object-hash "2.0.3"
     promise-pool-ext "1.3.2"
-    smart-fs "1.11.11"
+    smart-fs "1.11.13"
 
-aws-sdk@2.685.0, aws-sdk@^2.4.0:
-  version "2.685.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.685.0.tgz#ba5add21e98cc785b3c05ceb9f3fcb8ab046aa8a"
-  integrity sha512-mAOj7b4PuXRxIZkNdSkBWZ28lS2wYUY7O9u33nH9a7BawlttMNbxOgE/wDCPMrTLfj+RLQx0jvoIYj8BKCTRFw==
+aws-sdk@2.686.0, aws-sdk@^2.4.0:
+  version "2.686.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.686.0.tgz#c58c3874eff4c76c763d137df617e87971321eb7"
+  integrity sha512-QhYhJ5y8tUG5SlmY3CSf9RBaa3EFbta28oarOyiwceHKmY80cMCafRI1YypT6CVDx/q91dbnSNQfWhs0cZPbBQ==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -4067,10 +4067,10 @@ lambda-monitor-logger@2.4.0:
   dependencies:
     joi-strict "1.2.2"
 
-lambda-tdd@2.12.2:
-  version "2.12.2"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.12.2.tgz#064aa5347052db5d4ba0dbc5d5b5742afee90d9f"
-  integrity sha512-EeEqYF+vcj7EvpEYI608XStS74878Y/0M1D6AOGGp0ystp+Hmn5JDSpPz8NCIdjd/R/Zk6LyrbSL43N7f+FnnA==
+lambda-tdd@2.12.4:
+  version "2.12.4"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.12.4.tgz#2c429716e8a315e7c852ac7e2711727dc9af3000"
+  integrity sha512-UY10FnHZplXBKS6kFRkgsxrv9uQkUEHNvPewsLC49DGarQ7LnwOZCoMuSS9jBDm+TwNEMqLenAoFvU6r9Lcc2Q==
   dependencies:
     app-root-path "3.0.0"
     glob "7.1.6"
@@ -4079,7 +4079,7 @@ lambda-tdd@2.12.2:
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
     node-tdd "2.11.2"
-    smart-fs "1.11.11"
+    smart-fs "1.11.13"
 
 lambda-wrapper@0.3.0:
   version "0.3.0"
