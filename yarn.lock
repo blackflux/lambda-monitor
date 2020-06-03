@@ -4067,10 +4067,10 @@ lambda-monitor-logger@2.4.0:
   dependencies:
     joi-strict "1.2.2"
 
-lambda-tdd@2.12.4:
-  version "2.12.4"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.12.4.tgz#2c429716e8a315e7c852ac7e2711727dc9af3000"
-  integrity sha512-UY10FnHZplXBKS6kFRkgsxrv9uQkUEHNvPewsLC49DGarQ7LnwOZCoMuSS9jBDm+TwNEMqLenAoFvU6r9Lcc2Q==
+lambda-tdd@2.12.5:
+  version "2.12.5"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.12.5.tgz#51aeb17b4c43c36bc04608091a14d1115603d0f7"
+  integrity sha512-cbLEcaeolPfIdfb9c0bsQaHAxcWQV6NpdK12cWhncFfqjROTFm0p6zFLu3CM02vjoMyijUyrHg3dnVKDYTQPhQ==
   dependencies:
     app-root-path "3.0.0"
     glob "7.1.6"
@@ -4078,7 +4078,7 @@ lambda-tdd@2.12.4:
     js-yaml "3.14.0"
     lambda-wrapper "0.3.0"
     lodash.get "4.4.2"
-    node-tdd "2.11.2"
+    node-tdd "2.11.3"
     smart-fs "1.11.13"
 
 lambda-wrapper@0.3.0:
@@ -4981,22 +4981,6 @@ node-sass-tilde-importer@^1.0.2:
   integrity sha512-Swcmr38Y7uB78itQeBm3mThjxBy9/Ah/ykPIaURY/L6Nec9AyRoL/jJ7ECfMR+oZeCTVQNxVMu/aHU+TLRVbdg==
   dependencies:
     find-parent-dir "^0.3.0"
-
-node-tdd@2.11.2:
-  version "2.11.2"
-  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.11.2.tgz#18d47f0ee86a2a567f0408bf83bb491af16b7cd9"
-  integrity sha512-/FgVA45+BJxdHN6+uAlT15r75vPupMc+euODSYa5CfjT88HGsy+jQ/PNEtXDk9i9eCPDj/FuVqgVtkWPVapMpw==
-  dependencies:
-    callsites "3.1.0"
-    joi-strict "1.2.2"
-    lodash.get "4.4.2"
-    minimist "1.2.5"
-    nock "12.0.3"
-    smart-fs "1.11.11"
-    timekeeper "2.2.0"
-    tmp "0.2.1"
-    uuid "8.1.0"
-    xml2js "0.4.23"
 
 node-tdd@2.11.3:
   version "2.11.3"
@@ -6842,20 +6826,6 @@ smart-buffer@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-4.1.0.tgz#91605c25d91652f4661ea69ccf45f1b331ca21ba"
   integrity sha512-iVICrxOzCynf/SNaBQCw34eM9jROU/s5rzIhpOvzhzuYHfJR/DhZfDkXiZSgKXfgv26HT3Yni3AV/DGw0cGnnw==
-
-smart-fs@1.11.11:
-  version "1.11.11"
-  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.11.11.tgz#8ccb0dfaf5d7174981aa7f6f44bfbafa35b021cd"
-  integrity sha512-qpQ45ACg3kTFEyYi36nb2TpAZqQvW68YoIwl38/VPjNt4ffJ9YGL6jhisTaD6MT9KhWHMshCRlG1QbBRabqGyg==
-  dependencies:
-    fs-extra "9.0.0"
-    js-yaml "3.13.1"
-    json-stringify-pretty-compact "2.0.0"
-    lodash.clonedeep "4.5.0"
-    lodash.isequal "4.5.0"
-    object-align "1.0.11"
-    xml-js "1.6.11"
-    yaml-boost "1.9.21"
 
 smart-fs@1.11.12:
   version "1.11.12"
