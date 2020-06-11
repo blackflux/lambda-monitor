@@ -75,7 +75,7 @@
     "js-gardener": "2.0.161",
     "lambda-tdd": "2.12.5",
     "minimist": "1.2.5",
-    "mocha": "7.2.0",
+    "mocha": "8.0.1",
     "nock": "12.0.3",
     "node-tdd": "2.11.4",
     "nyc": "15.1.0",
