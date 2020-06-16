@@ -1,0 +1,3 @@
+timeout: 2000
+ignore:
+  - "./test/projects/*/**/*.spec.js"
