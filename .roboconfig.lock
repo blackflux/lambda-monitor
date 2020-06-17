@@ -8,6 +8,7 @@
     ".gally.json",
     ".gitignore",
     ".idea/lambda-monitor.iml",
+    ".mocharc.yml",
     ".npmignore",
     ".releaserc.json",
     "LICENSE",
@@ -17,7 +18,6 @@
     "manage.sh",
     "package.json",
     "src/index.js",
-    "test/index.spec.js",
-    "test/mocha.opts"
+    "test/index.spec.js"
   ]
 }
