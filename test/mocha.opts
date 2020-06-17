@@ -1,2 +1,0 @@
---timeout 2000
---exclude "./test/projects/*/**/*.spec.js"
