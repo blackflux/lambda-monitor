@@ -1,0 +1,69 @@
+{
+  "handler": "processLogs",
+  "success": true,
+  "timeout": 10000,
+  "env": {
+    "DATADOG_API_KEY": "INVALID_DATADOG_API_KEY"
+  },
+  "expect": {
+    "to.deep.equal()": {
+      "messageType": "DATA_MESSAGE",
+      "owner": "783629116497",
+      "logGroup": "/aws/lambda/peg-solitiare-dev-overview",
+      "logStream": "2017/11/23/[$LATEST]e680fe32c6ba48ce8c3a377a25cd488e",
+      "subscriptionFilters": [
+        "NoneFilter"
+      ],
+      "logEvents": [
+        {
+          "id": "33705477413970201536500575666792700703924347154117689344",
+          "timestamp": 1511405879665,
+          "message": "END RequestId: 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0\n"
+        },
+        {
+          "id": "33705477413970201536500575666792700703924347154117689345",
+          "timestamp": 1511405879665,
+          "message": "REPORT RequestId: 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0\tDuration: 1001.14 ms\tBilled Duration: 1000 ms\tMemory Size: 256 MB\tMax Memory Used: 44 MB\t\nXRAY TraceId: 1-5d716d64-b570b380d8e36a802457fb00\tSegmentId: 07918f362e186398\tSampled: false\t\n"
+        },
+        {
+          "id": "33705477413970201536500575666792700703924347154117689346",
+          "timestamp": 1511405879665,
+          "message": "2017-11-23T02:57:59.665Z 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0 INFO Task timed out after 1.02 seconds\n\n"
+        }
+      ]
+    }
+  },
+  "logs": {
+    "to.deep.equal()": []
+  },
+  "event": {
+    "awslogs": {
+      "data|JSON.stringify|toGzip|toBase64": {
+        "messageType": "DATA_MESSAGE",
+        "owner": "783629116497",
+        "logGroup": "/aws/lambda/peg-solitiare-dev-overview",
+        "logStream": "2017/11/23/[$LATEST]e680fe32c6ba48ce8c3a377a25cd488e",
+        "subscriptionFilters": [
+          "NoneFilter"
+        ],
+        "logEvents": [
+          {
+            "id": "33705477413970201536500575666792700703924347154117689344",
+            "timestamp": 1511405879665,
+            "message": "END RequestId: 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0\n"
+          },
+          {
+            "id": "33705477413970201536500575666792700703924347154117689345",
+            "timestamp": 1511405879665,
+            "message": "REPORT RequestId: 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0\tDuration: 1001.14 ms\tBilled Duration: 1000 ms\tMemory Size: 256 MB\tMax Memory Used: 44 MB\t\nXRAY TraceId: 1-5d716d64-b570b380d8e36a802457fb00\tSegmentId: 07918f362e186398\tSampled: false\t\n"
+          },
+          {
+            "id": "33705477413970201536500575666792700703924347154117689346",
+            "timestamp": 1511405879665,
+            "message": "2017-11-23T02:57:59.665Z 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0 INFO Task timed out after 1.02 seconds\n\n"
+          }
+        ]
+      }
+    }
+  }
+}
