@@ -1824,10 +1824,10 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-datadog-light@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/datadog-light/-/datadog-light-2.0.3.tgz#a21e044c155af7d93852f98a71695503235e21f1"
-  integrity sha512-Dzpw1Wcodt3h/+JAKM22Zpq/46VDZk1Y8Yg7vA/hsho7tXEhq/w3s5tAeMcztfUhuwanPyZvZAxsD+6S1n+pyw==
+datadog-light@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/datadog-light/-/datadog-light-2.0.4.tgz#f55d9dffb84385c7c15d47b06a9fd165d17f619e"
+  integrity sha512-kA0zKyU+lcF9BNdKIj6CvObLduVjF1oAfTZK0i5SAEiljxmm1Ia96fwWpbhKc0fggfsbYATh+BW4oCqI+no5bg==
   dependencies:
     joi-strict "1.2.2"
     lodash.get "4.4.2"
