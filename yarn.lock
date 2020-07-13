@@ -5078,6 +5078,22 @@ node-tdd@2.15.0:
     uuid "8.2.0"
     xml2js "0.4.23"
 
+node-tdd@2.16.1:
+  version "2.16.1"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.16.1.tgz#f37a00f3df8e11a6f61ec36b2b4fc11f3dd24bfc"
+  integrity sha512-d3+hS/hFgeSNS5fupRrkbaJEHE5YuZyv3KN9sWiNu0CEfEvdMnzalpfngW6aRdZqBSL3ferwi3uK97n86rFotw==
+  dependencies:
+    callsites "3.1.0"
+    joi-strict "1.2.2"
+    lodash.get "4.4.2"
+    minimist "1.2.5"
+    nock "13.0.2"
+    smart-fs "1.11.15"
+    timekeeper "2.2.0"
+    tmp "0.2.1"
+    uuid "8.2.0"
+    xml2js "0.4.23"
+
 nopt@^4.0.1, nopt@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-4.0.3.tgz#a375cad9d02fd921278d954c2254d5aa57e15e48"
