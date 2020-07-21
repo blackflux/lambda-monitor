@@ -51,7 +51,7 @@
     "lambda-monitor-logger": "2.4.0",
     "lodash.get": "4.4.2",
     "lru-cache-ext": "1.1.13",
-    "promise-pool-ext": "1.3.4",
+    "promise-pool-ext": "1.3.5",
     "request": "2.88.2",
     "request-promise-native": "1.0.8",
     "smart-fs": "1.11.15"
