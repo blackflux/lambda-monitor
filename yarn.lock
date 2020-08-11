@@ -5107,6 +5107,24 @@ node-tdd@2.17.0:
     uuid "8.2.0"
     xml2js "0.4.23"
 
+node-tdd@2.18.0:
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.18.0.tgz#2d4d106ac212c2050c9e22841738b5fa53f3c6b9"
+  integrity sha512-SaMGkqgeUWp9iCGF/rjLT6vrfKzbUCPzzYe/B6v/OzmhEPX7yIQqIsMlM8+Fut8KBvf2nS8Yzj/ShgwJucwfuw==
+  dependencies:
+    callsites "3.1.0"
+    joi-strict "1.2.3"
+    lodash.clonedeep "4.5.0"
+    lodash.get "4.4.2"
+    minimist "1.2.5"
+    nock "13.0.2"
+    object-scan "13.1.2"
+    smart-fs "1.11.16"
+    timekeeper "2.2.0"
+    tmp "0.2.1"
+    uuid "8.3.0"
+    xml2js "0.4.23"
+
 nopt@^4.0.1, nopt@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-4.0.3.tgz#a375cad9d02fd921278d954c2254d5aa57e15e48"
@@ -7972,6 +7990,11 @@ uuid@8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.2.0.tgz#cb10dd6b118e2dada7d0cd9730ba7417c93d920e"
   integrity sha512-CYpGiFTUrmI6OBMkAdjSDM0k5h8SkkiTP4WAjQgDgNB1S3Ou9VBEvr6q0Kv2H1mMk7IWfxYGpMH5sd5AvcIV2Q==
+
+uuid@8.3.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
+  integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
 
 uuid@^3.3.2, uuid@^3.3.3:
   version "3.4.0"
