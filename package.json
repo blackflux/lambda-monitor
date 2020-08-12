@@ -76,7 +76,7 @@
     "lambda-tdd": "2.13.0",
     "minimist": "1.2.5",
     "mocha": "8.1.1",
-    "nock": "13.0.3",
+    "nock": "13.0.4",
     "node-tdd": "2.18.1",
     "nyc": "15.1.0",
     "robo-config": "3.8.4",
