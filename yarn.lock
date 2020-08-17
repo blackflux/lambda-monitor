@@ -4080,24 +4080,17 @@ lambda-async@1.0.6:
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.6.tgz#5089e704ae019ddde7c31ac00d89575192fc3f46"
   integrity sha512-Kq/9YhpSS5Q0Dp7lNZMC4aHWzC3sDT9I8k1ElsIJAFDIZemWgGxgJj75JQh6Qlpbts6gcyeEoZO2SaSFUAJCBQ==
 
-lambda-cfn-hook@1.2.26:
-  version "1.2.26"
-  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.26.tgz#8ca4e48cc54bcc307c59e7de178437062cdf902e"
-  integrity sha512-RcxAXxbNnlkiQNeZ+MR4c0+7bTytRKjPfe/l3wkkCXIffSf1HaguGYucrXt8wTp4ITLPfUbG7OOQ5WuL7Gj2wg==
+lambda-cfn-hook@1.2.27:
+  version "1.2.27"
+  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.27.tgz#c4f54f1f17169ab6ea3d8904e8496d16f9ba60a3"
+  integrity sha512-Az/eVJS+o+s/9KblVL26RCHh8NtWP+8t1U6sZoS13J6E+Yf/qhgF5lgHYTJBbikX2svlgrnu1qCPbZggqGadZA==
   dependencies:
     joi-strict "1.2.3"
     lambda-async "1.0.6"
-    lambda-monitor-logger "2.4.1"
+    lambda-monitor-logger "2.4.2"
     lodash.get "4.4.2"
     request "2.88.2"
-    request-promise "4.2.5"
-
-lambda-monitor-logger@2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.4.1.tgz#ac5661ddbeae6204d1ddbc3eef94f60ab648bdc8"
-  integrity sha512-Ta2nMiFGgCnkeVj4S3odsENt8eOF31OEoJ5rjK0WWBR5Ldhz5H68r6RR3ZPrdVFbgCriQ8K4rjsorDQGCSxFbA==
-  dependencies:
-    joi-strict "1.2.2"
+    request-promise "4.2.6"
 
 lambda-monitor-logger@2.4.2:
   version "2.4.2"
@@ -6584,13 +6577,6 @@ replace-ext@1.0.0:
   resolved "https://registry.yarnpkg.com/replace-ext/-/replace-ext-1.0.0.tgz#de63128373fcbf7c3ccfa4de5a480c45a67958eb"
   integrity sha1-3mMSg3P8v3w8z6TeWkgMRaZ5WOs=
 
-request-promise-core@1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/request-promise-core/-/request-promise-core-1.1.3.tgz#e9a3c081b51380dfea677336061fea879a829ee9"
-  integrity sha512-QIs2+ArIGQVp5ZYbWD5ZLCY29D5CfWizP8eWnm8FoGD1TX61veauETVQbrV60662V0oFBkrDOuaBI8XgtuyYAQ==
-  dependencies:
-    lodash "^4.17.15"
-
 request-promise-core@1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/request-promise-core/-/request-promise-core-1.1.4.tgz#3eedd4223208d419867b78ce815167d10593a22f"
@@ -6607,13 +6593,13 @@ request-promise-native@1.0.9:
     stealthy-require "^1.1.1"
     tough-cookie "^2.3.3"
 
-request-promise@4.2.5:
-  version "4.2.5"
-  resolved "https://registry.yarnpkg.com/request-promise/-/request-promise-4.2.5.tgz#186222c59ae512f3497dfe4d75a9c8461bd0053c"
-  integrity sha512-ZgnepCykFdmpq86fKGwqntyTiUrHycALuGggpyCZwMvGaZWgxW6yagT0FHkgo5LzYvOaCNvxYwWYIjevSH1EDg==
+request-promise@4.2.6:
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/request-promise/-/request-promise-4.2.6.tgz#7e7e5b9578630e6f598e3813c0f8eb342a27f0a2"
+  integrity sha512-HCHI3DJJUakkOr8fNoCc73E5nU5bqITjOYFMDrKHYOXWXrgD/SBaC7LjwuPymUprRyuF06UK7hd/lMHkmUXglQ==
   dependencies:
     bluebird "^3.5.0"
-    request-promise-core "1.1.3"
+    request-promise-core "1.1.4"
     stealthy-require "^1.1.1"
     tough-cookie "^2.3.3"
 
