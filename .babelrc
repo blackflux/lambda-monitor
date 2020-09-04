@@ -1,10 +1,5 @@
 {
-  "presets": [],
-  "plugins": [
-    "@babel/plugin-proposal-object-rest-spread"
-  ],
-  "ignore": [
-    "./src/plugin"
-  ],
-  "sourceMaps": "inline"
+  "presets": [["latest-node", {"target": "10"}]],
+  "plugins": [],
+  "sourceMaps": false
 }

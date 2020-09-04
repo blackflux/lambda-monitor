@@ -17,7 +17,8 @@
     "ts": "yarn run test-simple",
     "tsv": "yarn run test-simple --verbose",
     "u": "yarn upgrade --latest --force",
-    "i": "yarn install --frozen-lockfile"
+    "i": "yarn install --frozen-lockfile",
+    "it": "yarn run i && yarn run t"
   },
   "repository": {
     "type": "git",
@@ -43,7 +44,7 @@
   },
   "homepage": "https://github.com/blackflux/lambda-monitor#readme",
   "dependencies": {
-    "aws-sdk": "2.735.0",
+    "aws-sdk": "2.746.0",
     "aws-sdk-wrap": "4.4.12",
     "datadog-light": "2.0.5",
     "lambda-async": "1.0.6",
@@ -57,16 +58,15 @@
     "smart-fs": "1.11.16"
   },
   "devDependencies": {
-    "@babel/cli": "7.10.5",
-    "@babel/core": "7.11.1",
-    "@babel/plugin-proposal-object-rest-spread": "7.11.0",
-    "@babel/register": "7.10.5",
-    "@blackflux/eslint-plugin-rules": "1.3.32",
-    "@blackflux/robo-config-plugin": "3.9.5",
+    "@babel/cli": "7.11.6",
+    "@babel/core": "7.11.6",
+    "@babel/register": "7.11.5",
+    "@blackflux/eslint-plugin-rules": "1.3.33",
+    "@blackflux/robo-config-plugin": "3.9.9",
     "babel-eslint": "10.1.0",
     "chai": "4.2.0",
     "coveralls": "3.1.0",
-    "eslint": "7.7.0",
+    "eslint": "7.8.1",
     "eslint-config-airbnb-base": "14.2.0",
     "eslint-plugin-import": "2.22.0",
     "eslint-plugin-json": "2.1.2",
@@ -75,12 +75,13 @@
     "js-gardener": "2.0.167",
     "lambda-tdd": "2.13.2",
     "minimist": "1.2.5",
-    "mocha": "8.1.1",
+    "mocha": "8.1.3",
     "nock": "13.0.4",
     "node-tdd": "2.18.3",
     "nyc": "15.1.0",
-    "robo-config": "3.8.4",
-    "semantic-release": "17.1.1"
+    "robo-config": "3.8.6",
+    "semantic-release": "17.1.1",
+    "babel-preset-latest-node": "4.1.0"
   },
   "licenses": [
     {
