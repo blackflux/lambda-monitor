@@ -15,7 +15,7 @@ module.exports.putGzipObject = (bucket, key, data) => aws.call('s3:putObject', {
   Body: zlib.gzipSync(data, { level: 9 })
 });
 
-module.exports.emptyBucket = async (objParams) => {
+const emptyBucket = async (objParams) => {
   logger.info(`emptyBucket(): ${JSON.stringify(objParams)}`);
   const result = await listObjectsV2(objParams);
   if (result.Contents.length === 0) {
@@ -31,9 +31,10 @@ module.exports.emptyBucket = async (objParams) => {
   });
   logger.info(`Deleted ${data.Deleted.length} items ok.`);
   if (result.IsTruncated) {
-    await this.emptyBucket({
+    await emptyBucket({
       Bucket: objParams.Bucket,
       ContinuationToken: result.NextContinuationToken
     });
   }
 };
+module.exports.emptyBucket = emptyBucket;
