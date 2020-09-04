@@ -13,14 +13,12 @@ RUN touch ~/.bashrc && \
   yarn global add serverless@1.70.1
 
 RUN touch ~/.bashrc && \
-  echo '# yarn-upgrade' >> ~/.bashrc && \
-  echo "alias u='yarn upgrade --latest --force'" >> ~/.bashrc && \
-  echo '# yarn re-install' >> ~/.bashrc && \
-  echo "alias i='yarn install --frozen-lockfile'" >> ~/.bashrc && \
-  echo '# run tests' >> ~/.bashrc && \
-  echo "alias t='yarn test'" >> ~/.bashrc && \
-  echo "alias ts='yarn run test-simple'" >> ~/.bashrc && \
-  echo "alias tsv='yarn run test-simple --verbose'" >> ~/.bashrc && \
+  echo "alias u='yarn run u'" >> ~/.bashrc && \
+  echo "alias i='yarn run i'" >> ~/.bashrc && \
+  echo "alias it='yarn run it'" >> ~/.bashrc && \
+  echo "alias t='yarn run t'" >> ~/.bashrc && \
+  echo "alias ts='yarn run ts'" >> ~/.bashrc && \
+  echo "alias tsv='yarn run tsv'" >> ~/.bashrc && \
   source ~/.bashrc
 
 RUN chmod -R 757 /user
