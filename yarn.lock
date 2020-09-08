@@ -991,10 +991,10 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk-wrap@4.4.12:
-  version "4.4.12"
-  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-4.4.12.tgz#88feea8fdea488e019b78fb2a8e1d13ad8595d71"
-  integrity sha512-AoVSNrQhy5lxk1um3CIE3o3T4BJ5JO84oA/pdDQ1h0D9vKaegc/mVM6xq2ZCtge9d96Oq8I7/S5gKrVmZF4MQQ==
+aws-sdk-wrap@4.4.13:
+  version "4.4.13"
+  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-4.4.13.tgz#4df7856bf0e4bb4640c0327c60b68d097fc14e74"
+  integrity sha512-bR4Wz5cxRav4HBNNVWaKrSWlXdzefvc1mc69sB+OpRJT9Xiq7cIsylIidhPcI1lYT2n8mSoA7jo82yTnnwnUVQ==
   dependencies:
     joi-strict "1.2.3"
     lambda-async "1.0.6"
@@ -1005,10 +1005,10 @@ aws-sdk-wrap@4.4.12:
     promise-pool-ext "1.3.5"
     smart-fs "1.11.16"
 
-aws-sdk@2.746.0, aws-sdk@^2.4.0:
-  version "2.746.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.746.0.tgz#19f2b8d5d628774030ae184b9e59a67bb9de1f63"
-  integrity sha512-TMa/jxS2AHuZqAYNyv0X+Ltjt2NebjraT7xdL6NqKUiu0U61j0uav+gr2zw9lkz5q+KeTeYo7pg+S9LXVawHXw==
+aws-sdk@2.747.0, aws-sdk@^2.4.0:
+  version "2.747.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.747.0.tgz#487776536a7f8e4e18d57ff22dd50d777f1d0fe8"
+  integrity sha512-JA2ygLXFw0tLjc6nlauH3wnc6haoPU023fJCZN01xrw22l+s4rRjVGxJmG83VrfCmq+lrqCv0kVwlzyxbixGhA==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -4208,6 +4208,13 @@ lambda-monitor-logger@2.4.2:
   dependencies:
     joi-strict "1.2.3"
 
+lambda-monitor-logger@2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.4.3.tgz#1b340a2760700ccb288c80c1c3c2a93f1a877c9d"
+  integrity sha512-uSe+w5JwV+zWOSorBAnEaOiJYu9tFq998T5tfrZDaJptBhSxZKYSZY35NyWKH+BexAZk8ARnj3FJQX6S/c7d2g==
+  dependencies:
+    joi-strict "1.2.3"
+
 lambda-tdd@2.13.2:
   version "2.13.2"
   resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.13.2.tgz#dda37cd6b22650fe28523f4d4165b2fe0f4713f2"
@@ -7093,6 +7100,20 @@ smart-fs@1.11.16:
   version "1.11.16"
   resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.11.16.tgz#092b34da10d57f82dbb2d53b0b15eceda7417d9b"
   integrity sha512-1NbCUyNUIMCOr1sQReWNEbs/t27f92wUrp77eZNfqPZKg/XWYHez2LYWFMeCTPRIZXYSsa6bWeiTMsWzTVmgTA==
+  dependencies:
+    fs-extra "9.0.1"
+    js-yaml "3.14.0"
+    json-stringify-pretty-compact "2.0.0"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    object-align "1.0.12"
+    xml-js "1.6.11"
+    yaml-boost "1.9.23"
+
+smart-fs@1.11.17:
+  version "1.11.17"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.11.17.tgz#41fe4f45a38a66569023191a164f4c84739e68d9"
+  integrity sha512-MJEEAsAPuy34NztifiYS08Dl/TH7BY9lPnSg8dplofJ8/RbRXgrwWHp2T/rKWhlHEsfH/5fnNUV9hJp/KdcqOg==
   dependencies:
     fs-extra "9.0.1"
     js-yaml "3.14.0"
