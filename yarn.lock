@@ -5620,6 +5620,11 @@ object-treeify@1.1.26:
   resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.26.tgz#80b882036cb5d0fddc16e8a2affa98ba96f89a74"
   integrity sha512-0WTfU7SGM8umY4YPpOg+oHXL66E6dPVCr+sMR6KitPmvg8CkVrHUUZYEFtx0+5Wb0HjFEsBwBYXyGRNeX7c/oQ==
 
+object-treeify@1.1.27:
+  version "1.1.27"
+  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.27.tgz#4244a90df5ba3d2d92747ebd64b271369379e4f3"
+  integrity sha512-xRDJvP4ptfleTmJm/qPrxv/8Iifgk/xnaNeBqyczbYeQ4Yh5GCGOZaO78MlbwR5nlo9viTxM1kgThgl8/sMEHg==
+
 object-visit@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/object-visit/-/object-visit-1.0.1.tgz#f79c4493af0c5377b59fe39d395e41042dd045bb"
@@ -6832,6 +6837,22 @@ rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
+robo-config@3.8.10:
+  version "3.8.10"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.8.10.tgz#e2a9f23fbbb2ba4a4ed8267762c95fb7dd618a24"
+  integrity sha512-43vz+ONe5jXDHR2eEQsh/nOaAr8oy/hzHmuSSt/ibfx1tqQwDMaw6NP6RiHLo/frQS6VcodV7oCSCsYk8C8yLw==
+  dependencies:
+    app-root-path "3.0.0"
+    deepmerge "4.2.2"
+    joi-strict "1.2.4"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    object-deep-contain "1.0.25"
+    object-scan "13.1.4"
+    object-treeify "1.1.27"
+    smart-fs "1.11.18"
+
 robo-config@3.8.4:
   version "3.8.4"
   resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.8.4.tgz#ce1b28f4692eb01728f96434921739f5a12c77d0"
@@ -6847,22 +6868,6 @@ robo-config@3.8.4:
     object-scan "13.1.2"
     object-treeify "1.1.26"
     smart-fs "1.11.15"
-
-robo-config@3.8.6:
-  version "3.8.6"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.8.6.tgz#994d8f2e2024c73591f3f766b1445e8562c39382"
-  integrity sha512-ucreSd4pdWDMSGN6loCcpn9FsHvy6wLblY56UcHZo5jdsXL5AFiRX5ntAAs3elpuP9GqV4p1rIX2zEFrUz2lUg==
-  dependencies:
-    app-root-path "3.0.0"
-    deepmerge "4.2.2"
-    joi-strict "1.2.3"
-    lodash.clonedeep "4.5.0"
-    lodash.difference "4.5.0"
-    lodash.get "4.4.2"
-    object-deep-contain "1.0.25"
-    object-scan "13.1.2"
-    object-treeify "1.1.26"
-    smart-fs "1.11.16"
 
 run-async@^0.1.0:
   version "0.1.0"
