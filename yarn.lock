@@ -4653,6 +4653,13 @@ lru-cache-ext@1.1.13:
   dependencies:
     lru-cache "6.0.0"
 
+lru-cache-ext@1.1.15:
+  version "1.1.15"
+  resolved "https://registry.yarnpkg.com/lru-cache-ext/-/lru-cache-ext-1.1.15.tgz#b94fd075f9489447fecd8f08dbd466207f9be9a2"
+  integrity sha512-rlPRbapEBv3pwD5dCADsbrUZ7Aa6ms7GUzahOZnrOYwCudGEd4zfI/qCwFUPCCMaLPgjw5tAjcXI2CLmCbsJHA==
+  dependencies:
+    lru-cache "6.0.0"
+
 lru-cache@6.0.0, lru-cache@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-6.0.0.tgz#6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94"

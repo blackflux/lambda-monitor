@@ -51,7 +51,7 @@
     "lambda-cfn-hook": "1.2.27",
     "lambda-monitor-logger": "2.4.3",
     "lodash.get": "4.4.2",
-    "lru-cache-ext": "1.1.13",
+    "lru-cache-ext": "1.1.15",
     "promise-pool-ext": "1.3.5",
     "request": "2.88.2",
     "request-promise-native": "1.0.9",
