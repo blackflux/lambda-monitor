@@ -7169,6 +7169,20 @@ smart-fs@1.11.19:
     xml-js "1.6.11"
     yaml-boost "1.9.24"
 
+smart-fs@1.11.20:
+  version "1.11.20"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.11.20.tgz#c3dfc632977c11a730cc408d9becc1a580f1406a"
+  integrity sha512-PtG2x91f6fSwx0Q/mZgoZKKxp4LuQq7mt0U9cM5gMOB0AUuNE2QG01JV4A28JpAG18KKdSSSF0xKZWT9UsnKAw==
+  dependencies:
+    fs-extra "9.0.1"
+    js-yaml "3.14.0"
+    json-stringify-pretty-compact "2.0.0"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    object-align "1.0.13"
+    xml-js "1.6.11"
+    yaml-boost "1.9.24"
+
 snapdragon-node@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/snapdragon-node/-/snapdragon-node-2.1.1.tgz#6c175f86ff14bdb0724563e8f3c1b021a286853b"
