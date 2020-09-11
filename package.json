@@ -79,7 +79,7 @@
     "nock": "13.0.4",
     "node-tdd": "2.18.8",
     "nyc": "15.1.0",
-    "robo-config": "3.8.10",
+    "robo-config": "3.8.12",
     "semantic-release": "17.1.1",
     "babel-preset-latest-node": "4.1.0"
   },
