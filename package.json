@@ -44,7 +44,7 @@
   },
   "homepage": "https://github.com/blackflux/lambda-monitor#readme",
   "dependencies": {
-    "aws-sdk": "2.751.0",
+    "aws-sdk": "2.752.0",
     "aws-sdk-wrap": "4.4.18",
     "datadog-light": "2.0.6",
     "lambda-async": "1.0.7",
@@ -80,7 +80,7 @@
     "nock": "13.0.4",
     "node-tdd": "2.18.8",
     "nyc": "15.1.0",
-    "robo-config": "3.8.12",
+    "robo-config": "3.8.13",
     "semantic-release": "17.1.1"
   },
   "licenses": [
