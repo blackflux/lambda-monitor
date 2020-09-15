@@ -4203,10 +4203,10 @@ lambda-async@1.0.6:
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.6.tgz#5089e704ae019ddde7c31ac00d89575192fc3f46"
   integrity sha512-Kq/9YhpSS5Q0Dp7lNZMC4aHWzC3sDT9I8k1ElsIJAFDIZemWgGxgJj75JQh6Qlpbts6gcyeEoZO2SaSFUAJCBQ==
 
-lambda-async@1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.7.tgz#3789c08fe606a87c41d7eace35888ef8e7015b3a"
-  integrity sha512-fdtZ/4QljF5CrqvbxB/6cnbqRJqi55t5rUl/pffnviqozf1CsGFNi3PGOCs11pdZUDfoMYb3hZx4qZYZLYUlhQ==
+lambda-async@1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.8.tgz#b09b2556d4938219277af4ba0f20936940a811db"
+  integrity sha512-YxsgmcjPrkXRWmeSkeQOlMLSuvKA61500ftW7C7JkLLJzGHuZygpRUzieprBv4sp33QC+6/VTQXV5PMxipC4uA==
 
 lambda-cfn-hook@1.2.29:
   version "1.2.29"
