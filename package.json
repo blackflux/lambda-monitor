@@ -73,7 +73,7 @@
     "eslint-plugin-json": "2.1.2",
     "eslint-plugin-markdown": "1.0.2",
     "eslint-plugin-mocha": "8.0.0",
-    "js-gardener": "2.0.175",
+    "js-gardener": "2.0.176",
     "lambda-tdd": "2.13.10",
     "minimist": "1.2.5",
     "mocha": "8.1.3",
