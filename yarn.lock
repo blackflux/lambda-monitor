@@ -4276,6 +4276,13 @@ lambda-monitor-logger@2.4.5:
   dependencies:
     joi-strict "1.2.5"
 
+lambda-monitor-logger@2.4.6:
+  version "2.4.6"
+  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.4.6.tgz#4a4baacd4c65b5199a52692cae79e4f60994f180"
+  integrity sha512-V/8hZBp40o5bgBwUqaZby1p4iWCKyObXnYWWm20pHVODsdjUKaLaTnZQ5wNFIiCrf7kMQZ0/Ke5bnzjBJSkxCQ==
+  dependencies:
+    joi-strict "1.2.5"
+
 lambda-tdd@2.13.10:
   version "2.13.10"
   resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.13.10.tgz#ea02186ad02a4afce461cac27fa98719c37a745e"
