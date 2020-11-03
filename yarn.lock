@@ -4624,10 +4624,10 @@ lru-cache-ext@1.2.0:
   dependencies:
     lru-cache "6.0.0"
 
-lru-cache-ext@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/lru-cache-ext/-/lru-cache-ext-1.2.1.tgz#0333edc5adda2467bedd496002c84ddfa116efb8"
-  integrity sha512-zdBCw9SZozOFcciNGvnPPZcqEzfKs0sQfkpSYU2n0ibU0AytVAGsxYTUuTBxv3KMkdV3yNOoIVkfHkZpCcOxKw==
+lru-cache-ext@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/lru-cache-ext/-/lru-cache-ext-1.2.2.tgz#61bfc60bc79063531932ebf004885d942b443524"
+  integrity sha512-9JDrA1q7mQtg0OnaAmDpXRoZM0k++eVzBvdp2q4+gBBqqLiYrtV6K3WA3Q0pKzoh67KXPPectHQ2+w30s4RbTA==
   dependencies:
     lru-cache "6.0.0"
 
