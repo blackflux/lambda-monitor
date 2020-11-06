@@ -14,7 +14,7 @@ Lambda log monitoring and streaming to external services.
 ## What it does
 
 - Parsing and analysis of AWS Lambda CloudWatch Logs
-- Pipes AWS Lambda Logs to external logging services (i.e. [Loggly](https://loggly.com), [Logz](https://logz.io) or [Datadog](https://www.datadoghq.com))
+- Pipes AWS Lambda Logs to external logging services (i.e. [Loggly](https://loggly.com), [Logit.io](https://logit.io), [Logz](https://logz.io) or [Datadog](https://www.datadoghq.com))
 - Detects and sends AWS Lambda anomalies to external monitoring service (i.e. [Rollbar](https://rollbar.com))
 - Fully transparent, no changes to existing Lambda functions required
 
