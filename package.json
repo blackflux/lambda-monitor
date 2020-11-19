@@ -46,7 +46,7 @@
   "dependencies": {
     "aws-sdk": "2.796.0",
     "aws-sdk-wrap": "4.5.1",
-    "datadog-light": "2.0.8",
+    "datadog-light": "2.0.9",
     "lambda-async": "1.0.9",
     "lambda-cfn-hook": "1.2.32",
     "lambda-monitor-logger": "2.4.6",
