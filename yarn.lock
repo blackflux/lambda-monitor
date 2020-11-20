@@ -1003,19 +1003,19 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk-wrap@4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-4.5.1.tgz#b025565d0d6f5e7bf2cd61afd5e936b759cb3f58"
-  integrity sha512-IMTZdVAoP6SBkwWWl22JBaj6lXPQTU+I7kc5pCRYrVPmxwaTcg0ppoT31fA9V2//eJ6BfqfazUTTGOAbUqHTlQ==
+aws-sdk-wrap@4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-4.5.2.tgz#819d4a5ef175e9aa6076069a5b0db90421f29389"
+  integrity sha512-aMneoaNYe0GWwGLrVS188/MYClsVz5UlDGiTJjfYHoifFJrr4RDt7Q3sG4JTlZ1SEpicOpYze+/EVWhA2CfAVw==
   dependencies:
-    joi-strict "1.2.5"
-    lambda-async "1.0.8"
+    joi-strict "1.2.6"
+    lambda-async "1.0.9"
     lodash.chunk "4.2.0"
     lodash.get "4.4.2"
-    lru-cache-ext "1.2.0"
+    lru-cache-ext "1.2.3"
     object-hash "2.0.3"
-    promise-pool-ext "1.3.8"
-    smart-fs "1.12.0"
+    promise-pool-ext "1.3.10"
+    smart-fs "1.12.1"
 
 aws-sdk@2.796.0, aws-sdk@^2.4.0:
   version "2.796.0"
@@ -4007,21 +4007,21 @@ joi-strict@1.2.6:
   dependencies:
     "@hapi/joi" "17.1.1"
 
-js-gardener@2.0.179:
-  version "2.0.179"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.179.tgz#71984da24b1109564fe1cab6b3862fd5b51f0e73"
-  integrity sha512-+aoslIpT1CPGBjonVrTW9ibvLp8gGx03ZvZesoK71Y3ICDDGNjQZZ4JiAuxotd3T5lzKxCWDxYJWLX+xo5HxHg==
+js-gardener@2.0.181:
+  version "2.0.181"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.181.tgz#e9cbeab8ecc74275d9613615cb8652c0bf19a496"
+  integrity sha512-g1qXgUBHtZOT6knCigs/12F+WvGNbomK149x4DBfhkPf9he37EtEhi6Z2Rywya+W7dRYO4KJ6thRrLlvF2RLRg==
   dependencies:
     chalk "4.1.0"
     fancy-log "1.3.3"
     glob "7.1.6"
-    joi-strict "1.2.5"
+    joi-strict "1.2.6"
     js-yaml "3.14.0"
     lodash.difference "4.5.0"
     lodash.get "4.4.2"
-    mocha "8.2.0"
+    mocha "8.2.1"
     npm-check "5.9.2"
-    robo-config "3.10.1"
+    robo-config "3.10.3"
 
 js-tokens@^3.0.0:
   version "3.0.2"
@@ -4611,13 +4611,6 @@ lowercase-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"
   integrity sha512-G2Lj61tXDnVFFOi8VZds+SoQjtQC3dgokKdDG2mTm1tx4m50NUHBOZSBwQQHyy0V12A0JTG4icfZQH+xPyh8VA==
 
-lru-cache-ext@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/lru-cache-ext/-/lru-cache-ext-1.2.0.tgz#9e0f3c086202d39a901686e09c9ca644c76de28f"
-  integrity sha512-HbruRdlMF03TVf8xIT4tR+YhVhoTWcY74FyNanL4iC4ZDzpt7bDqCjPG/RaIC4jJK7I3da2wX0gBl5D0rR44Lw==
-  dependencies:
-    lru-cache "6.0.0"
-
 lru-cache-ext@1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/lru-cache-ext/-/lru-cache-ext-1.2.3.tgz#bed7db030e0f8be06c10e9c4a0524d5d5a6292c9"
@@ -4915,37 +4908,6 @@ mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@^0.5.5, mkdirp@~0.5.0:
   integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
   dependencies:
     minimist "^1.2.5"
-
-mocha@8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/mocha/-/mocha-8.2.0.tgz#f8aa79110b4b5a6580c65d4dd8083c425282624e"
-  integrity sha512-lEWEMq2LMfNJMKeuEwb5UELi+OgFDollXaytR5ggQcHpzG3NP/R7rvixAvF+9/lLsTWhWG+4yD2M70GsM06nxw==
-  dependencies:
-    "@ungap/promise-all-settled" "1.1.2"
-    ansi-colors "4.1.1"
-    browser-stdout "1.3.1"
-    chokidar "3.4.3"
-    debug "4.2.0"
-    diff "4.0.2"
-    escape-string-regexp "4.0.0"
-    find-up "5.0.0"
-    glob "7.1.6"
-    growl "1.10.5"
-    he "1.2.0"
-    js-yaml "3.14.0"
-    log-symbols "4.0.0"
-    minimatch "3.0.4"
-    ms "2.1.2"
-    nanoid "3.1.12"
-    serialize-javascript "5.0.1"
-    strip-json-comments "3.1.1"
-    supports-color "7.2.0"
-    which "2.0.2"
-    wide-align "1.1.3"
-    workerpool "6.0.2"
-    yargs "13.3.2"
-    yargs-parser "13.1.2"
-    yargs-unparser "2.0.0"
 
 mocha@8.2.1:
   version "8.2.1"
@@ -5567,11 +5529,6 @@ object-copy@^0.1.0:
     define-property "^0.2.5"
     kind-of "^3.0.3"
 
-object-deep-contain@1.0.27:
-  version "1.0.27"
-  resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.27.tgz#16aecab563c29a15987a2cf9dcc9367ca7cb2348"
-  integrity sha512-VTMi2nYRKwNqysc5LASl6Amtq7AaxUh64WZ+frQMUU3puY0B4jF6+f7t4yEDU3auqCMnCSRUNDQWN4rw9RStSQ==
-
 object-deep-contain@1.0.28:
   version "1.0.28"
   resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.28.tgz#a9a820657ac22b475631dbf9b7555792f5cbcefa"
@@ -5597,20 +5554,10 @@ object-scan@13.1.6:
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-13.1.6.tgz#7ca059e129ee653edadb4ea1fecb57996d998a3d"
   integrity sha512-11zDs+8YzbqrhsFEqsPfPS8MucHuph5bmu0HA6JL2BlDoauLe2yKFa7HrZG1rS/+vdQCBibivqA+nvE5hj5ahQ==
 
-object-scan@13.3.8:
-  version "13.3.8"
-  resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-13.3.8.tgz#a354752cff057ec1cfde3a56a6522662735e8d59"
-  integrity sha512-2dDYo3736YbxOE8AFDeT5+kXjFs34wsqubyZp5rLaFwtzQ1oyiGp1e5yROWyxcRo29R1e3z69L/POcr47zZe/g==
-
 object-scan@13.6.6:
   version "13.6.6"
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-13.6.6.tgz#e44677a7f5411b96bf5d5f66ce627e94ea09e599"
   integrity sha512-Ag+m0/43i2HhbxMptWA9gZT0XvEQAv2fsvPkUQzvZTgo8sGcFgqdXEDFtru1VnYSTZpBWcEePy8dI0yyyFI5wA==
-
-object-treeify@1.1.28:
-  version "1.1.28"
-  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.28.tgz#2aba57f393cd991ce35d318d2ede33623c2b040a"
-  integrity sha512-FoBGZexpq9jJr6mDgV8wv711vreKyzRcw65TKeXzHh98+TNmPZfGYznpel3WceM869WsnSCyUuK46rPUG9+Rpg==
 
 object-treeify@1.1.29:
   version "1.1.29"
@@ -6195,13 +6142,6 @@ promise-pool-ext@1.3.10:
   integrity sha512-CbrLkKU4wrMLJlT3xs3P/UXNSLKVa0e/3m3whNlAf2kuWCXbt9WXVWmpwc85NeFS8RxLyhEQ6ML23od0sWazZQ==
   dependencies:
     joi-strict "1.2.6"
-
-promise-pool-ext@1.3.8:
-  version "1.3.8"
-  resolved "https://registry.yarnpkg.com/promise-pool-ext/-/promise-pool-ext-1.3.8.tgz#c7e882816cd5b6ba8e8fcee08fae7d75e768a966"
-  integrity sha512-3J4/rVgSmhB3OnboifsDjjM3d+itIGQcXweWnhw/90ze0UTgLJkQAIKYRu7DlPDqCbnomD+ZBbnTqpUucyxr/A==
-  dependencies:
-    joi-strict "1.2.5"
 
 promise-retry@^1.1.1:
   version "1.1.1"
@@ -6817,23 +6757,6 @@ rimraf@^3.0.0:
   integrity sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
   dependencies:
     glob "^7.1.3"
-
-robo-config@3.10.1:
-  version "3.10.1"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.10.1.tgz#03303d388e4a5d572a6d35cc9c7833c7c181a3a7"
-  integrity sha512-qijOOgfR4WKSfdvQGe7ojCpV4PrIfHqONQGwTaQBgz5hAF/iDtq40Au6rA4SGZy3zHdbCC4NxYi18j23xdUr6Q==
-  dependencies:
-    app-root-path "3.0.0"
-    deepmerge "4.2.2"
-    joi-strict "1.2.5"
-    lodash.clonedeep "4.5.0"
-    lodash.difference "4.5.0"
-    lodash.get "4.4.2"
-    mustache "4.0.1"
-    object-deep-contain "1.0.27"
-    object-scan "13.3.8"
-    object-treeify "1.1.28"
-    smart-fs "1.12.0"
 
 robo-config@3.10.3:
   version "3.10.3"
