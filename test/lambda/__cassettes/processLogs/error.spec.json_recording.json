@@ -16,7 +16,7 @@
   {
     "scope": "https://log-stream-bucket-name.s3.amazonaws.com:443",
     "method": "PUT",
-    "path": "/aws/lambda/peg-solitiare-dev-overview/2017/11/23/warning-33705525399286472041989494361812797248982273749060812800.json.gz",
+    "path": "/aws/lambda/peg-solitiare-dev-overview/2017/11/23/03/warning-33705525399286472041989494361812797248982273749060812800.json.gz",
     "body": "1f8b0800000000000203258c410ac3201000bf227bf112e8aa6bdccd0bfa885e52945488a6c4343d94febd422f731886f9408e30817301bdb7de89581e295824232c24e446c3c606099658d8dae002098ed82523c200472ea91d7379c264bc31848caed30cd07d9b97d4f7d7b9c635ed4a6f67dacf9cde5a95dc5aae8bdaaa2a5b7cad49e935df2f8f7fa96f15be3ffc72d9799c000000",
     "status": 200,
     "response": ""
