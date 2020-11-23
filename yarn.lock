@@ -4129,34 +4129,22 @@ kind-of@^6.0.0, kind-of@^6.0.2, kind-of@^6.0.3:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
-lambda-async@1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.8.tgz#b09b2556d4938219277af4ba0f20936940a811db"
-  integrity sha512-YxsgmcjPrkXRWmeSkeQOlMLSuvKA61500ftW7C7JkLLJzGHuZygpRUzieprBv4sp33QC+6/VTQXV5PMxipC4uA==
-
 lambda-async@1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.9.tgz#e66298ded7903b8c6163386b377ed08c89569255"
   integrity sha512-r24gjx5ATuQOx6EDET2KK+CQMyIVP1hZ1E91553vmu1D9k+QUCksrwNo9w8ff3luYwqXPdGDdEJKgo82j6SVCw==
 
-lambda-cfn-hook@1.2.32:
-  version "1.2.32"
-  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.32.tgz#cce40a4a5c96584fbe94f6fedd9fe49ceb72dc7a"
-  integrity sha512-eYlwELiUMl6mLJN36INGWt0zW38WFBppshgV7nAhyadNtqNN8hDQKwBJk7xLdpuJ8lNWkNihpYdgRNlb9b8w3Q==
+lambda-cfn-hook@1.2.34:
+  version "1.2.34"
+  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.34.tgz#ff12ce1c869670743719fbc1051e7a61239912a5"
+  integrity sha512-YLxLN3154KFwe+4I0kp1+f/0fVXoMZqPAV9a69JvhlVT4+Q+h68HwuMdelplJy6cy5gL+691XFdn+M880pp9vw==
   dependencies:
-    joi-strict "1.2.5"
-    lambda-async "1.0.8"
-    lambda-monitor-logger "2.4.5"
+    joi-strict "1.2.6"
+    lambda-async "1.0.9"
+    lambda-monitor-logger "2.4.7"
     lodash.get "4.4.2"
     request "2.88.2"
     request-promise "4.2.6"
-
-lambda-monitor-logger@2.4.5:
-  version "2.4.5"
-  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.4.5.tgz#917fad29ad76bed5a16b2820e68f86b7a67d504a"
-  integrity sha512-6k0kSJ/ajPG6dKq370nBQzyOtcL1vfBg4dHupOEePEnUf1oiGJ8Dhifj+DeeTdyBYhbrDM5OCnLT+iTrV4pJZw==
-  dependencies:
-    joi-strict "1.2.5"
 
 lambda-monitor-logger@2.4.6:
   version "2.4.6"
@@ -4164,6 +4152,13 @@ lambda-monitor-logger@2.4.6:
   integrity sha512-V/8hZBp40o5bgBwUqaZby1p4iWCKyObXnYWWm20pHVODsdjUKaLaTnZQ5wNFIiCrf7kMQZ0/Ke5bnzjBJSkxCQ==
   dependencies:
     joi-strict "1.2.5"
+
+lambda-monitor-logger@2.4.7:
+  version "2.4.7"
+  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.4.7.tgz#53318272cc31d6c8dcf91f9a183b0cfdab5ee65a"
+  integrity sha512-mCb+EAz5RTNKmN/A/ALJqXZRLcCv8nbMDMOjzVZiDg0nLEeS8WaOdnPvpHV0lGJWInJ1FqNmiVZru7l6EYFziA==
+  dependencies:
+    joi-strict "1.2.6"
 
 lambda-tdd@2.13.11:
   version "2.13.11"
