@@ -5,10 +5,11 @@ module.exports = ({
   logEvent,
   level
 }) => {
-  const [year, month, day] = new Date(logEvent.timestamp).toISOString().split('T')[0].split('-');
+  const [year, month, day, hour] = new Date(logEvent.timestamp)
+    .toISOString().split(/[-T:]/);
   s3PutGzipObject.enqueue(
     process.env.LOG_STREAM_BUCKET_NAME,
-    `${logGroup.slice(1)}/${year}/${month}/${day}/${level}-${logEvent.id}.json.gz`,
+    `${logGroup.slice(1)}/${year}/${month}/${day}/${hour}/${level}-${logEvent.id}.json.gz`,
     JSON.stringify(logEvent)
   );
 };
