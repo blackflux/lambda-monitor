@@ -4159,10 +4159,10 @@ lambda-monitor-logger@2.4.7:
   dependencies:
     joi-strict "1.2.6"
 
-lambda-tdd@2.13.11:
-  version "2.13.11"
-  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.13.11.tgz#b6dbee4b0d52e5d7d0dd3ec027a4095f0b1494d1"
-  integrity sha512-gSo0XItdGHRPi4soQLAzZmnvZlvlI6dxQ9uKrDScn7+bAk4fXu3htow0Us5rfxROeTiFoFm+2dmQEGjaU63fLw==
+lambda-tdd@2.13.12:
+  version "2.13.12"
+  resolved "https://registry.yarnpkg.com/lambda-tdd/-/lambda-tdd-2.13.12.tgz#474a4c4591c0b83735f20c7c27c12090f9aec046"
+  integrity sha512-4RpTNA93AZSzTIzGNIjLJeqMW6O9sATLj8NBtssc3Z4OlR9Ty3iCPrX9SBTXQ+Qcifs/nTa/SmHDlsOesvSa8w==
   dependencies:
     app-root-path "3.0.0"
     glob "7.1.6"
