@@ -893,6 +893,11 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
+argparse@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
+  integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
+
 argv-formatter@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/argv-formatter/-/argv-formatter-1.0.0.tgz#a0ca0cbc29a5b73e836eebe1cbf6c5e0e4eb82f9"
@@ -3991,21 +3996,21 @@ joi-strict@1.2.9:
   dependencies:
     "@hapi/joi" "17.1.1"
 
-js-gardener@2.0.181:
-  version "2.0.181"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.181.tgz#e9cbeab8ecc74275d9613615cb8652c0bf19a496"
-  integrity sha512-g1qXgUBHtZOT6knCigs/12F+WvGNbomK149x4DBfhkPf9he37EtEhi6Z2Rywya+W7dRYO4KJ6thRrLlvF2RLRg==
+js-gardener@2.0.184:
+  version "2.0.184"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.184.tgz#587ac5a374b80b3ccc5e166d3b2846742a765910"
+  integrity sha512-esHh8fY1KNa1aFZcO19tTmXkbImwQ0jvYIyz4y2ofcSdkyDZ9j8DTSNmXucz2iN+ptIzXC6wzemWygnXZd37Qg==
   dependencies:
     chalk "4.1.0"
     fancy-log "1.3.3"
     glob "7.1.6"
-    joi-strict "1.2.6"
-    js-yaml "3.14.0"
+    joi-strict "1.2.9"
+    js-yaml "4.0.0"
     lodash.difference "4.5.0"
     lodash.get "4.4.2"
     mocha "8.2.1"
     npm-check "5.9.2"
-    robo-config "3.10.3"
+    robo-config "3.10.5"
 
 js-tokens@^3.0.0:
   version "3.0.2"
@@ -4017,7 +4022,7 @@ js-tokens@^4.0.0:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-js-yaml@3.14.0, js-yaml@^3.13.0, js-yaml@^3.13.1, js-yaml@^3.4.2:
+js-yaml@3.14.0:
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.0.tgz#a7a34170f26a21bb162424d8adacb4113a69e482"
   integrity sha512-/4IbIeHcD9VMHFqDR/gQ7EdZdLimOvW2DdcxFjdyyZ9NsbS+ccrXqVWDtab/lRl5AlUqmpBx8EhPaWR+OtY17A==
@@ -4025,13 +4030,20 @@ js-yaml@3.14.0, js-yaml@^3.13.0, js-yaml@^3.13.1, js-yaml@^3.4.2:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-js-yaml@3.14.1:
+js-yaml@3.14.1, js-yaml@^3.13.0, js-yaml@^3.13.1, js-yaml@^3.4.2:
   version "3.14.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.1.tgz#dae812fdb3825fa306609a8717383c50c36a0537"
   integrity sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
+
+js-yaml@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.0.0.tgz#f426bc0ff4b4051926cd588c71113183409a121f"
+  integrity sha512-pqon0s+4ScYUvX30wxQi3PogGFAlUyH0awepWvwkj4jD4v+ova3RiYw8bmA6x2rDrEaj8i/oWKoRxpVNW+Re8Q==
+  dependencies:
+    argparse "^2.0.1"
 
 jsbn@~0.1.0:
   version "0.1.1"
@@ -4964,6 +4976,11 @@ mustache@4.0.1:
   resolved "https://registry.yarnpkg.com/mustache/-/mustache-4.0.1.tgz#d99beb031701ad433338e7ea65e0489416c854a2"
   integrity sha512-yL5VE97+OXn4+Er3THSmTdCFCtx5hHWzrolvH+JObZnUYwuaG7XV+Ch4fR2cIrcYI0tFHxS7iyFYl14bW8y2sA==
 
+mustache@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/mustache/-/mustache-4.1.0.tgz#8c1b042238a982d2eb2d30efc6c14296ae3f699d"
+  integrity sha512-0FsgP/WVq4mKyjolIyX+Z9Bd+3WS8GOwoUTyKXT5cTYMGeauNTi2HPCwERqseC1IHAy0Z7MDZnJBfjabd4O8GQ==
+
 mute-stream@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
@@ -5526,6 +5543,11 @@ object-deep-contain@1.0.28:
   resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.28.tgz#a9a820657ac22b475631dbf9b7555792f5cbcefa"
   integrity sha512-rlu9yObPELlwx7qkB5yCfT/PVwyBM3Ct5owNxVmH0lXMvZF+KXf/MfpJNs0JIYOB9IjlC2ImqFcfWCNEua1xZQ==
 
+object-deep-contain@1.0.29:
+  version "1.0.29"
+  resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.29.tgz#d6cf9df21455e31de769f486410594cd6885d215"
+  integrity sha512-nLOAncdGePrOWzjSD1AwroXRtaUOXf3LRyVhTntdYSPwvWld65toDGxFrDvw/0ji3AGF5FeEvnoBNZBUElK3Ng==
+
 object-hash@2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-2.1.1.tgz#9447d0279b4fcf80cff3259bf66a1dc73afabe09"
@@ -5560,6 +5582,11 @@ object-treeify@1.1.29:
   version "1.1.29"
   resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.29.tgz#53a0fe8346ca0936ed9f3b5dfb24438d534a7e17"
   integrity sha512-XnPIMyiv6fJeb/z3Bz+u43Fcw3C9fs1uoRITd8x3mau/rsSAUhx7qpIO10Q/dzJeMleJesccUSMiFx8FF+ruBA==
+
+object-treeify@1.1.31:
+  version "1.1.31"
+  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.31.tgz#eb083c8eb25b512c9feea088e72b03aa13032d5e"
+  integrity sha512-kt2UuyHDTH+J6w0pv2c+3uuEApGuwgfjWogbqPWAvk4nOM/T3No0SzDtp6CuJ/XBUy//nFNuerb8ms7CqjD9Tw==
 
 object-visit@^1.0.0:
   version "1.0.1"
@@ -6771,6 +6798,23 @@ robo-config@3.10.3:
     object-scan "13.6.6"
     object-treeify "1.1.29"
     smart-fs "1.12.1"
+
+robo-config@3.10.5:
+  version "3.10.5"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.10.5.tgz#df5a337aed62d4aa539aa1e467d8456280534753"
+  integrity sha512-EgwygWqElIIsxwTShR3pd4+7hs/ywmIYcfojuEOkkfuVpsf+Buvg0mhyFhDX38oB83x/+OpN6c0ZCfGOqo4w/Q==
+  dependencies:
+    app-root-path "3.0.0"
+    deepmerge "4.2.2"
+    joi-strict "1.2.9"
+    lodash.clonedeep "4.5.0"
+    lodash.difference "4.5.0"
+    lodash.get "4.4.2"
+    mustache "4.1.0"
+    object-deep-contain "1.0.29"
+    object-scan "13.7.1"
+    object-treeify "1.1.31"
+    smart-fs "1.12.3"
 
 run-async@^0.1.0:
   version "0.1.0"
