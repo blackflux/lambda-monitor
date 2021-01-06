@@ -4172,19 +4172,19 @@ lambda-cfn-hook@1.2.36:
     request "2.88.2"
     request-promise "4.2.6"
 
-lambda-monitor-logger@2.4.7:
-  version "2.4.7"
-  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.4.7.tgz#53318272cc31d6c8dcf91f9a183b0cfdab5ee65a"
-  integrity sha512-mCb+EAz5RTNKmN/A/ALJqXZRLcCv8nbMDMOjzVZiDg0nLEeS8WaOdnPvpHV0lGJWInJ1FqNmiVZru7l6EYFziA==
-  dependencies:
-    joi-strict "1.2.6"
-
 lambda-monitor-logger@2.4.8:
   version "2.4.8"
   resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.4.8.tgz#d06bd5eefa82417c0779d8d4ea564d9418c6d5a6"
   integrity sha512-BA5uogVmXS8ZLTmof7uyliuF+XbU03XaQZV6DPSKh3OoGEOq/q+XlCZFgQaFBGHVwViB4KcwEElgy3+D1A6JRQ==
   dependencies:
     joi-strict "1.2.6"
+
+lambda-monitor-logger@2.4.9:
+  version "2.4.9"
+  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.4.9.tgz#2403da632fc5314db983cfc2d2c3cf319e729c17"
+  integrity sha512-8nIzzabHGcXh/4ftz0QkCWSef8kWHV3etCzqaqICuCXqig5aN7PpfkiUB4WYHlBuWP8v1Q1ogORsL+hNF1rT3w==
+  dependencies:
+    joi-strict "1.2.9"
 
 lambda-tdd@2.13.12:
   version "2.13.12"
