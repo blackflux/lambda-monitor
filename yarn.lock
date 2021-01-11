@@ -1024,10 +1024,10 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk-wrap@4.8.0:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-4.8.0.tgz#ca5bc12db9c31feb5e4ebabdbe4b53ee79d9404e"
-  integrity sha512-/Xp1QrHdr9/6aYBJoC+OrjkxDnG7lgqGz9YFQJ8nKVlY7vyCzH5krVAOP9moh19lnMSmyRzsfiUtL8hlu0Ezxg==
+aws-sdk-wrap@4.8.2:
+  version "4.8.2"
+  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-4.8.2.tgz#e4793d13b6e404484786b9cb63c9553037250128"
+  integrity sha512-y2hVypM0ZshpfL100B4OEVRDmK4x/OUEvwM24qdbVDTDuvcMlfHlaw9jbs1doU7u5HlTSAYe4FOWaCMZpqgXqQ==
   dependencies:
     joi-strict "1.2.9"
     lambda-async "1.0.10"
@@ -1035,7 +1035,7 @@ aws-sdk-wrap@4.8.0:
     lodash.get "4.4.2"
     lru-cache-ext "1.2.4"
     object-hash-strict "1.2.38"
-    promise-pool-ext "1.3.11"
+    promise-pool-ext "1.3.12"
     smart-fs "1.12.4"
 
 aws-sdk@2.824.0, aws-sdk@^2.4.0:
@@ -6120,12 +6120,12 @@ promise-pool-ext@1.3.10:
   dependencies:
     joi-strict "1.2.6"
 
-promise-pool-ext@1.3.11:
-  version "1.3.11"
-  resolved "https://registry.yarnpkg.com/promise-pool-ext/-/promise-pool-ext-1.3.11.tgz#384d633aa0b1398703e3653db35f5c8b02574eaf"
-  integrity sha512-invzLRFpzLTySxLTPMw6x4NkJ72WN/T0Qn0MOIbOjq6smIfMqn5732xF7CjYVfPQ2rpSg0rNNXa/+OR/F4O/7g==
+promise-pool-ext@1.3.12:
+  version "1.3.12"
+  resolved "https://registry.yarnpkg.com/promise-pool-ext/-/promise-pool-ext-1.3.12.tgz#43c6ca3576907e29cbf3fe46d6e34bed3097ac58"
+  integrity sha512-QyXCFi6QxF1AIQa4qZ7uOaulZxKyk5L2WwplpE2BXEeRTxAbVWuWYFV4HvaVpYw0sXrEcM+RU+pGaHhZlwiqPw==
   dependencies:
-    joi-strict "1.2.6"
+    joi-strict "1.2.9"
 
 promise-retry@^1.1.1:
   version "1.1.1"
