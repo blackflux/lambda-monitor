@@ -1936,12 +1936,12 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-datadog-light@2.0.10:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/datadog-light/-/datadog-light-2.0.10.tgz#d44814d21a2a4f51bc982ef542be64c106aa447b"
-  integrity sha512-LfBHkqIaizaiQggmqE7fAY+1c24LY6le1C0yDiz83bpqwY69N3AI8/EYEs9hlNgVq9xeBnekQmek2X6Gqmji8g==
+datadog-light@2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/datadog-light/-/datadog-light-2.0.11.tgz#f4caa9f587b5398107d55dfcfdcb73f05797730e"
+  integrity sha512-wMHRiteE2kftUrSz0ZdYuWZh8GsllJ5GPBm6OfWY+dos/atJnlWsu9nBfLqs18oWy7KdZHYyE8XKMVZZy3ST4g==
   dependencies:
-    joi-strict "1.2.6"
+    joi-strict "1.2.9"
     lodash.get "4.4.2"
 
 dateformat@^3.0.0:
@@ -3998,13 +3998,6 @@ jmespath@0.15.0:
   version "0.15.0"
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
   integrity sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=
-
-joi-strict@1.2.6:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.2.6.tgz#2aed6ae784efa2adbf66175a198eb6d650418f1f"
-  integrity sha512-ShSxfxxoRA/ETL885BNCc+fOCYSoQgkc0ObTT4LWKcU3TBlKsGaxDuyYLOP17oie8dir2ZUvT6YvABpdfj2t8Q==
-  dependencies:
-    "@hapi/joi" "17.1.1"
 
 joi-strict@1.2.9:
   version "1.2.9"
