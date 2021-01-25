@@ -1018,19 +1018,19 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk-wrap@4.9.0:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-4.9.0.tgz#27e0af6ed6f7dd49f88b50530cdf4b45b2151140"
-  integrity sha512-ujbvsvnAuvWLP6WcpJ5dqXduXfR9QALqaFl9oDsRSLQMtlj8oujtoMPo7Zt7n5nkTwhzBxhWP0sNpKhw54r6nA==
+aws-sdk-wrap@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-5.0.1.tgz#9be4dc9c3f0fbf54f878fe32436637c3714ccf6d"
+  integrity sha512-xGUi2Qp3I/KsDL8xATGiKB6RmpVrC6WIwhgeWHdcEQ4qLsxxkqREh3ZPTag2PSEG15rKAppojer9iGbgp/Y4pg==
   dependencies:
+    dynamodb-toolbox "0.3.2"
     joi-strict "1.2.9"
     lambda-async "1.0.10"
     lodash.chunk "4.2.0"
     lodash.get "4.4.2"
-    lru-cache-ext "1.2.4"
     object-hash-strict "2.0.1"
     promise-pool-ext "1.3.12"
-    smart-fs "1.12.4"
+    smart-fs "1.12.5"
 
 aws-sdk@2.829.0, aws-sdk@^2.4.0:
   version "2.829.0"
@@ -2190,6 +2190,11 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
+
+dynamodb-toolbox@0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/dynamodb-toolbox/-/dynamodb-toolbox-0.3.2.tgz#e9b9dc060e3d2ee6668e331d628c30644e73e831"
+  integrity sha512-H++IY7pZRqbOUnCdL2lJuevoAMOA0/eFX0hv3KW+6HtZj0lyZEuC4mOFV/N87TLSNAeqauIZuFMXWrr1E6tVKg==
 
 ecc-jsbn@~0.1.1:
   version "0.1.2"
