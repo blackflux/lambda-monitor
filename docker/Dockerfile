@@ -1,8 +1,6 @@
-FROM lambci/lambda:build-nodejs12.x
+FROM amazon/aws-sam-cli-build-image-nodejs14.x
 
 WORKDIR /user
-
-RUN yum install git vi -y
 
 # set home folder
 ENV HOME /user
@@ -10,7 +8,7 @@ ENV HOME /user
 RUN touch ~/.bashrc && \
   curl -o- -L https://yarnpkg.com/install.sh | bash && \
   source ~/.bashrc && \
-  yarn global add serverless@2.19.0
+  yarn global add serverless@2.25.2
 
 RUN touch ~/.bashrc && \
   echo "alias u='yarn run u'" >> ~/.bashrc && \
