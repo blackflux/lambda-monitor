@@ -4264,10 +4264,10 @@ lambda-async@1.0.10:
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.10.tgz#328e2794b0ce189625cf1a3dad6fd09fa0667056"
   integrity sha512-zi6lvMe8B4JcNX21bA896QwLknSEf04ZUbq5YHHwatkiixUHvvSK/PXM9CfJlOCFaWjGR0ZQE6CV9rTq0rW/vQ==
 
-lambda-cfn-hook@1.2.37:
-  version "1.2.37"
-  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.37.tgz#0843eb05cb598d3290171d9c5ef7169aadfaf528"
-  integrity sha512-FSccdqOfRMPpXS5IgCEMnC6EHC9Sb6dcx2nrKsUX3A65q8SxTq1i9A1wrLbRNxRy2CbyJ8jM/VoHsdoC2/ztBw==
+lambda-cfn-hook@1.2.38:
+  version "1.2.38"
+  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.38.tgz#977f83fc8e1b8435ae0ce91313e3c044970a2ed0"
+  integrity sha512-DIhXQCdbW5PhbQi7E7EsxIam19YBqmDGSMIoIFLIXHb+4uR3iR1tzs8zB/fwYBvdCFPmGNeP4cqvG6kF4KrbsQ==
   dependencies:
     joi-strict "1.2.9"
     lambda-async "1.0.10"
