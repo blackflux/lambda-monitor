@@ -5118,6 +5118,16 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
+nock@13.0.10:
+  version "13.0.10"
+  resolved "https://registry.yarnpkg.com/nock/-/nock-13.0.10.tgz#a9a015269408d56ec9ac57fe3ede86b0a83ecc6a"
+  integrity sha512-AvUO/tbiWVBjlC3WsuIutPXltPbPmHWfcLwDSYzykKBJhOeo9eZPczo8n9aV4AHHCgpeL70zBXLwiSE+mzx89g==
+  dependencies:
+    debug "^4.1.0"
+    json-stringify-safe "^5.0.1"
+    lodash.set "^4.3.2"
+    propagate "^2.0.0"
+
 nock@13.0.11:
   version "13.0.11"
   resolved "https://registry.yarnpkg.com/nock/-/nock-13.0.11.tgz#ba733252e720897ca50033205c39db0c7470f331"
@@ -5213,6 +5223,24 @@ node-tdd@2.19.1:
     nock "13.0.5"
     object-scan "13.7.1"
     smart-fs "1.12.3"
+    timekeeper "2.2.0"
+    tmp "0.2.1"
+    uuid "8.3.0"
+    xml2js "0.4.23"
+
+node-tdd@2.19.2:
+  version "2.19.2"
+  resolved "https://registry.yarnpkg.com/node-tdd/-/node-tdd-2.19.2.tgz#9b73152b2aa7d8a4dec535d1ec626f7b67808fa7"
+  integrity sha512-VY65IAsspvgUHHfYl5d/gaa7C4KiJQIDEqELV66uroLBZEQVoLpQnbC+9NBHvSUYo6SxqEkNkkk+u+LHWcau3g==
+  dependencies:
+    callsites "3.1.0"
+    joi-strict "1.2.9"
+    lodash.clonedeep "4.5.0"
+    lodash.get "4.4.2"
+    minimist "1.2.5"
+    nock "13.0.10"
+    object-scan "13.9.1"
+    smart-fs "1.12.5"
     timekeeper "2.2.0"
     tmp "0.2.1"
     uuid "8.3.0"
@@ -5656,6 +5684,11 @@ object-scan@13.8.0:
   version "13.8.0"
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-13.8.0.tgz#70ec43620b76fbc580856beb5275ee28321f781c"
   integrity sha512-ljh4WKzs/TTBML0kl+qfTpu13lSZ0Q41aj5XiJa0ue9FkEdP5fi5/FTHbZgsGBiXo/AeyPRh1XZDOuGQLffC1A==
+
+object-scan@13.9.1:
+  version "13.9.1"
+  resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-13.9.1.tgz#03ab1be0d55e29471774945173a5fdcfcf5ebb35"
+  integrity sha512-81wHtSNKDEJiuo02QDsijTL0KHmKejAbgXzlFADnRIwhAAAuCFbdoPOZ+ZFCmssZWJTi/tq3Q0ohPw9YqJq/Cg==
 
 object-treeify@1.1.31:
   version "1.1.31"

@@ -78,7 +78,7 @@
     "minimist": "1.2.5",
     "mocha": "8.3.1",
     "nock": "13.0.11",
-    "node-tdd": "2.19.1",
+    "node-tdd": "2.19.2",
     "nyc": "15.1.0",
     "robo-config": "3.10.6",
     "semantic-release": "17.4.1"
