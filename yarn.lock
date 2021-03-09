@@ -4137,6 +4137,13 @@ jmespath@0.15.0:
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
   integrity sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=
 
+joi-strict@1.2.10:
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.2.10.tgz#18943d6086dda90812c7616ed306f23d96a93d3c"
+  integrity sha512-0JPNIIHuqgKCB0tMXHzfjPj6fp/cl0IBz5b8oZu+HxVah9/SQhaMKCOgYOk6afj4t7k2ph64TDetd3UxGGFC3A==
+  dependencies:
+    "@hapi/joi" "17.1.1"
+
 joi-strict@1.2.9:
   version "1.2.9"
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.2.9.tgz#d92e27afcf1abc60fa77ef6a2c3db5e66fca8210"
@@ -5754,6 +5761,13 @@ object-lib@2.1.0:
   dependencies:
     object-scan "13.8.0"
 
+object-lib@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/object-lib/-/object-lib-2.1.1.tgz#ecc3ff0c7431f58e225d5df1bd1394100df43c95"
+  integrity sha512-OM8xIEXFKGRlpe7XlxDQm93tNx/mF9M1SNOFBE0lV3Xtoz5KG7G/qY1LfQqJGYulWhRGmfuDXN64xDiJWGKEig==
+  dependencies:
+    object-scan "13.9.1"
+
 object-scan@13.7.1:
   version "13.7.1"
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-13.7.1.tgz#2ce78454ae6a35ea45da7f26f2209f5545613122"
@@ -5769,10 +5783,20 @@ object-scan@13.9.1:
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-13.9.1.tgz#03ab1be0d55e29471774945173a5fdcfcf5ebb35"
   integrity sha512-81wHtSNKDEJiuo02QDsijTL0KHmKejAbgXzlFADnRIwhAAAuCFbdoPOZ+ZFCmssZWJTi/tq3Q0ohPw9YqJq/Cg==
 
+object-scan@14.0.0:
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-14.0.0.tgz#a09dfefe6a69bcdce87162e5e9fa19d90c4dc1a7"
+  integrity sha512-hcs9kSd2NUlpgPb3rN5Q9L5z6oP/b9DjyYOEITvctHfnQ/S0BoXHU8e5zzrMx4MGCedtXhh1ScZT+UqcYUoz0A==
+
 object-treeify@1.1.31:
   version "1.1.31"
   resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.31.tgz#eb083c8eb25b512c9feea088e72b03aa13032d5e"
   integrity sha512-kt2UuyHDTH+J6w0pv2c+3uuEApGuwgfjWogbqPWAvk4nOM/T3No0SzDtp6CuJ/XBUy//nFNuerb8ms7CqjD9Tw==
+
+object-treeify@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-2.0.0.tgz#4c6c7f016f69b5f84c5f7d882bf41d18bdf03acb"
+  integrity sha512-OGm5j85dYrJ8fqMEZMe59QS4AuQmfM0A/QTiZEGTnEeOSQPjdC8zdmWq2DmhLBAZr/JYL0cd8SQaIboTzg9/EQ==
 
 object-visit@^1.0.0:
   version "1.0.1"
@@ -6990,22 +7014,22 @@ robo-config@3.10.6:
     object-treeify "1.1.31"
     smart-fs "1.12.4"
 
-robo-config@3.10.7:
-  version "3.10.7"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.10.7.tgz#7118899c8ee14ffba35948ec453b6b9a0f09af3b"
-  integrity sha512-NpQ8TziyRm+LQ0e5yK0iTNgNkKQCVqUz/mqxx2rgqsK8eysxD2IhPN0hIjr1bDV1CDY1FRPzjMe8nKmFlnMcdw==
+robo-config@3.10.8:
+  version "3.10.8"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.10.8.tgz#c14340f380a87ef849409b0b39cec578c69e038a"
+  integrity sha512-Y+UpJS41OrqbfBxPOb4k9WPeNzunE9/qSkUHkm55pJ/cHepBVH7RvqLtRRnOf8A2RtCEKb5UhOFwHrGsEXkwVQ==
   dependencies:
     app-root-path "3.0.0"
     deepmerge "4.2.2"
-    joi-strict "1.2.9"
+    joi-strict "1.2.10"
     lodash.clonedeep "4.5.0"
     lodash.difference "4.5.0"
     lodash.get "4.4.2"
     mustache "4.1.0"
-    object-lib "2.1.0"
-    object-scan "13.9.1"
-    object-treeify "1.1.31"
-    smart-fs "1.12.5"
+    object-lib "2.1.1"
+    object-scan "14.0.0"
+    object-treeify "2.0.0"
+    smart-fs "1.12.6"
 
 run-async@^0.1.0:
   version "0.1.0"
