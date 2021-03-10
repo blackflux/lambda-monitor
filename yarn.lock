@@ -4348,12 +4348,12 @@ lambda-cfn-hook@1.2.38:
     request "2.88.2"
     request-promise "4.2.6"
 
-lambda-monitor-logger@2.4.10:
-  version "2.4.10"
-  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.4.10.tgz#ef9cb621c215a98bda886c2fff5330fa93750f60"
-  integrity sha512-Jt3yA3JX5IIdIR8uOA4G3X16BcaDJa5NhqzASPTCRl9jsNCWMjTVMNEiF0+1j1cUTufmV3Kbfj5nb6KSOblymQ==
+lambda-monitor-logger@2.4.11:
+  version "2.4.11"
+  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.4.11.tgz#2d2a4b305dcabcc43497c8e6762f00e00fcf601f"
+  integrity sha512-l5QraW2gDG3iHFI0vSZDTHfdvmMObRUkBKC/Astv6l211M0y6Bt7OWnYLYAWYATZdOqPeSfwScbBBLDr37IotQ==
   dependencies:
-    joi-strict "1.2.9"
+    joi-strict "1.2.10"
 
 lambda-monitor-logger@2.4.9:
   version "2.4.9"
