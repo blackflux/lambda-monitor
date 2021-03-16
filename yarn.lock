@@ -4832,10 +4832,10 @@ lowercase-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"
   integrity sha512-G2Lj61tXDnVFFOi8VZds+SoQjtQC3dgokKdDG2mTm1tx4m50NUHBOZSBwQQHyy0V12A0JTG4icfZQH+xPyh8VA==
 
-lru-cache-ext@1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/lru-cache-ext/-/lru-cache-ext-1.2.5.tgz#cd23eead6fc057a01e56e28083192b0988df558e"
-  integrity sha512-3lk96NVCHDG12DH4gYBG1ziC7n+B1qEYZbs8d5Nm0NEm+7GZ2LMJhcmC8Gn6ArYdwwGzB0b2mrLjqwuhO8+b7Q==
+lru-cache-ext@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/lru-cache-ext/-/lru-cache-ext-2.0.0.tgz#a67faf6166e18bbb19684600eb9542e689f15e2b"
+  integrity sha512-0M/cj9kxWudqGN7eGWQaJrCEr58TliQpKYPAmmAPTsn3OgMr5yszC/ZpOqH//M3LMKrBMZOAoJVXVtXJ0Y1osg==
   dependencies:
     lru-cache "6.0.0"
 
