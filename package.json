@@ -47,7 +47,7 @@
     "aws-sdk": "2.864.0",
     "aws-sdk-wrap": "9.1.1",
     "datadog-light": "2.0.12",
-    "lambda-async": "1.0.12",
+    "lambda-async": "2.0.0",
     "lambda-cfn-hook": "1.2.38",
     "lambda-monitor-logger": "3.0.0",
     "lodash.get": "4.4.2",
