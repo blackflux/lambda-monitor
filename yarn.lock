@@ -6292,10 +6292,10 @@ promise-pool-ext@2.0.0:
   dependencies:
     joi-strict "2.0.0"
 
-promise-pool-ext@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/promise-pool-ext/-/promise-pool-ext-2.1.0.tgz#b2541700295ab428f88d20b78bc39cfc274728f9"
-  integrity sha512-TA0kBaPIb+ggf44DkXN3pFzkIAszbiORfcV5Jfpee/l/zp77wl/aGUPOfEwI9EgkatXsXvjaPqPScuLQuvUqnQ==
+promise-pool-ext@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/promise-pool-ext/-/promise-pool-ext-2.1.1.tgz#d08b90df4a99bae07d9f02a3b6aa5e76f136d61e"
+  integrity sha512-R0+5NAzDvHq+ftr2756MtwtKOGQKLLRnnswVBtaDAoxTktnkMSHax42qQ3JR7BH5BYeyJvhcLd4IiHY8vCV6eA==
   dependencies:
     joi-strict "2.0.0"
 
