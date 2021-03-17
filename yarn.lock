@@ -1130,20 +1130,20 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk-wrap@9.1.1:
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-9.1.1.tgz#aa61e173ae83257404da40669e10e6386131cd61"
-  integrity sha512-UUBd2+o8VTKF5IIbeNo6eeBWa5tBXiJ/sX6vASzoFYeiiQyBi+fdZGyeG1Bu68sh0vC9mLXsGCZC0/gYSbnVKw==
+aws-sdk-wrap@9.2.5:
+  version "9.2.5"
+  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-9.2.5.tgz#567af20380e187f8521c3585a574e02ad04218a7"
+  integrity sha512-X7qCi0DfZ8VrjzeqGMUUbIpYhFSn8HURkpR41122PiVExVl2LBlKabHhE5org7QmuhfmhGtJE3aj7yfRkQhiIQ==
   dependencies:
     dynamodb-toolbox "0.3.3"
-    joi-strict "1.2.11"
-    lambda-async "1.0.11"
+    joi-strict "2.0.0"
+    lambda-async "2.0.0"
     lodash.chunk "4.2.0"
     lodash.get "4.4.2"
-    object-fields "2.0.22"
-    object-hash-strict "2.0.3"
-    promise-pool-ext "1.3.14"
-    smart-fs "1.12.6"
+    object-fields "3.0.0"
+    object-hash-strict "3.0.0"
+    promise-pool-ext "2.0.0"
+    smart-fs "2.0.1"
 
 aws-sdk@2.864.0, aws-sdk@^2.4.0:
   version "2.864.0"
@@ -4158,20 +4158,6 @@ jmespath@0.15.0:
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
   integrity sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=
 
-joi-strict@1.2.10:
-  version "1.2.10"
-  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.2.10.tgz#18943d6086dda90812c7616ed306f23d96a93d3c"
-  integrity sha512-0JPNIIHuqgKCB0tMXHzfjPj6fp/cl0IBz5b8oZu+HxVah9/SQhaMKCOgYOk6afj4t7k2ph64TDetd3UxGGFC3A==
-  dependencies:
-    "@hapi/joi" "17.1.1"
-
-joi-strict@1.2.11:
-  version "1.2.11"
-  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.2.11.tgz#237d85a0d2b2b6776a9364e350a27b17c87ce014"
-  integrity sha512-lQzZRh8iY76PDRBktFJeDJfOJFjLBBIC6GlaZlFrokCyolGO0J/AKBOCuJapV2pGI0dScF3UzV3gjkyvDAvybw==
-  dependencies:
-    "@hapi/joi" "17.1.1"
-
 joi-strict@1.2.9:
   version "1.2.9"
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.2.9.tgz#d92e27afcf1abc60fa77ef6a2c3db5e66fca8210"
@@ -4358,11 +4344,6 @@ kind-of@^6.0.0, kind-of@^6.0.2, kind-of@^6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
-
-lambda-async@1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.11.tgz#389fba16cdcc7c30f2eb0335be8faac3358d6c77"
-  integrity sha512-8gNC37n9LmDp7+PfgseK7tZHzW0HpatxmFzrhTGhDqZOGqlxf3TlErp4mW4ZJCMjXRff7DBFNnA49HtdKUTUAw==
 
 lambda-async@2.0.0:
   version "2.0.0"
@@ -5713,17 +5694,17 @@ object-copy@^0.1.0:
     define-property "^0.2.5"
     kind-of "^3.0.3"
 
-object-fields@2.0.22:
-  version "2.0.22"
-  resolved "https://registry.yarnpkg.com/object-fields/-/object-fields-2.0.22.tgz#31d7943d7ad8297e86e44698df461b83a41c3215"
-  integrity sha512-RzLvuwTC4uqjF/QVLxrYnIBmcBoqrrOlgdi1zEgaZrNlpoJMgE+wQRkaJEAZlp8sx4jwxkJz+gHAa5T+WBDX/w==
+object-fields@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/object-fields/-/object-fields-3.0.0.tgz#90614dc7e973c5c168f596da023e33f5a83c65d1"
+  integrity sha512-b+y0vFLAPvxUv+9CFeOobkDONuuMVpRITGKsMaoxUqzEBa8qOFt/iLfnHN6aRrNHW/bqHJ0Y/EOYi1nSLGNOzg==
   dependencies:
     object-scan "14.0.0"
 
-object-hash-strict@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/object-hash-strict/-/object-hash-strict-2.0.3.tgz#201aa222cc11aee22117b11defe55a0835761002"
-  integrity sha512-i+6kPWz+/ZXB1ZpNWY1IZntNf1ojcF1XTqQB0uL3xTYaxkf4Po3cYyL5xWwSGangB9LHUmlbw9+o3yMF1TCedw==
+object-hash-strict@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/object-hash-strict/-/object-hash-strict-3.0.0.tgz#a0bfb993b41877dbc5c57d7e79cb43828587601d"
+  integrity sha512-lkJNnElUNg+23VhKxCg/0cpJRF2H5XqSsCFgGxWEh0H4+XksEyh5HWC9iqfAGtlAsCnqRlKFAeBugCTMj25uvw==
   dependencies:
     object-hash "2.1.1"
     object-scan "14.0.0"
@@ -5743,13 +5724,6 @@ object-keys@^1.0.12, object-keys@^1.1.1:
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.1.tgz#1c47f272df277f3b1daf061677d9c82e2322c60e"
   integrity sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==
 
-object-lib@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/object-lib/-/object-lib-2.1.0.tgz#596db87422adde9493bd6902c1330a7315c66fa5"
-  integrity sha512-faS7NENdnLpolVQ45IZmXcQJKYFxiChr2dbiG+GnhwCMfP24GUwcuV+dJXN7ks8vy/4U6+ZQFkZqABkYUFI+dw==
-  dependencies:
-    object-scan "13.8.0"
-
 object-lib@2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/object-lib/-/object-lib-2.1.2.tgz#d427c0b594825ef996c2975546f46a921e73e119"
@@ -5763,11 +5737,6 @@ object-lib@3.0.0:
   integrity sha512-CIlney6fXVZDlFcvRJVG4Bfemb5yceKjuSpv85Frm+SynKFPLNQGlFCRxYNlCrWnlhKdCs4MUei8ZA/cESczBA==
   dependencies:
     object-scan "14.0.0"
-
-object-scan@13.8.0:
-  version "13.8.0"
-  resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-13.8.0.tgz#70ec43620b76fbc580856beb5275ee28321f781c"
-  integrity sha512-ljh4WKzs/TTBML0kl+qfTpu13lSZ0Q41aj5XiJa0ue9FkEdP5fi5/FTHbZgsGBiXo/AeyPRh1XZDOuGQLffC1A==
 
 object-scan@14.0.0:
   version "14.0.0"
@@ -6350,13 +6319,6 @@ promise-inflight@^1.0.1, promise-inflight@~1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
   integrity sha1-mEcocL8igTL8vdhoEputEsPAKeM=
-
-promise-pool-ext@1.3.14:
-  version "1.3.14"
-  resolved "https://registry.yarnpkg.com/promise-pool-ext/-/promise-pool-ext-1.3.14.tgz#bd9493d5f9b13aef8420ed74d952bfb60f7872a7"
-  integrity sha512-gUPDUU4YviHOYy3RJJxm+UAx+mVnIdcSEBMo+YIMeCy2xz0ZABoTkoDBO9DPlpfzlgniY41/4LdqdfrDO39Qzg==
-  dependencies:
-    joi-strict "1.2.10"
 
 promise-pool-ext@2.0.0:
   version "2.0.0"
@@ -7236,20 +7198,6 @@ smart-buffer@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-4.1.0.tgz#91605c25d91652f4661ea69ccf45f1b331ca21ba"
   integrity sha512-iVICrxOzCynf/SNaBQCw34eM9jROU/s5rzIhpOvzhzuYHfJR/DhZfDkXiZSgKXfgv26HT3Yni3AV/DGw0cGnnw==
-
-smart-fs@1.12.6:
-  version "1.12.6"
-  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.12.6.tgz#38339e37ab5b862e6696dbf4c7cae7abcc4386f1"
-  integrity sha512-7NZ3GbGWvTkGlWUAU1utxPnZFt6zXHW72L0AC/rgbFjvjrWcvhizhQFJBCPP5CB0Qu9ymU97QAKY8Ey7Ml54PQ==
-  dependencies:
-    fs-extra "9.1.0"
-    js-yaml "4.0.0"
-    json-stringify-pretty-compact "3.0.0"
-    lodash.clonedeep "4.5.0"
-    lodash.isequal "4.5.0"
-    object-lib "2.1.0"
-    xml-js "1.6.11"
-    yaml-boost "1.10.5"
 
 smart-fs@2.0.1:
   version "2.0.1"
@@ -8558,16 +8506,6 @@ yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
-
-yaml-boost@1.10.5:
-  version "1.10.5"
-  resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-1.10.5.tgz#684d7352f1e600d84a1ff90dab03e34c9e465e9b"
-  integrity sha512-fR6D5X8miG6SNs23UWtrzSKPsyNsEtQwKdi5C2pYeHgbJEIQPeHn78uCaxOGfwKZhIaHk/q+gKCQBCjH+lSvhA==
-  dependencies:
-    js-yaml "4.0.0"
-    lodash.get "4.4.2"
-    lodash.mergewith "4.6.2"
-    lodash.set "4.3.2"
 
 yaml-boost@2.0.0:
   version "2.0.0"
