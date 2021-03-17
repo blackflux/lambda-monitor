@@ -74,14 +74,14 @@
     "eslint-plugin-markdown": "2.0.0",
     "eslint-plugin-mocha": "8.1.0",
     "js-gardener": "3.0.2",
-    "lambda-tdd": "3.0.2",
+    "lambda-tdd": "3.0.5",
     "minimist": "1.2.5",
     "mocha": "8.3.2",
     "nock": "13.0.11",
-    "node-tdd": "3.0.0",
+    "node-tdd": "3.0.4",
     "nyc": "15.1.0",
-    "robo-config": "4.0.1",
-    "semantic-release": "17.4.1"
+    "robo-config": "4.0.4",
+    "semantic-release": "17.4.2"
   },
   "licenses": [
     {
