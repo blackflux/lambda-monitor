@@ -6327,6 +6327,13 @@ promise-pool-ext@2.0.0:
   dependencies:
     joi-strict "2.0.0"
 
+promise-pool-ext@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/promise-pool-ext/-/promise-pool-ext-2.1.0.tgz#b2541700295ab428f88d20b78bc39cfc274728f9"
+  integrity sha512-TA0kBaPIb+ggf44DkXN3pFzkIAszbiORfcV5Jfpee/l/zp77wl/aGUPOfEwI9EgkatXsXvjaPqPScuLQuvUqnQ==
+  dependencies:
+    joi-strict "2.0.0"
+
 promise-retry@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/promise-retry/-/promise-retry-1.1.1.tgz#6739e968e3051da20ce6497fb2b50f6911df3d6d"
