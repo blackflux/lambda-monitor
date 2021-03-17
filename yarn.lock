@@ -4374,11 +4374,6 @@ kind-of@^6.0.0, kind-of@^6.0.2, kind-of@^6.0.3:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
-lambda-async@1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.10.tgz#328e2794b0ce189625cf1a3dad6fd09fa0667056"
-  integrity sha512-zi6lvMe8B4JcNX21bA896QwLknSEf04ZUbq5YHHwatkiixUHvvSK/PXM9CfJlOCFaWjGR0ZQE6CV9rTq0rW/vQ==
-
 lambda-async@1.0.11:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-1.0.11.tgz#389fba16cdcc7c30f2eb0335be8faac3358d6c77"
@@ -4389,24 +4384,17 @@ lambda-async@2.0.0:
   resolved "https://registry.yarnpkg.com/lambda-async/-/lambda-async-2.0.0.tgz#6792b79dd180ca8e0d73aba7d44e8fdd499d87fa"
   integrity sha512-1Cm/ly+aAwWBdvm4eUMdQhQiHdF9jKVimXwWlq9iy0YipX17CCyG6Ku6/gChMhBTqcgpNSsAm2AvTZWZt0pYgA==
 
-lambda-cfn-hook@1.2.38:
-  version "1.2.38"
-  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-1.2.38.tgz#977f83fc8e1b8435ae0ce91313e3c044970a2ed0"
-  integrity sha512-DIhXQCdbW5PhbQi7E7EsxIam19YBqmDGSMIoIFLIXHb+4uR3iR1tzs8zB/fwYBvdCFPmGNeP4cqvG6kF4KrbsQ==
+lambda-cfn-hook@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/lambda-cfn-hook/-/lambda-cfn-hook-2.0.2.tgz#d94570fb29cb8a52f4ac8e099584b4f5bb74bfd3"
+  integrity sha512-DU41CrkXQrDgzhp9J0xkE1/lnCmUyfy+29JqvJwsntVcsULLZB9MGJlmY24RS4WDANORIRTdCGf/hSoSm0M3vw==
   dependencies:
-    joi-strict "1.2.9"
-    lambda-async "1.0.10"
-    lambda-monitor-logger "2.4.9"
+    joi-strict "2.0.0"
+    lambda-async "2.0.0"
+    lambda-monitor-logger "3.0.0"
     lodash.get "4.4.2"
     request "2.88.2"
     request-promise "4.2.6"
-
-lambda-monitor-logger@2.4.9:
-  version "2.4.9"
-  resolved "https://registry.yarnpkg.com/lambda-monitor-logger/-/lambda-monitor-logger-2.4.9.tgz#2403da632fc5314db983cfc2d2c3cf319e729c17"
-  integrity sha512-8nIzzabHGcXh/4ftz0QkCWSef8kWHV3etCzqaqICuCXqig5aN7PpfkiUB4WYHlBuWP8v1Q1ogORsL+hNF1rT3w==
-  dependencies:
-    joi-strict "1.2.9"
 
 lambda-monitor-logger@3.0.0:
   version "3.0.0"
@@ -6448,19 +6436,19 @@ promise-inflight@^1.0.1, promise-inflight@~1.0.1:
   resolved "https://registry.yarnpkg.com/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
   integrity sha1-mEcocL8igTL8vdhoEputEsPAKeM=
 
-promise-pool-ext@1.3.13:
-  version "1.3.13"
-  resolved "https://registry.yarnpkg.com/promise-pool-ext/-/promise-pool-ext-1.3.13.tgz#8b6a3e7c1b850c2f872aa3aac897cea89d01c9f0"
-  integrity sha512-G9Pr8q5461WqPtYyDSmOzeYlro8LmnNbpj4M51wOeEPWrXEgU2Yy6kvcmbO0CPZHEJelgJdOZPKyPqQeMMkSRQ==
-  dependencies:
-    joi-strict "1.2.9"
-
 promise-pool-ext@1.3.14:
   version "1.3.14"
   resolved "https://registry.yarnpkg.com/promise-pool-ext/-/promise-pool-ext-1.3.14.tgz#bd9493d5f9b13aef8420ed74d952bfb60f7872a7"
   integrity sha512-gUPDUU4YviHOYy3RJJxm+UAx+mVnIdcSEBMo+YIMeCy2xz0ZABoTkoDBO9DPlpfzlgniY41/4LdqdfrDO39Qzg==
   dependencies:
     joi-strict "1.2.10"
+
+promise-pool-ext@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/promise-pool-ext/-/promise-pool-ext-2.0.0.tgz#ce6e7321b67fc474d92afe5bf9c1ee4c5db01a11"
+  integrity sha512-FjI28rV7/28higYjA8JJdIMO83LCckIRjUMR0lUSkoCqZQReQVGq7Pb5XE21eHeBrxaihd9l51uml0rfJoWfHw==
+  dependencies:
+    joi-strict "2.0.0"
 
 promise-retry@^1.1.1:
   version "1.1.1"
