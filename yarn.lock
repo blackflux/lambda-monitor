@@ -1102,10 +1102,10 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk-wrap@9.2.5:
-  version "9.2.5"
-  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-9.2.5.tgz#567af20380e187f8521c3585a574e02ad04218a7"
-  integrity sha512-X7qCi0DfZ8VrjzeqGMUUbIpYhFSn8HURkpR41122PiVExVl2LBlKabHhE5org7QmuhfmhGtJE3aj7yfRkQhiIQ==
+aws-sdk-wrap@9.2.6:
+  version "9.2.6"
+  resolved "https://registry.yarnpkg.com/aws-sdk-wrap/-/aws-sdk-wrap-9.2.6.tgz#4885a475578fdb9b1c4b010e6d9508c17af652a2"
+  integrity sha512-oYjFc/N1ylp+jc5DXjdqOMOv1Eo3wZpDn+vgqfd+d9LACo6J5ha6/RbvQn2vOSq8R+a5ZkB8slFGukALRj373g==
   dependencies:
     dynamodb-toolbox "0.3.3"
     joi-strict "2.0.0"
@@ -1115,7 +1115,7 @@ aws-sdk-wrap@9.2.5:
     object-fields "3.0.0"
     object-hash-strict "3.0.0"
     promise-pool-ext "2.0.0"
-    smart-fs "2.0.1"
+    smart-fs "2.0.2"
 
 aws-sdk@2.864.0, aws-sdk@^2.4.0:
   version "2.864.0"
