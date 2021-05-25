@@ -20,6 +20,21 @@
     "body": {
       "series": [
         {
+          "metric": "metric.name",
+          "points": [
+            [
+              1583284374000,
+              [
+                1
+              ]
+            ]
+          ],
+          "type": "distribution",
+          "tags": [
+            "environment:local-dev"
+          ]
+        },
+        {
           "metric": "aws.lambda_monitor.lambda.log_count",
           "points": [
             [
@@ -34,21 +49,6 @@
             "level:warning",
             "fnName:peg-solitiare-dev-overview",
             "type:datadog",
-            "environment:local-dev"
-          ]
-        },
-        {
-          "metric": "metric.name",
-          "points": [
-            [
-              1583284374000,
-              [
-                1
-              ]
-            ]
-          ],
-          "type": "distribution",
-          "tags": [
             "environment:local-dev"
           ]
         },

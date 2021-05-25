@@ -27,7 +27,8 @@ const processLogs = async (event, context) => {
         level: logLevel,
         message: logEvent.message,
         timestamp: Math.floor(logEvent.timestamp / 1000),
-        timestampMS: logEvent.timestamp
+        timestampMS: logEvent.timestamp,
+        types: targets
       };
       targets.forEach((target) => {
         messageLogger(target, args);
