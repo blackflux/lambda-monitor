@@ -28,6 +28,42 @@
     "body": {
       "series": [
         {
+          "metric": "aws.lambda_monitor.lambda.log_count",
+          "points": [
+            [
+              1511405879665,
+              [
+                1
+              ]
+            ]
+          ],
+          "type": "distribution",
+          "tags": [
+            "level:warning",
+            "fnName:peg-solitiare-dev-overview",
+            "type:rollbar",
+            "environment:local-dev"
+          ]
+        },
+        {
+          "metric": "aws.lambda_monitor.lambda.log_count",
+          "points": [
+            [
+              1511405879665,
+              [
+                1
+              ]
+            ]
+          ],
+          "type": "distribution",
+          "tags": [
+            "level:warning",
+            "fnName:peg-solitiare-dev-overview",
+            "type:s3-log",
+            "environment:local-dev"
+          ]
+        },
+        {
           "metric": "aws.lambda_monitor.lambda.execution_duration",
           "points": [
             [

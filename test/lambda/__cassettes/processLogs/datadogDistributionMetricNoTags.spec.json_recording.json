@@ -38,7 +38,7 @@
           "metric": "aws.lambda_monitor.lambda.log_count",
           "points": [
             [
-              1511405879000,
+              1511405879665,
               [
                 1
               ]
@@ -48,6 +48,7 @@
           "tags": [
             "level:warning",
             "fnName:peg-solitiare-dev-overview",
+            "type:datadog",
             "environment:local-dev"
           ]
         },
