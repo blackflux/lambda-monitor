@@ -4,7 +4,7 @@ module.exports = ({
   logGroup, level, types, timestampMS
 }) => {
   types.forEach((type) => {
-    if (type === 'datadog-meta') {
+    if (type === 'any-meta') {
       return;
     }
     datadogDistributionMetric.enqueue(
