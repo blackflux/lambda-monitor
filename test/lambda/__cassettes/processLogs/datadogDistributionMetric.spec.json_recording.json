@@ -20,6 +20,24 @@
     "body": {
       "series": [
         {
+          "metric": "aws.lambda_monitor.lambda.log_count",
+          "points": [
+            [
+              1511405879665,
+              [
+                1
+              ]
+            ]
+          ],
+          "type": "distribution",
+          "tags": [
+            "level:warning",
+            "fnName:peg-solitiare-dev-overview",
+            "type:datadog",
+            "environment:local-dev"
+          ]
+        },
+        {
           "metric": "metric.name",
           "points": [
             [
@@ -31,23 +49,6 @@
           ],
           "type": "distribution",
           "tags": [
-            "environment:local-dev"
-          ]
-        },
-        {
-          "metric": "aws.lambda_monitor.lambda.log_count",
-          "points": [
-            [
-              1511405879000,
-              [
-                1
-              ]
-            ]
-          ],
-          "type": "distribution",
-          "tags": [
-            "level:warning",
-            "fnName:peg-solitiare-dev-overview",
             "environment:local-dev"
           ]
         },
