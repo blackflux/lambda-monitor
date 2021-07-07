@@ -33,6 +33,14 @@
 
         CloudTrailS3Bucket:
           Type: AWS::S3::Bucket
+          Properties:
+            Tags:
+              - Key: service
+                Value: ${self:service}
+              - Key: stage
+                Value: ${self:provider.stage}
+              - Key: resource
+                Value: CloudTrailS3Bucket
 
       Outputs:
         CloudTrailS3BucketName:
@@ -46,6 +54,14 @@
       Resources:
         LogStreamS3Bucket:
           Type: AWS::S3::Bucket
+          Properties:
+            Tags:
+              - Key: service
+                Value: ${self:service}
+              - Key: stage
+                Value: ${self:provider.stage}
+              - Key: resource
+                Value: LogStreamS3Bucket
 
       Outputs:
         LogStreamS3BucketName:

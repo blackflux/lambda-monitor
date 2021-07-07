@@ -66,6 +66,9 @@ functions:
     tags:
       MONITOR: '1'
       MONITORED: '0'
+      service: ${self:service}
+      stage: ${self:provider.stage}
+      resource: process-logs
   subscribe:
     timeout: 300
     handler: lib/index.subscribe
@@ -84,11 +87,19 @@ functions:
               eventName:
                 - CreateLogGroup
     memorySize: 256
+    tags:
+      service: ${self:service}
+      stage: ${self:provider.stage}
+      resource: subscribe
   empty-bucket:
     timeout: 900
     handler: lib/index.emptyBucket
     description: Empty s3 bucket
     memorySize: 256
+    tags:
+      service: ${self:service}
+      stage: ${self:provider.stage}
+      resource: empty-bucket
 resources:
   Resources:
     LambdaInvokePermission:

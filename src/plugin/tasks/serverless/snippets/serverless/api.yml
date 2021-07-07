@@ -61,12 +61,19 @@ functions:
     tags:
       MONITOR: "1"
       MONITORED: "0"
+      service: ${self:service}
+      stage: ${self:provider.stage}
+      resource: process-logs
 
   subscribe:
     timeout: 300
     memorySize: 256
     handler: lib/index.subscribe
     description: Subscribe Processor to Lambda CloudWatch Streams
+    tags:
+      service: ${self:service}
+      stage: ${self:provider.stage}
+      resource: subscribe
     events:
       - schedule: rate(1 hour)
       - cloudwatchEvent:
@@ -86,6 +93,10 @@ functions:
     memorySize: 256
     handler: lib/index.emptyBucket
     description: Empty s3 bucket
+    tags:
+      service: ${self:service}
+      stage: ${self:provider.stage}
+      resource: empty-bucket
 
 resources:
   Resources:
