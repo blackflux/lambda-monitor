@@ -74,6 +74,14 @@
       Resources:
         LogS3Bucket:
           Type: 'AWS::S3::Bucket'
+          Properties:
+            Tags:
+              - Key: service
+                Value: ${self:service}
+              - Key: stage
+                Value: ${self:provider.stage}
+              - Key: resource
+                Value: LogS3Bucket
       Outputs:
         LogS3BucketName:
           Value:
