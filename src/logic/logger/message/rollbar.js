@@ -4,6 +4,19 @@ const request = require('../singleton/request');
 
 const logLevels = ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'];
 
+const loadToken = (logGroup) => {
+  if (process.env.ROLLBAR_ACCESS_TOKEN === undefined) {
+    return undefined;
+  }
+  const tokenData = process.env.ROLLBAR_ACCESS_TOKEN.split('|');
+  for (let idx = 1; idx < tokenData.length - 1; idx += 2) {
+    if (tokenData[idx] === logGroup) {
+      return tokenData[idx + 1];
+    }
+  }
+  return tokenData[0];
+};
+
 module.exports = ({
   logGroup,
   logStream,
@@ -11,7 +24,8 @@ module.exports = ({
   message,
   timestamp
 }) => {
-  if (process.env.ROLLBAR_ACCESS_TOKEN === undefined) {
+  const token = loadToken(logGroup);
+  if (token === undefined) {
     return;
   }
   const logLevelIdx = logLevels.indexOf(level.toUpperCase());
@@ -27,7 +41,7 @@ module.exports = ({
       'content-type': 'application/json'
     },
     body: JSON.stringify({
-      access_token: process.env.ROLLBAR_ACCESS_TOKEN,
+      access_token: token,
       data: {
         level,
         environment: process.env.ENVIRONMENT,
