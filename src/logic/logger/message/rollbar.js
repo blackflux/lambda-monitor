@@ -10,7 +10,7 @@ const loadToken = (logGroup) => {
   }
   const tokenData = process.env.ROLLBAR_ACCESS_TOKEN.split('|');
   for (let idx = 1; idx < tokenData.length - 1; idx += 2) {
-    if (tokenData[idx] === logGroup) {
+    if (logGroup.startsWith(tokenData[idx])) {
       return tokenData[idx + 1];
     }
   }
