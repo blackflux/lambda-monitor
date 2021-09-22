@@ -8,7 +8,7 @@ ENV HOME /user
 RUN touch ~/.bashrc && \
   curl -o- -L https://yarnpkg.com/install.sh | bash && \
   source ~/.bashrc && \
-  yarn global add serverless@2.25.2
+  yarn global add serverless@2.59.0
 
 RUN touch ~/.bashrc && \
   echo "alias u='yarn run u'" >> ~/.bashrc && \
