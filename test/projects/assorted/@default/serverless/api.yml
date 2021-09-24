@@ -1,50 +1,51 @@
 provider:
   memorySize: 128
   environment:
-    LOGGLY_TOKEN: '${ssm:LOGGLY_TOKEN}'
-    LOGZ_TOKEN: '${ssm:LOGZ_TOKEN}'
-    DATADOG_API_KEY: '${ssm:DATADOG_API_KEY}'
-    ROLLBAR_ACCESS_TOKEN: '${ssm:ROLLBAR_ACCESS_TOKEN}'
-    ROLLBAR_REPORT_LEVEL: '${ssm:ROLLBAR_REPORT_LEVEL}'
-    LOG_STREAM_BUCKET_NAME: '${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}'
-    LOG_BUCKET_NAME: '${cf:${opt:service}-data-${self:provider.stage}.LogS3BucketName}'
+    LOGGLY_TOKEN: ${ssm:LOGGLY_TOKEN}
+    LOGZ_TOKEN: ${ssm:LOGZ_TOKEN}
+    DATADOG_API_KEY: ${ssm:DATADOG_API_KEY}
+    ROLLBAR_ACCESS_TOKEN: ${ssm:ROLLBAR_ACCESS_TOKEN}
+    ROLLBAR_REPORT_LEVEL: ${ssm:ROLLBAR_REPORT_LEVEL}
+    LOG_STREAM_BUCKET_NAME: ${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}
+    LOG_BUCKET_NAME: ${cf:${opt:service}-data-${self:provider.stage}.LogS3BucketName}
+    BATCHER_QUEUE_URL: ${cf:${opt:service}-data-${self:provider.stage}.BatcherQueueUrl}
   iamRoleStatements:
     - Effect: Allow
       Action:
-        - 'tag:GetResources'
-        - 'logs:DescribeLogGroups'
-        - 'logs:DescribeSubscriptionFilters'
-        - 'logs:PutSubscriptionFilter'
+        - tag:GetResources
+        - logs:DescribeLogGroups
+        - logs:DescribeSubscriptionFilters
+        - logs:PutSubscriptionFilter
       Resource:
         - '*'
     - Effect: Allow
       Action:
-        - 'lambda:GetFunction'
+        - lambda:GetFunction
       Resource:
-        - 'Fn::Join':
+        - Fn::Join:
             - ':'
-            - - 'arn:aws:lambda'
-              - Ref: 'AWS::Region'
-              - Ref: 'AWS::AccountId'
+            - - arn:aws:lambda
+              - Ref: AWS::Region
+              - Ref: AWS::AccountId
               - function
               - '*'
     - Effect: Allow
       Action:
-        - 's3:DeleteObject'
+        - s3:DeleteObject
       Resource:
         - >-
           arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.CloudTrailS3BucketName}/*
     - Effect: Allow
       Action:
-        - 's3:ListBucket'
+        - s3:ListBucket
       Resource:
         - >-
           arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.CloudTrailS3BucketName}
     - Effect: Allow
       Action:
-        - 's3:GetObject'
-        - 's3:PutObject'
-        - 's3:DeleteObject'
+        - s3:GetObject
+        - s3:PutObject
+        - s3:DeleteObject
       Resource:
         - >-
           arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}/*
@@ -52,12 +53,20 @@ provider:
           arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogS3BucketName}/*
     - Effect: Allow
       Action:
-        - 's3:ListBucket'
+        - s3:ListBucket
       Resource:
         - >-
           arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}
         - >-
           arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogS3BucketName}
+    - Effect: Allow
+      Action:
+        - sqs:SendMessage
+        - sqs:GetQueueAttributes
+      Resource:
+        - ${cf:${opt:service}-data-${self:provider.stage}.BatcherQueueArn}
+        - >-
+          ${cf:${opt:service}-data-${self:provider.stage}.BatcherDeadLetterQueueArn}
 functions:
   process-logs:
     timeout: 30
@@ -100,21 +109,35 @@ functions:
       service: ${self:service}
       stage: ${self:provider.stage}
       resource: empty-bucket
+  batcher-handler:
+    memorySize: 512
+    handler: lib/index.batcherHandler
+    reservedConcurrency: 5
+    timeout: 60
+    tags:
+      service: ${self:service}
+      stage: ${self:provider.stage}
+      resource: batcher-handler
+    events:
+      - sqs:
+          arn: ${cf:${opt:service}-data-${self:provider.stage}.BatcherQueueArn}
+          batchSize: 10000
+          maximumBatchingWindow: 300
 resources:
   Resources:
     LambdaInvokePermission:
-      Type: 'AWS::Lambda::Permission'
+      Type: AWS::Lambda::Permission
       Properties:
-        Action: 'lambda:InvokeFunction'
-        FunctionName: '${self:service}-${opt:env}-process-logs'
-        Principal: 'logs.${opt:region}.amazonaws.com'
+        Action: lambda:InvokeFunction
+        FunctionName: ${self:service}-${opt:env}-process-logs
+        Principal: logs.${opt:region}.amazonaws.com
       DependsOn:
         - ProcessDashlogsLambdaFunction
     TriggerLambdaSubscribeResource:
-      Type: 'Custom::LambdaDependency'
+      Type: Custom::LambdaDependency
       Properties:
         ServiceToken:
-          'Fn::GetAtt':
+          Fn::GetAtt:
             - SubscribeLambdaFunction
             - Arn
       DependsOn:
@@ -122,10 +145,10 @@ resources:
         - SubscribeLambdaFunction
         - ProcessDashlogsLambdaFunction
     EmptyCloudTrailS3Bucket:
-      Type: 'Custom::LambdaDependency'
+      Type: Custom::LambdaDependency
       Properties:
         ServiceToken:
-          'Fn::GetAtt':
+          Fn::GetAtt:
             - EmptyDashbucketLambdaFunction
             - Arn
         BucketName: >-
@@ -133,7 +156,7 @@ resources:
       DependsOn:
         - EmptyDashbucketLambdaFunction
     CloudTrailS3BucketPolicy:
-      Type: 'AWS::S3::BucketPolicy'
+      Type: AWS::S3::BucketPolicy
       Properties:
         Bucket: >-
           ${cf:${opt:service}-data-${self:provider.stage}.CloudTrailS3BucketName}
@@ -143,9 +166,9 @@ resources:
               Effect: Allow
               Principal:
                 Service: cloudtrail.amazonaws.com
-              Action: 's3:GetBucketAcl'
+              Action: s3:GetBucketAcl
               Resource:
-                'Fn::Join':
+                Fn::Join:
                   - ''
                   - - 'arn:aws:s3:::'
                     - >-
@@ -154,23 +177,23 @@ resources:
               Effect: Allow
               Principal:
                 Service: cloudtrail.amazonaws.com
-              Action: 's3:PutObject'
+              Action: s3:PutObject
               Resource:
-                'Fn::Join':
+                Fn::Join:
                   - ''
                   - - 'arn:aws:s3:::'
                     - >-
                       ${cf:${opt:service}-data-${self:provider.stage}.CloudTrailS3BucketName}
                     - /AWSLogs/
-                    - Ref: 'AWS::AccountId'
+                    - Ref: AWS::AccountId
                     - /*
               Condition:
                 StringEquals:
-                  's3:x-amz-acl': bucket-owner-full-control
+                  s3:x-amz-acl: bucket-owner-full-control
       DependsOn:
         - EmptyCloudTrailS3Bucket
     CloudTrail:
-      Type: 'AWS::CloudTrail::Trail'
+      Type: AWS::CloudTrail::Trail
       Properties:
         S3BucketName: >-
           ${cf:${opt:service}-data-${self:provider.stage}.CloudTrailS3BucketName}
