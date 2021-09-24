@@ -1,9 +1,8 @@
 const crypto = require('crypto');
-const objectScan = require('object-scan');
 const { putGzipObject } = require('./util/s3');
 
 module.exports = async (event, context) => {
-  const lines = objectScan(['Records[*].body'], { rtn: 'value' })(event);
+  const lines = event.Records.map(({ body }) => body);
   const data = lines.join('\n');
   const hash = crypto.createHash('md5').update(data).digest('hex');
 
