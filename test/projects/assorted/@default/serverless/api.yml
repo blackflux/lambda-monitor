@@ -118,6 +118,7 @@ functions:
       service: ${self:service}
       stage: ${self:provider.stage}
       resource: batcher-handler
+      MONITORED: '0'
     events:
       - sqs:
           arn: ${cf:${opt:service}-data-${self:provider.stage}.BatcherQueueArn}

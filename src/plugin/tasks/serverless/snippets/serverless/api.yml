@@ -112,6 +112,7 @@ functions:
     reservedConcurrency: 5
     timeout: 60
     tags:
+      MONITORED: "0"
       service: ${self:service}
       stage: ${self:provider.stage}
       resource: batcher-handler
