@@ -10,7 +10,7 @@ The setup assumes:
 
 ## Important
 
-Only enable CloudTrail if it is not already enabled for your account. Otherwise significant AWS charges will occur. 
+Only enable CloudTrail if it is not already enabled for your account. Otherwise significant AWS charges will occur.
 
 ## 0. Preparation
 
@@ -37,10 +37,10 @@ aws --region ${awsRegion} --profile prod ssm put-parameter --cli-input-json '{"T
 - Start docker container with `. manage.sh`
 
 ```shell script
-sls deploy --config serverless/config.js --region ${awsRegion} --env local --stack data --aws-profile local --force && \
-sls deploy --config serverless/config.js --region ${awsRegion} --env dev --stack data --aws-profile dev --force && \
-sls deploy --config serverless/config.js --region ${awsRegion} --env stage --stack data --aws-profile stage --force && \
-sls deploy --config serverless/config.js --region ${awsRegion} --env prod --stack data --aws-profile prod --force
+sls deploy --config serverless.config.js --region ${awsRegion} --env local --stack data --aws-profile local --force && \
+sls deploy --config serverless.config.js --region ${awsRegion} --env dev --stack data --aws-profile dev --force && \
+sls deploy --config serverless.config.js --region ${awsRegion} --env stage --stack data --aws-profile stage --force && \
+sls deploy --config serverless.config.js --region ${awsRegion} --env prod --stack data --aws-profile prod --force
 ```
 
 ## 2. Configure CircleCI
