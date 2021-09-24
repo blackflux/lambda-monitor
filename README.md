@@ -26,7 +26,7 @@ Lambda log monitoring and streaming to external services.
 
 - Install dev dependencies with `yarn add -DE js-gardener @blackflux/robo-config-plugin eslint object-hash` and
 - Dependencies with `yarn add -E lambda-monitor`
-- Add `gardener.js` containing 
+- Add `gardener.js` containing
 ```js
 // eslint-disable-next-line import/no-extraneous-dependencies
 const gardener = require('js-gardener');
@@ -90,8 +90,10 @@ While deploying this project is straight forward, there is a lot of complexity g
 
 There are four lambda function created per stage. All operations are only performed on lambda functions tagged with the corresponding stage.
 
+**batcher-handler** - Listens to SQS messages to group them before writing to S3
+
 **process-logs** - This lambda function is subscribed to CloudWatch and processes the logs. Anomalies are submitted to rollbar and all detected log events are sent to the configured logging services. Tagged with `"MONITOR": "1"` and `"MONITORED": "0"`.
 
-**subscribe** - Subscribes the *process-logs* lambda function (detected using the `MONITOR` tag) to all relevant CloudWatch Groups, excluding those functions that have the `MONITORED` tag set to `0`. 
+**subscribe** - Subscribes the *process-logs* lambda function (detected using the `MONITOR` tag) to all relevant CloudWatch Groups, excluding those functions that have the `MONITORED` tag set to `0`.
 
 **empty-bucket** - Empty CloudTrail bucket when stage is removed from AWS.
