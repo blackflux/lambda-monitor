@@ -5,6 +5,9 @@
     "ROLLBAR_ACCESS_TOKEN": "rollbar_default_token|/aws/lambda/stats|rollbar_stats_token|/aws/lambda/peg-solitiare-dev-overview|rollbar_other_token",
     "ROLLBAR_REPORT_LEVEL": "WARNING"
   },
+  "allowedOutOfOrderRecordings": [
+    "POST https://sqs.us-west-2.amazonaws.com:443/"
+  ],
   "success": true,
   "timeout": 10000,
   "expect": {
