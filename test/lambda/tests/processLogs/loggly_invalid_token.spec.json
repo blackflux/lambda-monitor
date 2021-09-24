@@ -3,6 +3,9 @@
   "env": {
     "LOGGLY_TOKEN": "loggly_invalid_token"
   },
+  "allowedOutOfOrderRecordings": [
+    "POST https://sqs.us-west-2.amazonaws.com:443/"
+  ],
   "success": false,
   "timeout": 10000,
   "expect(message)": {

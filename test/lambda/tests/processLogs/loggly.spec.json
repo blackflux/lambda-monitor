@@ -3,6 +3,9 @@
   "env": {
     "LOGGLY_TOKEN": "loggly_dummy_token"
   },
+  "allowedOutOfOrderRecordings": [
+    "POST https://logs-01.loggly.com:443/bulk/loggly_dummy_token/tag/local-dev/"
+  ],
   "success": true,
   "timeout": 10000,
   "expect": {

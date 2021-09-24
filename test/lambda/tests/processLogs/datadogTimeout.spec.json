@@ -5,6 +5,9 @@
   "env": {
     "DATADOG_API_KEY": "INVALID_DATADOG_API_KEY"
   },
+  "allowedOutOfOrderRecordings": [
+    "POST https://api.datadoghq.com:443/api/v1/distribution_points?api_key=INVALID_DATADOG_API_KEY"
+  ],
   "expect": {
     "to.deep.equal()": {
       "messageType": "DATA_MESSAGE",
