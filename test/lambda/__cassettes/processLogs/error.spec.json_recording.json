@@ -20,5 +20,13 @@
     "body": "1f8b0800000000000203258c410ac3201000bf227bf112e8aa6bdccd0bfa885e52945488a6c4343d94febd422f731886f9408e30817301bdb7de89581e295824232c24e446c3c606099658d8dae002098ed82523c200472ea91d7379c264bc31848caed30cd07d9b97d4f7d7b9c635ed4a6f67dacf9cde5a95dc5aae8bdaaa2a5b7cad49e935df2f8f7fa96f15be3ffc72d9799c000000",
     "status": 200,
     "response": ""
+  },
+  {
+    "scope": "https://sqs.us-west-2.amazonaws.com:443",
+    "method": "POST",
+    "path": "/",
+    "body": "Action=SendMessageBatch&QueueUrl=https%3A%2F%2Fsqs.us-west-2.amazonaws.com%2F0123456789%2Fservice-search-data-local-batcherQueue&SendMessageBatchRequestEntry.1.Id=8ae7f474b04c6db878011a29648d49053a7a0278&SendMessageBatchRequestEntry.1.MessageBody=%7B%22logGroup%22%3A%22%2Faws%2Flambda%2Fpeg-solitiare-dev-overview%22%2C%22logEvent%22%3A%7B%22id%22%3A%2233705525399286472041989494361812797248982273749060812800%22%2C%22timestamp%22%3A1511408031401%2C%22message%22%3A%22Handler%20%27overview%27%20missing%20on%20module%20%27lib%2Fhandler%27%5Cn%22%7D%2C%22level%22%3A%22warning%22%7D&Version=2012-11-05",
+    "status": 200,
+    "response": "<?xml version=\"1.0\"?><SendMessageBatchResponse xmlns=\"http://queue.amazonaws.com/doc/2012-11-05/\"><SendMessageBatchResult><SendMessageBatchResultEntry><Id>8ae7f474b04c6db878011a29648d49053a7a0278</Id><MessageId>c0004b0c-ea00-498a-a5a2-362703c0b621</MessageId><MD5OfMessageBody>669866fd39969dc8fabefb1f650884ec</MD5OfMessageBody></SendMessageBatchResultEntry></SendMessageBatchResult><ResponseMetadata><RequestId>584b2818-1c3b-5bfd-97e0-7d388e494f1e</RequestId></ResponseMetadata></SendMessageBatchResponse>"
   }
 ]
