@@ -8,6 +8,7 @@ provider:
     ROLLBAR_REPORT_LEVEL: ${ssm:ROLLBAR_REPORT_LEVEL}
     LOG_STREAM_BUCKET_NAME: ${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}
     LOG_BUCKET_NAME: ${cf:${opt:service}-data-${self:provider.stage}.LogS3BucketName}
+    BATCHER_QUEUE_URL: ${cf:${opt:service}-data-${self:provider.stage}.BatcherQueueUrl}
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -52,6 +53,13 @@ provider:
       Resource:
         - arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}
         - arn:aws:s3:::${cf:${opt:service}-data-${self:provider.stage}.LogS3BucketName}
+    - Effect: Allow
+      Action:
+        - sqs:SendMessage
+        - sqs:GetQueueAttributes
+      Resource:
+        - ${cf:${opt:service}-data-${self:provider.stage}.BatcherQueueArn}
+        - ${cf:${opt:service}-data-${self:provider.stage}.BatcherDeadLetterQueueArn}
 
 functions:
   process-logs:
@@ -97,6 +105,21 @@ functions:
       service: ${self:service}
       stage: ${self:provider.stage}
       resource: empty-bucket
+
+  batcher-handler:
+    memorySize: 512
+    handler: lib/index.batcherHandler
+    reservedConcurrency: 5
+    timeout: 60
+    tags:
+      service: ${self:service}
+      stage: ${self:provider.stage}
+      resource: batcher-handler
+    events:
+      - sqs:
+          arn: ${cf:${opt:service}-data-${self:provider.stage}.BatcherQueueArn}
+          batchSize: 10000
+          maximumBatchingWindow: 300
 
 resources:
   Resources:

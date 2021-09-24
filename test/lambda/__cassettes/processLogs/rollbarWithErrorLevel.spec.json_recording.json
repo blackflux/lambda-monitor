@@ -22,6 +22,14 @@
     "response": ""
   },
   {
+    "scope": "https://sqs.us-west-2.amazonaws.com:443",
+    "method": "POST",
+    "path": "/",
+    "body": "Action=SendMessageBatch&QueueUrl=https%3A%2F%2Fsqs.us-west-2.amazonaws.com%2F0123456789%2Fservice-search-data-local-batcherQueue&SendMessageBatchRequestEntry.1.Id=ab0ec4e6014ef3e7e640c5d6e0c8d5d6e00bf5e0&SendMessageBatchRequestEntry.1.MessageBody=%7B%22logGroup%22%3A%22%2Faws%2Flambda%2Fpeg-solitiare-dev-overview%22%2C%22logEvent%22%3A%7B%22id%22%3A%2233705477413970201536500575666792700703924347154117689346%22%2C%22timestamp%22%3A1511405879665%2C%22message%22%3A%22Some%20Error%5Cn%5Cn%22%7D%2C%22level%22%3A%22error%22%7D&Version=2012-11-05",
+    "status": 200,
+    "response": "<?xml version=\"1.0\"?><SendMessageBatchResponse xmlns=\"http://queue.amazonaws.com/doc/2012-11-05/\"><SendMessageBatchResult><SendMessageBatchResultEntry><Id>ab0ec4e6014ef3e7e640c5d6e0c8d5d6e00bf5e0</Id><MessageId>c0004b0c-ea00-498a-a5a2-362703c0b621</MessageId><MD5OfMessageBody>393d0d8c49dae8673b1bf1ece92d0dc0</MD5OfMessageBody></SendMessageBatchResultEntry></SendMessageBatchResult><ResponseMetadata><RequestId>584b2818-1c3b-5bfd-97e0-7d388e494f1e</RequestId></ResponseMetadata></SendMessageBatchResponse>"
+  },
+  {
     "scope": "https://api.rollbar.com:443",
     "method": "POST",
     "path": "/api/1/item/",

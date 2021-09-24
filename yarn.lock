@@ -5241,6 +5241,11 @@ object-scan@17.0.0:
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-17.0.0.tgz#ee51a7f7c2b6a056ae513a67d75955ddcf545fd1"
   integrity sha512-/GkRZGupBmWcbmWqWqQ5/I98MRryIlrTVenteL7DOvymqm11WlL4tcXwxH7iV+9Pc8ouQwtk/4rLAnXJp6Qobw==
 
+object-scan@17.0.1:
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-17.0.1.tgz#21a6a7edaf5e0d319bdc422019009a44101f9f7e"
+  integrity sha512-XpHh3zWBp+3MoUYYvlnFJBOMdFomdZ3ORKU58ZJg8H4SPyf6pP0MPRGaP3tJMxGk0Mh/BarJI19uHK3MLWz7Jw==
+
 object-treeify@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-2.0.0.tgz#4c6c7f016f69b5f84c5f7d882bf41d18bdf03acb"
