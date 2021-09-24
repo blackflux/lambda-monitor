@@ -89,9 +89,6 @@ module.exports.extractLogMessage = (() => {
         )
       });
     }
-    if (result.targets.includes('rollbar') && !result.targets.includes('s3-log')) {
-      result.targets.push('s3-log');
-    }
     if (result.targets.includes('rollbar') && !result.targets.includes('sqs-batch')) {
       result.targets.push('sqs-batch');
     }
