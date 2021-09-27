@@ -109,7 +109,7 @@ functions:
   batcher-handler:
     memorySize: 512
     handler: lib/index.batcherHandler
-    reservedConcurrency: 5
+    reservedConcurrency: 1
     timeout: 60
     tags:
       MONITORED: "0"
