@@ -5,7 +5,7 @@ module.exports = ({
   logEvent,
   level
 }) => {
-  sqs.enqueue({
+  sqs.enqueue(process.env.BATCHER_QUEUE_URL, {
     logGroup,
     logEvent,
     level
