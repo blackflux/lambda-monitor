@@ -92,6 +92,8 @@ There are four lambda function created per stage. All operations are only perfor
 
 **batcher-handler** - Listens to SQS messages to group them before writing to S3
 
+**bundler-handler** - Listens to SQS messages to group them before writing to json logging service
+
 **process-logs** - This lambda function is subscribed to CloudWatch and processes the logs. Anomalies are submitted to rollbar and all detected log events are sent to the configured logging services. Tagged with `"MONITOR": "1"` and `"MONITORED": "0"`.
 
 **subscribe** - Subscribes the *process-logs* lambda function (detected using the `MONITOR` tag) to all relevant CloudWatch Groups, excluding those functions that have the `MONITORED` tag set to `0`.

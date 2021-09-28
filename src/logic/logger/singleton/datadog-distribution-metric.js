@@ -1,9 +1,7 @@
-const Datadog = require('datadog-light');
+const Datadog = require('../../util/datadog');
 
 module.exports = (() => {
-  const datadog = process.env.DATADOG_API_KEY === undefined
-    ? null
-    : Datadog(process.env.DATADOG_API_KEY);
+  const datadog = Datadog();
 
   return {
     enqueue: (metric, datapoints, opts = {}) => {
