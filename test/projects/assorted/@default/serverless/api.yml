@@ -140,7 +140,7 @@ functions:
       resource: bundler-handler
     events:
       - sqs:
-          arn: ${cf:${opt:service}-data-${self:provider.stage}.bundlerQueueArn}
+          arn: ${cf:${opt:service}-data-${self:provider.stage}.BundlerQueueArn}
           batchSize: 1000
           maximumBatchingWindow: 300
 resources:
