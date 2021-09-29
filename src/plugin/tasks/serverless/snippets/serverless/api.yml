@@ -9,6 +9,7 @@ provider:
     LOG_STREAM_BUCKET_NAME: ${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}
     LOG_BUCKET_NAME: ${cf:${opt:service}-data-${self:provider.stage}.LogS3BucketName}
     BATCHER_QUEUE_URL: ${cf:${opt:service}-data-${self:provider.stage}.BatcherQueueUrl}
+    BUNDLER_QUEUE_URL: ${cf:${opt:service}-data-${self:provider.stage}.BundlerQueueUrl}
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -60,6 +61,8 @@ provider:
       Resource:
         - ${cf:${opt:service}-data-${self:provider.stage}.BatcherQueueArn}
         - ${cf:${opt:service}-data-${self:provider.stage}.BatcherDeadLetterQueueArn}
+        - ${cf:${opt:service}-data-${self:provider.stage}.BundlerQueueArn}
+        - ${cf:${opt:service}-data-${self:provider.stage}.BundlerDeadLetterQueueArn}
 
 functions:
   process-logs:
@@ -119,7 +122,23 @@ functions:
     events:
       - sqs:
           arn: ${cf:${opt:service}-data-${self:provider.stage}.BatcherQueueArn}
-          batchSize: 10000
+          batchSize: 1000
+          maximumBatchingWindow: 300
+
+  bundler-handler:
+    memorySize: 512
+    handler: lib/index.bundlerHandler
+    reservedConcurrency: 1
+    timeout: 60
+    tags:
+      MONITORED: "0"
+      service: ${self:service}
+      stage: ${self:provider.stage}
+      resource: bundler-handler
+    events:
+      - sqs:
+          arn: ${cf:${opt:service}-data-${self:provider.stage}.bundlerQueueArn}
+          batchSize: 1000
           maximumBatchingWindow: 300
 
 resources:
