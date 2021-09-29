@@ -143,3 +143,55 @@
         BatcherQueueUrl:
           Value:
             Ref: BatcherQueue
+
+  - resources:
+      Resources:
+        BundlerDeadLetterQueue:
+          Type: AWS::SQS::Queue
+          Properties:
+            MessageRetentionPeriod: 1209600
+            Tags:
+              - Key: service
+                Value: ${self:service}
+              - Key: stage
+                Value: ${self:provider.stage}
+              - Key: resource
+                Value: BundlerDeadLetterQueue
+        BundlerQueue:
+          Type: AWS::SQS::Queue
+          Properties:
+            DelaySeconds: 0
+            MaximumMessageSize: 262144
+            MessageRetentionPeriod: 345600
+            ReceiveMessageWaitTimeSeconds: 0
+            VisibilityTimeout: 360
+            RedrivePolicy:
+              deadLetterTargetArn:
+                Fn::GetAtt:
+                  - BundlerDeadLetterQueue
+                  - Arn
+              maxReceiveCount: 10
+            Tags:
+              - Key: service
+                Value: ${self:service}
+              - Key: stage
+                Value: ${self:provider.stage}
+              - Key: resource
+                Value: BundlerQueue
+      Outputs:
+        BundlerDeadLetterQueueArn:
+          Value:
+            Fn::GetAtt:
+              - BundlerDeadLetterQueue
+              - Arn
+        BundlerDeadLetterQueueUrl:
+          Value:
+            Ref: BundlerDeadLetterQueue
+        BundlerQueueArn:
+          Value:
+            Fn::GetAtt:
+              - BundlerQueue
+              - Arn
+        BundlerQueueUrl:
+          Value:
+            Ref: BundlerQueue

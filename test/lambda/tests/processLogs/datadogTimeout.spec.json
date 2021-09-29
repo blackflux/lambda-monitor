@@ -6,7 +6,8 @@
     "DATADOG_API_KEY": "INVALID_DATADOG_API_KEY"
   },
   "allowedOutOfOrderRecordings": [
-    "POST https://api.datadoghq.com:443/api/v1/distribution_points?api_key=INVALID_DATADOG_API_KEY"
+    "POST https://api.datadoghq.com:443/api/v1/distribution_points?api_key=INVALID_DATADOG_API_KEY",
+    "POST https://sqs.us-west-2.amazonaws.com:443/"
   ],
   "expect": {
     "to.deep.equal()": {

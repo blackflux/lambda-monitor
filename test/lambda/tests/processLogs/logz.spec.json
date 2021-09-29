@@ -4,7 +4,8 @@
     "LOGZ_TOKEN": "logz_dummy_token"
   },
   "allowedOutOfOrderRecordings": [
-    "POST https://sqs.us-west-2.amazonaws.com:443/"
+    "POST https://sqs.us-west-2.amazonaws.com:443/",
+    "POST https://listener.logz.io:8071/?token=logz_dummy_token&type=lambda-execution-info"
   ],
   "success": true,
   "timeout": 10000,

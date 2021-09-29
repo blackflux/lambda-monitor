@@ -5,6 +5,7 @@ describe('Testing index.js', () => {
   it('Testing Exports', () => {
     expect(Object.keys(index)).to.deep.equal([
       'batcherHandler',
+      'bundlerHandler',
       'processLogs',
       'subscribe',
       'emptyBucket'

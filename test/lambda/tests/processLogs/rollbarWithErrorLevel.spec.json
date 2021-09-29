@@ -6,7 +6,9 @@
     "ROLLBAR_REPORT_LEVEL": "WARNING"
   },
   "allowedOutOfOrderRecordings": [
-    "POST https://sqs.us-west-2.amazonaws.com:443/"
+    "POST https://sqs.us-west-2.amazonaws.com:443/",
+    "POST https://api.rollbar.com:443/api/1/item/",
+    "POST https://api.rollbar.com:443/api/1/item/"
   ],
   "success": true,
   "timeout": 10000,
@@ -34,6 +36,11 @@
           "id": "33705477413970201536500575666792700703924347154117689346",
           "timestamp": 1511405879665,
           "message": "2017-11-23T02:57:59.665Z 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0 ERROR: Some Error\n\n"
+        },
+        {
+          "id": "33705477413970201536500575666792700703924347154117689347",
+          "timestamp": 1511405879665,
+          "message": "2017-11-23T03:22:59.665Z 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0 ERROR: Other Error\n\n"
         }
       ]
     }
@@ -66,6 +73,11 @@
             "id": "33705477413970201536500575666792700703924347154117689346",
             "timestamp": 1511405879665,
             "message": "2017-11-23T02:57:59.665Z 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0 ERROR: Some Error\n\n"
+          },
+          {
+            "id": "33705477413970201536500575666792700703924347154117689347",
+            "timestamp": 1511405879665,
+            "message": "2017-11-23T03:22:59.665Z 1c2a7f3e-cffa-11e7-aa7b-d3cd50f70cb0 ERROR: Other Error\n\n"
           }
         ]
       }
