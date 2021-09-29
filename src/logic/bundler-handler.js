@@ -5,6 +5,6 @@ module.exports = async (event, context) => {
   if (datadog === null) {
     return;
   }
-  const lines = event.Records.map(({ body }) => JSON.parse(body));
-  await datadog.Logger.uploadJsonArray(lines);
+  const arr = event.Records.map(({ body }) => JSON.parse(body));
+  await datadog.Logger.uploadJsonArray(arr);
 };
