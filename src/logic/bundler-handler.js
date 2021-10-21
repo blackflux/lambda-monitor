@@ -14,8 +14,7 @@ module.exports = async (event, context) => {
       if (value === null) {
         // eslint-disable-next-line no-param-reassign
         parent[property] = '<null>';
-      }
-      if (value instanceof Object && Object.keys(value).length === 0) {
+      } else if (value instanceof Object && Object.keys(value).length === 0) {
         // eslint-disable-next-line no-param-reassign
         parent[property] = `<empty ${JSON.stringify(value)}>`;
       }
