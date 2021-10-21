@@ -29,7 +29,10 @@
         "status": 200,
         "event": {
           "emptyArray": "<empty []>",
-          "emptyObj": "<empty {}>"
+          "emptyObj": "<empty {}>",
+          "arrContainingEmptyObj": [
+            "<empty {}>"
+          ]
         }
       }
     ],
