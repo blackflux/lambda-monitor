@@ -1,0 +1,31 @@
+[
+  {
+    "scope": "https://api.sendgrid.com:443",
+    "method": "POST",
+    "path": "/v3/mail/send",
+    "body": {
+      "from": {
+        "email": "source@test.com"
+      },
+      "personalizations": [
+        {
+          "to": [
+            {
+              "email": "target@test.com"
+            }
+          ]
+        }
+      ],
+      "subject": "subject text",
+      "content": [
+        {
+          "type": "text/plain",
+          "value": "body text"
+        }
+      ]
+    },
+    "status": 202,
+    "response": "",
+    "responseIsBinary": false
+  }
+]

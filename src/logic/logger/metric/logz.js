@@ -13,7 +13,6 @@ module.exports = (context, logs) => {
     },
     body: logs.map(JSON.stringify).join('\n')
       // Reference: http://tiny.cc/bru4oy
-      .replace(/"timestamp":/g, '"@timestamp":'),
-    resolveWithFullResponse: true
+      .replace(/"timestamp":/g, '"@timestamp":')
   });
 };
