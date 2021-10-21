@@ -7,7 +7,6 @@ module.exports = (context, logs) => {
   request.enqueue({
     method: 'POST',
     uri: `https://logs-01.loggly.com/bulk/${process.env.LOGGLY_TOKEN}/tag/${process.env.ENVIRONMENT}/`,
-    body: logs.map(JSON.stringify).join('\n'),
-    resolveWithFullResponse: true
+    body: logs.map(JSON.stringify).join('\n')
   });
 };
