@@ -7,7 +7,7 @@ module.exports = async (event, context) => {
     return;
   }
   const arr = event.Records.map(({ body }) => JSON.parse(body));
-  objectScan(['**'], {
+  objectScan(['[*]**'], {
     filterFn: ({ parent, property, value }) => {
       if (value instanceof Object && Object.keys(value).length === 0) {
         // eslint-disable-next-line no-param-reassign
