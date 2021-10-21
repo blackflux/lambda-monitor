@@ -26,7 +26,11 @@
         "_level": "warning",
         "_group": "/aws/lambda/peg-solitiare-dev-overview",
         "path": "path/to/data3.json.gz",
-        "status": 200
+        "status": 200,
+        "event": {
+          "emptyArray": "<empty []>",
+          "emptyObj": "<empty {}>"
+        }
       }
     ],
     "status": 200,
