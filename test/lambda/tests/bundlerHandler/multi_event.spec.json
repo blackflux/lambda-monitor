@@ -67,7 +67,8 @@
           "event": {
             "emptyArray": [],
             "emptyObj": {},
-            "arrContainingEmptyObj": [{}]
+            "arrContainingEmptyObj": [{}],
+            "null": null
           },
           "path": "path/to/data3.json.gz",
           "status": 200
