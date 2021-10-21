@@ -64,6 +64,12 @@
           "_timestamp": 1632869955749,
           "_level": "warning",
           "_group": "/aws/lambda/peg-solitiare-dev-overview",
+          "event": {
+            "emptyArray": [],
+            "emptyObj": {},
+            "arrContainingEmptyObj": [{}],
+            "null": null
+          },
           "path": "path/to/data3.json.gz",
           "status": 200
         },
