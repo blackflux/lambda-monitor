@@ -11,6 +11,7 @@ provider:
     LOG_BUCKET_NAME: ${cf:${opt:service}-data-${self:provider.stage}.LogS3BucketName}
     BATCHER_QUEUE_URL: ${cf:${opt:service}-data-${self:provider.stage}.BatcherQueueUrl}
     BUNDLER_QUEUE_URL: ${cf:${opt:service}-data-${self:provider.stage}.BundlerQueueUrl}
+    CONFIG_FILEPATH: 'lib/config.json'
   iamRoleStatements:
     - Effect: "Allow"
       Action:

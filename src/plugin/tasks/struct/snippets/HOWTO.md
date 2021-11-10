@@ -32,6 +32,14 @@ aws --region ${awsRegion} --profile prod ssm put-parameter --cli-input-json '{"T
 
 - Define other environment variables as necessary, e.g. `LOGGLY_TOKEN`, `LOGZ_TOKEN`, `DATADOG_API_KEY` (all optional)
 
+- To disable monitoring for certain logs, set up a `config.json` file of form
+```json
+{
+  "suppress": [<REGEX>]
+}
+```
+
+
 ## 1. Deploy Data Stacks
 
 - Start docker container with `. manage.sh`

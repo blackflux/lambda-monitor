@@ -3,14 +3,17 @@ const metricLogger = require('./logger/metric');
 const messageLogger = require('./logger/message');
 const singletonLogger = require('./logger/singleton');
 const parser = require('./util/parser');
+const Config = require('../config');
 
 const processLogs = async (event, context) => {
+  const config = Config(process.env.CONFIG_FILEPATH);
   const data = JSON.parse(zlib
     .gunzipSync(Buffer.from(event.awslogs.data, 'base64'))
     .toString('ascii'));
 
   const logEvents = data.logEvents
-    .filter((logEvent) => !parser.isRequestStartOrEnd(logEvent.message))
+    .filter(({ message }) => !parser.isRequestStartOrEnd(message))
+    .filter(({ message }) => !config.isSuppressed(message))
     .map((logEvent) => [logEvent, parser.extractRequestMeta(logEvent.message)]);
 
   const messageLogs = logEvents.filter(([logEvent, requestMeta]) => requestMeta === null);
