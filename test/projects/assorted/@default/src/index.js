@@ -1,1 +1,3 @@
-module.exports = require('lambda-monitor').exports;
+import lambdaMonitor from 'lambda-monitor';
+
+export default lambdaMonitor.exports;
