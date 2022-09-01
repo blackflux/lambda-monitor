@@ -1,0 +1,7 @@
+{
+  "description": "Api stack custom config definition.",
+  "details": ["Contains monitoring api stack custom definitions."],
+  "formats": ["yml"],
+  "requires": ["serverless", "javascript"],
+  "website": null
+}

@@ -1,12 +1,6 @@
 provider:
   memorySize: 128
   environment:
-    LOGGLY_TOKEN: ${ssm:LOGGLY_TOKEN}
-    LOGZ_TOKEN: ${ssm:LOGZ_TOKEN}
-    DATADOG_API_KEY: ${ssm:DATADOG_API_KEY}
-    SENDGRID_API_KEY: ${ssm:SENDGRID_API_KEY}
-    ROLLBAR_ACCESS_TOKEN: ${ssm:ROLLBAR_ACCESS_TOKEN}
-    ROLLBAR_REPORT_LEVEL: ${ssm:ROLLBAR_REPORT_LEVEL}
     LOG_STREAM_BUCKET_NAME: ${cf:${opt:service}-data-${self:provider.stage}.LogStreamS3BucketName}
     LOG_BUCKET_NAME: ${cf:${opt:service}-data-${self:provider.stage}.LogS3BucketName}
     BATCHER_QUEUE_URL: ${cf:${opt:service}-data-${self:provider.stage}.BatcherQueueUrl}
@@ -220,3 +214,6 @@ resources:
         IsLogging: "${enableCloudTrail}"
       DependsOn:
         - CloudTrailS3BucketPolicy
+
+<<<:
+  - ${file(^/api/config.yml)}
