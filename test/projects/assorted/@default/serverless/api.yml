@@ -222,3 +222,5 @@ resources:
         IsLogging: enableCloudTrail
       DependsOn:
         - CloudTrailS3BucketPolicy
+<<<:
+  - ${file(^/api/config.yml)}

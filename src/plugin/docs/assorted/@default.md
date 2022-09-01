@@ -5,6 +5,7 @@
     - <a name="lambda-monitor-task-idx-ref-structhowto">:clipboard:</a> <a href="#lambda-monitor-task-ref-structhowto">`struct/howto`</a>
   - <a name="lambda-monitor-task-idx-ref-serverlessdefault">:open_file_folder:</a> <a href="#lambda-monitor-task-ref-serverlessdefault">`serverless/#default`</a>
     - <a name="lambda-monitor-task-idx-ref-serverlessserverless-data">:clipboard:</a> <a href="#lambda-monitor-task-ref-serverlessserverless-data">`serverless/serverless-data`</a>
+    - <a name="lambda-monitor-task-idx-ref-serverlessserverless-api-config">:clipboard:</a> <a href="#lambda-monitor-task-ref-serverlessserverless-api-config">`serverless/serverless-api-config`</a>
     - <a name="lambda-monitor-task-idx-ref-serverlessserverless-api">:clipboard:</a> <a href="#lambda-monitor-task-ref-serverlessserverless-api">`serverless/serverless-api`</a>
 
 # :open_file_folder: <a name="lambda-monitor-task-ref-assorteddefaultjson">assorted/@default.json</a> (<a href="#lambda-monitor-task-idx-ref-assorteddefaultjson">`index`</a>)
@@ -25,7 +26,9 @@ Manages files for monitoring project.
 <code>├─&nbsp;<a href="#lambda-monitor-target-ref-howtomd">HOWTO.md</a></code><br/>
 <code>├─&nbsp;serverless</code><br/>
 <code>│&nbsp;&nbsp;├─&nbsp;<a href="#lambda-monitor-target-ref-serverlessapiyml">api.yml</a></code><br/>
-<code>│&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>│&nbsp;&nbsp;├─&nbsp;<a href="#lambda-monitor-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-serverlessapiconfigyml">config.yml</a></code><br/>
 <code>├─&nbsp;src</code><br/>
 <code>│&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-srcindexjs">index.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
@@ -198,7 +201,9 @@ Manages configuration files for monitoring project.
 <code>project</code><br/>
 <code>└─&nbsp;serverless</code><br/>
 <code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#lambda-monitor-target-ref-serverlessapiyml">api.yml</a></code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#lambda-monitor-target-ref-serverlessdatayml">data.yml</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-serverlessapiconfigyml">config.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -234,6 +239,37 @@ _Updating <a href="#lambda-monitor-target-ref-serverlessdatayml">serverless/data
 <code>project</code><br/>
 <code>└─&nbsp;serverless</code><br/>
 <code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-serverlessdatayml">data.yml</a></code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#lambda-monitor-req-ref-serverless">serverless</a></li>
+          <li><a href="#lambda-monitor-req-ref-aws">aws</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### :clipboard: <a name="lambda-monitor-task-ref-serverlessserverless-api-config">serverless/serverless-api-config</a> (<a href="#lambda-monitor-task-idx-ref-serverlessserverless-api-config">`index`</a>)
+
+_Updating <a href="#lambda-monitor-target-ref-serverlessapiconfigyml">serverless/api/config.yml</a> using <a href="#lambda-monitor-strat-ref-create-only">create-only</a>._
+
+- Define api stack custom definition file.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;serverless</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;api</code><br/>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-serverlessapiconfigyml">config.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -371,6 +407,16 @@ Contains basic instructions on how to set up monitoring project.
 
 Contains monitoring data stack resource definitions.
 
+### <a name="lambda-monitor-target-ref-serverlessapiconfigyml">serverless/api/config.yml</a>  
+
+:small_red_triangle: <a href="#lambda-monitor-req-ref-serverless">serverless</a>, <a href="#lambda-monitor-req-ref-javascript">javascript</a>
+
+:small_blue_diamond: `yml`
+
+*Api stack custom config definition.*
+
+Contains monitoring api stack custom definitions.
+
 ### <a name="lambda-monitor-target-ref-serverlessapiyml">serverless/api.yml</a>  
 
 :small_red_triangle: <a href="#lambda-monitor-req-ref-serverless">serverless</a>, <a href="#lambda-monitor-req-ref-javascript">javascript</a>
@@ -390,4 +436,10 @@ Contains monitoring api stack resource definitions.
 :small_blue_diamond: `any`
 
 *Simply replace the old with the new content.*
+
+### <a name="lambda-monitor-strat-ref-create-only">create-only</a>  
+
+:small_blue_diamond: `any`
+
+*Does nothing when the file is already present, otherwise creates it.*
 

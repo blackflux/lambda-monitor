@@ -1,0 +1,15 @@
+{
+  "target": "serverless/api/config.yml",
+  "format": "yml",
+  "strategy": "create-only",
+  "snippets": [
+    "serverless/api/config.yml"
+  ],
+  "requires": [
+    "serverless",
+    "aws"
+  ],
+  "purpose": [
+    "Define api stack custom definition file."
+  ]
+}

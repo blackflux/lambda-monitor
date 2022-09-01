@@ -1,6 +1,7 @@
 {
   "tasks": [
     "serverless-api",
+    "serverless-api-config",
     "serverless-data"
   ],
   "description": "Manages configuration files for monitoring project."
