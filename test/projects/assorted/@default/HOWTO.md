@@ -45,10 +45,14 @@ aws --region awsRegion --profile prod ssm put-parameter --cli-input-json '{"Type
 - Start docker container with `. manage.sh`
 
 ```shell script
-sls deploy --config serverless.config.js --region awsRegion --env local --stack data --aws-profile local --force && \
-sls deploy --config serverless.config.js --region awsRegion --env dev --stack data --aws-profile dev --force && \
-sls deploy --config serverless.config.js --region awsRegion --env stage --stack data --aws-profile stage --force && \
-sls deploy --config serverless.config.js --region awsRegion --env prod --stack data --aws-profile prod --force
+yarn run sls-compile --stack data --region awsRegion --env local && \
+sls deploy --config serverless-local-data.config.yml --aws-profile local --force && \
+yarn run sls-compile --stack data --region awsRegion --env dev && \
+sls deploy --config serverless-dev-data.config.yml --aws-profile dev --force && \
+yarn run sls-compile --stack data --region awsRegion --env stage && \
+sls deploy --config serverless-stage-data.config.yml --aws-profile stage --force && \
+yarn run sls-compile --stack data --region awsRegion --env prod && \
+sls deploy --config serverless-prod-data.config.yml --aws-profile prod --force
 ```
 
 ## 2. Configure CircleCI
