@@ -40,6 +40,10 @@
                 Value: ${self:provider.stage}
               - Key: resource
                 Value: CloudTrailS3Bucket
+            LifecycleConfiguration:
+              Rules:
+                - ExpirationInDays: 365
+                  Status: Enabled
       Outputs:
         CloudTrailS3BucketName:
           Value:
@@ -61,6 +65,10 @@
                 Value: ${self:provider.stage}
               - Key: resource
                 Value: LogStreamS3Bucket
+            LifecycleConfiguration:
+              Rules:
+                - ExpirationInDays: 365
+                  Status: Enabled
       Outputs:
         LogStreamS3BucketName:
           Value:
