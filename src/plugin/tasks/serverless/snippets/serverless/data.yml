@@ -34,6 +34,10 @@
         CloudTrailS3Bucket:
           Type: AWS::S3::Bucket
           Properties:
+            LifecycleConfiguration:
+              Rules:
+                - ExpirationInDays: 365
+                  Status: Enabled
             Tags:
               - Key: service
                 Value: ${self:service}
@@ -55,6 +59,10 @@
         LogStreamS3Bucket:
           Type: AWS::S3::Bucket
           Properties:
+            LifecycleConfiguration:
+              Rules:
+                - ExpirationInDays: 365
+                  Status: Enabled
             Tags:
               - Key: service
                 Value: ${self:service}
