@@ -72,7 +72,24 @@ module.exports.extractLogMessage = (() => {
     /$/
   ].map((r) => r.source).join(''), '');
 
+  const initRegex = /^INIT_START Runtime Version: /;
+
   return (message, logGroup) => {
+    if (initRegex.test(message)) {
+      return {
+        targets: ['DATADOG'.toLowerCase()],
+        logLevel: 'INFO'.toLowerCase(),
+        message: JSON.stringify({
+          type: 'distribution-metric',
+          args: [
+            'aws.lambda_monitor.lambda.init_start',
+            [new Date() / 1],
+            { tags: [`fnName:${logGroup.replace(/^\/aws\/lambda\//, '')}`] }
+          ]
+        })
+      };
+    }
+
     const result = {
       targets: ['ROLLBAR'.toLowerCase()],
       logLevel: 'WARNING'.toLowerCase(),
