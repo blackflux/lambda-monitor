@@ -1,0 +1,44 @@
+[
+  {
+    "scope": "https://api.datadoghq.com:443",
+    "method": "POST",
+    "path": "/api/v1/distribution_points?api_key=DATADOG_API_KEY",
+    "body": {
+      "series": [
+        {
+          "metric": "aws.lambda_monitor.lambda.init_start",
+          "points": [
+            [
+              1577149167000,
+              [
+                1
+              ]
+            ]
+          ],
+          "type": "distribution",
+          "tags": [
+            "fnName:peg-solitiare-dev-overview",
+            "environment:local-dev"
+          ]
+        }
+      ]
+    },
+    "status": 200,
+    "response": "",
+    "rawHeaders": [
+      "Date",
+      "Mon, 23 Jan 2023 22:27:03 GMT",
+      "Content-Type",
+      "application/json",
+      "Content-Length",
+      "170",
+      "Connection",
+      "close",
+      "cache-control",
+      "no-cache",
+      "via",
+      "haproxy"
+    ],
+    "responseIsBinary": false
+  }
+]
