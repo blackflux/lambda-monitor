@@ -1,0 +1,50 @@
+{
+  "handler": "processLogs",
+  "timestamp": 1577149167,
+  "env": {
+    "DATADOG_API_KEY": "DATADOG_API_KEY"
+  },
+  "success": true,
+  "timeout": 10000,
+  "expect": {
+    "to.deep.equal()": {
+      "messageType": "DATA_MESSAGE",
+      "owner": "783629116497",
+      "logGroup": "/aws/lambda/peg-solitiare-dev-overview",
+      "logStream": "2017/11/23/[$LATEST]e680fe32c6ba48ce8c3a377a25cd488e",
+      "subscriptionFilters": [
+        "NoneFilter"
+      ],
+      "logEvents": [
+        {
+          "id": "33705477413970201536500575666792700703924347154117689345",
+          "timestamp": 1511405879665,
+          "message": "INIT_START Runtime Version: nodejs:16.v11\tRuntime Version ARN: arn:aws:lambda:us-west-2::runtime:44e59da9efedf3dc3162c48106885a41abdcdb4e3cd943509e8a94c1dbfd76d5\n"
+        }
+      ]
+    }
+  },
+  "logs": {
+    "to.deep.equal()": []
+  },
+  "event": {
+    "awslogs": {
+      "data|JSON.stringify|toGzip|toBase64": {
+        "messageType": "DATA_MESSAGE",
+        "owner": "783629116497",
+        "logGroup": "/aws/lambda/peg-solitiare-dev-overview",
+        "logStream": "2017/11/23/[$LATEST]e680fe32c6ba48ce8c3a377a25cd488e",
+        "subscriptionFilters": [
+          "NoneFilter"
+        ],
+        "logEvents": [
+          {
+            "id": "33705477413970201536500575666792700703924347154117689345",
+            "timestamp": 1511405879665,
+            "message": "INIT_START Runtime Version: nodejs:16.v11\tRuntime Version ARN: arn:aws:lambda:us-west-2::runtime:44e59da9efedf3dc3162c48106885a41abdcdb4e3cd943509e8a94c1dbfd76d5\n"
+          }
+        ]
+      }
+    }
+  }
+}
