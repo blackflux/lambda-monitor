@@ -1,6 +1,6 @@
-const datadogDistributionMetric = require('../singleton/datadog-distribution-metric');
+import datadogDistributionMetric from '../singleton/datadog-distribution-metric.js';
 
-module.exports = ({
+export default ({
   logGroup, level, types, timestampMS
 }) => {
   types.forEach((type) => {

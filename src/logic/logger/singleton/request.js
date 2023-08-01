@@ -1,6 +1,6 @@
-const request = require('request-promise-native');
+import request from 'request-promise-native';
 
-module.exports = (() => {
+export default (() => {
   const queue = [];
   return {
     enqueue: (...args) => {

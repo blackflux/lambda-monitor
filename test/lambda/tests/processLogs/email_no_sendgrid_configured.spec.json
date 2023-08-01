@@ -1,6 +1,6 @@
 {
   "handler": "processLogs",
-  "env": {},
+  "envVars": {},
   "timestamp": 1559595312,
   "success": true,
   "timeout": 10000,

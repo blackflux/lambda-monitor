@@ -1,14 +1,17 @@
-const path = require('path');
-const fs = require('smart-fs');
-const { Pool } = require('promise-pool-ext');
+import { Pool } from 'promise-pool-ext';
+import datadogDistributionMetric from './singleton/datadog-distribution-metric.js';
+import request from './singleton/request.js';
+import s3PutGzipObject from './singleton/s3-put-gzip-object.js';
+import sqs from './singleton/sqs.js';
 
-const singletons = fs
-  .walkDir(path.join(__dirname, 'singleton'))
-  .reduce((p, f) => Object.assign(p, {
-    [f.slice(0, -3)]: fs.smartRead(path.join(__dirname, 'singleton', f))
-  }), {});
+const singletons = {
+  'datadog-distribution-metric': datadogDistributionMetric,
+  request,
+  's3-put-gzip-object': s3PutGzipObject,
+  sqs
+};
 
-module.exports.flushAll = async (context) => {
+export const flushAll = async (context) => {
   const pool = Pool({
     concurrency: 10,
     timeout: Math.floor((context.getRemainingTimeInMillis() - 5000.0) / 1000.0) * 1000

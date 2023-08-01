@@ -1,7 +1,7 @@
-const objectScan = require('object-scan');
-const Datadog = require('./util/datadog');
+import objectScan from 'object-scan';
+import Datadog from './util/datadog.js';
 
-module.exports = async (event, context) => {
+export default async (event, context) => {
   const datadog = Datadog();
   if (datadog === null) {
     return;

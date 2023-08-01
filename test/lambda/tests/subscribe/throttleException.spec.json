@@ -2,6 +2,9 @@
   "handler": "subscribe",
   "success": true,
   "timeout": 30000,
+  "expect": {
+    "to.be.undefined": null
+  },
   "logs": {
     "to.deep.equal()": [
       "ERROR: CloudWatch subscription logic temporarily throttled by AWS."

@@ -73,19 +73,6 @@
     }
   },
   {
-    "scope": "https://logs.us-east-1.amazonaws.com:443",
-    "method": "POST",
-    "path": "/",
-    "body": {
-      "logGroupName": "/aws/lambda/some-function-name"
-    },
-    "status": 400,
-    "response": {
-      "__type": "ThrottlingException",
-      "message": "Rate exceeded"
-    }
-  },
-  {
     "scope": "https://cloudformation-custom-resource-response-uswest2.s3-us-west-2.amazonaws.com:443",
     "method": "PUT",
     "path": "/arn",

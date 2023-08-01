@@ -8,6 +8,16 @@
       "ERROR: Failure in custom code run inside of lambda-cfn-hook: NoSuchBucket: The specified bucket does not exist"
     ]
   },
+  "expect": {
+    "to.deep.contain()": {
+      "name": "NoSuchBucket",
+      "Code": "NoSuchBucket",
+      "BucketName": "unknown-bucket-weflkj34tEfoijkwefdqwdojkerg",
+      "RequestId": "D05DB1E1F6C5577F",
+      "HostId": "DcMwUFfoHAknx+mhQcZ9I1qjOlTG6YI/rxbSqXdvHDWz0tKydFvaK+q9QQanfk6Yvamhgxxoafk=",
+      "message": "The specified bucket does not exist"
+    }
+  },
   "event": {
     "RequestType": "Delete",
     "ServiceToken": "arn:aws:lambda:...:function:route53Dependency",

@@ -1,11 +1,14 @@
-const path = require('path');
-const fs = require('smart-fs');
+import datadog from './metric/datadog.js';
+import loggly from './metric/loggly.js';
+import logz from './metric/logz.js';
 
-const metricLogger = fs
-  .walkDir(path.join(__dirname, 'metric'))
-  .map((f) => [f.slice(0, -3), fs.smartRead(path.join(__dirname, 'metric', f))]);
+const metricLogger = Object.entries({
+  datadog,
+  loggly,
+  logz
+});
 
-module.exports = (context, logs) => {
+export default (context, logs) => {
   metricLogger.forEach(([name, logger]) => {
     logger(context, logs);
   });

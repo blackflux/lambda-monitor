@@ -1,6 +1,6 @@
 {
   "handler": "processLogs",
-  "env": {
+  "envVars": {
     "DATADOG_API_KEY": "DATADOG_API_KEY"
   },
   "timestamp": 1559595312,
