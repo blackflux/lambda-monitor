@@ -7,6 +7,12 @@
       "ERROR: Failure in custom code run inside of lambda-cfn-hook: UnrecognizedClientException: The security token included in the request is invalid."
     ]
   },
+  "expect": {
+    "to.deep.contain()": {
+      "name": "UnrecognizedClientException",
+      "message": "The security token included in the request is invalid."
+    }
+  },
   "event": {
     "RequestType": "Create",
     "ServiceToken": "arn:aws:lambda:us-west-2:.:.:.",

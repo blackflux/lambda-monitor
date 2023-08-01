@@ -1,6 +1,6 @@
-const assert = require('assert');
-const crypto = require('crypto');
-const request = require('../singleton/request');
+import assert from 'assert';
+import crypto from 'crypto';
+import request from '../singleton/request.js';
 
 const logLevels = ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'];
 
@@ -17,7 +17,7 @@ const loadToken = (logGroup) => {
   return tokenData[0];
 };
 
-module.exports = ({
+export default ({
   logGroup,
   logStream,
   level,

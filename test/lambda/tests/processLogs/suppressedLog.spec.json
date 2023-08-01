@@ -1,7 +1,7 @@
 {
   "handler": "processLogs",
   "timestamp": 1559595312,
-  "env": {
+  "envVars": {
     "CONFIG_FILEPATH": "./test/lambda/config.json"
   },
   "success": true,

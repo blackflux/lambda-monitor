@@ -1,12 +1,13 @@
-const path = require('path');
-const handler = require('./handler');
+import path from 'path';
+import fs from 'smart-fs';
+import * as handler from './handler.js';
 
-module.exports = ({
+export default ({
   name: 'lambda-monitor',
-  taskDir: path.join(__dirname, 'plugin', 'tasks'),
-  reqDir: path.join(__dirname, 'plugin', 'reqs'),
-  varDir: path.join(__dirname, 'plugin', 'vars'),
-  targetDir: path.join(__dirname, 'plugin', 'targets'),
-  docDir: path.join(__dirname, 'plugin', 'docs'),
+  taskDir: path.join(fs.dirname(import.meta.url), 'plugin', 'tasks'),
+  reqDir: path.join(fs.dirname(import.meta.url), 'plugin', 'reqs'),
+  varDir: path.join(fs.dirname(import.meta.url), 'plugin', 'vars'),
+  targetDir: path.join(fs.dirname(import.meta.url), 'plugin', 'targets'),
+  docDir: path.join(fs.dirname(import.meta.url), 'plugin', 'docs'),
   exports: handler
 });

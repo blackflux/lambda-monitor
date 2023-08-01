@@ -1,9 +1,14 @@
-const zlib = require('zlib');
-const metricLogger = require('./logger/metric');
-const messageLogger = require('./logger/message');
-const singletonLogger = require('./logger/singleton');
-const parser = require('./util/parser');
-const Config = require('../config');
+import zlib from 'zlib';
+import metricLogger from './logger/metric.js';
+import messageLogger from './logger/message.js';
+import { flushAll } from './logger/singleton.js';
+import {
+  isRequestStartOrEnd,
+  extractRequestMeta,
+  extractLogMessage,
+  generateExecutionReport
+} from './util/parser.js';
+import Config from '../config.js';
 
 const processLogs = async (event, context) => {
   const config = Config(process.env.CONFIG_FILEPATH);
@@ -12,14 +17,14 @@ const processLogs = async (event, context) => {
     .toString('ascii'));
 
   const logEvents = data.logEvents
-    .filter(({ message }) => !parser.isRequestStartOrEnd(message))
+    .filter(({ message }) => !isRequestStartOrEnd(message))
     .filter(({ message }) => !config.isSuppressed(message))
-    .map((logEvent) => [logEvent, parser.extractRequestMeta(logEvent.message)]);
+    .map((logEvent) => [logEvent, extractRequestMeta(logEvent.message)]);
 
   const messageLogs = logEvents.filter(([logEvent, requestMeta]) => requestMeta === null);
   messageLogs
     .map(([logEvent]) => {
-      const { targets, logLevel, message } = parser.extractLogMessage(logEvent.message, data.logGroup);
+      const { targets, logLevel, message } = extractLogMessage(logEvent.message, data.logGroup);
       return [{ ...logEvent, message }, logLevel, targets];
     })
     .forEach(([logEvent, logLevel, targets]) => {
@@ -40,11 +45,11 @@ const processLogs = async (event, context) => {
 
   const metricLogs = await Promise.all(logEvents
     .filter(([logEvent, requestMeta]) => requestMeta !== null)
-    .map(([logEvent, requestMeta]) => parser.generateExecutionReport(data, logEvent, requestMeta)));
+    .map(([logEvent, requestMeta]) => generateExecutionReport(data, logEvent, requestMeta)));
   metricLogger(context, metricLogs);
 
-  await singletonLogger.flushAll(context);
+  await flushAll(context);
   return data;
 };
 
-module.exports = processLogs;
+export default processLogs;

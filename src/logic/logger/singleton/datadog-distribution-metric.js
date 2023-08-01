@@ -1,6 +1,6 @@
-const Datadog = require('../../util/datadog');
+import Datadog from '../../util/datadog.js';
 
-module.exports = (() => {
+export default (() => {
   const datadog = Datadog();
 
   return {

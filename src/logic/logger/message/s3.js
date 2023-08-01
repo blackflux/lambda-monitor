@@ -1,6 +1,6 @@
-const s3PutGzipObject = require('../singleton/s3-put-gzip-object');
+import s3PutGzipObject from '../singleton/s3-put-gzip-object.js';
 
-module.exports = ({ logGroup, message }) => {
+export default ({ logGroup, message }) => {
   let messageParsed;
   try {
     messageParsed = JSON.parse(message);
@@ -10,7 +10,5 @@ module.exports = ({ logGroup, message }) => {
       `${logGroup.slice(1)}/${key}`,
       JSON.stringify(data)
     );
-  } catch (e) {
-    /* ignored */
-  }
+  } catch (e) { /* ignored */ }
 };

@@ -10,6 +10,9 @@
       "INFO: non-empty-bucket-32498uerfgjk45t89u34tjwer emptied!"
     ]
   },
+  "expect": {
+    "to.be.undefined": null
+  },
   "event": {
     "RequestType": "Delete",
     "ServiceToken": "arn:aws:lambda:...:function:route53Dependency",

@@ -1,6 +1,6 @@
-const request = require('../singleton/request');
+import request from '../singleton/request.js';
 
-module.exports = ({ logEvent }) => {
+export default ({ logEvent }) => {
   if (process.env.SENDGRID_API_KEY === undefined) {
     return;
   }

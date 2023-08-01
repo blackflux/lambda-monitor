@@ -1,4 +1,4 @@
-FROM amazon/aws-sam-cli-build-image-nodejs14.x
+FROM public.ecr.aws/sam/build-nodejs18.x
 
 WORKDIR /user
 
@@ -6,9 +6,9 @@ WORKDIR /user
 ENV HOME /user
 
 RUN touch ~/.bashrc && \
-  curl -o- -L https://yarnpkg.com/install.sh | bash && \
+  yarn -v || npm install --global yarn && \
   source ~/.bashrc && \
-  yarn global add serverless@2.59.0
+  yarn global add serverless@3.33.0
 
 RUN touch ~/.bashrc && \
   echo "alias u='yarn run u'" >> ~/.bashrc && \
@@ -23,7 +23,5 @@ RUN chmod -R 757 /user
 
 # set correct execution env
 ENV LAMBDA_TASK_ROOT /user/project
-# disable babel trying to access root file location
-ENV BABEL_DISABLE_CACHE 1
 
 ENTRYPOINT (cd project && bash)

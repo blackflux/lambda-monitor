@@ -1,7 +1,7 @@
-const crypto = require('crypto');
-const { putGzipObject } = require('./util/s3');
+import crypto from 'crypto';
+import { putGzipObject } from './util/s3.js';
 
-module.exports = async (event, context) => {
+export default async (event, context) => {
   const lines = event.Records.map(({ body }) => body);
   const data = lines.join('\n');
   const hash = crypto.createHash('md5').update(data).digest('hex');

@@ -7,6 +7,9 @@
       "ERROR: Failure in custom code run inside of lambda-cfn-hook: Error: No Bucket Provided."
     ]
   },
+  "expect": {
+    "to.deep.contain()": {}
+  },
   "event": {
     "RequestType": "Delete",
     "ServiceToken": "arn:aws:lambda:...:function:route53Dependency",

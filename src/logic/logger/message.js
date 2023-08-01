@@ -1,12 +1,21 @@
-const path = require('path');
-const fs = require('smart-fs');
+import anyMeta from './message/any-meta.js';
+import datadog from './message/datadog.js';
+import email from './message/email.js';
+import json from './message/json.js';
+import rollbar from './message/rollbar.js';
+import s3 from './message/s3.js';
+import sqsBatch from './message/sqs-batch.js';
 
-const messageLogger = fs
-  .walkDir(path.join(__dirname, 'message'))
-  .reduce((p, f) => Object.assign(p, {
-    [f.slice(0, -3)]: fs.smartRead(path.join(__dirname, 'message', f))
-  }), {});
+const messageLogger = {
+  'any-meta': anyMeta,
+  datadog,
+  email,
+  json,
+  rollbar,
+  s3,
+  'sqs-batch': sqsBatch
+};
 
-module.exports = (type, ...args) => {
+export default (type, ...args) => {
   messageLogger[type](...args);
 };

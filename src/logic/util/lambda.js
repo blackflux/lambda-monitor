@@ -1,9 +1,7 @@
-const get = require('lodash.get');
-const Aws = require('aws-sdk-wrap');
+import get from 'lodash.get';
+import aws from './aws.js';
 
-module.exports = (options) => {
-  const aws = Aws({ config: options });
-
+export default () => {
   const logGroupName = (fn) => `/aws/lambda/${fn.FunctionName}`;
 
   const getAllFunctions = async (reqOptions = {}) => {
@@ -11,7 +9,7 @@ module.exports = (options) => {
     let PaginationToken;
     do {
       // eslint-disable-next-line no-await-in-loop
-      const response = await aws.call('ResourceGroupsTaggingAPI:getResources', {
+      const response = await aws.call('ResourceGroupsTaggingAPI:GetResourcesCommand', {
         ...reqOptions,
         ...(PaginationToken ? { PaginationToken } : {}),
         ResourceTypeFilters: ['lambda'],
@@ -29,13 +27,13 @@ module.exports = (options) => {
 
   const appendLogSubscriptionInfo = (fns) => Promise.all(
     fns.map((fn) => aws
-      .call('CloudWatchLogs:describeSubscriptionFilters', { logGroupName: logGroupName(fn) })
+      .call('CloudWatchLogs:DescribeSubscriptionFiltersCommand', { logGroupName: logGroupName(fn) })
       .then((r) => ({
         ...r,
         ...fn
       }))
       .catch((err) => {
-        if (err.code === 'ResourceNotFoundException') {
+        if (err.name === 'ResourceNotFoundException') {
           return false;
         }
         throw err;
@@ -43,7 +41,7 @@ module.exports = (options) => {
   ).then((res) => res.filter((fn) => fn !== false));
 
   const subscribeCloudWatchLogGroup = (monitor, producer) => aws
-    .call('CloudWatchLogs:putSubscriptionFilter', {
+    .call('CloudWatchLogs:PutSubscriptionFilterCommand', {
       destinationArn: monitor.FunctionARN,
       filterName: 'NoneFilter',
       filterPattern: '',
@@ -51,7 +49,7 @@ module.exports = (options) => {
     });
 
   const getFunctionConfiguration = async (name) => get(await aws
-    .call('Lambda:getFunction', {
+    .call('Lambda:GetFunctionCommand', {
       FunctionName: name
     }), 'Configuration');
 

@@ -1,10 +1,10 @@
-const get = require('lodash.get');
-const { logger } = require('lambda-monitor-logger');
-const lambda = require('./util/lambda')({
-  region: process.env.AWS_REGION
-});
+import get from 'lodash.get';
+import { logger } from 'lambda-monitor-logger';
+import Lambda from './util/lambda.js';
 
-module.exports = () => lambda
+const lambda = Lambda();
+
+export default () => lambda
   .getAllFunctions({
     TagFilters: [{
       Key: 'STAGE',

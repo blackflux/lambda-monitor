@@ -1,15 +1,17 @@
-const path = require('path');
-const minimist = require('minimist');
-const LambdaTdd = require('lambda-tdd');
+import path from 'path';
+import minimist from 'minimist';
+import LambdaTdd from 'lambda-tdd';
+import fs from 'smart-fs';
 
 LambdaTdd({
-  cwd: path.join(__dirname, '..'),
+  cwd: path.join(fs.dirname(import.meta.url), '..'),
   verbose: minimist(process.argv.slice(2)).verbose === true,
   timeout: minimist(process.argv.slice(2)).timeout,
   nockHeal: minimist(process.argv.slice(2))['nock-heal'],
-  handlerFile: path.join(__dirname, '..', 'src', 'handler.js'),
-  cassetteFolder: path.join(__dirname, 'lambda', '__cassettes'),
-  envVarYml: path.join(__dirname, 'lambda', 'env.yml'),
-  envVarYmlRecording: path.join(__dirname, 'lambda', 'env.recording.yml'),
-  testFolder: path.join(__dirname, 'lambda', 'tests')
+  testHeal: minimist(process.argv.slice(2))['test-heal'],
+  handlerFile: path.join(fs.dirname(import.meta.url), '..', 'src', 'handler.js'),
+  cassetteFolder: path.join(fs.dirname(import.meta.url), 'lambda', '__cassettes'),
+  envVarYml: path.join(fs.dirname(import.meta.url), 'lambda', 'env.yml'),
+  envVarYmlRecording: path.join(fs.dirname(import.meta.url), 'lambda', 'env.recording.yml'),
+  testFolder: path.join(fs.dirname(import.meta.url), 'lambda', 'tests')
 }).execute();

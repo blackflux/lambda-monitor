@@ -1,12 +1,12 @@
 {
   "handler": "processLogs",
   "timestamp": 1559595312,
-  "env": {
+  "envVars": {
     "ROLLBAR_ACCESS_TOKEN": "rollbar_dummy_token",
     "ROLLBAR_REPORT_LEVEL": "WARNING"
   },
   "allowedOutOfOrderRecordings": [
-    "POST https://sqs.us-west-2.amazonaws.com:443/",
+    "POST https://sqs.us-east-1.amazonaws.com:443/",
     "POST https://api.rollbar.com:443/api/1/item/",
     "POST https://api.rollbar.com:443/api/1/item/"
   ],

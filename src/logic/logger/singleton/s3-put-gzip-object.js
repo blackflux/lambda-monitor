@@ -1,11 +1,11 @@
-const s3 = require('../../util/s3');
+import { putGzipObject } from '../../util/s3.js';
 
-module.exports = (() => {
+export default (() => {
   const queue = [];
   return {
     enqueue: (...args) => {
       queue.push(args);
     },
-    flush: () => Promise.all(queue.splice(0).map((args) => s3.putGzipObject(...args)))
+    flush: () => Promise.all(queue.splice(0).map((args) => putGzipObject(...args)))
   };
 })();

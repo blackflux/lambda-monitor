@@ -1,15 +1,15 @@
-const get = require('lodash.get');
-const { logger } = require('lambda-monitor-logger');
-const s3 = require('./util/s3');
+import get from 'lodash.get';
+import { logger } from 'lambda-monitor-logger';
+import { emptyBucket } from './util/s3.js';
 
-module.exports = async (event) => {
+export default async (event) => {
   const requestType = get(event, 'RequestType');
   if (requestType === 'Delete') {
     const Bucket = get(event, 'ResourceProperties.BucketName');
     if (Bucket === undefined) {
       throw new Error('No Bucket Provided.');
     }
-    await s3.emptyBucket({ Bucket });
+    await emptyBucket({ Bucket });
     logger.info(`${Bucket} emptied!`);
   }
 };

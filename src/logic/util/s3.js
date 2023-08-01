@@ -1,13 +1,8 @@
-const zlib = require('zlib');
-const aws = require('aws-sdk-wrap')();
-const { logger } = require('lambda-monitor-logger');
+import zlib from 'zlib';
+import { logger } from 'lambda-monitor-logger';
+import aws from './aws.js';
 
-const s3 = aws.get('s3');
-
-const listObjectsV2 = (p) => s3.listObjectsV2(p).promise();
-const deleteObjects = (p) => s3.deleteObjects(p).promise();
-
-module.exports.putGzipObject = (bucket, key, data) => aws.call('s3:putObject', {
+export const putGzipObject = (bucket, key, data) => aws.call('s3:PutObjectCommand', {
   ContentType: 'application/json',
   ContentEncoding: 'gzip',
   Bucket: bucket,
@@ -15,15 +10,15 @@ module.exports.putGzipObject = (bucket, key, data) => aws.call('s3:putObject', {
   Body: zlib.gzipSync(data, { level: 9 })
 });
 
-const emptyBucket = async (objParams) => {
+export const emptyBucket = async (objParams) => {
   logger.info(`emptyBucket(): ${JSON.stringify(objParams)}`);
-  const result = await listObjectsV2(objParams);
-  if (result.Contents.length === 0) {
+  const result = await aws.call('s3:ListObjectsV2Command', objParams);
+  if (result.KeyCount === 0) {
     return;
   }
   const objectList = result.Contents.map((c) => ({ Key: c.Key }));
   logger.info(`Deleting ${objectList.length} items...`);
-  const data = await deleteObjects({
+  const data = await aws.call('s3:DeleteObjectsCommand', {
     Bucket: objParams.Bucket,
     Delete: {
       Objects: objectList
@@ -37,4 +32,3 @@ const emptyBucket = async (objParams) => {
     });
   }
 };
-module.exports.emptyBucket = emptyBucket;

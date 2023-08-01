@@ -1,11 +1,11 @@
 [
   {
-    "scope": "https://empty-bucket-32498uerfgjk45t89u34tjwer.s3.amazonaws.com:443",
+    "scope": "https://empty-bucket-32498uerfgjk45t89u34tjwer.s3.us-east-1.amazonaws.com:443",
     "method": "GET",
     "path": "/?list-type=2",
     "body": "",
     "status": 200,
-    "response": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ListBucketResult xmlns=\"http://s3.amazonaws.com/doc/2006-03-01/\"><Name>empty-bucket-32498uerfgjk45t89u34tjwer</Name><Prefix></Prefix><KeyCount>0</KeyCount><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated></ListBucketResult>",
+    "response": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ListBucketResult xmlns=\"http://s3.us-east-1.amazonaws.com/doc/2006-03-01/\"><Name>empty-bucket-32498uerfgjk45t89u34tjwer</Name><Prefix></Prefix><KeyCount>0</KeyCount><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated></ListBucketResult>",
     "rawHeaders": [
       "x-amz-id-2",
       "eC0zSrwyaw6affDeTjmS1BIfA5iI1dVEb7SRH5JvWyQsgQC7w48lIpZXWTrHF4zCqyV4/9K6FsE=",

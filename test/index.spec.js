@@ -1,7 +1,10 @@
-const path = require('path');
-const expect = require('chai').expect;
-const { load } = require('robo-config');
-const plugin = require('../src/index');
+import path from 'path';
+import roboConfig from 'robo-config';
+import fs from 'smart-fs';
+import { expect } from 'chai';
+import plugin from '../src/index.js';
+
+const { load } = roboConfig;
 
 describe('Testing Plugin', () => {
   it('Documenting Plugin Tasks', () => {
@@ -9,7 +12,7 @@ describe('Testing Plugin', () => {
   });
 
   it('Testing Plugin Tasks', () => {
-    expect(load(plugin).test(path.join(__dirname, 'projects'))).to.deep.equal({
+    expect(load(plugin).test(path.join(fs.dirname(import.meta.url), 'projects'))).to.deep.equal({
       'assorted/@default': []
     });
   });

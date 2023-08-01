@@ -1,7 +1,7 @@
 {
   "handler": "processLogs",
   "timestamp": 1559595312,
-  "env": {
+  "envVars": {
     "ROLLBAR_ACCESS_TOKEN": "rollbar_dummy_token",
     "ROLLBAR_REPORT_LEVEL": "WARNING",
     "DATADOG_API_KEY": "INVALID_DATADOG_API_KEY"

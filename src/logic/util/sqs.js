@@ -1,9 +1,5 @@
-const Aws = require('aws-sdk-wrap');
+import aws from './aws.js';
 
-module.exports = (options) => {
-  const aws = Aws({ config: options });
-
-  return {
-    sendBatch: (...args) => aws.sqs.sendMessageBatch(...args)
-  };
-};
+export default () => ({
+  sendBatch: (...args) => aws.sqs.sendMessageBatch(...args)
+});
