@@ -6,6 +6,7 @@
     "plugin:markdown/recommended"
   ],
   "rules": {
+    "@blackflux/rules/c8-prevent-ignore": 1,
     "@blackflux/rules/kebab-case-enforce": 1,
     "max-len": ["error", {"code": 120}],
     "mocha/no-exclusive-tests": "error",
@@ -37,7 +38,6 @@
     "mocha/no-mocha-arrows": 0,
     "mocha/no-hooks-for-single-case": 0,
     "import/no-useless-path-segments": [2, {"commonjs": true}],
-    "@blackflux/rules/c8-prevent-ignore": 1,
     "import/extensions": [2, "always"],
     "import/prefer-default-export": 0
   },
