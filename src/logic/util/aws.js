@@ -2,22 +2,17 @@
 import AwsSdkWrap from 'aws-sdk-wrap';
 import {
   S3Client,
-  GetObjectCommand,
   PutObjectCommand,
-  HeadObjectCommand,
   ListObjectsV2Command,
   DeleteObjectsCommand
 } from '@aws-sdk/client-s3';
 import {
   SQSClient,
-  SendMessageBatchCommand,
-  GetQueueAttributesCommand
+  SendMessageBatchCommand
 } from '@aws-sdk/client-sqs';
 import {
   LambdaClient,
-  GetFunctionCommand,
-  PutFunctionConcurrencyCommand,
-  ListEventSourceMappingsCommand
+  GetFunctionCommand
 } from '@aws-sdk/client-lambda';
 import {
   ResourceGroupsTaggingAPIClient,
@@ -29,28 +24,22 @@ import {
   PutSubscriptionFilterCommand
 } from '@aws-sdk/client-cloudwatch-logs';
 
-// TODO: remove unnecessary
 export default AwsSdkWrap({
   configService: {},
   services: {
     S3: S3Client,
     'S3:CMD': {
-      GetObjectCommand,
       PutObjectCommand,
-      HeadObjectCommand,
       ListObjectsV2Command,
       DeleteObjectsCommand
     },
     SQS: SQSClient,
     'SQS:CMD': {
-      SendMessageBatchCommand,
-      GetQueueAttributesCommand
+      SendMessageBatchCommand
     },
     Lambda: LambdaClient,
     'Lambda:CMD': {
-      GetFunctionCommand,
-      PutFunctionConcurrencyCommand,
-      ListEventSourceMappingsCommand
+      GetFunctionCommand
     },
     ResourceGroupsTaggingAPI: ResourceGroupsTaggingAPIClient,
     'ResourceGroupsTaggingAPI:CMD': {
