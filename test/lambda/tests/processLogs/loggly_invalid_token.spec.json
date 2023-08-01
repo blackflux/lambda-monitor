@@ -1,10 +1,10 @@
 {
   "handler": "processLogs",
-  "env": {
+  "envVars": {
     "LOGGLY_TOKEN": "loggly_invalid_token"
   },
   "allowedOutOfOrderRecordings": [
-    "POST https://sqs.us-west-2.amazonaws.com:443/",
+    "POST https://sqs.us-east-1.amazonaws.com:443/",
     "POST https://logs-01.loggly.com:443/bulk/loggly_invalid_token/tag/local-dev/"
   ],
   "success": false,

@@ -1,10 +1,13 @@
-const LRU = require('lru-cache-ext');
-const Lambda = require('./lambda');
+import LRU from 'lru-cache-ext';
+import Lambda from './lambda.js';
 
 const lambda = Lambda();
-const lru = new LRU({ maxAge: 60 * 60 * 1000 });
+const lru = new LRU({
+  ttl: 60 * 60 * 1000,
+  max: 256
+});
 
-module.exports.isRequestStartOrEnd = (() => {
+export const isRequestStartOrEnd = (() => {
   const requestStartRegex = new RegExp([
     /^START RequestId: [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} /,
     /Version: (\$LATEST|\d+)\n$/
@@ -15,7 +18,7 @@ module.exports.isRequestStartOrEnd = (() => {
   return (message) => message.match(requestEndRegex) || message.match(requestStartRegex);
 })();
 
-module.exports.extractRequestMeta = (message) => new RegExp([
+export const extractRequestMeta = (message) => new RegExp([
   /^/,
   /REPORT RequestId: (?<requestId>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\t/,
   /Duration: (?<duration>\d+.\d+) ms\t/,
@@ -30,7 +33,7 @@ module.exports.extractRequestMeta = (message) => new RegExp([
   /$/
 ].map((r) => r.source).join(''), '').exec(message);
 
-module.exports.generateExecutionReport = async (logEntry, logEvent, requestMeta) => {
+export const generateExecutionReport = async (logEntry, logEvent, requestMeta) => {
   const {
     duration, billedDuration, maxMemory, requestId, memory, initDuration, traceId, segmentId, sampled
   } = requestMeta.groups;
@@ -60,7 +63,7 @@ module.exports.generateExecutionReport = async (logEntry, logEvent, requestMeta)
   };
 };
 
-module.exports.extractLogMessage = (() => {
+export const extractLogMessage = (() => {
   const messageRegex = new RegExp([
     /^/,
     /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z[\s\t]/,

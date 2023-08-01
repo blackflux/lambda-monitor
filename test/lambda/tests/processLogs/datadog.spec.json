@@ -1,7 +1,7 @@
 {
   "handler": "processLogs",
   "timestamp": 1577149167,
-  "env": {
+  "envVars": {
     "DATADOG_API_KEY": "INVALID_DATADOG_API_KEY"
   },
   "success": true,

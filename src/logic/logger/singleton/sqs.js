@@ -1,8 +1,8 @@
-const Sqs = require('../../util/sqs');
+import Sqs from '../../util/sqs.js';
 
 const sqs = Sqs();
 
-module.exports = (() => {
+export default (() => {
   const buffer = {};
   return {
     enqueue: (url, msg) => {

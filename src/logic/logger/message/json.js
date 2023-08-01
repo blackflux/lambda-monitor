@@ -1,6 +1,6 @@
-const sqs = require('../singleton/sqs');
+import sqs from '../singleton/sqs.js';
 
-module.exports = ({
+export default ({
   logGroup,
   logEvent,
   level

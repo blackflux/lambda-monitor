@@ -1,10 +1,10 @@
 {
   "handler": "processLogs",
-  "env": {
+  "envVars": {
     "LOGZ_TOKEN": "logz_dummy_token"
   },
   "allowedOutOfOrderRecordings": [
-    "POST https://sqs.us-west-2.amazonaws.com:443/"
+    "POST https://sqs.us-east-1.amazonaws.com:443/"
   ],
   "success": true,
   "timeout": 10000,

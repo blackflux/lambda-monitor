@@ -1,6 +1,6 @@
-const request = require('../singleton/request');
+import request from '../singleton/request.js';
 
-module.exports = (context, logs) => {
+export default (context, logs) => {
   if (process.env.LOGZ_TOKEN === undefined || logs.length === 0) {
     return;
   }

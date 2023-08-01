@@ -29,7 +29,7 @@ Lambda log monitoring and streaming to external services.
 - Add `gardener.js` containing
 ```js
 // eslint-disable-next-line import/no-extraneous-dependencies
-const gardener = require('js-gardener');
+import gardener from 'js-gardener';
 
 if (require.main === module) {
   gardener().catch(() => process.exit(1));

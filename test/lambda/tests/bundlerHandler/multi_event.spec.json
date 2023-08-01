@@ -2,11 +2,14 @@
   "handler": "bundlerHandler",
   "success": true,
   "timeout": 30000,
-  "env": {
+  "envVars": {
     "DATADOG_API_KEY": "DATADOG_API_KEY"
   },
   "logs": {
     "to.deep.equal()": []
+  },
+  "expect": {
+    "to.be.undefined": null
   },
   "event": {
     "Records": [

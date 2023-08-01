@@ -1,10 +1,13 @@
-const fs = require('smart-fs');
-const LRU = require('lru-cache-ext');
-const Joi = require('joi-strict');
+import fs from 'smart-fs';
+import LRU from 'lru-cache-ext';
+import Joi from 'joi-strict';
 
-const lru = new LRU({ maxAge: 60 * 60 * 1000 });
+const lru = new LRU({
+  ttl: 60 * 60 * 1000,
+  max: 10
+});
 
-module.exports = (filepath = 'config.json') => lru.memoizeSync('config', () => {
+export default (filepath = 'config.json') => lru.memoizeSync('config', () => {
   const config = fs.existsSync(filepath)
     ? fs.smartRead(filepath)
     : { suppress: [] };

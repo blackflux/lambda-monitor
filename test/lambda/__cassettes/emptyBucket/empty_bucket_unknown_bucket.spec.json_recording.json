@@ -1,8 +1,8 @@
 [
   {
-    "scope": "https://s3.amazonaws.com:443",
+    "scope": "https://s3.us-east-1.amazonaws.com:443",
     "method": "GET",
-    "path": "/unknown-bucket-weflkj34tEfoijkwefdqwdojkerg?list-type=2",
+    "path": "/unknown-bucket-weflkj34tEfoijkwefdqwdojkerg/?list-type=2",
     "body": "",
     "status": 404,
     "response": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>NoSuchBucket</Code><Message>The specified bucket does not exist</Message><BucketName>unknown-bucket-weflkj34tEfoijkwefdqwdojkerg</BucketName><RequestId>D05DB1E1F6C5577F</RequestId><HostId>DcMwUFfoHAknx+mhQcZ9I1qjOlTG6YI/rxbSqXdvHDWz0tKydFvaK+q9QQanfk6Yvamhgxxoafk=</HostId></Error>",

@@ -9,9 +9,10 @@
       "packageName": "lambda-monitor",
       "projectName": "lambda-monitor",
       "owner": "simlu",
-      "nodeVersion": "12",
+      "nodeVersion": "18",
       "ownerName": "Lukas Siemon",
-      "mergeBot": "MrsFlux"
+      "mergeBot": "MrsFlux",
+      "nccEnabled": false
     }
   }
 }

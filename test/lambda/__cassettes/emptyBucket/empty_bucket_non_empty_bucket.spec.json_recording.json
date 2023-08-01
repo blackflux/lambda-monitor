@@ -1,11 +1,11 @@
 [
   {
-    "scope": "https://non-empty-bucket-32498uerfgjk45t89u34tjwer.s3.amazonaws.com:443",
+    "scope": "https://non-empty-bucket-32498uerfgjk45t89u34tjwer.s3.us-east-1.amazonaws.com:443",
     "method": "GET",
     "path": "/?list-type=2",
     "body": "",
     "status": 200,
-    "response": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ListBucketResult xmlns=\"http://s3.amazonaws.com/doc/2006-03-01/\"><Name>non-empty-bucket-32498uerfgjk45t89u34tjwer</Name><Prefix></Prefix><KeyCount>1</KeyCount><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated><Contents><Key>chr_knight.vox</Key><LastModified>2017-12-11T03:43:41.000Z</LastModified><ETag>&quot;9696e39104b8264b3c3a73f14b102cd4&quot;</ETag><Size>1652</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>",
+    "response": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ListBucketResult xmlns=\"http://s3.us-east-1.amazonaws.com/doc/2006-03-01/\"><Name>non-empty-bucket-32498uerfgjk45t89u34tjwer</Name><Prefix></Prefix><KeyCount>1</KeyCount><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated><Contents><Key>chr_knight.vox</Key><LastModified>2017-12-11T03:43:41.000Z</LastModified><ETag>&quot;9696e39104b8264b3c3a73f14b102cd4&quot;</ETag><Size>1652</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>",
     "rawHeaders": [
       "x-amz-id-2",
       "8ZV80IBTJ0kk8oiTz+K6Jfql+AcksYJ6+Xl8tt0G63OvLUzzfAJTiyxuO+YZkL6MUN574+BdYks=",
@@ -24,12 +24,12 @@
     ]
   },
   {
-    "scope": "https://non-empty-bucket-32498uerfgjk45t89u34tjwer.s3.amazonaws.com:443",
+    "scope": "https://non-empty-bucket-32498uerfgjk45t89u34tjwer.s3.us-east-1.amazonaws.com:443",
     "method": "POST",
-    "path": "/?delete",
-    "body": "<Delete xmlns=\"http://s3.amazonaws.com/doc/2006-03-01/\"><Object><Key>chr_knight.vox</Key></Object></Delete>",
+    "path": "/?delete=&x-id=DeleteObjects",
+    "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Delete xmlns=\"http://s3.amazonaws.com/doc/2006-03-01/\"><Object><Key>chr_knight.vox</Key></Object></Delete>",
     "status": 200,
-    "response": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<DeleteResult xmlns=\"http://s3.amazonaws.com/doc/2006-03-01/\"><Deleted><Key>chr_knight.vox</Key></Deleted></DeleteResult>",
+    "response": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<DeleteResult xmlns=\"http://s3.us-east-1.amazonaws.com/doc/2006-03-01/\"><Deleted><Key>chr_knight.vox</Key></Deleted></DeleteResult>",
     "rawHeaders": [
       "x-amz-id-2",
       "Z3Uo/7VOsdzRwpOP0jXX85do1MlftUPTnPqc23QKdZ1EqEkzLbwHRvqTkKIczf5OboXh+uVpeWU=",
