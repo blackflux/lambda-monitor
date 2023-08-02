@@ -1,4 +1,4 @@
-import request from 'request-promise-native';
+import axios from '@blackflux/axios';
 
 export default (() => {
   const queue = [];
@@ -6,6 +6,6 @@ export default (() => {
     enqueue: (...args) => {
       queue.push(args);
     },
-    flush: () => Promise.all(queue.splice(0).map((args) => request(...args)))
+    flush: () => Promise.all(queue.splice(0).map((args) => axios(...args)))
   };
 })();

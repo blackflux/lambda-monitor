@@ -40,7 +40,7 @@ export default ({
     headers: {
       'content-type': 'application/json'
     },
-    body: JSON.stringify({
+    data: {
       access_token: token,
       data: {
         level,
@@ -59,6 +59,6 @@ export default ({
           .update(message.split(/[\n\r]/)[0])
           .digest('hex')
       }
-    })
+    }
   });
 };
