@@ -2,8 +2,8 @@
 
 - <a name="lambda-monitor-task-idx-ref-assorteddefault">:open_file_folder:</a> <a href="#lambda-monitor-task-ref-assorteddefault">`assorted/@default`</a>
   - <a name="lambda-monitor-task-idx-ref-structdefault">:open_file_folder:</a> <a href="#lambda-monitor-task-ref-structdefault">`struct/#default`</a>
-    - <a name="lambda-monitor-task-idx-ref-structtest-index-spec">:clipboard:</a> <a href="#lambda-monitor-task-ref-structtest-index-spec">`struct/test-index-spec`</a>
-    - <a name="lambda-monitor-task-idx-ref-structsrc-index">:clipboard:</a> <a href="#lambda-monitor-task-ref-structsrc-index">`struct/src-index`</a>
+    - <a name="lambda-monitor-task-idx-ref-structtest-hangler-spec">:clipboard:</a> <a href="#lambda-monitor-task-ref-structtest-hangler-spec">`struct/test-hangler-spec`</a>
+    - <a name="lambda-monitor-task-idx-ref-structsrc-hangler">:clipboard:</a> <a href="#lambda-monitor-task-ref-structsrc-hangler">`struct/src-hangler`</a>
     - <a name="lambda-monitor-task-idx-ref-structhowto">:clipboard:</a> <a href="#lambda-monitor-task-ref-structhowto">`struct/howto`</a>
   - <a name="lambda-monitor-task-idx-ref-serverlessdefault">:open_file_folder:</a> <a href="#lambda-monitor-task-ref-serverlessdefault">`serverless/#default`</a>
     - <a name="lambda-monitor-task-idx-ref-serverlessserverless-data">:clipboard:</a> <a href="#lambda-monitor-task-ref-serverlessserverless-data">`serverless/serverless-data`</a>
@@ -32,9 +32,9 @@ Manages files for monitoring project.
 <code>│&nbsp;&nbsp;└─&nbsp;api</code><br/>
 <code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-serverlessapiconfigyml">config.yml</a></code><br/>
 <code>├─&nbsp;src</code><br/>
-<code>│&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-srcindexjs">index.js</a></code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-srchanglerjs">hangler.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-testindexspecjs">index.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-testhanglerspecjs">hangler.spec.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -72,9 +72,9 @@ Manages structure files for monitoring project.
 <code>project</code><br/>
 <code>├─&nbsp;<a href="#lambda-monitor-target-ref-howtomd">HOWTO.md</a></code><br/>
 <code>├─&nbsp;src</code><br/>
-<code>│&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-srcindexjs">index.js</a></code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-srchanglerjs">hangler.js</a></code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-testindexspecjs">index.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-testhanglerspecjs">hangler.spec.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -92,9 +92,9 @@ Manages structure files for monitoring project.
   </tbody>
 </table>
 
-##### :clipboard: <a name="lambda-monitor-task-ref-structtest-index-spec">struct/test-index-spec</a> (<a href="#lambda-monitor-task-idx-ref-structtest-index-spec">`index`</a>)
+##### :clipboard: <a name="lambda-monitor-task-ref-structtest-hangler-spec">struct/test-hangler-spec</a> (<a href="#lambda-monitor-task-idx-ref-structtest-hangler-spec">`index`</a>)
 
-_Updating <a href="#lambda-monitor-target-ref-testindexspecjs">test/index.spec.js</a> using <a href="#lambda-monitor-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#lambda-monitor-target-ref-testhanglerspecjs">test/hangler.spec.js</a> using <a href="#lambda-monitor-strat-ref-overwrite">overwrite</a>._
 
 - Define main test file.
 
@@ -109,7 +109,7 @@ _Updating <a href="#lambda-monitor-target-ref-testindexspecjs">test/index.spec.j
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;test</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-testindexspecjs">index.spec.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-testhanglerspecjs">hangler.spec.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -122,9 +122,9 @@ _Updating <a href="#lambda-monitor-target-ref-testindexspecjs">test/index.spec.j
   </tbody>
 </table>
 
-##### :clipboard: <a name="lambda-monitor-task-ref-structsrc-index">struct/src-index</a> (<a href="#lambda-monitor-task-idx-ref-structsrc-index">`index`</a>)
+##### :clipboard: <a name="lambda-monitor-task-ref-structsrc-hangler">struct/src-hangler</a> (<a href="#lambda-monitor-task-idx-ref-structsrc-hangler">`index`</a>)
 
-_Updating <a href="#lambda-monitor-target-ref-srcindexjs">src/index.js</a> using <a href="#lambda-monitor-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#lambda-monitor-target-ref-srchanglerjs">src/hangler.js</a> using <a href="#lambda-monitor-strat-ref-overwrite">overwrite</a>._
 
 - Define main code file.
 
@@ -139,7 +139,7 @@ _Updating <a href="#lambda-monitor-target-ref-srcindexjs">src/index.js</a> using
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;src</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-srcindexjs">index.js</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#lambda-monitor-target-ref-srchanglerjs">hangler.js</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -371,7 +371,7 @@ Should only be enabled if cloud trail logging is not already enabled on this aws
 
 ## Targets
 
-### <a name="lambda-monitor-target-ref-testindexspecjs">test/index.spec.js</a>  
+### <a name="lambda-monitor-target-ref-testhanglerspecjs">test/hangler.spec.js</a>  
 
 :small_red_triangle: <a href="#lambda-monitor-req-ref-javascript">javascript</a>
 
@@ -381,7 +381,7 @@ Should only be enabled if cloud trail logging is not already enabled on this aws
 
 Contains basic testing of code functionality for monitoring.
 
-### <a name="lambda-monitor-target-ref-srcindexjs">src/index.js</a>  
+### <a name="lambda-monitor-target-ref-srchanglerjs">src/hangler.js</a>  
 
 :small_red_triangle: <a href="#lambda-monitor-req-ref-javascript">javascript</a>
 

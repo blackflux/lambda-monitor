@@ -1,9 +1,9 @@
 import { expect } from 'chai';
-import * as index from '../src/index.js';
+import * as hangler from '../src/hangler.js';
 
-describe('Testing index.js', () => {
+describe('Testing hangler.js', () => {
   it('Testing Exports', () => {
-    expect(Object.keys(index)).to.deep.equal([
+    expect(Object.keys(hangler)).to.deep.equal([
       'batcherHandler',
       'bundlerHandler',
       'emptyBucket',

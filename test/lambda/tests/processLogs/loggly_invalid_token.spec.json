@@ -9,8 +9,15 @@
   ],
   "success": false,
   "timeout": 10000,
-  "expect(message)": {
-    "to.contain()": "Invalid API key"
+  "expect": {
+    "to.deep.contain()": {
+      "response": {
+        "data": "Invalid API key",
+        "headers": {},
+        "status": 403,
+        "statusText": null
+      }
+    }
   },
   "logs": {
     "to.deep.equal()": []
