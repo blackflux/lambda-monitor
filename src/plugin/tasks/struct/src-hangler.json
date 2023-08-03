@@ -1,9 +1,9 @@
 {
-  "target": "src/index.js",
+  "target": "src/hangler.js",
   "format": "txt",
   "strategy": "overwrite",
   "snippets": [
-    "src/index.js"
+    "src/hangler.js"
   ],
   "requires": [
     "javascript"

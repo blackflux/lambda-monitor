@@ -9,8 +9,15 @@
   ],
   "success": false,
   "timeout": 10000,
-  "expect(message)": {
-    "to.equal()": "401 - \"Logging token is not valid\""
+  "expect": {
+    "to.deep.contain()": {
+      "response": {
+        "data": "Logging token is not valid",
+        "headers": {},
+        "status": 401,
+        "statusText": null
+      }
+    }
   },
   "logs": {
     "to.deep.equal()": []

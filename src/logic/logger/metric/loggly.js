@@ -6,7 +6,10 @@ export default (context, logs) => {
   }
   request.enqueue({
     method: 'POST',
-    uri: `https://logs-01.loggly.com/bulk/${process.env.LOGGLY_TOKEN}/tag/${process.env.ENVIRONMENT}/`,
-    body: logs.map(JSON.stringify).join('\n')
+    headers: {
+      'content-type': 'application/x-ndjson'
+    },
+    url: `https://logs-01.loggly.com/bulk/${process.env.LOGGLY_TOKEN}/tag/${process.env.ENVIRONMENT}/`,
+    data: logs.map(JSON.stringify).join('\n')
   });
 };
