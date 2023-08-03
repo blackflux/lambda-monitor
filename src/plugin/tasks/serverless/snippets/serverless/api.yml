@@ -63,7 +63,7 @@ provider:
 functions:
   process-logs:
     timeout: 30
-    handler: lib/index.processLogs
+    handler: lib/hangler.processLogs
     description: Processor for Lambda CloudWatch Streams
     tags:
       MONITOR: "1"
@@ -75,7 +75,7 @@ functions:
   subscribe:
     timeout: 300
     memorySize: 256
-    handler: lib/index.subscribe
+    handler: lib/hangler.subscribe
     description: Subscribe Processor to Lambda CloudWatch Streams
     tags:
       service: ${self:service}
@@ -98,7 +98,7 @@ functions:
   empty-bucket:
     timeout: 900
     memorySize: 256
-    handler: lib/index.emptyBucket
+    handler: lib/hangler.emptyBucket
     description: Empty s3 bucket
     tags:
       service: ${self:service}
@@ -107,7 +107,7 @@ functions:
 
   batcher-handler:
     memorySize: 512
-    handler: lib/index.batcherHandler
+    handler: lib/hangler.batcherHandler
     reservedConcurrency: 1
     timeout: 60
     tags:
@@ -123,7 +123,7 @@ functions:
 
   bundler-handler:
     memorySize: 512
-    handler: lib/index.bundlerHandler
+    handler: lib/hangler.bundlerHandler
     reservedConcurrency: 1
     timeout: 60
     tags:
