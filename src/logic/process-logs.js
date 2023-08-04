@@ -10,8 +10,9 @@ import {
 } from './util/parser.js';
 import Config from '../config.js';
 
+const config = Config(process.env.CONFIG_FILEPATH);
+
 const processLogs = async (event, context) => {
-  const config = Config(process.env.CONFIG_FILEPATH);
   const data = JSON.parse(zlib
     .gunzipSync(Buffer.from(event.awslogs.data, 'base64'))
     .toString('ascii'));
