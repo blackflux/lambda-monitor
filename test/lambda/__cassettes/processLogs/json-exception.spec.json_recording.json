@@ -32,7 +32,8 @@
       "content-length": 211,
       "content-type": "application/json",
       "host": "api.datadoghq.com",
-      "user-agent": "axios/0.21.4"
+      "user-agent": "axios/1.4.0",
+      "accept-encoding": "gzip, compress, deflate, br"
     }
   }
 ]
