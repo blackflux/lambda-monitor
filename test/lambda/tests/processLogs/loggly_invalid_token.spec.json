@@ -9,14 +9,10 @@
   ],
   "success": false,
   "timeout": 10000,
-  "expect": {
+  "expect([response])": {
     "to.deep.contain()": {
-      "response": {
-        "data": "Invalid API key",
-        "headers": {},
-        "status": 403,
-        "statusText": null
-      }
+      "status": 403,
+      "data": "Invalid API key"
     }
   },
   "logs": {
