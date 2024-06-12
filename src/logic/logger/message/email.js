@@ -21,8 +21,9 @@ export default ({ logEvent }) => {
         subject,
         content: [{ type: 'text/plain', value: body }],
         tracking_settings: {
-          enabled: false,
-          enable_text: false
+          click_tracking: {
+            enable: false
+          }
         }
       }
     });
