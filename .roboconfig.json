@@ -9,7 +9,7 @@
       "packageName": "lambda-monitor",
       "projectName": "lambda-monitor",
       "owner": "simlu",
-      "nodeVersion": "16",
+      "nodeVersion": "18",
       "ownerName": "Lukas Siemon",
       "mergeBot": "MrsFlux",
       "nccEnabled": false

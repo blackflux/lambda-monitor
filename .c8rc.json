@@ -6,7 +6,8 @@
     "lib/*",
     "test/hot.js",
     "src/plugin/tasks/**",
-    "test/projects/**"
+    "test/projects/**",
+    "eslint.config.js"
   ],
   "temp-directory": "./coverage/.c8_output",
   "reports-dir": "./coverage",
