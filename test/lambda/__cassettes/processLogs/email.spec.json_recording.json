@@ -24,8 +24,9 @@
         }
       ],
       "tracking_settings": {
-        "enabled": false,
-        "enable_text": false
+        "click_tracking": {
+          "enable": false
+        }
       }
     },
     "status": 202,
