@@ -22,7 +22,11 @@
           "type": "text/plain",
           "value": "body text"
         }
-      ]
+      ],
+      "tracking_settings": {
+        "enabled": false,
+        "enable_text": false
+      }
     },
     "status": 202,
     "response": "",

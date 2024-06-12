@@ -19,7 +19,11 @@ export default ({ logEvent }) => {
         from: { email: from },
         personalizations: [{ to: [{ email: to }] }],
         subject,
-        content: [{ type: 'text/plain', value: body }]
+        content: [{ type: 'text/plain', value: body }],
+        tracking_settings: {
+          enabled: false,
+          enable_text: false
+        }
       }
     });
   } catch (e) { /* ignored */ }
