@@ -24,4 +24,7 @@ RUN chmod -R 757 /user
 # set correct execution env
 ENV LAMBDA_TASK_ROOT /user/project
 
-ENTRYPOINT (cd project && bash)
+ARG COMMAND=bash
+ENV COMMAND=${COMMAND}
+
+ENTRYPOINT (cd project && $COMMAND)

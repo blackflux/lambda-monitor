@@ -6,9 +6,11 @@ const func = { FunctionARN: 'FUNCTION_ARN', FunctionName: 'FUNCTION_NAME' };
 
 describe('Testing Lambda', { useNock: true }, () => {
   let lambda;
+
   before(() => {
     lambda = Lambda();
   });
+
   it('Testing getAllFunctions Error', async ({ capture }) => {
     const e = await capture(() => lambda.getAllFunctions());
     expect(e.message).to.equal('The security token included in the request is invalid.');
