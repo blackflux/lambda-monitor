@@ -14,11 +14,13 @@
     "LICENSE",
     "README.md",
     "docker/Dockerfile",
+    "eslint.config.js",
     "gardener.js",
     "manage.sh",
     "package.json",
     "src/index.js",
     "test/hot.js",
-    "test/index.spec.js"
+    "test/index.spec.js",
+    "test/reg.js"
   ]
 }
