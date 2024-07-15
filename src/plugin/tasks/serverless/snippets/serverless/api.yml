@@ -18,6 +18,7 @@ provider:
     - Effect: Allow
       Action:
         - 'lambda:GetFunction'
+        - 'lambda:ListTags'
       Resource:
         - 'Fn::Join':
             - ':'
