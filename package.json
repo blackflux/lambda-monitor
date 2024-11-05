@@ -55,7 +55,7 @@
     "joi-strict": "3.0.1",
     "lambda-async": "3.0.0",
     "lambda-cfn-hook": "3.0.5",
-    "lambda-monitor-logger": "5.0.1",
+    "lambda-monitor-logger": "5.1.0",
     "lodash.get": "4.4.2",
     "lru-cache-ext": "4.0.0",
     "object-scan": "19.0.5",
