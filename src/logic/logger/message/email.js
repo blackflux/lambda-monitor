@@ -6,7 +6,7 @@ export default ({ logEvent }) => {
   }
   try {
     const {
-      from, to, subject, body
+      from, to, subject, body, html = false
     } = JSON.parse(logEvent.message);
     request.enqueue({
       method: 'POST',
@@ -19,7 +19,7 @@ export default ({ logEvent }) => {
         from: { email: from },
         personalizations: [{ to: [{ email: to }] }],
         subject,
-        content: [{ type: 'text/plain', value: body }],
+        content: [{ type: html === true ? 'text/html' : 'text/plain', value: body }],
         tracking_settings: {
           click_tracking: {
             enable: false
