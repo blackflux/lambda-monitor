@@ -5,6 +5,8 @@
     "coverage/*",
     "lib/*",
     "test/hot.js",
+    "test/reg.js",
+    "eslint.config.js",
     "src/plugin/tasks/**",
     "test/projects/**",
     "eslint.config.js"
