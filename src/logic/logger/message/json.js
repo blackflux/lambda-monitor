@@ -17,5 +17,5 @@ export default ({
       ...JSON.parse(logEvent.message)
     };
     sqs.enqueue(process.env.BUNDLER_QUEUE_URL, result);
-  } catch (e) { /* ignored */ }
+  } catch { /* ignored */ }
 };

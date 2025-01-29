@@ -10,5 +10,5 @@ export default ({ logGroup, message }) => {
       `${logGroup.slice(1)}/${key}`,
       JSON.stringify(data)
     );
-  } catch (e) { /* ignored */ }
+  } catch { /* ignored */ }
 };
