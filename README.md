@@ -69,7 +69,7 @@ if (require.main === module) {
 - Then enter docker container with `. manage.sh`
 - Then run `yarn install && u && t`
 - Create `.depunusedignore`
-```text
+```
 @blackflux/robo-config-plugin
 @blackflux/eslint-plugin-rules
 object-hash
