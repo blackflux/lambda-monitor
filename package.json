@@ -45,44 +45,44 @@
   "homepage": "https://github.com/blackflux/lambda-monitor#readme",
   "dependencies": {
     "@aws-sdk/client-cloudwatch-logs": "3.385.0",
-    "@aws-sdk/client-lambda": "3.385.0",
-    "@aws-sdk/client-resource-groups-tagging-api": "3.385.0",
+    "@aws-sdk/client-lambda": "3.734.0",
+    "@aws-sdk/client-resource-groups-tagging-api": "3.734.0",
     "@aws-sdk/client-s3": "3.385.0",
     "@aws-sdk/client-sqs": "3.385.0",
-    "@blackflux/axios": "2.0.2",
+    "@blackflux/axios": "3.0.0",
     "aws-sdk-wrap": "13.3.2",
-    "datadog-light": "4.0.0",
-    "joi-strict": "3.0.1",
-    "lambda-async": "3.0.0",
+    "datadog-light": "5.0.0",
+    "joi-strict": "4.0.0",
+    "lambda-async": "4.0.0",
     "lambda-cfn-hook": "3.0.5",
-    "lambda-monitor-logger": "5.1.0",
+    "lambda-monitor-logger": "5.1.1",
     "lodash.get": "4.4.2",
-    "lru-cache-ext": "4.1.1",
-    "object-scan": "19.0.5",
+    "lru-cache-ext": "5.0.0",
+    "object-scan": "20.0.0",
     "promise-pool-ext": "3.3.0",
-    "smart-fs": "4.0.1"
+    "smart-fs": "5.0.1"
   },
   "devDependencies": {
-    "@babel/core": "7.26.0",
-    "@babel/eslint-parser": "7.25.9",
+    "@babel/core": "7.26.7",
+    "@babel/eslint-parser": "7.26.5",
     "@babel/register": "7.25.9",
-    "@blackflux/eslint-plugin-rules": "3.0.1",
-    "@blackflux/robo-config-plugin": "9.4.3",
-    "c8": "10.1.2",
+    "@blackflux/eslint-plugin-rules": "4.0.0",
+    "@blackflux/robo-config-plugin": "10.0.0",
+    "c8": "10.1.3",
     "chai": "5.1.2",
-    "eslint": "8.57.0",
+    "eslint": "9.19.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-json": "4.0.1",
     "eslint-plugin-markdown": "5.1.0",
     "eslint-plugin-mocha": "10.5.0",
-    "js-gardener": "5.0.4",
-    "lambda-tdd": "7.1.0",
+    "js-gardener": "6.0.2",
+    "lambda-tdd": "8.0.0",
     "minimist": "1.2.8",
     "mocha": "10.8.2",
     "nock": "13.5.5",
-    "node-tdd": "5.2.5",
-    "robo-config": "6.0.1"
+    "node-tdd": "6.0.0",
+    "robo-config": "7.0.0"
   },
   "licenses": [
     {
@@ -91,7 +91,7 @@
     }
   ],
   "engines": {
-    "node": ">= 18"
+    "node": ">= 20"
   },
   "files": [
     "lib"

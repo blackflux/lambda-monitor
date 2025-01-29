@@ -5,9 +5,7 @@ export default ({ message }) => {
   let parsedMessage = {};
   try {
     parsedMessage = JSON.parse(message);
-  } catch (e) {
-    /* ignored */
-  }
+  } catch { /* ignored */ }
   if (get(parsedMessage, ['type']) === 'distribution-metric') {
     datadogDistributionMetric.enqueue(...get(parsedMessage, ['args']));
   }

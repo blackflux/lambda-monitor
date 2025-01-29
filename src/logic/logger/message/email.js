@@ -27,5 +27,5 @@ export default ({ logEvent }) => {
         }
       }
     });
-  } catch (e) { /* ignored */ }
+  } catch { /* ignored */ }
 };

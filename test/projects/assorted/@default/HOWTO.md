@@ -18,7 +18,7 @@ Only enable CloudTrail if it is not already enabled for your account. Otherwise 
 - Sync github settings with `ga sync`. This will create three branches `dev`, `stage` and `prod` in the upstream repo
 - Sync environment variables to AWS (adjust and fill in as necessary):
 
-```shell script
+```
 aws --region awsRegion --profile local ssm put-parameter --cli-input-json '{"Type": "String", "Name": "ROLLBAR_REPORT_LEVEL", "Value": "INFO"}'
 aws --region awsRegion --profile dev ssm put-parameter --cli-input-json '{"Type": "String", "Name": "ROLLBAR_REPORT_LEVEL", "Value": "INFO"}'
 aws --region awsRegion --profile stage ssm put-parameter --cli-input-json '{"Type": "String", "Name": "ROLLBAR_REPORT_LEVEL", "Value": "WARNING"}'
@@ -44,7 +44,7 @@ aws --region awsRegion --profile prod ssm put-parameter --cli-input-json '{"Type
 
 - Start docker container with `. manage.sh`
 
-```shell script
+```
 yarn run sls-compile --stack data --region awsRegion --env local && \
 sls deploy --config serverless-local-data.config.yml --aws-profile local --force && \
 yarn run sls-compile --stack data --region awsRegion --env dev && \
@@ -60,7 +60,7 @@ sls deploy --config serverless-prod-data.config.yml --aws-profile prod --force
 - Create the CircleCI contexts `PROJECT_NAME-local`, `PROJECT_NAME-dev`, `PROJECT_NAME-stage` and `PROJECT_NAME-prod` and
 - Fill in the variables `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for each context by accessing them with
 
-```shell script
+```
 aws cloudformation describe-stacks --region awsRegion --profile ENVIRONMENT \
 --stack-name PROJECT_NAME-data-ENVIRONMENT \
 --query '[Stacks[*].Outputs[?OutputKey==`DeployAccessKeyId`].OutputValue, Stacks[*].Outputs[?OutputKey==`DeploySecretAccessKey`].OutputValue]' --output text
