@@ -8,7 +8,7 @@ ENV HOME /user
 RUN touch ~/.bashrc && \
   yarn -v || npm install --global yarn && \
   source ~/.bashrc && \
-  yarn global add serverless@3.33.0
+  yarn global add serverless@3.40.0
 
 RUN touch ~/.bashrc && \
   echo "alias u='yarn run u'" >> ~/.bashrc && \
