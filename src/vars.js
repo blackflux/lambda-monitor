@@ -1,1 +1,1 @@
-export const filterPattern = '-%^START RequestId: |^END RequestId: %';
+export const filterPattern = '-"END RequestId: " -"START RequestId: "';
