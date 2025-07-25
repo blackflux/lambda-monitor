@@ -6,7 +6,7 @@
     "body": {
       "destinationArn": "FUNCTION_ARN",
       "filterName": "NoneFilter",
-      "filterPattern": "",
+      "filterPattern": "-%^START RequestId: |^END RequestId: %",
       "logGroupName": "/aws/lambda/FUNCTION_NAME"
     },
     "status": 400,

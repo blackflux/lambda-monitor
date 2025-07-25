@@ -1,5 +1,6 @@
 import get from 'lodash.get';
 import aws from './aws.js';
+import { filterPattern } from '../../vars.js';
 
 export default () => {
   const logGroupName = (fn) => `/aws/lambda/${fn.FunctionName}`;
@@ -43,8 +44,8 @@ export default () => {
   const subscribeCloudWatchLogGroup = (monitor, producer) => aws
     .call('CloudWatchLogs:PutSubscriptionFilterCommand', {
       destinationArn: monitor.FunctionARN,
-      filterName: 'NoneFilter',
-      filterPattern: '',
+      filterName: 'NoneFilter', // existing name, can't really change
+      filterPattern,
       logGroupName: logGroupName(producer)
     });
 
