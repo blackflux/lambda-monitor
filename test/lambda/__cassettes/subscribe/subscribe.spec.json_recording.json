@@ -81,7 +81,7 @@
     "body": {
       "destinationArn": "arn:aws:lambda:us-east-1:1234567890:function:lambda-function-one",
       "filterName": "NoneFilter",
-      "filterPattern": "-%^START RequestId: |^END RequestId: %",
+      "filterPattern": "-\"END RequestId: \" -\"START RequestId: \"",
       "logGroupName": "/aws/lambda/lambda-function-two"
     },
     "status": 200,
