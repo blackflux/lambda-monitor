@@ -1,1 +1,1 @@
-export const filterPattern = '-"END RequestId: " -"START RequestId: "';
+export const filterPattern = '';
